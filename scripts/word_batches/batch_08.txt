@@ -1,0 +1,52 @@
+discuss|verb|논의하다|Teams discuss budgets every quarter.
+disease|noun|질병|Insurance covers treatment for disease.
+display|verb|전시하다|Stores display new models near entrances.
+dispose|verb|처분하다|Dispose of chemicals following safety rules.
+distinct|adjective|뚜렷한|Each brand has a distinct logo style.
+distinction|noun|차별|There is a clear distinction in quality.
+distinguish|verb|구별하다|Labels help distinguish similar products.
+distribute|verb|배포하다|We distribute catalogs to all branches.
+district|noun|지구|The business district is expanding west.
+disturb|verb|방해하다|Do not disturb staff during the audit.
+diverse|adjective|다양한|We hire diverse talent from many fields.
+divide|verb|나누다|Divide tasks among three project groups.
+division|noun|부문|The sales division met on Tuesday.
+document|noun|문서|Upload each document to the shared drive.
+domestic|adjective|국내의|Domestic sales outpaced exports this year.
+dominate|verb|지배하다|One brand dominates the online market.
+donate|verb|기부하다|Employees donate to local charities yearly.
+draft|noun|초안|Send a draft by end of day Friday.
+dramatic|adjective|극적인|We saw dramatic growth in mobile orders.
+draw|verb|끌어들이다|The event drew record attendance.
+drive|verb|운전하다|Drivers deliver goods across the region.
+due|adjective|마감인|Payment is due on the first of month.
+duration|noun|기간|The duration of the course is six weeks.
+duty|noun|의무|It is your duty to report safety issues.
+dynamic|adjective|역동적인|We need dynamic leaders for new units.
+each|determiner|각각|Each employee receives a badge.
+early|adjective|이른|Early orders qualify for free shipping.
+earn|verb|벌다|Top reps earn bonuses each quarter.
+ease|noun|완화|New tools ease daily reporting work.
+economic|adjective|경제의|Economic growth slowed last quarter.
+economy|noun|경제|The economy affects hiring plans greatly.
+edge|noun|우위|Innovation gives us an edge over rivals.
+edit|verb|편집하다|Please edit the brochure before printing.
+edition|noun|판|This edition includes updated case studies.
+editor|noun|편집자|The editor checked facts in the article.
+effect|noun|효과|The policy had a positive effect on morale.
+effective|adjective|효과적인|Training proved effective for new hires.
+efficiency|noun|효율|Automation improved warehouse efficiency.
+efficient|adjective|효율적인|We seek efficient ways to cut waste.
+effort|noun|노력|Thank you for your effort on the launch.
+either|determiner|둘 중 하나|Either option meets our basic needs.
+elect|verb|선출하다|Members elect officers each spring.
+electric|adjective|전기의|Electric vehicles reduce fuel costs.
+element|noun|요소|Trust is a key element of partnership.
+eliminate|verb|제거하다|We eliminate steps that add no value.
+else|adverb|그 밖에|Ask HR if you need anything else.
+embarrass|verb|당황하게 하다|Errors embarrass speakers during demos.
+emerge|verb|나타나다|New rivals emerge each year online.
+emphasis|noun|강조|We place emphasis on client service.
+employ|verb|고용하다|We employ over two thousand staff.
+employee|noun|직원|Each employee must complete safety training.
+employer|noun|고용주|The employer offers flexible schedules.

@@ -1,0 +1,51 @@
+bankrupt|adjective|파산한|The firm went bankrupt last year.
+barrier|noun|장벽|Language can be a barrier to trade.
+basis|noun|기준|We pay bonuses on a merit basis.
+behalf|noun|대표|She spoke on behalf of the team.
+behave|verb|행동하다|Employees must behave professionally.
+benefit|noun|혜택|Health benefits start after ninety days.
+besides|preposition|게다가|Besides salary, we offer training.
+beware|verb|조심하다|Beware of fraudulent emails.
+bid|noun|입찰|Our bid was the lowest submitted.
+bill|noun|청구서|Please pay the bill by Monday.
+bind|verb|구속하다|The contract will bind both parties.
+blank|adjective|빈|Leave the last line blank.
+block|verb|막다|Construction will block the entrance.
+board|noun|이사회|The board meets every quarter.
+bond|noun|채권|Investors bought government bonds.
+bonus|noun|보너스|Staff received a year-end bonus.
+book|verb|예약하다|Book your flight early for discounts.
+boost|verb|신장시키다|The ad campaign boosted sales.
+borrow|verb|빌리다|We borrow equipment when needed.
+branch|noun|지점|The bank opened a new branch downtown.
+brand|noun|브랜드|Brand loyalty remains strong.
+breakdown|noun|고장|A breakdown halted production briefly.
+brief|adjective|간단한|Keep your comments brief and clear.
+briefcase|noun|서류가방|He left his briefcase in the taxi.
+bright|adjective|밝은|The office has bright natural light.
+bring|verb|가져오다|Bring the signed forms to HR.
+broad|adjective|넓은|We seek broad market coverage.
+budget|noun|예산|The budget allows for new hires.
+build|verb|건설하다|They build warehouses near ports.
+bulk|noun|대량|Buy in bulk to reduce unit cost.
+bureau|noun|국|Contact the tourism bureau for maps.
+business|noun|사업|Business improved after the launch.
+busy|adjective|바쁜|The front desk is busy today.
+calculate|verb|계산하다|Calculate totals before submitting invoices.
+calendar|noun|달력|Mark the deadline on your calendar.
+campaign|noun|캠페인|The marketing campaign starts in May.
+cancel|verb|취소하다|You may cancel within twenty-four hours.
+candidate|noun|후보|Three candidates interviewed yesterday.
+capable|adjective|유능한|She is capable of managing projects.
+capacity|noun|수용력|The venue has capacity for five hundred.
+capital|noun|자본|We need capital to expand operations.
+capture|verb|포착하다|The photo captures the product well.
+career|noun|경력|He built a career in finance.
+careful|adjective|조심스러운|Be careful when handling fragile items.
+cargo|noun|화물|The cargo arrived at the port.
+carry|verb|운반하다|Trucks carry goods across the region.
+case|noun|사례|Review each case individually.
+cash|noun|현금|We prefer payment in cash.
+catalog|noun|카탈로그|Browse our online catalog for prices.
+category|noun|범주|Sort items by product category.
+cause|noun|원인|Identify the cause of the error.

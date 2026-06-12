@@ -1,0 +1,51 @@
+decline|verb|감소하다|Orders declined during the slow season.
+decrease|verb|줄이다|We decreased spending on travel.
+dedicate|verb|헌신하다|She dedicates time to mentor interns.
+deduct|verb|공제하다|Taxes deduct from each paycheck.
+defect|noun|결함|Report any defect within seven days.
+defend|verb|옹호하다|Lawyers defend the firm in court.
+define|verb|정의하다|Define roles before the project starts.
+degree|noun|학위|A degree in finance is preferred.
+delay|noun|지연|Weather caused a delay in shipments.
+delegate|verb|위임하다|Managers delegate tasks to team leads.
+deliver|verb|배달하다|Couriers deliver packages by six.
+delivery|noun|배송|Track delivery status on our website.
+demand|noun|수요|Demand surged after the promotion.
+demonstrate|verb|증명하다|Tests demonstrate improved battery life.
+deny|verb|부인하다|He denied any wrongdoing in the audit.
+department|noun|부서|Contact the IT department for access.
+depend|verb|의존하다|Results depend on market conditions.
+deposit|noun|보증금|Pay a deposit to reserve the venue.
+depress|verb|위축시키다|High rates depress consumer spending.
+describe|verb|설명하다|Describe the issue in detail please.
+design|noun|디자인|The design won an industry award.
+desire|noun|욕구|There is strong desire for faster service.
+desk|noun|책상|Leave forms at the front desk.
+despite|preposition|~에도 불구하고|Despite rain, attendance was high.
+destination|noun|목적지|Enter your destination in the app.
+destroy|verb|파괴하다|Fire destroyed part of the warehouse.
+detail|noun|세부사항|Review every detail before approval.
+detect|verb|탐지하다|Sensors detect motion after hours.
+determine|verb|결정하다|Tests determine whether items pass.
+develop|verb|개발하다|Teams develop software in agile sprints.
+device|noun|기기|Each device requires a unique login.
+devote|verb|바치다|She devotes weekends to training staff.
+diagram|noun|도표|The diagram shows the workflow clearly.
+differ|verb|다르다|Prices differ by region and season.
+difference|noun|차이|Note the difference between the two plans.
+different|adjective|다른|We offer different plans for small firms.
+difficult|adjective|어려운|The upgrade proved difficult to finish.
+digital|adjective|디지털의|Digital receipts replace paper copies.
+dimension|noun|치수|Check the dimension before ordering parts.
+direct|verb|안내하다|Staff direct visitors to the lobby.
+direction|noun|방향|New direction came from senior leadership.
+directly|adverb|직접|Speak directly with the project lead.
+director|noun|이사|The director approved the hiring plan.
+disability|noun|장애|We provide access for disability needs.
+disagree|verb|동의하지 않다|Auditors disagree on one line item.
+disappear|verb|사라지다|Stock disappeared from shelves quickly.
+disappoint|verb|실망시키다|Delays disappoint many loyal clients.
+disaster|noun|재난|A disaster plan is posted in each office.
+discipline|noun|규율|Discipline improves safety on the floor.
+discount|noun|할인|Members receive a ten percent discount.
+discover|verb|발견하다|Researchers discover flaws during testing.

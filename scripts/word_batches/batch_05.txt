@@ -1,0 +1,51 @@
+communicate|verb|의사소통하다|Teams communicate through shared tools.
+community|noun|지역사회|The firm supports the local community.
+company|noun|회사|Our company exports to twelve nations.
+compare|verb|비교하다|Compare prices before you buy.
+compensate|verb|보상하다|We compensate staff for overtime work.
+compete|verb|경쟁하다|Small firms compete on service quality.
+competition|noun|경쟁|Competition pushed prices lower.
+complain|verb|불평하다|Customers complain about slow support.
+complete|verb|완료하다|Complete the form before noon.
+complex|adjective|복잡한|The contract terms are complex.
+complicate|verb|복잡하게 하다|Delays complicate the shipping plan.
+component|noun|구성요소|Each component is tested separately.
+compose|verb|작성하다|Compose a reply within one business day.
+compound|noun|화합물|The lab stores each compound safely.
+comprehensive|adjective|포괄적인|We offer comprehensive training programs.
+compress|verb|압축하다|Compress files before you upload them.
+comprise|verb|구성하다|Women comprise half of the workforce.
+compute|verb|계산하다|Systems compute tax automatically.
+concentrate|verb|집중하다|Concentrate on tasks with highest impact.
+concept|noun|개념|The concept needs clearer explanation.
+concern|noun|우려|Investors expressed concern about debt.
+conclude|verb|결론짓다|We conclude the meeting at four.
+concrete|adjective|구체적인|Give concrete examples in your report.
+condition|noun|조건|Products must meet safety conditions.
+conduct|verb|수행하다|We conduct audits every year.
+conference|noun|회의|The conference draws global attendees.
+confidence|noun|신뢰|Client confidence rose after the launch.
+confirm|verb|확인하다|Please confirm your attendance today.
+conflict|noun|갈등|Avoid conflict by setting clear roles.
+confuse|verb|혼란스럽게 하다|Similar labels confuse many buyers.
+connect|verb|연결하다|Connect the printer to the network.
+consent|noun|동의|We need written consent from clients.
+consequence|noun|결과|Consider the consequence of each choice.
+consider|verb|고려하다|Consider all bids before deciding.
+consist|verb|구성되다|The kit consists of ten parts.
+consistent|adjective|일관된|We need consistent quality standards.
+constant|adjective|지속적인|There is constant demand for updates.
+construct|verb|건설하다|They construct offices near transit hubs.
+consult|verb|상담하다|Consult legal counsel before signing.
+consumer|noun|소비자|Consumer tastes shift quickly online.
+contact|verb|연락하다|Contact support if issues persist.
+contain|verb|포함하다|Each box contains twenty units.
+content|noun|내용|Update the website content monthly.
+contest|noun|대회|Staff entered a photo contest.
+context|noun|맥락|Read the clause in full context.
+continue|verb|계속하다|Work will continue through the weekend.
+contract|noun|계약|Both sides signed the contract yesterday.
+contrary|adjective|반대의|Contrary reports caused market confusion.
+contrast|noun|대조|The ad uses contrast to highlight features.
+contribute|verb|기여하다|Volunteers contribute time each month.
+control|verb|통제하다|Managers control spending by department.

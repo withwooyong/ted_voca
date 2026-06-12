@@ -1,0 +1,15 @@
+node_modules/
+.expo/
+dist/
+coverage/
+.env
+.env.local
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.DS_Store
+npm-debug.log*
+.idea/
+.vscode/

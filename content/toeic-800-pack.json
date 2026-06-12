@@ -1,0 +1,6639 @@
+{
+  "course": {
+    "slug": "toeic-800",
+    "title": "TOEIC 800",
+    "description": "토익 800점 목표 핵심 어휘 500선"
+  },
+  "words": [
+    {
+      "lemma": "abandon",
+      "pos": "verb",
+      "meaning_ko": "포기하다",
+      "example_en": "They had to abandon the project.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 1
+    },
+    {
+      "lemma": "ability",
+      "pos": "noun",
+      "meaning_ko": "능력",
+      "example_en": "She has the ability to lead teams.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 2
+    },
+    {
+      "lemma": "abroad",
+      "pos": "adverb",
+      "meaning_ko": "해외에",
+      "example_en": "He works abroad for a global firm.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 3
+    },
+    {
+      "lemma": "absence",
+      "pos": "noun",
+      "meaning_ko": "부재",
+      "example_en": "Your absence was noted in the meeting.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 4
+    },
+    {
+      "lemma": "absolute",
+      "pos": "adjective",
+      "meaning_ko": "절대적인",
+      "example_en": "There is no absolute guarantee.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 5
+    },
+    {
+      "lemma": "absorb",
+      "pos": "verb",
+      "meaning_ko": "흡수하다",
+      "example_en": "The sponge can absorb water quickly.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 6
+    },
+    {
+      "lemma": "abstract",
+      "pos": "adjective",
+      "meaning_ko": "추상적인",
+      "example_en": "The concept is too abstract for beginners.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 7
+    },
+    {
+      "lemma": "abundant",
+      "pos": "adjective",
+      "meaning_ko": "풍부한",
+      "example_en": "The region has abundant natural resources.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 8
+    },
+    {
+      "lemma": "academic",
+      "pos": "adjective",
+      "meaning_ko": "학문의",
+      "example_en": "She received an academic award.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 9
+    },
+    {
+      "lemma": "accept",
+      "pos": "verb",
+      "meaning_ko": "수락하다",
+      "example_en": "We accept credit cards only.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 10
+    },
+    {
+      "lemma": "access",
+      "pos": "noun",
+      "meaning_ko": "접근",
+      "example_en": "Employees have access to the database.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 11
+    },
+    {
+      "lemma": "accommodate",
+      "pos": "verb",
+      "meaning_ko": "수용하다",
+      "example_en": "The hotel can accommodate 200 guests.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 12
+    },
+    {
+      "lemma": "accompany",
+      "pos": "verb",
+      "meaning_ko": "동반하다",
+      "example_en": "A guide will accompany the tour group.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 13
+    },
+    {
+      "lemma": "accomplish",
+      "pos": "verb",
+      "meaning_ko": "성취하다",
+      "example_en": "We accomplished our quarterly goals.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 14
+    },
+    {
+      "lemma": "accord",
+      "pos": "noun",
+      "meaning_ko": "합의",
+      "example_en": "They reached an accord on pricing.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 15
+    },
+    {
+      "lemma": "account",
+      "pos": "noun",
+      "meaning_ko": "계정",
+      "example_en": "Please create a user account.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 16
+    },
+    {
+      "lemma": "accurate",
+      "pos": "adjective",
+      "meaning_ko": "정확한",
+      "example_en": "The report contains accurate data.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 17
+    },
+    {
+      "lemma": "achieve",
+      "pos": "verb",
+      "meaning_ko": "달성하다",
+      "example_en": "She achieved record sales this year.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 18
+    },
+    {
+      "lemma": "acknowledge",
+      "pos": "verb",
+      "meaning_ko": "인정하다",
+      "example_en": "He acknowledged the receipt of the package.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 19
+    },
+    {
+      "lemma": "acquire",
+      "pos": "verb",
+      "meaning_ko": "획득하다",
+      "example_en": "The firm acquired a smaller competitor.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 20
+    },
+    {
+      "lemma": "adapt",
+      "pos": "verb",
+      "meaning_ko": "적응하다",
+      "example_en": "Staff must adapt to new software.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 21
+    },
+    {
+      "lemma": "adequate",
+      "pos": "adjective",
+      "meaning_ko": "적절한",
+      "example_en": "We need adequate funding for the plan.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 22
+    },
+    {
+      "lemma": "adjust",
+      "pos": "verb",
+      "meaning_ko": "조정하다",
+      "example_en": "Please adjust the settings accordingly.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 23
+    },
+    {
+      "lemma": "administration",
+      "pos": "noun",
+      "meaning_ko": "행정",
+      "example_en": "Administration approved the budget.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 24
+    },
+    {
+      "lemma": "admit",
+      "pos": "verb",
+      "meaning_ko": "인정하다",
+      "example_en": "He admitted making a mistake.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 25
+    },
+    {
+      "lemma": "adopt",
+      "pos": "verb",
+      "meaning_ko": "채택하다",
+      "example_en": "The board adopted a new policy.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 26
+    },
+    {
+      "lemma": "advance",
+      "pos": "verb",
+      "meaning_ko": "진전시키다",
+      "example_en": "Technology continues to advance rapidly.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 27
+    },
+    {
+      "lemma": "advantage",
+      "pos": "noun",
+      "meaning_ko": "이점",
+      "example_en": "Bilingual skills are a clear advantage.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 28
+    },
+    {
+      "lemma": "advertise",
+      "pos": "verb",
+      "meaning_ko": "광고하다",
+      "example_en": "They advertise on social media.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 29
+    },
+    {
+      "lemma": "advise",
+      "pos": "verb",
+      "meaning_ko": "조언하다",
+      "example_en": "Experts advise caution during negotiations.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 30
+    },
+    {
+      "lemma": "affair",
+      "pos": "noun",
+      "meaning_ko": "업무",
+      "example_en": "He manages public affairs for the company.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 31
+    },
+    {
+      "lemma": "affect",
+      "pos": "verb",
+      "meaning_ko": "영향을 미치다",
+      "example_en": "Weather can affect delivery schedules.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 32
+    },
+    {
+      "lemma": "afford",
+      "pos": "verb",
+      "meaning_ko": "~할 여유가 있다",
+      "example_en": "We cannot afford further delays.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 33
+    },
+    {
+      "lemma": "agency",
+      "pos": "noun",
+      "meaning_ko": "대행사",
+      "example_en": "The travel agency booked our flights.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 34
+    },
+    {
+      "lemma": "agenda",
+      "pos": "noun",
+      "meaning_ko": "의제",
+      "example_en": "The agenda includes budget review.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 35
+    },
+    {
+      "lemma": "agent",
+      "pos": "noun",
+      "meaning_ko": "대리인",
+      "example_en": "Contact our sales agent for details.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 36
+    },
+    {
+      "lemma": "agree",
+      "pos": "verb",
+      "meaning_ko": "동의하다",
+      "example_en": "Both parties agree on the terms.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 37
+    },
+    {
+      "lemma": "agreement",
+      "pos": "noun",
+      "meaning_ko": "계약",
+      "example_en": "They signed a three-year agreement.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 38
+    },
+    {
+      "lemma": "agriculture",
+      "pos": "noun",
+      "meaning_ko": "농업",
+      "example_en": "Agriculture remains a key export sector.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 39
+    },
+    {
+      "lemma": "aid",
+      "pos": "noun",
+      "meaning_ko": "지원",
+      "example_en": "Foreign aid supported the recovery.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 40
+    },
+    {
+      "lemma": "aim",
+      "pos": "verb",
+      "meaning_ko": "겨냥하다",
+      "example_en": "The campaign aims to boost awareness.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 41
+    },
+    {
+      "lemma": "aircraft",
+      "pos": "noun",
+      "meaning_ko": "항공기",
+      "example_en": "The aircraft landed on schedule.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 42
+    },
+    {
+      "lemma": "alarm",
+      "pos": "noun",
+      "meaning_ko": "경보",
+      "example_en": "The fire alarm sounded at noon.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 43
+    },
+    {
+      "lemma": "allocate",
+      "pos": "verb",
+      "meaning_ko": "할당하다",
+      "example_en": "Funds were allocated to marketing.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 44
+    },
+    {
+      "lemma": "allow",
+      "pos": "verb",
+      "meaning_ko": "허용하다",
+      "example_en": "Smoking is not allowed in the building.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 45
+    },
+    {
+      "lemma": "alter",
+      "pos": "verb",
+      "meaning_ko": "변경하다",
+      "example_en": "We cannot alter the contract now.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 46
+    },
+    {
+      "lemma": "alternative",
+      "pos": "noun",
+      "meaning_ko": "대안",
+      "example_en": "Consider an alternative supplier.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 47
+    },
+    {
+      "lemma": "although",
+      "pos": "conjunction",
+      "meaning_ko": "비록 ~이지만",
+      "example_en": "Although costs rose, profits grew.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "conjunction"
+      ],
+      "sort_order": 48
+    },
+    {
+      "lemma": "altogether",
+      "pos": "adverb",
+      "meaning_ko": "완전히",
+      "example_en": "The plan was altogether successful.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 49
+    },
+    {
+      "lemma": "amateur",
+      "pos": "adjective",
+      "meaning_ko": "아마추어의",
+      "example_en": "Amateur photographers joined the contest.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 50
+    },
+    {
+      "lemma": "ambiguous",
+      "pos": "adjective",
+      "meaning_ko": "애매한",
+      "example_en": "The wording is ambiguous and unclear.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 51
+    },
+    {
+      "lemma": "amount",
+      "pos": "noun",
+      "meaning_ko": "양",
+      "example_en": "The total amount exceeds our budget.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 52
+    },
+    {
+      "lemma": "ample",
+      "pos": "adjective",
+      "meaning_ko": "충분한",
+      "example_en": "There is ample parking behind the building.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 53
+    },
+    {
+      "lemma": "analyze",
+      "pos": "verb",
+      "meaning_ko": "분석하다",
+      "example_en": "We analyze customer feedback weekly.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 54
+    },
+    {
+      "lemma": "announce",
+      "pos": "verb",
+      "meaning_ko": "발표하다",
+      "example_en": "The CEO will announce results tomorrow.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 55
+    },
+    {
+      "lemma": "annual",
+      "pos": "adjective",
+      "meaning_ko": "연간의",
+      "example_en": "Annual revenue increased by eight percent.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 56
+    },
+    {
+      "lemma": "anticipate",
+      "pos": "verb",
+      "meaning_ko": "예상하다",
+      "example_en": "We anticipate strong demand in spring.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 57
+    },
+    {
+      "lemma": "anxious",
+      "pos": "adjective",
+      "meaning_ko": "불안한",
+      "example_en": "Investors are anxious about inflation.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 58
+    },
+    {
+      "lemma": "apologize",
+      "pos": "verb",
+      "meaning_ko": "사과하다",
+      "example_en": "Please apologize for the delay.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 59
+    },
+    {
+      "lemma": "apparent",
+      "pos": "adjective",
+      "meaning_ko": "명백한",
+      "example_en": "It is apparent that costs must fall.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 60
+    },
+    {
+      "lemma": "appeal",
+      "pos": "noun",
+      "meaning_ko": "매력",
+      "example_en": "The product has broad consumer appeal.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 61
+    },
+    {
+      "lemma": "appear",
+      "pos": "verb",
+      "meaning_ko": "나타나다",
+      "example_en": "New options appear on the menu.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 62
+    },
+    {
+      "lemma": "applicant",
+      "pos": "noun",
+      "meaning_ko": "지원자",
+      "example_en": "Each applicant submitted a resume.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 63
+    },
+    {
+      "lemma": "apply",
+      "pos": "verb",
+      "meaning_ko": "지원하다",
+      "example_en": "You may apply online by Friday.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 64
+    },
+    {
+      "lemma": "appoint",
+      "pos": "verb",
+      "meaning_ko": "임명하다",
+      "example_en": "They appointed a new director.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 65
+    },
+    {
+      "lemma": "appreciate",
+      "pos": "verb",
+      "meaning_ko": "감사하다",
+      "example_en": "We appreciate your prompt response.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 66
+    },
+    {
+      "lemma": "approach",
+      "pos": "noun",
+      "meaning_ko": "접근법",
+      "example_en": "Try a different approach to sales.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 67
+    },
+    {
+      "lemma": "appropriate",
+      "pos": "adjective",
+      "meaning_ko": "적절한",
+      "example_en": "Wear appropriate attire to the event.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 68
+    },
+    {
+      "lemma": "approve",
+      "pos": "verb",
+      "meaning_ko": "승인하다",
+      "example_en": "Management approved the proposal.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 69
+    },
+    {
+      "lemma": "approximately",
+      "pos": "adverb",
+      "meaning_ko": "대략",
+      "example_en": "Approximately two hundred people attended.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 70
+    },
+    {
+      "lemma": "architect",
+      "pos": "noun",
+      "meaning_ko": "건축가",
+      "example_en": "The architect revised the blueprints.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 71
+    },
+    {
+      "lemma": "area",
+      "pos": "noun",
+      "meaning_ko": "지역",
+      "example_en": "This area needs better lighting.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 72
+    },
+    {
+      "lemma": "arrange",
+      "pos": "verb",
+      "meaning_ko": "배치하다",
+      "example_en": "Please arrange the chairs in rows.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 73
+    },
+    {
+      "lemma": "article",
+      "pos": "noun",
+      "meaning_ko": "기사",
+      "example_en": "The article discussed market trends.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 74
+    },
+    {
+      "lemma": "artificial",
+      "pos": "adjective",
+      "meaning_ko": "인공의",
+      "example_en": "Artificial lighting replaced natural light.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 75
+    },
+    {
+      "lemma": "aspect",
+      "pos": "noun",
+      "meaning_ko": "측면",
+      "example_en": "Consider every aspect of the deal.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 76
+    },
+    {
+      "lemma": "assemble",
+      "pos": "verb",
+      "meaning_ko": "조립하다",
+      "example_en": "Workers assemble parts on the line.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 77
+    },
+    {
+      "lemma": "assess",
+      "pos": "verb",
+      "meaning_ko": "평가하다",
+      "example_en": "Auditors assess financial statements.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 78
+    },
+    {
+      "lemma": "asset",
+      "pos": "noun",
+      "meaning_ko": "자산",
+      "example_en": "Property is a valuable company asset.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 79
+    },
+    {
+      "lemma": "assign",
+      "pos": "verb",
+      "meaning_ko": "배정하다",
+      "example_en": "Managers assign tasks each morning.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 80
+    },
+    {
+      "lemma": "assist",
+      "pos": "verb",
+      "meaning_ko": "돕다",
+      "example_en": "Staff assist customers at the desk.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 81
+    },
+    {
+      "lemma": "associate",
+      "pos": "noun",
+      "meaning_ko": "동료",
+      "example_en": "She met with a business associate.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 82
+    },
+    {
+      "lemma": "assume",
+      "pos": "verb",
+      "meaning_ko": "가정하다",
+      "example_en": "Do not assume prices will stay low.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 83
+    },
+    {
+      "lemma": "assure",
+      "pos": "verb",
+      "meaning_ko": "보장하다",
+      "example_en": "We assure you of timely delivery.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 84
+    },
+    {
+      "lemma": "attach",
+      "pos": "verb",
+      "meaning_ko": "첨부하다",
+      "example_en": "Attach the file to your email.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 85
+    },
+    {
+      "lemma": "attempt",
+      "pos": "noun",
+      "meaning_ko": "시도",
+      "example_en": "Their attempt failed at first.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 86
+    },
+    {
+      "lemma": "attend",
+      "pos": "verb",
+      "meaning_ko": "참석하다",
+      "example_en": "All staff must attend the briefing.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 87
+    },
+    {
+      "lemma": "attention",
+      "pos": "noun",
+      "meaning_ko": "주의",
+      "example_en": "Pay attention to safety rules.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 88
+    },
+    {
+      "lemma": "attitude",
+      "pos": "noun",
+      "meaning_ko": "태도",
+      "example_en": "A positive attitude improves teamwork.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 89
+    },
+    {
+      "lemma": "attract",
+      "pos": "verb",
+      "meaning_ko": "끌어들이다",
+      "example_en": "The sale should attract new buyers.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 90
+    },
+    {
+      "lemma": "attribute",
+      "pos": "noun",
+      "meaning_ko": "특성",
+      "example_en": "Reliability is a key attribute.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 91
+    },
+    {
+      "lemma": "audience",
+      "pos": "noun",
+      "meaning_ko": "청중",
+      "example_en": "The audience applauded the speaker.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 92
+    },
+    {
+      "lemma": "audit",
+      "pos": "noun",
+      "meaning_ko": "감사",
+      "example_en": "An external audit begins next week.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 93
+    },
+    {
+      "lemma": "authority",
+      "pos": "noun",
+      "meaning_ko": "권한",
+      "example_en": "Only managers have signing authority.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 94
+    },
+    {
+      "lemma": "automatic",
+      "pos": "adjective",
+      "meaning_ko": "자동의",
+      "example_en": "The door has an automatic opener.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 95
+    },
+    {
+      "lemma": "available",
+      "pos": "adjective",
+      "meaning_ko": "이용 가능한",
+      "example_en": "Rooms are available after three.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 96
+    },
+    {
+      "lemma": "average",
+      "pos": "adjective",
+      "meaning_ko": "평균의",
+      "example_en": "Average sales rose last quarter.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 97
+    },
+    {
+      "lemma": "avoid",
+      "pos": "verb",
+      "meaning_ko": "피하다",
+      "example_en": "Avoid delays by ordering early.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 98
+    },
+    {
+      "lemma": "award",
+      "pos": "noun",
+      "meaning_ko": "상",
+      "example_en": "She won an industry award.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 99
+    },
+    {
+      "lemma": "aware",
+      "pos": "adjective",
+      "meaning_ko": "알고 있는",
+      "example_en": "Be aware of updated regulations.",
+      "example_ko": "",
+      "difficulty": 1,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 100
+    },
+    {
+      "lemma": "background",
+      "pos": "noun",
+      "meaning_ko": "배경",
+      "example_en": "Check the applicant's background carefully.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 101
+    },
+    {
+      "lemma": "balance",
+      "pos": "noun",
+      "meaning_ko": "균형",
+      "example_en": "Maintain a balance between cost and quality.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 102
+    },
+    {
+      "lemma": "bankrupt",
+      "pos": "adjective",
+      "meaning_ko": "파산한",
+      "example_en": "The firm went bankrupt last year.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 103
+    },
+    {
+      "lemma": "barrier",
+      "pos": "noun",
+      "meaning_ko": "장벽",
+      "example_en": "Language can be a barrier to trade.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 104
+    },
+    {
+      "lemma": "basis",
+      "pos": "noun",
+      "meaning_ko": "기준",
+      "example_en": "We pay bonuses on a merit basis.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 105
+    },
+    {
+      "lemma": "behalf",
+      "pos": "noun",
+      "meaning_ko": "대표",
+      "example_en": "She spoke on behalf of the team.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 106
+    },
+    {
+      "lemma": "behave",
+      "pos": "verb",
+      "meaning_ko": "행동하다",
+      "example_en": "Employees must behave professionally.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 107
+    },
+    {
+      "lemma": "benefit",
+      "pos": "noun",
+      "meaning_ko": "혜택",
+      "example_en": "Health benefits start after ninety days.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 108
+    },
+    {
+      "lemma": "besides",
+      "pos": "preposition",
+      "meaning_ko": "게다가",
+      "example_en": "Besides salary, we offer training.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "preposition"
+      ],
+      "sort_order": 109
+    },
+    {
+      "lemma": "beware",
+      "pos": "verb",
+      "meaning_ko": "조심하다",
+      "example_en": "Beware of fraudulent emails.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 110
+    },
+    {
+      "lemma": "bid",
+      "pos": "noun",
+      "meaning_ko": "입찰",
+      "example_en": "Our bid was the lowest submitted.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 111
+    },
+    {
+      "lemma": "bill",
+      "pos": "noun",
+      "meaning_ko": "청구서",
+      "example_en": "Please pay the bill by Monday.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 112
+    },
+    {
+      "lemma": "bind",
+      "pos": "verb",
+      "meaning_ko": "구속하다",
+      "example_en": "The contract will bind both parties.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 113
+    },
+    {
+      "lemma": "blank",
+      "pos": "adjective",
+      "meaning_ko": "빈",
+      "example_en": "Leave the last line blank.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 114
+    },
+    {
+      "lemma": "block",
+      "pos": "verb",
+      "meaning_ko": "막다",
+      "example_en": "Construction will block the entrance.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 115
+    },
+    {
+      "lemma": "board",
+      "pos": "noun",
+      "meaning_ko": "이사회",
+      "example_en": "The board meets every quarter.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 116
+    },
+    {
+      "lemma": "bond",
+      "pos": "noun",
+      "meaning_ko": "채권",
+      "example_en": "Investors bought government bonds.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 117
+    },
+    {
+      "lemma": "bonus",
+      "pos": "noun",
+      "meaning_ko": "보너스",
+      "example_en": "Staff received a year-end bonus.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 118
+    },
+    {
+      "lemma": "book",
+      "pos": "verb",
+      "meaning_ko": "예약하다",
+      "example_en": "Book your flight early for discounts.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 119
+    },
+    {
+      "lemma": "boost",
+      "pos": "verb",
+      "meaning_ko": "신장시키다",
+      "example_en": "The ad campaign boosted sales.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 120
+    },
+    {
+      "lemma": "borrow",
+      "pos": "verb",
+      "meaning_ko": "빌리다",
+      "example_en": "We borrow equipment when needed.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 121
+    },
+    {
+      "lemma": "branch",
+      "pos": "noun",
+      "meaning_ko": "지점",
+      "example_en": "The bank opened a new branch downtown.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 122
+    },
+    {
+      "lemma": "brand",
+      "pos": "noun",
+      "meaning_ko": "브랜드",
+      "example_en": "Brand loyalty remains strong.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 123
+    },
+    {
+      "lemma": "breakdown",
+      "pos": "noun",
+      "meaning_ko": "고장",
+      "example_en": "A breakdown halted production briefly.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 124
+    },
+    {
+      "lemma": "brief",
+      "pos": "adjective",
+      "meaning_ko": "간단한",
+      "example_en": "Keep your comments brief and clear.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 125
+    },
+    {
+      "lemma": "briefcase",
+      "pos": "noun",
+      "meaning_ko": "서류가방",
+      "example_en": "He left his briefcase in the taxi.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 126
+    },
+    {
+      "lemma": "bright",
+      "pos": "adjective",
+      "meaning_ko": "밝은",
+      "example_en": "The office has bright natural light.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 127
+    },
+    {
+      "lemma": "bring",
+      "pos": "verb",
+      "meaning_ko": "가져오다",
+      "example_en": "Bring the signed forms to HR.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 128
+    },
+    {
+      "lemma": "broad",
+      "pos": "adjective",
+      "meaning_ko": "넓은",
+      "example_en": "We seek broad market coverage.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 129
+    },
+    {
+      "lemma": "budget",
+      "pos": "noun",
+      "meaning_ko": "예산",
+      "example_en": "The budget allows for new hires.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 130
+    },
+    {
+      "lemma": "build",
+      "pos": "verb",
+      "meaning_ko": "건설하다",
+      "example_en": "They build warehouses near ports.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 131
+    },
+    {
+      "lemma": "bulk",
+      "pos": "noun",
+      "meaning_ko": "대량",
+      "example_en": "Buy in bulk to reduce unit cost.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 132
+    },
+    {
+      "lemma": "bureau",
+      "pos": "noun",
+      "meaning_ko": "국",
+      "example_en": "Contact the tourism bureau for maps.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 133
+    },
+    {
+      "lemma": "business",
+      "pos": "noun",
+      "meaning_ko": "사업",
+      "example_en": "Business improved after the launch.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 134
+    },
+    {
+      "lemma": "busy",
+      "pos": "adjective",
+      "meaning_ko": "바쁜",
+      "example_en": "The front desk is busy today.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 135
+    },
+    {
+      "lemma": "calculate",
+      "pos": "verb",
+      "meaning_ko": "계산하다",
+      "example_en": "Calculate totals before submitting invoices.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 136
+    },
+    {
+      "lemma": "calendar",
+      "pos": "noun",
+      "meaning_ko": "달력",
+      "example_en": "Mark the deadline on your calendar.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 137
+    },
+    {
+      "lemma": "campaign",
+      "pos": "noun",
+      "meaning_ko": "캠페인",
+      "example_en": "The marketing campaign starts in May.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 138
+    },
+    {
+      "lemma": "cancel",
+      "pos": "verb",
+      "meaning_ko": "취소하다",
+      "example_en": "You may cancel within twenty-four hours.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 139
+    },
+    {
+      "lemma": "candidate",
+      "pos": "noun",
+      "meaning_ko": "후보",
+      "example_en": "Three candidates interviewed yesterday.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 140
+    },
+    {
+      "lemma": "capable",
+      "pos": "adjective",
+      "meaning_ko": "유능한",
+      "example_en": "She is capable of managing projects.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 141
+    },
+    {
+      "lemma": "capacity",
+      "pos": "noun",
+      "meaning_ko": "수용력",
+      "example_en": "The venue has capacity for five hundred.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 142
+    },
+    {
+      "lemma": "capital",
+      "pos": "noun",
+      "meaning_ko": "자본",
+      "example_en": "We need capital to expand operations.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 143
+    },
+    {
+      "lemma": "capture",
+      "pos": "verb",
+      "meaning_ko": "포착하다",
+      "example_en": "The photo captures the product well.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 144
+    },
+    {
+      "lemma": "career",
+      "pos": "noun",
+      "meaning_ko": "경력",
+      "example_en": "He built a career in finance.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 145
+    },
+    {
+      "lemma": "careful",
+      "pos": "adjective",
+      "meaning_ko": "조심스러운",
+      "example_en": "Be careful when handling fragile items.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 146
+    },
+    {
+      "lemma": "cargo",
+      "pos": "noun",
+      "meaning_ko": "화물",
+      "example_en": "The cargo arrived at the port.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 147
+    },
+    {
+      "lemma": "carry",
+      "pos": "verb",
+      "meaning_ko": "운반하다",
+      "example_en": "Trucks carry goods across the region.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 148
+    },
+    {
+      "lemma": "case",
+      "pos": "noun",
+      "meaning_ko": "사례",
+      "example_en": "Review each case individually.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 149
+    },
+    {
+      "lemma": "cash",
+      "pos": "noun",
+      "meaning_ko": "현금",
+      "example_en": "We prefer payment in cash.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 150
+    },
+    {
+      "lemma": "catalog",
+      "pos": "noun",
+      "meaning_ko": "카탈로그",
+      "example_en": "Browse our online catalog for prices.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 151
+    },
+    {
+      "lemma": "category",
+      "pos": "noun",
+      "meaning_ko": "범주",
+      "example_en": "Sort items by product category.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 152
+    },
+    {
+      "lemma": "cause",
+      "pos": "noun",
+      "meaning_ko": "원인",
+      "example_en": "Identify the cause of the error.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 153
+    },
+    {
+      "lemma": "caution",
+      "pos": "noun",
+      "meaning_ko": "주의",
+      "example_en": "Proceed with caution during repairs.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 154
+    },
+    {
+      "lemma": "celebrate",
+      "pos": "verb",
+      "meaning_ko": "축하하다",
+      "example_en": "We celebrate milestones with the team.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 155
+    },
+    {
+      "lemma": "cell",
+      "pos": "noun",
+      "meaning_ko": "세포",
+      "example_en": "Lab staff study each cell sample.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 156
+    },
+    {
+      "lemma": "center",
+      "pos": "noun",
+      "meaning_ko": "센터",
+      "example_en": "The training center opens at nine.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 157
+    },
+    {
+      "lemma": "central",
+      "pos": "adjective",
+      "meaning_ko": "중앙의",
+      "example_en": "Our central office handles billing.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 158
+    },
+    {
+      "lemma": "certificate",
+      "pos": "noun",
+      "meaning_ko": "증명서",
+      "example_en": "Bring your certificate to orientation.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 159
+    },
+    {
+      "lemma": "chain",
+      "pos": "noun",
+      "meaning_ko": "체인",
+      "example_en": "The hotel chain expanded overseas.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 160
+    },
+    {
+      "lemma": "chair",
+      "pos": "noun",
+      "meaning_ko": "의장",
+      "example_en": "She was elected chair of the committee.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 161
+    },
+    {
+      "lemma": "challenge",
+      "pos": "noun",
+      "meaning_ko": "도전",
+      "example_en": "Rising costs pose a major challenge.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 162
+    },
+    {
+      "lemma": "chance",
+      "pos": "noun",
+      "meaning_ko": "기회",
+      "example_en": "This is a chance to enter new markets.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 163
+    },
+    {
+      "lemma": "change",
+      "pos": "verb",
+      "meaning_ko": "변화하다",
+      "example_en": "Policies change with new leadership.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 164
+    },
+    {
+      "lemma": "channel",
+      "pos": "noun",
+      "meaning_ko": "채널",
+      "example_en": "Use our online channel for orders.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 165
+    },
+    {
+      "lemma": "character",
+      "pos": "noun",
+      "meaning_ko": "성격",
+      "example_en": "Honesty is part of his character.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 166
+    },
+    {
+      "lemma": "charge",
+      "pos": "verb",
+      "meaning_ko": "청구하다",
+      "example_en": "We charge a fee for rush delivery.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 167
+    },
+    {
+      "lemma": "chart",
+      "pos": "noun",
+      "meaning_ko": "차트",
+      "example_en": "The chart shows monthly growth.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 168
+    },
+    {
+      "lemma": "check",
+      "pos": "verb",
+      "meaning_ko": "확인하다",
+      "example_en": "Check inventory before placing orders.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 169
+    },
+    {
+      "lemma": "chief",
+      "pos": "adjective",
+      "meaning_ko": "수석의",
+      "example_en": "The chief engineer approved the design.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 170
+    },
+    {
+      "lemma": "choice",
+      "pos": "noun",
+      "meaning_ko": "선택",
+      "example_en": "Customers want more product choices.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 171
+    },
+    {
+      "lemma": "choose",
+      "pos": "verb",
+      "meaning_ko": "선택하다",
+      "example_en": "Choose the option that fits your needs.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 172
+    },
+    {
+      "lemma": "circumstance",
+      "pos": "noun",
+      "meaning_ko": "상황",
+      "example_en": "Under no circumstance share passwords.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 173
+    },
+    {
+      "lemma": "cite",
+      "pos": "verb",
+      "meaning_ko": "인용하다",
+      "example_en": "Please cite your sources in the report.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 174
+    },
+    {
+      "lemma": "claim",
+      "pos": "verb",
+      "meaning_ko": "주장하다",
+      "example_en": "He claims the data supports his view.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 175
+    },
+    {
+      "lemma": "clarify",
+      "pos": "verb",
+      "meaning_ko": "명확히 하다",
+      "example_en": "Clarify the terms before signing.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 176
+    },
+    {
+      "lemma": "class",
+      "pos": "noun",
+      "meaning_ko": "등급",
+      "example_en": "This room is first class only.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 177
+    },
+    {
+      "lemma": "classic",
+      "pos": "adjective",
+      "meaning_ko": "고전적인",
+      "example_en": "The design has a classic look.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 178
+    },
+    {
+      "lemma": "classify",
+      "pos": "verb",
+      "meaning_ko": "분류하다",
+      "example_en": "Classify expenses by department.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 179
+    },
+    {
+      "lemma": "clean",
+      "pos": "adjective",
+      "meaning_ko": "깨끗한",
+      "example_en": "Keep workstations clean and organized.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 180
+    },
+    {
+      "lemma": "clear",
+      "pos": "adjective",
+      "meaning_ko": "명확한",
+      "example_en": "Give clear instructions to new hires.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 181
+    },
+    {
+      "lemma": "clerk",
+      "pos": "noun",
+      "meaning_ko": "점원",
+      "example_en": "The clerk processed our return quickly.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 182
+    },
+    {
+      "lemma": "client",
+      "pos": "noun",
+      "meaning_ko": "고객",
+      "example_en": "Each client receives a dedicated manager.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 183
+    },
+    {
+      "lemma": "climate",
+      "pos": "noun",
+      "meaning_ko": "기후",
+      "example_en": "Climate affects agricultural output.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 184
+    },
+    {
+      "lemma": "close",
+      "pos": "verb",
+      "meaning_ko": "마감하다",
+      "example_en": "We close accounts at month end.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 185
+    },
+    {
+      "lemma": "closure",
+      "pos": "noun",
+      "meaning_ko": "폐쇄",
+      "example_en": "The factory closure affected many workers.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 186
+    },
+    {
+      "lemma": "clue",
+      "pos": "noun",
+      "meaning_ko": "단서",
+      "example_en": "The email provides a clue about timing.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 187
+    },
+    {
+      "lemma": "coast",
+      "pos": "noun",
+      "meaning_ko": "해안",
+      "example_en": "Shipments move along the coast.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 188
+    },
+    {
+      "lemma": "code",
+      "pos": "noun",
+      "meaning_ko": "코드",
+      "example_en": "Enter the access code at the gate.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 189
+    },
+    {
+      "lemma": "coin",
+      "pos": "noun",
+      "meaning_ko": "동전",
+      "example_en": "The machine accepts coins and bills.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 190
+    },
+    {
+      "lemma": "collapse",
+      "pos": "verb",
+      "meaning_ko": "붕괴하다",
+      "example_en": "Prices may collapse if demand falls.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 191
+    },
+    {
+      "lemma": "colleague",
+      "pos": "noun",
+      "meaning_ko": "동료",
+      "example_en": "Ask a colleague to review the draft.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 192
+    },
+    {
+      "lemma": "collect",
+      "pos": "verb",
+      "meaning_ko": "수집하다",
+      "example_en": "We collect feedback after each event.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 193
+    },
+    {
+      "lemma": "collection",
+      "pos": "noun",
+      "meaning_ko": "수집",
+      "example_en": "A data collection starts on Monday.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 194
+    },
+    {
+      "lemma": "combine",
+      "pos": "verb",
+      "meaning_ko": "결합하다",
+      "example_en": "Combine teams to finish faster.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 195
+    },
+    {
+      "lemma": "comfort",
+      "pos": "noun",
+      "meaning_ko": "편안함",
+      "example_en": "Guest comfort is our priority.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 196
+    },
+    {
+      "lemma": "command",
+      "pos": "noun",
+      "meaning_ko": "명령",
+      "example_en": "He issued a command to halt work.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 197
+    },
+    {
+      "lemma": "comment",
+      "pos": "noun",
+      "meaning_ko": "코멘트",
+      "example_en": "Leave a comment on the proposal.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 198
+    },
+    {
+      "lemma": "commerce",
+      "pos": "noun",
+      "meaning_ko": "상업",
+      "example_en": "E-commerce drives much of our growth.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 199
+    },
+    {
+      "lemma": "commercial",
+      "pos": "adjective",
+      "meaning_ko": "상업의",
+      "example_en": "The commercial district is expanding.",
+      "example_ko": "",
+      "difficulty": 2,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 200
+    },
+    {
+      "lemma": "commission",
+      "pos": "noun",
+      "meaning_ko": "수수료",
+      "example_en": "Sales staff earn a commission.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 201
+    },
+    {
+      "lemma": "commit",
+      "pos": "verb",
+      "meaning_ko": "약속하다",
+      "example_en": "We commit to meeting deadlines.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 202
+    },
+    {
+      "lemma": "committee",
+      "pos": "noun",
+      "meaning_ko": "위원회",
+      "example_en": "The committee will vote on Friday.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 203
+    },
+    {
+      "lemma": "common",
+      "pos": "adjective",
+      "meaning_ko": "흔한",
+      "example_en": "Delays are common during peak season.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 204
+    },
+    {
+      "lemma": "communicate",
+      "pos": "verb",
+      "meaning_ko": "의사소통하다",
+      "example_en": "Teams communicate through shared tools.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 205
+    },
+    {
+      "lemma": "community",
+      "pos": "noun",
+      "meaning_ko": "지역사회",
+      "example_en": "The firm supports the local community.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 206
+    },
+    {
+      "lemma": "company",
+      "pos": "noun",
+      "meaning_ko": "회사",
+      "example_en": "Our company exports to twelve nations.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 207
+    },
+    {
+      "lemma": "compare",
+      "pos": "verb",
+      "meaning_ko": "비교하다",
+      "example_en": "Compare prices before you buy.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 208
+    },
+    {
+      "lemma": "compensate",
+      "pos": "verb",
+      "meaning_ko": "보상하다",
+      "example_en": "We compensate staff for overtime work.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 209
+    },
+    {
+      "lemma": "compete",
+      "pos": "verb",
+      "meaning_ko": "경쟁하다",
+      "example_en": "Small firms compete on service quality.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 210
+    },
+    {
+      "lemma": "competition",
+      "pos": "noun",
+      "meaning_ko": "경쟁",
+      "example_en": "Competition pushed prices lower.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 211
+    },
+    {
+      "lemma": "complain",
+      "pos": "verb",
+      "meaning_ko": "불평하다",
+      "example_en": "Customers complain about slow support.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 212
+    },
+    {
+      "lemma": "complete",
+      "pos": "verb",
+      "meaning_ko": "완료하다",
+      "example_en": "Complete the form before noon.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 213
+    },
+    {
+      "lemma": "complex",
+      "pos": "adjective",
+      "meaning_ko": "복잡한",
+      "example_en": "The contract terms are complex.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 214
+    },
+    {
+      "lemma": "complicate",
+      "pos": "verb",
+      "meaning_ko": "복잡하게 하다",
+      "example_en": "Delays complicate the shipping plan.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 215
+    },
+    {
+      "lemma": "component",
+      "pos": "noun",
+      "meaning_ko": "구성요소",
+      "example_en": "Each component is tested separately.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 216
+    },
+    {
+      "lemma": "compose",
+      "pos": "verb",
+      "meaning_ko": "작성하다",
+      "example_en": "Compose a reply within one business day.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 217
+    },
+    {
+      "lemma": "compound",
+      "pos": "noun",
+      "meaning_ko": "화합물",
+      "example_en": "The lab stores each compound safely.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 218
+    },
+    {
+      "lemma": "comprehensive",
+      "pos": "adjective",
+      "meaning_ko": "포괄적인",
+      "example_en": "We offer comprehensive training programs.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 219
+    },
+    {
+      "lemma": "compress",
+      "pos": "verb",
+      "meaning_ko": "압축하다",
+      "example_en": "Compress files before you upload them.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 220
+    },
+    {
+      "lemma": "comprise",
+      "pos": "verb",
+      "meaning_ko": "구성하다",
+      "example_en": "Women comprise half of the workforce.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 221
+    },
+    {
+      "lemma": "compute",
+      "pos": "verb",
+      "meaning_ko": "계산하다",
+      "example_en": "Systems compute tax automatically.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 222
+    },
+    {
+      "lemma": "concentrate",
+      "pos": "verb",
+      "meaning_ko": "집중하다",
+      "example_en": "Concentrate on tasks with highest impact.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 223
+    },
+    {
+      "lemma": "concept",
+      "pos": "noun",
+      "meaning_ko": "개념",
+      "example_en": "The concept needs clearer explanation.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 224
+    },
+    {
+      "lemma": "concern",
+      "pos": "noun",
+      "meaning_ko": "우려",
+      "example_en": "Investors expressed concern about debt.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 225
+    },
+    {
+      "lemma": "conclude",
+      "pos": "verb",
+      "meaning_ko": "결론짓다",
+      "example_en": "We conclude the meeting at four.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 226
+    },
+    {
+      "lemma": "concrete",
+      "pos": "adjective",
+      "meaning_ko": "구체적인",
+      "example_en": "Give concrete examples in your report.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 227
+    },
+    {
+      "lemma": "condition",
+      "pos": "noun",
+      "meaning_ko": "조건",
+      "example_en": "Products must meet safety conditions.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 228
+    },
+    {
+      "lemma": "conduct",
+      "pos": "verb",
+      "meaning_ko": "수행하다",
+      "example_en": "We conduct audits every year.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 229
+    },
+    {
+      "lemma": "conference",
+      "pos": "noun",
+      "meaning_ko": "회의",
+      "example_en": "The conference draws global attendees.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 230
+    },
+    {
+      "lemma": "confidence",
+      "pos": "noun",
+      "meaning_ko": "신뢰",
+      "example_en": "Client confidence rose after the launch.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 231
+    },
+    {
+      "lemma": "confirm",
+      "pos": "verb",
+      "meaning_ko": "확인하다",
+      "example_en": "Please confirm your attendance today.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 232
+    },
+    {
+      "lemma": "conflict",
+      "pos": "noun",
+      "meaning_ko": "갈등",
+      "example_en": "Avoid conflict by setting clear roles.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 233
+    },
+    {
+      "lemma": "confuse",
+      "pos": "verb",
+      "meaning_ko": "혼란스럽게 하다",
+      "example_en": "Similar labels confuse many buyers.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 234
+    },
+    {
+      "lemma": "connect",
+      "pos": "verb",
+      "meaning_ko": "연결하다",
+      "example_en": "Connect the printer to the network.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 235
+    },
+    {
+      "lemma": "consent",
+      "pos": "noun",
+      "meaning_ko": "동의",
+      "example_en": "We need written consent from clients.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 236
+    },
+    {
+      "lemma": "consequence",
+      "pos": "noun",
+      "meaning_ko": "결과",
+      "example_en": "Consider the consequence of each choice.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 237
+    },
+    {
+      "lemma": "consider",
+      "pos": "verb",
+      "meaning_ko": "고려하다",
+      "example_en": "Consider all bids before deciding.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 238
+    },
+    {
+      "lemma": "consist",
+      "pos": "verb",
+      "meaning_ko": "구성되다",
+      "example_en": "The kit consists of ten parts.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 239
+    },
+    {
+      "lemma": "consistent",
+      "pos": "adjective",
+      "meaning_ko": "일관된",
+      "example_en": "We need consistent quality standards.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 240
+    },
+    {
+      "lemma": "constant",
+      "pos": "adjective",
+      "meaning_ko": "지속적인",
+      "example_en": "There is constant demand for updates.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 241
+    },
+    {
+      "lemma": "construct",
+      "pos": "verb",
+      "meaning_ko": "건설하다",
+      "example_en": "They construct offices near transit hubs.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 242
+    },
+    {
+      "lemma": "consult",
+      "pos": "verb",
+      "meaning_ko": "상담하다",
+      "example_en": "Consult legal counsel before signing.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 243
+    },
+    {
+      "lemma": "consumer",
+      "pos": "noun",
+      "meaning_ko": "소비자",
+      "example_en": "Consumer tastes shift quickly online.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 244
+    },
+    {
+      "lemma": "contact",
+      "pos": "verb",
+      "meaning_ko": "연락하다",
+      "example_en": "Contact support if issues persist.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 245
+    },
+    {
+      "lemma": "contain",
+      "pos": "verb",
+      "meaning_ko": "포함하다",
+      "example_en": "Each box contains twenty units.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 246
+    },
+    {
+      "lemma": "content",
+      "pos": "noun",
+      "meaning_ko": "내용",
+      "example_en": "Update the website content monthly.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 247
+    },
+    {
+      "lemma": "contest",
+      "pos": "noun",
+      "meaning_ko": "대회",
+      "example_en": "Staff entered a photo contest.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 248
+    },
+    {
+      "lemma": "context",
+      "pos": "noun",
+      "meaning_ko": "맥락",
+      "example_en": "Read the clause in full context.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 249
+    },
+    {
+      "lemma": "continue",
+      "pos": "verb",
+      "meaning_ko": "계속하다",
+      "example_en": "Work will continue through the weekend.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 250
+    },
+    {
+      "lemma": "contract",
+      "pos": "noun",
+      "meaning_ko": "계약",
+      "example_en": "Both sides signed the contract yesterday.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 251
+    },
+    {
+      "lemma": "contrary",
+      "pos": "adjective",
+      "meaning_ko": "반대의",
+      "example_en": "Contrary reports caused market confusion.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 252
+    },
+    {
+      "lemma": "contrast",
+      "pos": "noun",
+      "meaning_ko": "대조",
+      "example_en": "The ad uses contrast to highlight features.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 253
+    },
+    {
+      "lemma": "contribute",
+      "pos": "verb",
+      "meaning_ko": "기여하다",
+      "example_en": "Volunteers contribute time each month.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 254
+    },
+    {
+      "lemma": "control",
+      "pos": "verb",
+      "meaning_ko": "통제하다",
+      "example_en": "Managers control spending by department.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 255
+    },
+    {
+      "lemma": "convenient",
+      "pos": "adjective",
+      "meaning_ko": "편리한",
+      "example_en": "Online booking is more convenient.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 256
+    },
+    {
+      "lemma": "convention",
+      "pos": "noun",
+      "meaning_ko": "대회",
+      "example_en": "The industry convention starts next week.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 257
+    },
+    {
+      "lemma": "convert",
+      "pos": "verb",
+      "meaning_ko": "전환하다",
+      "example_en": "Convert the file to PDF format.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 258
+    },
+    {
+      "lemma": "convince",
+      "pos": "verb",
+      "meaning_ko": "설득하다",
+      "example_en": "Data helped convince the board to invest.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 259
+    },
+    {
+      "lemma": "cooperate",
+      "pos": "verb",
+      "meaning_ko": "협력하다",
+      "example_en": "Departments must cooperate on the rollout.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 260
+    },
+    {
+      "lemma": "coordinate",
+      "pos": "verb",
+      "meaning_ko": "조율하다",
+      "example_en": "She coordinates schedules for all teams.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 261
+    },
+    {
+      "lemma": "copy",
+      "pos": "noun",
+      "meaning_ko": "사본",
+      "example_en": "Keep a copy of every signed document.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 262
+    },
+    {
+      "lemma": "core",
+      "pos": "adjective",
+      "meaning_ko": "핵심의",
+      "example_en": "Security is a core company value.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 263
+    },
+    {
+      "lemma": "corporate",
+      "pos": "adjective",
+      "meaning_ko": "기업의",
+      "example_en": "Corporate policy bans personal devices.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 264
+    },
+    {
+      "lemma": "correct",
+      "pos": "adjective",
+      "meaning_ko": "올바른",
+      "example_en": "Submit the correct form to payroll.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 265
+    },
+    {
+      "lemma": "correspond",
+      "pos": "verb",
+      "meaning_ko": "해당하다",
+      "example_en": "Prices correspond to service levels.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 266
+    },
+    {
+      "lemma": "cost",
+      "pos": "noun",
+      "meaning_ko": "비용",
+      "example_en": "Labor cost rose more than expected.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 267
+    },
+    {
+      "lemma": "council",
+      "pos": "noun",
+      "meaning_ko": "협의회",
+      "example_en": "The city council approved the permit.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 268
+    },
+    {
+      "lemma": "counsel",
+      "pos": "noun",
+      "meaning_ko": "조언",
+      "example_en": "Seek legal counsel before litigation.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 269
+    },
+    {
+      "lemma": "count",
+      "pos": "verb",
+      "meaning_ko": "세다",
+      "example_en": "Count units before sealing each box.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 270
+    },
+    {
+      "lemma": "counter",
+      "pos": "noun",
+      "meaning_ko": "카운터",
+      "example_en": "Pick up badges at the front counter.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 271
+    },
+    {
+      "lemma": "country",
+      "pos": "noun",
+      "meaning_ko": "국가",
+      "example_en": "We export to over thirty countries.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 272
+    },
+    {
+      "lemma": "coupon",
+      "pos": "noun",
+      "meaning_ko": "쿠폰",
+      "example_en": "Use this coupon before it expires.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 273
+    },
+    {
+      "lemma": "course",
+      "pos": "noun",
+      "meaning_ko": "과정",
+      "example_en": "Enroll in the safety course online.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 274
+    },
+    {
+      "lemma": "cover",
+      "pos": "verb",
+      "meaning_ko": "다루다",
+      "example_en": "The manual covers basic procedures.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 275
+    },
+    {
+      "lemma": "create",
+      "pos": "verb",
+      "meaning_ko": "만들다",
+      "example_en": "Teams create prototypes in the lab.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 276
+    },
+    {
+      "lemma": "credit",
+      "pos": "noun",
+      "meaning_ko": "신용",
+      "example_en": "We extended credit to loyal clients.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 277
+    },
+    {
+      "lemma": "crew",
+      "pos": "noun",
+      "meaning_ko": "승무원",
+      "example_en": "The flight crew boarded early today.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 278
+    },
+    {
+      "lemma": "crisis",
+      "pos": "noun",
+      "meaning_ko": "위기",
+      "example_en": "The firm managed the crisis well.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 279
+    },
+    {
+      "lemma": "criterion",
+      "pos": "noun",
+      "meaning_ko": "기준",
+      "example_en": "Price is one criterion for selection.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 280
+    },
+    {
+      "lemma": "critical",
+      "pos": "adjective",
+      "meaning_ko": "중요한",
+      "example_en": "Timing is critical for this launch.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 281
+    },
+    {
+      "lemma": "crop",
+      "pos": "noun",
+      "meaning_ko": "작물",
+      "example_en": "A poor crop reduced export volume.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 282
+    },
+    {
+      "lemma": "cross",
+      "pos": "verb",
+      "meaning_ko": "건너다",
+      "example_en": "Trucks cross the border at dawn.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 283
+    },
+    {
+      "lemma": "crowd",
+      "pos": "noun",
+      "meaning_ko": "군중",
+      "example_en": "A large crowd gathered at the sale.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 284
+    },
+    {
+      "lemma": "crucial",
+      "pos": "adjective",
+      "meaning_ko": "결정적인",
+      "example_en": "Lead time is crucial for retailers.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 285
+    },
+    {
+      "lemma": "culture",
+      "pos": "noun",
+      "meaning_ko": "문화",
+      "example_en": "Company culture supports innovation.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 286
+    },
+    {
+      "lemma": "currency",
+      "pos": "noun",
+      "meaning_ko": "통화",
+      "example_en": "Currency swings affect import prices.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 287
+    },
+    {
+      "lemma": "current",
+      "pos": "adjective",
+      "meaning_ko": "현재의",
+      "example_en": "Review current policies with HR.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 288
+    },
+    {
+      "lemma": "curriculum",
+      "pos": "noun",
+      "meaning_ko": "교육과정",
+      "example_en": "The curriculum includes safety modules.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 289
+    },
+    {
+      "lemma": "custom",
+      "pos": "noun",
+      "meaning_ko": "관습",
+      "example_en": "It is custom to greet clients formally.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 290
+    },
+    {
+      "lemma": "customer",
+      "pos": "noun",
+      "meaning_ko": "고객",
+      "example_en": "Customer feedback drives product changes.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 291
+    },
+    {
+      "lemma": "cycle",
+      "pos": "noun",
+      "meaning_ko": "주기",
+      "example_en": "The billing cycle ends on the fifteenth.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 292
+    },
+    {
+      "lemma": "daily",
+      "pos": "adjective",
+      "meaning_ko": "일일의",
+      "example_en": "Read the daily report each morning.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 293
+    },
+    {
+      "lemma": "damage",
+      "pos": "noun",
+      "meaning_ko": "손상",
+      "example_en": "Inspect goods for damage on arrival.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 294
+    },
+    {
+      "lemma": "danger",
+      "pos": "noun",
+      "meaning_ko": "위험",
+      "example_en": "Mark areas of danger with signs.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 295
+    },
+    {
+      "lemma": "data",
+      "pos": "noun",
+      "meaning_ko": "데이터",
+      "example_en": "Secure data stored on company servers.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 296
+    },
+    {
+      "lemma": "database",
+      "pos": "noun",
+      "meaning_ko": "데이터베이스",
+      "example_en": "Update the client database weekly.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 297
+    },
+    {
+      "lemma": "date",
+      "pos": "noun",
+      "meaning_ko": "날짜",
+      "example_en": "Confirm the delivery date in writing.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 298
+    },
+    {
+      "lemma": "deadline",
+      "pos": "noun",
+      "meaning_ko": "마감일",
+      "example_en": "The deadline for bids is Friday.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 299
+    },
+    {
+      "lemma": "deal",
+      "pos": "noun",
+      "meaning_ko": "거래",
+      "example_en": "They closed the deal after long talks.",
+      "example_ko": "",
+      "difficulty": 3,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 300
+    },
+    {
+      "lemma": "debate",
+      "pos": "noun",
+      "meaning_ko": "토론",
+      "example_en": "A debate on fees lasted two hours.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 301
+    },
+    {
+      "lemma": "debt",
+      "pos": "noun",
+      "meaning_ko": "부채",
+      "example_en": "The firm reduced debt last quarter.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 302
+    },
+    {
+      "lemma": "decade",
+      "pos": "noun",
+      "meaning_ko": "10년",
+      "example_en": "Sales doubled over the past decade.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 303
+    },
+    {
+      "lemma": "decide",
+      "pos": "verb",
+      "meaning_ko": "결정하다",
+      "example_en": "We decide after reviewing all options.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 304
+    },
+    {
+      "lemma": "decision",
+      "pos": "noun",
+      "meaning_ko": "결정",
+      "example_en": "The decision takes effect immediately.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 305
+    },
+    {
+      "lemma": "declare",
+      "pos": "verb",
+      "meaning_ko": "선언하다",
+      "example_en": "The CEO declared strong quarterly results.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 306
+    },
+    {
+      "lemma": "decline",
+      "pos": "verb",
+      "meaning_ko": "감소하다",
+      "example_en": "Orders declined during the slow season.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 307
+    },
+    {
+      "lemma": "decrease",
+      "pos": "verb",
+      "meaning_ko": "줄이다",
+      "example_en": "We decreased spending on travel.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 308
+    },
+    {
+      "lemma": "dedicate",
+      "pos": "verb",
+      "meaning_ko": "헌신하다",
+      "example_en": "She dedicates time to mentor interns.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 309
+    },
+    {
+      "lemma": "deduct",
+      "pos": "verb",
+      "meaning_ko": "공제하다",
+      "example_en": "Taxes deduct from each paycheck.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 310
+    },
+    {
+      "lemma": "defect",
+      "pos": "noun",
+      "meaning_ko": "결함",
+      "example_en": "Report any defect within seven days.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 311
+    },
+    {
+      "lemma": "defend",
+      "pos": "verb",
+      "meaning_ko": "옹호하다",
+      "example_en": "Lawyers defend the firm in court.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 312
+    },
+    {
+      "lemma": "define",
+      "pos": "verb",
+      "meaning_ko": "정의하다",
+      "example_en": "Define roles before the project starts.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 313
+    },
+    {
+      "lemma": "degree",
+      "pos": "noun",
+      "meaning_ko": "학위",
+      "example_en": "A degree in finance is preferred.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 314
+    },
+    {
+      "lemma": "delay",
+      "pos": "noun",
+      "meaning_ko": "지연",
+      "example_en": "Weather caused a delay in shipments.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 315
+    },
+    {
+      "lemma": "delegate",
+      "pos": "verb",
+      "meaning_ko": "위임하다",
+      "example_en": "Managers delegate tasks to team leads.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 316
+    },
+    {
+      "lemma": "deliver",
+      "pos": "verb",
+      "meaning_ko": "배달하다",
+      "example_en": "Couriers deliver packages by six.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 317
+    },
+    {
+      "lemma": "delivery",
+      "pos": "noun",
+      "meaning_ko": "배송",
+      "example_en": "Track delivery status on our website.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 318
+    },
+    {
+      "lemma": "demand",
+      "pos": "noun",
+      "meaning_ko": "수요",
+      "example_en": "Demand surged after the promotion.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 319
+    },
+    {
+      "lemma": "demonstrate",
+      "pos": "verb",
+      "meaning_ko": "증명하다",
+      "example_en": "Tests demonstrate improved battery life.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 320
+    },
+    {
+      "lemma": "deny",
+      "pos": "verb",
+      "meaning_ko": "부인하다",
+      "example_en": "He denied any wrongdoing in the audit.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 321
+    },
+    {
+      "lemma": "department",
+      "pos": "noun",
+      "meaning_ko": "부서",
+      "example_en": "Contact the IT department for access.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 322
+    },
+    {
+      "lemma": "depend",
+      "pos": "verb",
+      "meaning_ko": "의존하다",
+      "example_en": "Results depend on market conditions.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 323
+    },
+    {
+      "lemma": "deposit",
+      "pos": "noun",
+      "meaning_ko": "보증금",
+      "example_en": "Pay a deposit to reserve the venue.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 324
+    },
+    {
+      "lemma": "depress",
+      "pos": "verb",
+      "meaning_ko": "위축시키다",
+      "example_en": "High rates depress consumer spending.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 325
+    },
+    {
+      "lemma": "describe",
+      "pos": "verb",
+      "meaning_ko": "설명하다",
+      "example_en": "Describe the issue in detail please.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 326
+    },
+    {
+      "lemma": "design",
+      "pos": "noun",
+      "meaning_ko": "디자인",
+      "example_en": "The design won an industry award.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 327
+    },
+    {
+      "lemma": "desire",
+      "pos": "noun",
+      "meaning_ko": "욕구",
+      "example_en": "There is strong desire for faster service.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 328
+    },
+    {
+      "lemma": "desk",
+      "pos": "noun",
+      "meaning_ko": "책상",
+      "example_en": "Leave forms at the front desk.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 329
+    },
+    {
+      "lemma": "despite",
+      "pos": "preposition",
+      "meaning_ko": "~에도 불구하고",
+      "example_en": "Despite rain, attendance was high.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "preposition"
+      ],
+      "sort_order": 330
+    },
+    {
+      "lemma": "destination",
+      "pos": "noun",
+      "meaning_ko": "목적지",
+      "example_en": "Enter your destination in the app.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 331
+    },
+    {
+      "lemma": "destroy",
+      "pos": "verb",
+      "meaning_ko": "파괴하다",
+      "example_en": "Fire destroyed part of the warehouse.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 332
+    },
+    {
+      "lemma": "detail",
+      "pos": "noun",
+      "meaning_ko": "세부사항",
+      "example_en": "Review every detail before approval.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 333
+    },
+    {
+      "lemma": "detect",
+      "pos": "verb",
+      "meaning_ko": "탐지하다",
+      "example_en": "Sensors detect motion after hours.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 334
+    },
+    {
+      "lemma": "determine",
+      "pos": "verb",
+      "meaning_ko": "결정하다",
+      "example_en": "Tests determine whether items pass.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 335
+    },
+    {
+      "lemma": "develop",
+      "pos": "verb",
+      "meaning_ko": "개발하다",
+      "example_en": "Teams develop software in agile sprints.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 336
+    },
+    {
+      "lemma": "device",
+      "pos": "noun",
+      "meaning_ko": "기기",
+      "example_en": "Each device requires a unique login.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 337
+    },
+    {
+      "lemma": "devote",
+      "pos": "verb",
+      "meaning_ko": "바치다",
+      "example_en": "She devotes weekends to training staff.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 338
+    },
+    {
+      "lemma": "diagram",
+      "pos": "noun",
+      "meaning_ko": "도표",
+      "example_en": "The diagram shows the workflow clearly.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 339
+    },
+    {
+      "lemma": "differ",
+      "pos": "verb",
+      "meaning_ko": "다르다",
+      "example_en": "Prices differ by region and season.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 340
+    },
+    {
+      "lemma": "difference",
+      "pos": "noun",
+      "meaning_ko": "차이",
+      "example_en": "Note the difference between the two plans.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 341
+    },
+    {
+      "lemma": "different",
+      "pos": "adjective",
+      "meaning_ko": "다른",
+      "example_en": "We offer different plans for small firms.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 342
+    },
+    {
+      "lemma": "difficult",
+      "pos": "adjective",
+      "meaning_ko": "어려운",
+      "example_en": "The upgrade proved difficult to finish.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 343
+    },
+    {
+      "lemma": "digital",
+      "pos": "adjective",
+      "meaning_ko": "디지털의",
+      "example_en": "Digital receipts replace paper copies.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 344
+    },
+    {
+      "lemma": "dimension",
+      "pos": "noun",
+      "meaning_ko": "치수",
+      "example_en": "Check the dimension before ordering parts.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 345
+    },
+    {
+      "lemma": "direct",
+      "pos": "verb",
+      "meaning_ko": "안내하다",
+      "example_en": "Staff direct visitors to the lobby.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 346
+    },
+    {
+      "lemma": "direction",
+      "pos": "noun",
+      "meaning_ko": "방향",
+      "example_en": "New direction came from senior leadership.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 347
+    },
+    {
+      "lemma": "directly",
+      "pos": "adverb",
+      "meaning_ko": "직접",
+      "example_en": "Speak directly with the project lead.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 348
+    },
+    {
+      "lemma": "director",
+      "pos": "noun",
+      "meaning_ko": "이사",
+      "example_en": "The director approved the hiring plan.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 349
+    },
+    {
+      "lemma": "disability",
+      "pos": "noun",
+      "meaning_ko": "장애",
+      "example_en": "We provide access for disability needs.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 350
+    },
+    {
+      "lemma": "disagree",
+      "pos": "verb",
+      "meaning_ko": "동의하지 않다",
+      "example_en": "Auditors disagree on one line item.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 351
+    },
+    {
+      "lemma": "disappear",
+      "pos": "verb",
+      "meaning_ko": "사라지다",
+      "example_en": "Stock disappeared from shelves quickly.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 352
+    },
+    {
+      "lemma": "disappoint",
+      "pos": "verb",
+      "meaning_ko": "실망시키다",
+      "example_en": "Delays disappoint many loyal clients.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 353
+    },
+    {
+      "lemma": "disaster",
+      "pos": "noun",
+      "meaning_ko": "재난",
+      "example_en": "A disaster plan is posted in each office.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 354
+    },
+    {
+      "lemma": "discipline",
+      "pos": "noun",
+      "meaning_ko": "규율",
+      "example_en": "Discipline improves safety on the floor.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 355
+    },
+    {
+      "lemma": "discount",
+      "pos": "noun",
+      "meaning_ko": "할인",
+      "example_en": "Members receive a ten percent discount.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 356
+    },
+    {
+      "lemma": "discover",
+      "pos": "verb",
+      "meaning_ko": "발견하다",
+      "example_en": "Researchers discover flaws during testing.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 357
+    },
+    {
+      "lemma": "discuss",
+      "pos": "verb",
+      "meaning_ko": "논의하다",
+      "example_en": "Teams discuss budgets every quarter.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 358
+    },
+    {
+      "lemma": "disease",
+      "pos": "noun",
+      "meaning_ko": "질병",
+      "example_en": "Insurance covers treatment for disease.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 359
+    },
+    {
+      "lemma": "display",
+      "pos": "verb",
+      "meaning_ko": "전시하다",
+      "example_en": "Stores display new models near entrances.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 360
+    },
+    {
+      "lemma": "dispose",
+      "pos": "verb",
+      "meaning_ko": "처분하다",
+      "example_en": "Dispose of chemicals following safety rules.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 361
+    },
+    {
+      "lemma": "distinct",
+      "pos": "adjective",
+      "meaning_ko": "뚜렷한",
+      "example_en": "Each brand has a distinct logo style.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 362
+    },
+    {
+      "lemma": "distinction",
+      "pos": "noun",
+      "meaning_ko": "차별",
+      "example_en": "There is a clear distinction in quality.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 363
+    },
+    {
+      "lemma": "distinguish",
+      "pos": "verb",
+      "meaning_ko": "구별하다",
+      "example_en": "Labels help distinguish similar products.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 364
+    },
+    {
+      "lemma": "distribute",
+      "pos": "verb",
+      "meaning_ko": "배포하다",
+      "example_en": "We distribute catalogs to all branches.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 365
+    },
+    {
+      "lemma": "district",
+      "pos": "noun",
+      "meaning_ko": "지구",
+      "example_en": "The business district is expanding west.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 366
+    },
+    {
+      "lemma": "disturb",
+      "pos": "verb",
+      "meaning_ko": "방해하다",
+      "example_en": "Do not disturb staff during the audit.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 367
+    },
+    {
+      "lemma": "diverse",
+      "pos": "adjective",
+      "meaning_ko": "다양한",
+      "example_en": "We hire diverse talent from many fields.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 368
+    },
+    {
+      "lemma": "divide",
+      "pos": "verb",
+      "meaning_ko": "나누다",
+      "example_en": "Divide tasks among three project groups.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 369
+    },
+    {
+      "lemma": "division",
+      "pos": "noun",
+      "meaning_ko": "부문",
+      "example_en": "The sales division met on Tuesday.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 370
+    },
+    {
+      "lemma": "document",
+      "pos": "noun",
+      "meaning_ko": "문서",
+      "example_en": "Upload each document to the shared drive.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 371
+    },
+    {
+      "lemma": "domestic",
+      "pos": "adjective",
+      "meaning_ko": "국내의",
+      "example_en": "Domestic sales outpaced exports this year.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 372
+    },
+    {
+      "lemma": "dominate",
+      "pos": "verb",
+      "meaning_ko": "지배하다",
+      "example_en": "One brand dominates the online market.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 373
+    },
+    {
+      "lemma": "donate",
+      "pos": "verb",
+      "meaning_ko": "기부하다",
+      "example_en": "Employees donate to local charities yearly.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 374
+    },
+    {
+      "lemma": "draft",
+      "pos": "noun",
+      "meaning_ko": "초안",
+      "example_en": "Send a draft by end of day Friday.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 375
+    },
+    {
+      "lemma": "dramatic",
+      "pos": "adjective",
+      "meaning_ko": "극적인",
+      "example_en": "We saw dramatic growth in mobile orders.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 376
+    },
+    {
+      "lemma": "draw",
+      "pos": "verb",
+      "meaning_ko": "끌어들이다",
+      "example_en": "The event drew record attendance.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 377
+    },
+    {
+      "lemma": "drive",
+      "pos": "verb",
+      "meaning_ko": "운전하다",
+      "example_en": "Drivers deliver goods across the region.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 378
+    },
+    {
+      "lemma": "due",
+      "pos": "adjective",
+      "meaning_ko": "마감인",
+      "example_en": "Payment is due on the first of month.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 379
+    },
+    {
+      "lemma": "duration",
+      "pos": "noun",
+      "meaning_ko": "기간",
+      "example_en": "The duration of the course is six weeks.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 380
+    },
+    {
+      "lemma": "duty",
+      "pos": "noun",
+      "meaning_ko": "의무",
+      "example_en": "It is your duty to report safety issues.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 381
+    },
+    {
+      "lemma": "dynamic",
+      "pos": "adjective",
+      "meaning_ko": "역동적인",
+      "example_en": "We need dynamic leaders for new units.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 382
+    },
+    {
+      "lemma": "each",
+      "pos": "determiner",
+      "meaning_ko": "각각",
+      "example_en": "Each employee receives a badge.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "determiner"
+      ],
+      "sort_order": 383
+    },
+    {
+      "lemma": "early",
+      "pos": "adjective",
+      "meaning_ko": "이른",
+      "example_en": "Early orders qualify for free shipping.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 384
+    },
+    {
+      "lemma": "earn",
+      "pos": "verb",
+      "meaning_ko": "벌다",
+      "example_en": "Top reps earn bonuses each quarter.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 385
+    },
+    {
+      "lemma": "ease",
+      "pos": "noun",
+      "meaning_ko": "완화",
+      "example_en": "New tools ease daily reporting work.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 386
+    },
+    {
+      "lemma": "economic",
+      "pos": "adjective",
+      "meaning_ko": "경제의",
+      "example_en": "Economic growth slowed last quarter.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 387
+    },
+    {
+      "lemma": "economy",
+      "pos": "noun",
+      "meaning_ko": "경제",
+      "example_en": "The economy affects hiring plans greatly.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 388
+    },
+    {
+      "lemma": "edge",
+      "pos": "noun",
+      "meaning_ko": "우위",
+      "example_en": "Innovation gives us an edge over rivals.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 389
+    },
+    {
+      "lemma": "edit",
+      "pos": "verb",
+      "meaning_ko": "편집하다",
+      "example_en": "Please edit the brochure before printing.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 390
+    },
+    {
+      "lemma": "edition",
+      "pos": "noun",
+      "meaning_ko": "판",
+      "example_en": "This edition includes updated case studies.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 391
+    },
+    {
+      "lemma": "editor",
+      "pos": "noun",
+      "meaning_ko": "편집자",
+      "example_en": "The editor checked facts in the article.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 392
+    },
+    {
+      "lemma": "effect",
+      "pos": "noun",
+      "meaning_ko": "효과",
+      "example_en": "The policy had a positive effect on morale.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 393
+    },
+    {
+      "lemma": "effective",
+      "pos": "adjective",
+      "meaning_ko": "효과적인",
+      "example_en": "Training proved effective for new hires.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 394
+    },
+    {
+      "lemma": "efficiency",
+      "pos": "noun",
+      "meaning_ko": "효율",
+      "example_en": "Automation improved warehouse efficiency.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 395
+    },
+    {
+      "lemma": "efficient",
+      "pos": "adjective",
+      "meaning_ko": "효율적인",
+      "example_en": "We seek efficient ways to cut waste.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 396
+    },
+    {
+      "lemma": "effort",
+      "pos": "noun",
+      "meaning_ko": "노력",
+      "example_en": "Thank you for your effort on the launch.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 397
+    },
+    {
+      "lemma": "either",
+      "pos": "determiner",
+      "meaning_ko": "둘 중 하나",
+      "example_en": "Either option meets our basic needs.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "determiner"
+      ],
+      "sort_order": 398
+    },
+    {
+      "lemma": "elect",
+      "pos": "verb",
+      "meaning_ko": "선출하다",
+      "example_en": "Members elect officers each spring.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 399
+    },
+    {
+      "lemma": "electric",
+      "pos": "adjective",
+      "meaning_ko": "전기의",
+      "example_en": "Electric vehicles reduce fuel costs.",
+      "example_ko": "",
+      "difficulty": 4,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 400
+    },
+    {
+      "lemma": "element",
+      "pos": "noun",
+      "meaning_ko": "요소",
+      "example_en": "Trust is a key element of partnership.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 401
+    },
+    {
+      "lemma": "eliminate",
+      "pos": "verb",
+      "meaning_ko": "제거하다",
+      "example_en": "We eliminate steps that add no value.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 402
+    },
+    {
+      "lemma": "else",
+      "pos": "adverb",
+      "meaning_ko": "그 밖에",
+      "example_en": "Ask HR if you need anything else.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 403
+    },
+    {
+      "lemma": "embarrass",
+      "pos": "verb",
+      "meaning_ko": "당황하게 하다",
+      "example_en": "Errors embarrass speakers during demos.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 404
+    },
+    {
+      "lemma": "emerge",
+      "pos": "verb",
+      "meaning_ko": "나타나다",
+      "example_en": "New rivals emerge each year online.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 405
+    },
+    {
+      "lemma": "emphasis",
+      "pos": "noun",
+      "meaning_ko": "강조",
+      "example_en": "We place emphasis on client service.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 406
+    },
+    {
+      "lemma": "employ",
+      "pos": "verb",
+      "meaning_ko": "고용하다",
+      "example_en": "We employ over two thousand staff.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 407
+    },
+    {
+      "lemma": "employee",
+      "pos": "noun",
+      "meaning_ko": "직원",
+      "example_en": "Each employee must complete safety training.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 408
+    },
+    {
+      "lemma": "employer",
+      "pos": "noun",
+      "meaning_ko": "고용주",
+      "example_en": "The employer offers flexible schedules.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 409
+    },
+    {
+      "lemma": "employment",
+      "pos": "noun",
+      "meaning_ko": "고용",
+      "example_en": "Employment rose in the service sector.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 410
+    },
+    {
+      "lemma": "enable",
+      "pos": "verb",
+      "meaning_ko": "가능하게 하다",
+      "example_en": "Software enables remote collaboration.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 411
+    },
+    {
+      "lemma": "encounter",
+      "pos": "verb",
+      "meaning_ko": "마주치다",
+      "example_en": "You may encounter delays at customs.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 412
+    },
+    {
+      "lemma": "encourage",
+      "pos": "verb",
+      "meaning_ko": "격려하다",
+      "example_en": "Managers encourage ideas from all staff.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 413
+    },
+    {
+      "lemma": "end",
+      "pos": "verb",
+      "meaning_ko": "끝내다",
+      "example_en": "We end meetings on time whenever possible.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 414
+    },
+    {
+      "lemma": "energy",
+      "pos": "noun",
+      "meaning_ko": "에너지",
+      "example_en": "Lower energy use cuts operating costs.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 415
+    },
+    {
+      "lemma": "enforce",
+      "pos": "verb",
+      "meaning_ko": "시행하다",
+      "example_en": "Security enforces badge rules at entry.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 416
+    },
+    {
+      "lemma": "engage",
+      "pos": "verb",
+      "meaning_ko": "참여시키다",
+      "example_en": "Campaigns engage customers on social media.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 417
+    },
+    {
+      "lemma": "engine",
+      "pos": "noun",
+      "meaning_ko": "엔진",
+      "example_en": "The engine meets new emission standards.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 418
+    },
+    {
+      "lemma": "engineer",
+      "pos": "noun",
+      "meaning_ko": "엔지니어",
+      "example_en": "An engineer reviewed the structural plans.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 419
+    },
+    {
+      "lemma": "enhance",
+      "pos": "verb",
+      "meaning_ko": "향상시키다",
+      "example_en": "Training enhances skills across teams.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 420
+    },
+    {
+      "lemma": "enormous",
+      "pos": "adjective",
+      "meaning_ko": "엄청난",
+      "example_en": "An enormous warehouse stores seasonal stock.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 421
+    },
+    {
+      "lemma": "ensure",
+      "pos": "verb",
+      "meaning_ko": "보장하다",
+      "example_en": "Checks ensure orders ship without errors.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 422
+    },
+    {
+      "lemma": "enterprise",
+      "pos": "noun",
+      "meaning_ko": "기업",
+      "example_en": "Small enterprise grants are available now.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 423
+    },
+    {
+      "lemma": "entire",
+      "pos": "adjective",
+      "meaning_ko": "전체의",
+      "example_en": "The entire staff attended the briefing.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 424
+    },
+    {
+      "lemma": "entity",
+      "pos": "noun",
+      "meaning_ko": "실체",
+      "example_en": "Each entity files taxes separately.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 425
+    },
+    {
+      "lemma": "entrance",
+      "pos": "noun",
+      "meaning_ko": "입구",
+      "example_en": "Use the side entrance after six pm.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 426
+    },
+    {
+      "lemma": "entry",
+      "pos": "noun",
+      "meaning_ko": "입력",
+      "example_en": "Data entry must be accurate and timely.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 427
+    },
+    {
+      "lemma": "environment",
+      "pos": "noun",
+      "meaning_ko": "환경",
+      "example_en": "A clean environment boosts productivity.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 428
+    },
+    {
+      "lemma": "equal",
+      "pos": "adjective",
+      "meaning_ko": "동등한",
+      "example_en": "Equal pay rules apply to all roles.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 429
+    },
+    {
+      "lemma": "equipment",
+      "pos": "noun",
+      "meaning_ko": "장비",
+      "example_en": "Inspect equipment before each shift starts.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 430
+    },
+    {
+      "lemma": "equivalent",
+      "pos": "adjective",
+      "meaning_ko": "동등한",
+      "example_en": "One euro is equivalent to about one dollar.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 431
+    },
+    {
+      "lemma": "error",
+      "pos": "noun",
+      "meaning_ko": "오류",
+      "example_en": "Fix the error before resubmitting the form.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 432
+    },
+    {
+      "lemma": "escape",
+      "pos": "verb",
+      "meaning_ko": "탈출하다",
+      "example_en": "No one could escape strict budget limits.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 433
+    },
+    {
+      "lemma": "especially",
+      "pos": "adverb",
+      "meaning_ko": "특히",
+      "example_en": "Prices rose, especially for raw materials.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 434
+    },
+    {
+      "lemma": "essential",
+      "pos": "adjective",
+      "meaning_ko": "필수적인",
+      "example_en": "Water is essential for the production line.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 435
+    },
+    {
+      "lemma": "establish",
+      "pos": "verb",
+      "meaning_ko": "설립하다",
+      "example_en": "They established the firm in nineteen ninety.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 436
+    },
+    {
+      "lemma": "estimate",
+      "pos": "verb",
+      "meaning_ko": "추정하다",
+      "example_en": "We estimate costs will rise five percent.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 437
+    },
+    {
+      "lemma": "evaluate",
+      "pos": "verb",
+      "meaning_ko": "평가하다",
+      "example_en": "Managers evaluate staff performance yearly.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 438
+    },
+    {
+      "lemma": "even",
+      "pos": "adverb",
+      "meaning_ko": "심지어",
+      "example_en": "Even small delays hurt client trust.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 439
+    },
+    {
+      "lemma": "event",
+      "pos": "noun",
+      "meaning_ko": "행사",
+      "example_en": "The event attracted vendors from abroad.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 440
+    },
+    {
+      "lemma": "eventually",
+      "pos": "adverb",
+      "meaning_ko": "결국",
+      "example_en": "Costs will eventually stabilize, analysts say.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adverb"
+      ],
+      "sort_order": 441
+    },
+    {
+      "lemma": "evidence",
+      "pos": "noun",
+      "meaning_ko": "증거",
+      "example_en": "Evidence supports our market expansion plan.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 442
+    },
+    {
+      "lemma": "exact",
+      "pos": "adjective",
+      "meaning_ko": "정확한",
+      "example_en": "Use the exact figure from the ledger.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 443
+    },
+    {
+      "lemma": "examine",
+      "pos": "verb",
+      "meaning_ko": "조사하다",
+      "example_en": "Auditors examine records each quarter.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 444
+    },
+    {
+      "lemma": "example",
+      "pos": "noun",
+      "meaning_ko": "예",
+      "example_en": "See the example on page twelve please.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 445
+    },
+    {
+      "lemma": "exceed",
+      "pos": "verb",
+      "meaning_ko": "초과하다",
+      "example_en": "Sales exceeded forecasts for three months.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 446
+    },
+    {
+      "lemma": "excellent",
+      "pos": "adjective",
+      "meaning_ko": "훌륭한",
+      "example_en": "She received excellent feedback from clients.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 447
+    },
+    {
+      "lemma": "except",
+      "pos": "preposition",
+      "meaning_ko": "~을 제외하고",
+      "example_en": "All staff except interns may travel.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "preposition"
+      ],
+      "sort_order": 448
+    },
+    {
+      "lemma": "exchange",
+      "pos": "noun",
+      "meaning_ko": "교환",
+      "example_en": "We exchange data through secure portals.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 449
+    },
+    {
+      "lemma": "excited",
+      "pos": "adjective",
+      "meaning_ko": "흥분한",
+      "example_en": "Teams are excited about the new product.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 450
+    },
+    {
+      "lemma": "exclude",
+      "pos": "verb",
+      "meaning_ko": "제외하다",
+      "example_en": "The price excludes tax and shipping fees.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 451
+    },
+    {
+      "lemma": "excuse",
+      "pos": "noun",
+      "meaning_ko": "변명",
+      "example_en": "There is no excuse for missed deadlines.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 452
+    },
+    {
+      "lemma": "execute",
+      "pos": "verb",
+      "meaning_ko": "실행하다",
+      "example_en": "We execute the plan in three phases.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 453
+    },
+    {
+      "lemma": "executive",
+      "pos": "noun",
+      "meaning_ko": "임원",
+      "example_en": "An executive signed the final agreement.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 454
+    },
+    {
+      "lemma": "exercise",
+      "pos": "noun",
+      "meaning_ko": "행사",
+      "example_en": "Stock options exercise after vesting periods.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 455
+    },
+    {
+      "lemma": "exhibit",
+      "pos": "verb",
+      "meaning_ko": "전시하다",
+      "example_en": "Galleries exhibit work from local artists.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 456
+    },
+    {
+      "lemma": "exist",
+      "pos": "verb",
+      "meaning_ko": "존재하다",
+      "example_en": "Many risks exist in global supply chains.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 457
+    },
+    {
+      "lemma": "expand",
+      "pos": "verb",
+      "meaning_ko": "확장하다",
+      "example_en": "We expand into Asia next fiscal year.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 458
+    },
+    {
+      "lemma": "expansion",
+      "pos": "noun",
+      "meaning_ko": "확장",
+      "example_en": "Expansion requires new capital and staff.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 459
+    },
+    {
+      "lemma": "expect",
+      "pos": "verb",
+      "meaning_ko": "기대하다",
+      "example_en": "We expect demand to rise in summer.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 460
+    },
+    {
+      "lemma": "expense",
+      "pos": "noun",
+      "meaning_ko": "비용",
+      "example_en": "Travel expense must include receipts.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 461
+    },
+    {
+      "lemma": "experience",
+      "pos": "noun",
+      "meaning_ko": "경험",
+      "example_en": "Experience in sales is required here.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 462
+    },
+    {
+      "lemma": "experiment",
+      "pos": "noun",
+      "meaning_ko": "실험",
+      "example_en": "The experiment tested two pricing models.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 463
+    },
+    {
+      "lemma": "expert",
+      "pos": "noun",
+      "meaning_ko": "전문가",
+      "example_en": "An expert reviewed the safety procedures.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 464
+    },
+    {
+      "lemma": "explain",
+      "pos": "verb",
+      "meaning_ko": "설명하다",
+      "example_en": "Please explain the change to all teams.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 465
+    },
+    {
+      "lemma": "explicit",
+      "pos": "adjective",
+      "meaning_ko": "명시적인",
+      "example_en": "Rules are explicit in the handbook.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 466
+    },
+    {
+      "lemma": "explore",
+      "pos": "verb",
+      "meaning_ko": "탐색하다",
+      "example_en": "Teams explore new markets each year.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 467
+    },
+    {
+      "lemma": "export",
+      "pos": "verb",
+      "meaning_ko": "수출하다",
+      "example_en": "We export goods to over forty nations.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 468
+    },
+    {
+      "lemma": "expose",
+      "pos": "verb",
+      "meaning_ko": "노출시키다",
+      "example_en": "Sunlight can expose products to damage.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 469
+    },
+    {
+      "lemma": "express",
+      "pos": "verb",
+      "meaning_ko": "표현하다",
+      "example_en": "Clients express concerns through surveys.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 470
+    },
+    {
+      "lemma": "extend",
+      "pos": "verb",
+      "meaning_ko": "연장하다",
+      "example_en": "We extend the offer until month end.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 471
+    },
+    {
+      "lemma": "extension",
+      "pos": "noun",
+      "meaning_ko": "연장",
+      "example_en": "Request an extension before the deadline.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 472
+    },
+    {
+      "lemma": "extensive",
+      "pos": "adjective",
+      "meaning_ko": "광범위한",
+      "example_en": "Extensive training precedes floor work.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 473
+    },
+    {
+      "lemma": "extent",
+      "pos": "noun",
+      "meaning_ko": "정도",
+      "example_en": "To what extent will prices change?",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 474
+    },
+    {
+      "lemma": "external",
+      "pos": "adjective",
+      "meaning_ko": "외부의",
+      "example_en": "External auditors arrive on Monday.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 475
+    },
+    {
+      "lemma": "extra",
+      "pos": "adjective",
+      "meaning_ko": "추가의",
+      "example_en": "Extra staff help during peak season.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 476
+    },
+    {
+      "lemma": "extract",
+      "pos": "verb",
+      "meaning_ko": "추출하다",
+      "example_en": "Tools extract data from legacy systems.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 477
+    },
+    {
+      "lemma": "extraordinary",
+      "pos": "adjective",
+      "meaning_ko": "비범한",
+      "example_en": "She made extraordinary gains in sales.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 478
+    },
+    {
+      "lemma": "extreme",
+      "pos": "adjective",
+      "meaning_ko": "극심한",
+      "example_en": "Extreme weather disrupted supply routes.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 479
+    },
+    {
+      "lemma": "fabric",
+      "pos": "noun",
+      "meaning_ko": "직물",
+      "example_en": "The fabric meets export quality standards.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 480
+    },
+    {
+      "lemma": "face",
+      "pos": "verb",
+      "meaning_ko": "직면하다",
+      "example_en": "Firms face tighter rules on emissions.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 481
+    },
+    {
+      "lemma": "facilitate",
+      "pos": "verb",
+      "meaning_ko": "촉진하다",
+      "example_en": "Software facilitates booking and payments.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 482
+    },
+    {
+      "lemma": "facility",
+      "pos": "noun",
+      "meaning_ko": "시설",
+      "example_en": "The facility opens to visitors on weekends.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 483
+    },
+    {
+      "lemma": "factor",
+      "pos": "noun",
+      "meaning_ko": "요인",
+      "example_en": "Cost is a major factor in the decision.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 484
+    },
+    {
+      "lemma": "factory",
+      "pos": "noun",
+      "meaning_ko": "공장",
+      "example_en": "The factory runs three shifts daily.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 485
+    },
+    {
+      "lemma": "fail",
+      "pos": "verb",
+      "meaning_ko": "실패하다",
+      "example_en": "Projects fail without clear milestones.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 486
+    },
+    {
+      "lemma": "failure",
+      "pos": "noun",
+      "meaning_ko": "실패",
+      "example_en": "Power failure halted production briefly.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 487
+    },
+    {
+      "lemma": "fair",
+      "pos": "adjective",
+      "meaning_ko": "공정한",
+      "example_en": "We seek fair terms for all vendors.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 488
+    },
+    {
+      "lemma": "faith",
+      "pos": "noun",
+      "meaning_ko": "신뢰",
+      "example_en": "Clients place faith in our brand promise.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 489
+    },
+    {
+      "lemma": "fall",
+      "pos": "verb",
+      "meaning_ko": "떨어지다",
+      "example_en": "Prices may fall if supply increases.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 490
+    },
+    {
+      "lemma": "false",
+      "pos": "adjective",
+      "meaning_ko": "거짓",
+      "example_en": "False claims can lead to legal action.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 491
+    },
+    {
+      "lemma": "familiar",
+      "pos": "adjective",
+      "meaning_ko": "익숙한",
+      "example_en": "Staff are familiar with the new system.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 492
+    },
+    {
+      "lemma": "family",
+      "pos": "noun",
+      "meaning_ko": "가족",
+      "example_en": "Family leave policies are posted online.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 493
+    },
+    {
+      "lemma": "famous",
+      "pos": "adjective",
+      "meaning_ko": "유명한",
+      "example_en": "The city is famous for tech startups.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 494
+    },
+    {
+      "lemma": "fare",
+      "pos": "noun",
+      "meaning_ko": "요금",
+      "example_en": "Bus fare increased slightly this year.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 495
+    },
+    {
+      "lemma": "farm",
+      "pos": "noun",
+      "meaning_ko": "농장",
+      "example_en": "The farm supplies organic produce locally.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 496
+    },
+    {
+      "lemma": "fashion",
+      "pos": "noun",
+      "meaning_ko": "유행",
+      "example_en": "Fashion trends shift each season quickly.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 497
+    },
+    {
+      "lemma": "fasten",
+      "pos": "verb",
+      "meaning_ko": "고정하다",
+      "example_en": "Fasten seat belts before the vehicle moves.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 498
+    },
+    {
+      "lemma": "fault",
+      "pos": "noun",
+      "meaning_ko": "결함",
+      "example_en": "A wiring fault caused the outage.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 499
+    },
+    {
+      "lemma": "favor",
+      "pos": "noun",
+      "meaning_ko": "호의",
+      "example_en": "Could you do me a favor this afternoon?",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 500
+    },
+    {
+      "lemma": "feature",
+      "pos": "noun",
+      "meaning_ko": "기능",
+      "example_en": "The app includes a chat feature now.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 501
+    },
+    {
+      "lemma": "federal",
+      "pos": "adjective",
+      "meaning_ko": "연방의",
+      "example_en": "Federal rules affect cross-state shipping.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 502
+    },
+    {
+      "lemma": "fee",
+      "pos": "noun",
+      "meaning_ko": "수수료",
+      "example_en": "A late fee applies after ten days.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 503
+    },
+    {
+      "lemma": "feed",
+      "pos": "verb",
+      "meaning_ko": "공급하다",
+      "example_en": "Pipelines feed fuel to regional depots.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 504
+    },
+    {
+      "lemma": "feedback",
+      "pos": "noun",
+      "meaning_ko": "피드백",
+      "example_en": "We welcome feedback from every client.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 505
+    },
+    {
+      "lemma": "feel",
+      "pos": "verb",
+      "meaning_ko": "느끼다",
+      "example_en": "Staff feel supported during the transition.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 506
+    },
+    {
+      "lemma": "fellow",
+      "pos": "adjective",
+      "meaning_ko": "동료의",
+      "example_en": "She met fellow leaders at the forum.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "adjective"
+      ],
+      "sort_order": 507
+    },
+    {
+      "lemma": "field",
+      "pos": "noun",
+      "meaning_ko": "분야",
+      "example_en": "He works in the healthcare field.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 508
+    },
+    {
+      "lemma": "figure",
+      "pos": "noun",
+      "meaning_ko": "수치",
+      "example_en": "Check the figure against the invoice.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "noun"
+      ],
+      "sort_order": 509
+    },
+    {
+      "lemma": "file",
+      "pos": "verb",
+      "meaning_ko": "제출하다",
+      "example_en": "File reports with the agency by April.",
+      "example_ko": "",
+      "difficulty": 5,
+      "tags": [
+        "toeic",
+        "verb"
+      ],
+      "sort_order": 510
+    }
+  ]
+}

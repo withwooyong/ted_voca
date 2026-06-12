@@ -1,0 +1,50 @@
+expense|noun|비용|Travel expense must include receipts.
+experience|noun|경험|Experience in sales is required here.
+experiment|noun|실험|The experiment tested two pricing models.
+expert|noun|전문가|An expert reviewed the safety procedures.
+explain|verb|설명하다|Please explain the change to all teams.
+explicit|adjective|명시적인|Rules are explicit in the handbook.
+explore|verb|탐색하다|Teams explore new markets each year.
+export|verb|수출하다|We export goods to over forty nations.
+expose|verb|노출시키다|Sunlight can expose products to damage.
+express|verb|표현하다|Clients express concerns through surveys.
+extend|verb|연장하다|We extend the offer until month end.
+extension|noun|연장|Request an extension before the deadline.
+extensive|adjective|광범위한|Extensive training precedes floor work.
+extent|noun|정도|To what extent will prices change?
+external|adjective|외부의|External auditors arrive on Monday.
+extra|adjective|추가의|Extra staff help during peak season.
+extract|verb|추출하다|Tools extract data from legacy systems.
+extraordinary|adjective|비범한|She made extraordinary gains in sales.
+extreme|adjective|극심한|Extreme weather disrupted supply routes.
+fabric|noun|직물|The fabric meets export quality standards.
+face|verb|직면하다|Firms face tighter rules on emissions.
+facilitate|verb|촉진하다|Software facilitates booking and payments.
+facility|noun|시설|The facility opens to visitors on weekends.
+factor|noun|요인|Cost is a major factor in the decision.
+factory|noun|공장|The factory runs three shifts daily.
+fail|verb|실패하다|Projects fail without clear milestones.
+failure|noun|실패|Power failure halted production briefly.
+fair|adjective|공정한|We seek fair terms for all vendors.
+faith|noun|신뢰|Clients place faith in our brand promise.
+fall|verb|떨어지다|Prices may fall if supply increases.
+false|adjective|거짓|False claims can lead to legal action.
+familiar|adjective|익숙한|Staff are familiar with the new system.
+family|noun|가족|Family leave policies are posted online.
+famous|adjective|유명한|The city is famous for tech startups.
+fare|noun|요금|Bus fare increased slightly this year.
+farm|noun|농장|The farm supplies organic produce locally.
+fashion|noun|유행|Fashion trends shift each season quickly.
+fasten|verb|고정하다|Fasten seat belts before the vehicle moves.
+fault|noun|결함|A wiring fault caused the outage.
+favor|noun|호의|Could you do me a favor this afternoon?
+feature|noun|기능|The app includes a chat feature now.
+federal|adjective|연방의|Federal rules affect cross-state shipping.
+fee|noun|수수료|A late fee applies after ten days.
+feed|verb|공급하다|Pipelines feed fuel to regional depots.
+feedback|noun|피드백|We welcome feedback from every client.
+feel|verb|느끼다|Staff feel supported during the transition.
+fellow|adjective|동료의|She met fellow leaders at the forum.
+field|noun|분야|He works in the healthcare field.
+figure|noun|수치|Check the figure against the invoice.
+file|verb|제출하다|File reports with the agency by April.

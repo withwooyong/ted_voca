@@ -1,0 +1,51 @@
+amount|noun|양|The total amount exceeds our budget.
+ample|adjective|충분한|There is ample parking behind the building.
+analyze|verb|분석하다|We analyze customer feedback weekly.
+announce|verb|발표하다|The CEO will announce results tomorrow.
+annual|adjective|연간의|Annual revenue increased by eight percent.
+anticipate|verb|예상하다|We anticipate strong demand in spring.
+anxious|adjective|불안한|Investors are anxious about inflation.
+apologize|verb|사과하다|Please apologize for the delay.
+apparent|adjective|명백한|It is apparent that costs must fall.
+appeal|noun|매력|The product has broad consumer appeal.
+appear|verb|나타나다|New options appear on the menu.
+applicant|noun|지원자|Each applicant submitted a resume.
+apply|verb|지원하다|You may apply online by Friday.
+appoint|verb|임명하다|They appointed a new director.
+appreciate|verb|감사하다|We appreciate your prompt response.
+approach|noun|접근법|Try a different approach to sales.
+appropriate|adjective|적절한|Wear appropriate attire to the event.
+approve|verb|승인하다|Management approved the proposal.
+approximately|adverb|대략|Approximately two hundred people attended.
+architect|noun|건축가|The architect revised the blueprints.
+area|noun|지역|This area needs better lighting.
+arrange|verb|배치하다|Please arrange the chairs in rows.
+article|noun|기사|The article discussed market trends.
+artificial|adjective|인공의|Artificial lighting replaced natural light.
+aspect|noun|측면|Consider every aspect of the deal.
+assemble|verb|조립하다|Workers assemble parts on the line.
+assess|verb|평가하다|Auditors assess financial statements.
+asset|noun|자산|Property is a valuable company asset.
+assign|verb|배정하다|Managers assign tasks each morning.
+assist|verb|돕다|Staff assist customers at the desk.
+associate|noun|동료|She met with a business associate.
+assume|verb|가정하다|Do not assume prices will stay low.
+assure|verb|보장하다|We assure you of timely delivery.
+attach|verb|첨부하다|Attach the file to your email.
+attempt|noun|시도|Their attempt failed at first.
+attend|verb|참석하다|All staff must attend the briefing.
+attention|noun|주의|Pay attention to safety rules.
+attitude|noun|태도|A positive attitude improves teamwork.
+attract|verb|끌어들이다|The sale should attract new buyers.
+attribute|noun|특성|Reliability is a key attribute.
+audience|noun|청중|The audience applauded the speaker.
+audit|noun|감사|An external audit begins next week.
+authority|noun|권한|Only managers have signing authority.
+automatic|adjective|자동의|The door has an automatic opener.
+available|adjective|이용 가능한|Rooms are available after three.
+average|adjective|평균의|Average sales rose last quarter.
+avoid|verb|피하다|Avoid delays by ordering early.
+award|noun|상|She won an industry award.
+aware|adjective|알고 있는|Be aware of updated regulations.
+background|noun|배경|Check the applicant's background carefully.
+balance|noun|균형|Maintain a balance between cost and quality.

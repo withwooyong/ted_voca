@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ted Voca — 인터랙티브 프로토타입</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --primary: #4F46E5;
+    --primary-dark: #4338CA;
+    --primary-tint: #EEF2FF;
+    --accent: #F59E0B;
+    --surface: #F8FAFC;
+    --card: #FFFFFF;
+    --ink: #0F172A;
+    --muted: #64748B;
+    --border: #E2E8F0;
+    --success: #10B981;
+    --success-tint: #ECFDF5;
+    --error: #EF4444;
+    --error-tint: #FEF2F2;
+    --rail-bg: #1E1B4B;
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: var(--sans);
+    background: linear-gradient(160deg, #ECEAFB 0%, #F1F5F9 55%, #E7EDF5 100%);
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+    padding: 28px;
+    min-height: 100vh;
+  }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; font-size: inherit; }
+  button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+  /* ───────────────── 좌측: 화면 맵 rail ───────────────── */
+  .rail {
+    width: 230px; flex: none;
+    background: var(--rail-bg);
+    border-radius: 20px;
+    color: #C7C5E8;
+    padding: 22px 14px;
+    overflow-y: auto;
+    max-height: calc(100vh - 56px);
+    position: sticky; top: 28px;
+  }
+  .rail h1 { font-size: 17px; color: #fff; padding: 0 10px; letter-spacing: -0.01em; }
+  .rail .sub { font-size: 11.5px; color: #8B88BE; padding: 4px 10px 14px; line-height: 1.5; }
+  .rail .phase { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; color: #7C79B8; padding: 14px 10px 5px; text-transform: uppercase; }
+  .rail button.nav {
+    display: block; width: 100%; text-align: left;
+    padding: 7px 10px; border-radius: 9px;
+    font-size: 13.5px; color: #DDDCF2; line-height: 1.3;
+  }
+  .rail button.nav:hover { background: rgba(255,255,255,0.08); }
+  .rail button.nav.active { background: var(--primary); color: #fff; font-weight: 600; }
+
+  /* ───────────────── 중앙: 폰 프레임 ───────────────── */
+  .stage { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .phone {
+    width: 390px; height: 812px; flex: none;
+    background: var(--surface);
+    border-radius: 44px;
+    border: 10px solid #111322;
+    box-shadow: 0 30px 80px rgba(30, 27, 75, 0.35);
+    overflow: hidden;
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+  .statusbar {
+    height: 38px; flex: none;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 26px; font-size: 12.5px; font-weight: 600; color: var(--ink);
+    background: var(--surface);
+    z-index: 5;
+  }
+  .screens { flex: 1; position: relative; overflow: hidden; }
+  .screen {
+    position: absolute; inset: 0;
+    display: none; flex-direction: column;
+    overflow-y: auto;
+    background: var(--surface);
+  }
+  .screen.on { display: flex; animation: slidein 0.28s ease; }
+  @keyframes slidein { from { opacity: 0; transform: translateX(22px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .screen.on { animation: none; }
+    * { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
+  }
+
+  /* 탭바 */
+  .tabbar {
+    flex: none; display: none;
+    border-top: 1px solid var(--border);
+    background: var(--card);
+    padding: 8px 6px 18px;
+  }
+  .tabbar.on { display: flex; }
+  .tabbar button { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 10.5px; color: var(--muted); font-weight: 600; }
+  .tabbar button .ico { font-size: 21px; }
+  .tabbar button.active { color: var(--primary); }
+
+  /* ───────────────── 공통 컴포넌트 ───────────────── */
+  .pad { padding: 18px 20px; }
+  .apphead {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 20px 10px;
+  }
+  .apphead .back { font-size: 22px; color: var(--ink); padding: 2px 6px; }
+  .apphead .ttl { font-size: 16px; font-weight: 700; flex: 1; }
+  .apphead .meta { font-size: 13px; color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .apphead .close { font-size: 18px; color: var(--muted); padding: 2px 6px; }
+
+  .progress { height: 5px; background: var(--border); border-radius: 99px; margin: 0 20px 6px; overflow: hidden; }
+  .progress i { display: block; height: 100%; background: var(--primary); border-radius: 99px; transition: width 0.4s ease; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 18px; padding: 16px;
+  }
+  .btn {
+    display: block; width: 100%;
+    background: var(--primary); color: #fff;
+    font-size: 15.5px; font-weight: 700;
+    padding: 15px; border-radius: 14px;
+    text-align: center;
+    transition: background 0.15s;
+  }
+  .btn:hover { background: var(--primary-dark); }
+  .btn.ghost { background: var(--primary-tint); color: var(--primary-dark); }
+  .btn:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
+  .cta-dock { margin-top: auto; padding: 14px 20px 22px; }
+
+  /* Ted 마스코트 + 말풍선 */
+  .ted-row { display: flex; align-items: flex-start; gap: 10px; }
+  .ted-face { flex: none; }
+  .bubble {
+    background: var(--primary-tint);
+    border: 1px solid #DDD9FB;
+    border-radius: 4px 16px 16px 16px;
+    padding: 11px 14px;
+    font-size: 14px; line-height: 1.55; color: var(--ink);
+  }
+  .bubble b { color: var(--primary-dark); }
+
+  /* 선택지 */
+  .opt {
+    display: block; width: 100%; text-align: left;
+    background: var(--card); border: 1.5px solid var(--border);
+    border-radius: 14px; padding: 14px 16px;
+    font-size: 15px; font-weight: 600; color: var(--ink);
+    transition: border-color 0.12s, background 0.12s;
+  }
+  .opt:hover { border-color: var(--primary); }
+  .opt.sel-ok { border-color: var(--success); background: var(--success-tint); }
+  .opt.sel-no { border-color: var(--error); background: var(--error-tint); }
+  .opt.reveal { border-color: var(--success); }
+  .opt .en { font-family: var(--serif); }
+  .opt:disabled { cursor: default; }
+  .optgrid { display: flex; flex-direction: column; gap: 10px; }
+
+  /* 피드백 시트 */
+  .feedback {
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+    background: var(--card);
+    padding: 16px 20px 22px;
+    display: none;
+  }
+  .feedback.on { display: block; animation: rise 0.25s ease; }
+  @keyframes rise { from { transform: translateY(30px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .feedback .verdict { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+  .feedback.good .verdict { color: var(--success); }
+  .feedback.bad .verdict { color: var(--error); }
+  .feedback .word { font-family: var(--serif); font-size: 19px; font-weight: 700; }
+  .feedback .expl { font-size: 13.5px; color: var(--muted); line-height: 1.55; margin: 6px 0 12px; }
+
+  .qprompt { font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; }
+  .qsentence { font-family: var(--serif); font-size: 21px; line-height: 1.5; margin-bottom: 22px; }
+  .qsentence .blank { display: inline-block; min-width: 86px; border-bottom: 2.5px solid var(--primary); text-align: center; color: var(--primary); font-weight: 700; }
+  .headword { font-family: var(--serif); font-size: 34px; font-weight: 700; letter-spacing: -0.01em; }
+
+  .pillrow { display: flex; gap: 8px; }
+  .pill {
+    flex: 1; padding: 12px 8px; border-radius: 12px;
+    border: 1.5px solid var(--border); background: var(--card);
+    font-size: 14.5px; font-weight: 700; text-align: center;
+  }
+  .pill.active { border-color: var(--primary); background: var(--primary-tint); color: var(--primary-dark); }
+
+  .chip {
+    display: inline-block; padding: 9px 14px; border-radius: 11px;
+    border: 1.5px solid var(--border); background: var(--card);
+    font-family: var(--serif); font-size: 16px; font-weight: 600; margin: 0 6px 8px 0;
+  }
+  .chip:hover { border-color: var(--primary); }
+  .chip.used { opacity: 0.25; pointer-events: none; }
+
+  .stat-num { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .stat-lbl { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+
+  .dots { display: flex; gap: 6px; padding: 18px 20px 4px; }
+  .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+  .dots i.on { background: var(--primary); }
+
+  /* 플래시카드 */
+  .flash-wrap { perspective: 900px; }
+  .flash {
+    position: relative; width: 100%; height: 240px;
+    transform-style: preserve-3d; transition: transform 0.45s ease;
+    cursor: pointer;
+  }
+  .flash.flipped { transform: rotateY(180deg); }
+  .flash .fface {
+    position: absolute; inset: 0; backface-visibility: hidden;
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  }
+  .flash .fback { transform: rotateY(180deg); }
+
+  /* 회화 채팅 */
+  .chat { display: flex; flex-direction: column; gap: 10px; }
+  .msg { max-width: 78%; padding: 11px 14px; border-radius: 16px; font-size: 14.5px; line-height: 1.5; }
+  .msg.ted { background: var(--card); border: 1px solid var(--border); border-top-left-radius: 4px; align-self: flex-start; font-family: var(--serif); }
+  .msg.me { background: var(--primary); color: #fff; border-top-right-radius: 4px; align-self: flex-end; font-family: var(--serif); }
+  .msg .who { display: block; font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 3px; }
+  .msg.me .who { color: #C7D2FE; }
+  .micbtn {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--primary); color: #fff; font-size: 34px;
+    margin: 0 auto; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+    transition: transform 0.15s;
+  }
+  .micbtn:hover { transform: scale(1.05); }
+  .micbtn.rec { background: var(--error); animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); } 50% { box-shadow: 0 0 0 16px rgba(239,68,68,0); } }
+
+  /* 리스닝 웨이브 */
+  .wave { display: flex; align-items: center; justify-content: center; gap: 4px; height: 56px; }
+  .wave i { width: 5px; border-radius: 99px; background: #C7D2FE; height: 14px; }
+  .wave.playing i { background: var(--primary); animation: wv 0.9s ease-in-out infinite; }
+  .wave i:nth-child(2n) { animation-delay: 0.15s; height: 30px; }
+  .wave i:nth-child(3n) { animation-delay: 0.3s; height: 44px; }
+  .wave i:nth-child(5n) { animation-delay: 0.45s; height: 22px; }
+  @keyframes wv { 0%,100% { transform: scaleY(0.5); } 50% { transform: scaleY(1.15); } }
+
+  /* 주간 차트 */
+  .weekchart { display: flex; align-items: flex-end; gap: 9px; height: 110px; padding-top: 8px; }
+  .weekchart .col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; height: 100%; justify-content: flex-end; }
+  .weekchart .bar { width: 100%; border-radius: 7px 7px 3px 3px; background: #C7D2FE; }
+  .weekchart .bar.hi { background: var(--primary); }
+  .weekchart .day { font-size: 10.5px; color: var(--muted); font-weight: 600; }
+
+  /* 리그 */
+  .rankrow { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 13px; }
+  .rankrow.me { background: var(--primary-tint); border: 1.5px solid var(--primary); }
+  .rankrow .rk { width: 22px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .rankrow .nm { flex: 1; font-weight: 600; font-size: 14.5px; }
+  .rankrow .xp { font-weight: 700; color: var(--primary-dark); font-variant-numeric: tabular-nums; font-size: 13.5px; }
+
+  .listrow {
+    display: flex; align-items: center; gap: 13px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 14px 16px; width: 100%; text-align: left;
+  }
+  .listrow:hover { border-color: var(--primary); }
+  .listrow .emoji { font-size: 26px; }
+  .listrow .t { font-size: 15px; font-weight: 700; }
+  .listrow .d { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .listrow .arr { margin-left: auto; color: var(--muted); }
+
+  input.field {
+    width: 100%; padding: 14px 16px;
+    border: 1.5px solid var(--border); border-radius: 13px;
+    font-size: 15px; font-family: inherit; background: var(--card);
+  }
+  input.field:focus { border-color: var(--primary); outline: none; }
+  label.flabel { display: block; font-size: 12.5px; font-weight: 700; color: var(--muted); margin: 0 0 6px 2px; }
+
+  /* 단어 카드 bottom sheet */
+  .sheetveil { position: absolute; inset: 0; background: rgba(15,23,42,0.45); display: none; z-index: 20; }
+  .sheetveil.on { display: block; }
+  .sheet {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    background: var(--card); border-radius: 24px 24px 0 0;
+    padding: 14px 22px 30px; z-index: 21;
+    transform: translateY(105%); transition: transform 0.3s ease;
+  }
+  .sheet.on { transform: none; }
+  .sheet .grab { width: 40px; height: 4px; background: var(--border); border-radius: 99px; margin: 0 auto 16px; }
+
+  .confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 30; }
+  .confetti i { position: absolute; width: 8px; height: 13px; top: -16px; animation: fall 1.6s ease-in forwards; }
+  @keyframes fall { to { transform: translateY(860px) rotate(540deg); opacity: 0.2; } }
+
+  /* ───────────────── 우측: 검증 노트 ───────────────── */
+  .notes {
+    width: 270px; flex: none;
+    max-height: calc(100vh - 56px);
+    position: sticky; top: 28px;
+    overflow-y: auto;
+  }
+  .notes .card { margin-bottom: 14px; }
+  .notes h2 { font-size: 13px; font-weight: 800; color: var(--primary-dark); margin-bottom: 8px; letter-spacing: 0.02em; }
+  .notes p, .notes li { font-size: 12.5px; line-height: 1.65; color: var(--ink); }
+  .notes ul { padding-left: 16px; display: flex; flex-direction: column; gap: 5px; }
+  .notes .tag { display: inline-block; font-size: 10.5px; font-weight: 700; background: var(--primary-tint); color: var(--primary-dark); border-radius: 6px; padding: 3px 8px; margin-bottom: 8px; }
+
+  @media (max-width: 1180px) { .notes { display: none; } }
+  @media (max-width: 860px) {
+    body { padding: 10px; gap: 10px; }
+    .rail { display: none; }
+    .phone { width: min(390px, 100vw - 20px); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ 좌측 화면 맵 ════════ -->
+<nav class="rail" aria-label="화면 맵">
+  <h1>Ted Voca 프로토타입</h1>
+  <p class="sub">MASTER-PLAN P0~P6 전체 동선 검증용 클릭 모형. 화면을 눌러 바로 이동하세요.</p>
+  <div id="railList"></div>
+</nav>
+
+<!-- ════════ 폰 프레임 ════════ -->
+<div class="stage">
+<div class="phone">
+  <div class="statusbar"><span>9:41</span><span>Ted Voca</span><span>📶 🔋</span></div>
+  <div class="screens" id="screens">
+
+    <!-- ── P0: 로그인 ── -->
+    <section class="screen" id="s-login">
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:14px;">
+        <div style="text-align:center; margin-bottom:10px;">
+          <span class="ted-face" data-ted="happy" data-size="92"></span>
+          <h2 style="font-size:26px; margin-top:14px; letter-spacing:-0.02em;">Ted Voca</h2>
+          <p style="color:var(--muted); font-size:14px; margin-top:5px;">Ted와 함께, 매일 10분 영어 습관</p>
+        </div>
+        <div>
+          <label class="flabel" for="em">이메일</label>
+          <input class="field" id="em" type="email" placeholder="you@example.com" value="wooyong@test.com" />
+        </div>
+        <div>
+          <label class="flabel" for="pw">비밀번호</label>
+          <input class="field" id="pw" type="password" value="········" />
+        </div>
+        <button class="btn" onclick="go('onboarding')">로그인</button>
+        <button class="btn ghost" onclick="go('onboarding')">이메일로 가입하기</button>
+        <p style="text-align:center; font-size:12px; color:var(--muted);">Google / Apple 로그인은 v1.0에서 지원</p>
+      </div>
+    </section>
+
+    <!-- ── P0: 온보딩 (3-step) ── -->
+    <section class="screen" id="s-onboarding">
+      <div class="dots" id="obDots"><i class="on"></i><i></i><i></i></div>
+      <div class="pad" id="obBody" style="flex:1;"></div>
+      <div class="cta-dock"><button class="btn" id="obNext" onclick="obNext()">다음 →</button></div>
+    </section>
+
+    <!-- ── P1: 레벨 테스트 인트로 ── -->
+    <section class="screen" id="s-leveltest-intro">
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:18px;">
+        <div class="ted-row">
+          <span class="ted-face" data-ted="think" data-size="56"></span>
+          <div class="bubble">실력을 알아야 딱 맞는 코스를 줄 수 있어!<br /><b>20문항, 약 5분</b>이면 끝나.</div>
+        </div>
+        <div class="card">
+          <p style="font-size:13.5px; line-height:1.7; color:var(--muted);">
+            · 어휘 / 문법 / 리스닝 혼합 출제<br />
+            · 정답률에 따라 난이도가 자동 조절돼요 (adaptive)<br />
+            · 결과로 <b style="color:var(--ink)">CEFR 추정 레벨</b>과 <b style="color:var(--ink)">약점 태그</b>를 알려드려요
+          </p>
+        </div>
+      </div>
+      <div class="cta-dock">
+        <button class="btn" onclick="startLevelTest()">테스트 시작</button>
+        <button class="btn ghost" style="margin-top:9px;" onclick="go('home')">나중에 하기 (기본 코스로 시작)</button>
+      </div>
+    </section>
+
+    <!-- ── P1: 레벨 테스트 진행 ── -->
+    <section class="screen" id="s-leveltest">
+      <div class="apphead">
+        <span class="ttl">실력 진단</span>
+        <span class="meta" id="ltMeta">1/20</span>
+        <button class="close" onclick="go('home')" aria-label="닫기">✕</button>
+      </div>
+      <div class="progress"><i id="ltBar" style="width:5%"></i></div>
+      <div class="pad" id="ltBody" style="flex:1;"></div>
+      <div class="feedback" id="ltFb">
+        <div class="verdict" id="ltVerdict"></div>
+        <p class="expl" id="ltExpl"></p>
+        <button class="btn" onclick="ltNext()">계속 →</button>
+      </div>
+    </section>
+
+    <!-- ── P1: 레벨 테스트 결과 ── -->
+    <section class="screen" id="s-leveltest-result">
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; gap:16px; justify-content:center;">
+        <div class="ted-row">
+          <span class="ted-face" data-ted="cheer" data-size="56"></span>
+          <div class="bubble">수고했어! 지금 실력에 맞춰 코스를 준비했어 🎯</div>
+        </div>
+        <div class="card" style="text-align:center; padding:24px;">
+          <p class="stat-lbl">추정 레벨</p>
+          <p style="font-size:44px; font-weight:800; color:var(--primary); margin:4px 0;">B1</p>
+          <p style="font-size:13px; color:var(--muted);">CEFR 기준 · 중급 (토익 600~700 수준)</p>
+        </div>
+        <div class="card">
+          <p class="stat-lbl" style="margin-bottom:8px;">약점 태그 — 복습에 우선 반영돼요</p>
+          <span class="chip" style="cursor:default; font-family:var(--sans); font-size:13px;">⏱️ 시제 (현재완료)</span>
+          <span class="chip" style="cursor:default; font-family:var(--sans); font-size:13px;">💼 비즈니스 어휘</span>
+          <span class="chip" style="cursor:default; font-family:var(--sans); font-size:13px;">🎧 연음 듣기</span>
+        </div>
+      </div>
+      <div class="cta-dock"><button class="btn" onclick="go('home')">맞춤 코스 시작하기</button></div>
+    </section>
+
+    <!-- ── P0: 홈 ── -->
+    <section class="screen" id="s-home">
+      <div class="apphead" style="padding-top:16px;">
+        <span class="ttl" style="font-size:19px;">Ted Voca</span>
+        <span class="meta" style="color:var(--accent); font-weight:800;">🔥 <span data-bind="streak">7</span></span>
+        <span class="meta" style="color:var(--primary); font-weight:800;">⭐ <span data-bind="xp">120</span> XP</span>
+      </div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:14px; padding-top:6px;">
+        <div class="ted-row">
+          <span class="ted-face" data-ted="happy" data-size="48"></span>
+          <div class="bubble">안녕, 우용! 오늘도 <b>10분</b>만 하면 streak 8일이야 🔥</div>
+        </div>
+        <button class="card" style="text-align:left; width:100%; cursor:pointer;" onclick="go('review')">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:9px;">
+            <span style="font-weight:800; font-size:15px;">📋 오늘 할 일</span>
+            <span style="font-size:12.5px; color:var(--muted); font-weight:600;"><span data-bind="todayPct">20</span>% 완료</span>
+          </div>
+          <p style="font-size:13.5px; color:var(--muted); margin-bottom:10px;">복습 <b style="color:var(--ink)" data-bind="dueCount">12</b>개 · 신규 단어 <b style="color:var(--ink)">5</b>개 · 리스닝 1개</p>
+          <div class="progress" style="margin:0;"><i data-bind-width="todayPct" style="width:20%"></i></div>
+        </button>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px;">
+          <button class="card modcard" onclick="startVocab()" style="text-align:left;">
+            <span style="font-size:24px;">📖</span>
+            <p style="font-weight:800; margin-top:7px;">어휘</p>
+            <p style="font-size:12px; color:var(--muted);"><span data-bind="vocabDone">5</span>/10 문항</p>
+          </button>
+          <button class="card modcard" onclick="go('grammar')" style="text-align:left;">
+            <span style="font-size:24px;">📝</span>
+            <p style="font-weight:800; margin-top:7px;">문법</p>
+            <p style="font-size:12px; color:var(--muted);">0/5 문항</p>
+          </button>
+          <button class="card modcard" onclick="go('listening')" style="text-align:left;">
+            <span style="font-size:24px;">🎧</span>
+            <p style="font-weight:800; margin-top:7px;">리스닝</p>
+            <p style="font-size:12px; color:var(--muted);">0/3 클립</p>
+          </button>
+          <button class="card modcard" onclick="go('speaking-list')" style="text-align:left;">
+            <span style="font-size:24px;">🗣️</span>
+            <p style="font-weight:800; margin-top:7px;">회화</p>
+            <p style="font-size:12px; color:var(--muted);">0/2 시나리오</p>
+          </button>
+        </div>
+        <button class="card" style="display:flex; align-items:center; gap:12px; width:100%; cursor:pointer; text-align:left;" onclick="go('league')">
+          <span style="font-size:24px;">🏆</span>
+          <div style="flex:1;">
+            <p style="font-weight:800; font-size:14.5px;">실버 리그 · 이번 주 #12</p>
+            <p style="font-size:12px; color:var(--muted);">상위 10명이 골드로 승급 — 80 XP 차이</p>
+          </div>
+          <span style="color:var(--muted);">›</span>
+        </button>
+        <button class="card" style="display:flex; align-items:center; gap:12px; width:100%; cursor:pointer; text-align:left;" onclick="go('leveltest-intro')">
+          <span style="font-size:24px;">🎯</span>
+          <div style="flex:1;">
+            <p style="font-weight:800; font-size:14.5px;">실력 진단 다시 받기</p>
+            <p style="font-size:12px; color:var(--muted);">마지막 진단: B1 (2주 전)</p>
+          </div>
+          <span style="color:var(--muted);">›</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ── P1: 학습 허브 (Learn 탭) ── -->
+    <section class="screen" id="s-learn">
+      <div class="apphead" style="padding-top:16px;"><span class="ttl" style="font-size:19px;">학습</span></div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:11px; padding-top:4px;">
+        <div class="card" style="background:var(--primary); color:#fff; border:none;">
+          <p style="font-size:12px; font-weight:700; opacity:0.8;">진행 중인 코스</p>
+          <p style="font-size:18px; font-weight:800; margin:4px 0 10px;">TOEIC 800 — 핵심 어휘 510</p>
+          <div class="progress" style="margin:0; background:rgba(255,255,255,0.25);"><i style="width:34%; background:#fff;"></i></div>
+          <p style="font-size:12px; margin-top:7px; opacity:0.85;">173 / 510 단어 학습 · 34%</p>
+        </div>
+        <button class="listrow" onclick="startVocab()"><span class="emoji">📖</span><div><p class="t">어휘 퀴즈</p><p class="d">빈칸 · 4지선다 · 철자 입력 — 오늘 5문항 남음</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('grammar')"><span class="emoji">📝</span><div><p class="t">문법</p><p class="d">현재완료 — 카드 배열로 문장 만들기</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('listening')"><span class="emoji">🎧</span><div><p class="t">리스닝</p><p class="d">안내 방송 듣기 · 0.75x~1.25x 속도</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('speaking-list')"><span class="emoji">🗣️</span><div><p class="t">회화 (AI)</p><p class="d">상황극 25종 · Ted가 피드백 — 오늘 무료 10회</p></div><span class="arr">›</span></button>
+        <div class="card" style="border-style:dashed;">
+          <p style="font-weight:800; font-size:14px;">+ 코스 추가</p>
+          <p style="font-size:12.5px; color:var(--muted); margin-top:4px;">수능 필수 · 일상 회화 · 비즈니스 — 단어팩(JSON)으로 확장되는 오픈 구조</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── P1: 어휘 퀴즈 ── -->
+    <section class="screen" id="s-vocab">
+      <div class="apphead">
+        <button class="back" onclick="go('learn')" aria-label="뒤로">‹</button>
+        <span class="ttl">어휘 · TOEIC 800</span>
+        <span class="meta" id="vqMeta">1/3</span>
+        <button class="close" onclick="go('learn')" aria-label="닫기">✕</button>
+      </div>
+      <div class="progress"><i id="vqBar" style="width:8%"></i></div>
+      <div class="pad" id="vqBody" style="flex:1;"></div>
+      <div class="feedback" id="vqFb">
+        <div class="verdict" id="vqVerdict"></div>
+        <p><span class="word" id="vqWord"></span> <button onclick="alert('TTS 재생 (expo-speech)')" aria-label="발음 듣기" style="font-size:17px;">🔊</button></p>
+        <p class="expl" id="vqExpl"></p>
+        <div style="display:flex; gap:9px;">
+          <button class="btn ghost" style="flex:1;" onclick="openSheet()">단어 카드</button>
+          <button class="btn" style="flex:2;" onclick="vqNext()">계속 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── P1: 어휘 완료 ── -->
+    <section class="screen" id="s-vocab-done">
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:16px; text-align:center;">
+        <span class="ted-face" data-ted="cheer" data-size="92" style="margin:0 auto;"></span>
+        <h2 style="font-size:23px;">세션 완료!</h2>
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="card" style="flex:1;"><p class="stat-num" style="color:var(--primary);">+30</p><p class="stat-lbl">획득 XP</p></div>
+          <div class="card" style="flex:1;"><p class="stat-num" style="color:var(--success);" id="vqScore">3/3</p><p class="stat-lbl">정답률</p></div>
+          <div class="card" style="flex:1;"><p class="stat-num" style="color:var(--accent);">🔥 8</p><p class="stat-lbl">Streak</p></div>
+        </div>
+        <div class="ted-row" style="text-align:left;">
+          <span class="ted-face" data-ted="happy" data-size="44"></span>
+          <div class="bubble">틀린 단어는 <b>내일 복습 큐</b>에 자동으로 들어갔어. SRS가 알아서 챙겨줄게!</div>
+        </div>
+      </div>
+      <div class="cta-dock">
+        <button class="btn" onclick="go('review')">바로 복습 이어하기</button>
+        <button class="btn ghost" style="margin-top:9px;" onclick="go('home')">홈으로</button>
+      </div>
+    </section>
+
+    <!-- ── P2: SRS 복습 ── -->
+    <section class="screen" id="s-review">
+      <div class="apphead" style="padding-top:16px;">
+        <span class="ttl" style="font-size:19px;">🔄 오늘의 복습</span>
+        <span class="meta" id="rvMeta">1/4</span>
+      </div>
+      <div class="progress"><i id="rvBar" style="width:25%"></i></div>
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; gap:14px;">
+        <div class="flash-wrap">
+          <div class="flash" id="rvCard" onclick="flipCard()" role="button" tabindex="0" aria-label="카드 뒤집기">
+            <div class="fface">
+              <p class="headword" id="rvFront">implement</p>
+              <p style="font-size:12.5px; color:var(--muted);">탭하여 뒤집기</p>
+            </div>
+            <div class="fface fback">
+              <p style="font-size:21px; font-weight:800;" id="rvMeaning">시행하다</p>
+              <p style="font-size:13px; color:var(--muted);" id="rvPos">verb · TOEIC</p>
+              <p style="font-family:var(--serif); font-size:14px; color:var(--muted); font-style:italic; padding:0 24px; text-align:center;" id="rvEx">They implemented the new policy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pillrow" id="rvGrades" style="visibility:hidden;">
+          <button class="pill" style="border-color:var(--error); color:var(--error);" onclick="gradeCard('again')">다시<br /><small>&lt;10분</small></button>
+          <button class="pill" style="border-color:var(--accent); color:var(--accent);" onclick="gradeCard('hard')">어려움<br /><small>1일</small></button>
+          <button class="pill" style="border-color:var(--success); color:var(--success);" onclick="gradeCard('good')">알맞음<br /><small>3일</small></button>
+          <button class="pill" style="border-color:var(--primary); color:var(--primary);" onclick="gradeCard('easy')">쉬움<br /><small>7일</small></button>
+        </div>
+        <p style="text-align:center; font-size:11.5px; color:var(--muted);">버튼의 날짜 = SM-2가 계산한 다음 복습일 (투명한 스케줄)</p>
+        <div class="card" style="display:flex; align-items:center; gap:11px; margin-top:auto;">
+          <span style="font-size:21px;">🔊</span>
+          <div style="flex:1;">
+            <p style="font-weight:800; font-size:13.5px;">Memory Booster</p>
+            <p style="font-size:11.5px; color:var(--muted);">최근 7일 학습 문장 자동 재생</p>
+          </div>
+          <button class="pill" id="mbToggle" style="flex:none; padding:7px 16px;" onclick="this.classList.toggle('active'); this.textContent = this.classList.contains('active') ? 'ON' : 'OFF';">OFF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── P2: 복습 완료 ── -->
+    <section class="screen" id="s-review-done">
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:16px; text-align:center;">
+        <span class="ted-face" data-ted="cheer" data-size="92" style="margin:0 auto;"></span>
+        <h2 style="font-size:23px;">복습 끝! +20 XP</h2>
+        <div class="card" style="text-align:left;">
+          <p class="stat-lbl" style="margin-bottom:10px;">다음 복습 스케줄</p>
+          <p style="font-size:13.5px; line-height:2;">
+            <b class="word">comply</b> — 10분 뒤 (다시)<br />
+            <b class="word">negotiate</b> — 내일<br />
+            <b class="word">implement</b> · <b class="word">refund</b> — 3일 뒤
+          </p>
+        </div>
+        <div class="ted-row" style="text-align:left;">
+          <span class="ted-face" data-ted="happy" data-size="44"></span>
+          <div class="bubble">내일 아침에 푸시로 알려줄게. <b>"Ted: 복습 1개 10분 컷!"</b></div>
+        </div>
+      </div>
+      <div class="cta-dock"><button class="btn" onclick="go('home')">홈으로</button></div>
+    </section>
+
+    <!-- ── P3: 문법 ── -->
+    <section class="screen" id="s-grammar">
+      <div class="apphead">
+        <button class="back" onclick="go('learn')" aria-label="뒤로">‹</button>
+        <span class="ttl">문법 · 현재완료</span>
+        <span class="meta">1/5</span>
+        <button class="close" onclick="go('learn')" aria-label="닫기">✕</button>
+      </div>
+      <div class="progress"><i style="width:20%"></i></div>
+      <div class="pad" style="flex:1;">
+        <p class="qprompt">카드를 순서대로 눌러 문장을 완성하세요</p>
+        <p style="font-size:14.5px; color:var(--muted); margin-bottom:14px;">"그는 여기서 5년째 일하고 있다."</p>
+        <div class="card" style="min-height:64px; margin-bottom:16px; font-family:var(--serif); font-size:17px; display:flex; flex-wrap:wrap; gap:6px; align-items:center;" id="gmAnswer">
+          <span style="color:var(--muted); font-size:13.5px; font-family:var(--sans);" id="gmHint">여기에 카드가 놓여요</span>
+        </div>
+        <div id="gmChips"></div>
+        <button class="btn ghost" style="margin-top:8px; width:auto; padding:9px 18px; font-size:13px;" onclick="gmReset()">↺ 다시 놓기</button>
+      </div>
+      <div class="feedback" id="gmFb">
+        <div class="verdict" id="gmVerdict"></div>
+        <p class="expl" id="gmExpl"></p>
+        <div style="display:flex; gap:9px;">
+          <button class="btn ghost" style="flex:1;" onclick="alert('문법 사전: 현재완료 (have + p.p.) — A2\\n\\n과거에 시작해 지금까지 이어지는 일은 현재완료 + for/since를 써요.')">📚 규칙 보기</button>
+          <button class="btn" style="flex:2;" onclick="go('learn')">계속 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── P4: 리스닝 ── -->
+    <section class="screen" id="s-listening">
+      <div class="apphead">
+        <button class="back" onclick="go('learn')" aria-label="뒤로">‹</button>
+        <span class="ttl">리스닝</span>
+        <span class="meta">1/3</span>
+        <button class="close" onclick="go('learn')" aria-label="닫기">✕</button>
+      </div>
+      <div class="progress"><i style="width:33%"></i></div>
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; gap:14px;">
+        <div class="card" style="text-align:center; padding:20px;">
+          <p class="qprompt">잘 듣고 질문에 답하세요 (11초)</p>
+          <div class="wave" id="lsWave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <button class="btn" style="width:auto; margin:10px auto 0; padding:11px 34px;" id="lsPlay" onclick="playClip()">▶ 재생</button>
+          <div class="pillrow" style="margin-top:14px; max-width:230px; margin-left:auto; margin-right:auto;">
+            <button class="pill spd" onclick="setSpeed(this)">0.75x</button>
+            <button class="pill spd active" onclick="setSpeed(this)">1.0x</button>
+            <button class="pill spd" onclick="setSpeed(this)">1.25x</button>
+          </div>
+        </div>
+        <div id="lsQuiz" style="display:none;">
+          <p class="qprompt">What is the announcement about?</p>
+          <div class="optgrid">
+            <button class="opt en" onclick="lsAnswer(this, false)">A flight cancellation</button>
+            <button class="opt en" onclick="lsAnswer(this, true)">A train delay</button>
+            <button class="opt en" onclick="lsAnswer(this, false)">A platform change</button>
+          </div>
+        </div>
+      </div>
+      <div class="feedback" id="lsFb">
+        <div class="verdict" id="lsVerdict"></div>
+        <p class="expl">"The express train to Seoul Station has been <b>delayed</b> by ten minutes." — delay(지연)가 핵심 단서예요.</p>
+        <div style="display:flex; gap:9px;">
+          <button class="btn ghost" style="flex:1;" onclick="alert('따라 말하기 (선택) — 마이크로 녹음 후 발음 비교 (P5 STT 재사용)')">🎤 따라 말하기</button>
+          <button class="btn" style="flex:2;" onclick="go('learn')">계속 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── P5: 회화 시나리오 목록 ── -->
+    <section class="screen" id="s-speaking-list">
+      <div class="apphead">
+        <button class="back" onclick="go('learn')" aria-label="뒤로">‹</button>
+        <span class="ttl">회화 시나리오</span>
+        <span class="meta" style="font-size:11.5px;">오늘 10회 남음</span>
+      </div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:11px;">
+        <div class="ted-row">
+          <span class="ted-face" data-ted="happy" data-size="44"></span>
+          <div class="bubble">내가 상대역을 해줄게. 틀려도 괜찮아, 그게 연습이야!</div>
+        </div>
+        <button class="listrow" onclick="go('speaking')"><span class="emoji">☕</span><div><p class="t">카페에서 주문하기</p><p class="d">초급 · 5턴 · 음료 주문과 요청 표현</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('speaking')"><span class="emoji">🏨</span><div><p class="t">호텔 체크인</p><p class="d">초급 · 6턴 · 예약 확인과 시설 질문</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('speaking')"><span class="emoji">💼</span><div><p class="t">회의에서 의견 말하기</p><p class="d">중급 · 7턴 · 동의·반대·제안 표현</p></div><span class="arr">›</span></button>
+        <button class="listrow" style="opacity:0.5;"><span class="emoji">✈️</span><div><p class="t">공항 출입국 심사</p><p class="d">🔒 레벨 12에 해제</p></div></button>
+      </div>
+    </section>
+
+    <!-- ── P5: 회화 진행 ── -->
+    <section class="screen" id="s-speaking">
+      <div class="apphead">
+        <button class="back" onclick="go('speaking-list')" aria-label="뒤로">‹</button>
+        <span class="ttl">☕ 카페에서 주문하기</span>
+        <span class="meta" id="spMeta">1/5</span>
+      </div>
+      <div class="progress"><i id="spBar" style="width:20%"></i></div>
+      <div class="pad chat" id="spChat" style="flex:1;">
+        <div class="msg ted"><span class="who">☕ Barista (Ted)</span>Hi there! What can I get for you today?</div>
+      </div>
+      <div style="padding:14px 20px 24px; border-top:1px solid var(--border); background:var(--card);" id="spDock">
+        <p style="text-align:center; font-size:12px; color:var(--muted); margin-bottom:11px;" id="spHint">마이크를 누르고 영어로 답해보세요 · 힌트: latte, please</p>
+        <button class="micbtn" id="spMic" onclick="micTap()" aria-label="말하기">🎤</button>
+      </div>
+    </section>
+
+    <!-- ── P6: 리그 ── -->
+    <section class="screen" id="s-league">
+      <div class="apphead">
+        <button class="back" onclick="go('home')" aria-label="뒤로">‹</button>
+        <span class="ttl">주간 리그</span>
+        <span class="meta">3일 남음</span>
+      </div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card" style="text-align:center; background:linear-gradient(135deg, #EEF2FF, #E0E7FF); border-color:#C7D2FE;">
+          <p style="font-size:34px;">🥈</p>
+          <p style="font-weight:800; font-size:17px;">실버 리그</p>
+          <p style="font-size:12.5px; color:var(--muted); margin-top:3px;">상위 10명 골드 승급 · 하위 5명 브론즈 강등</p>
+        </div>
+        <div class="card" style="padding:8px;" id="leagueList"></div>
+      </div>
+    </section>
+
+    <!-- ── P2: 통계 ── -->
+    <section class="screen" id="s-stats">
+      <div class="apphead">
+        <button class="back" onclick="go('profile')" aria-label="뒤로">‹</button>
+        <span class="ttl">학습 통계</span>
+      </div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; gap:10px;">
+          <div class="card" style="flex:1; text-align:center;"><p class="stat-num">86%</p><p class="stat-lbl">7일 정답률</p></div>
+          <div class="card" style="flex:1; text-align:center;"><p class="stat-num">173</p><p class="stat-lbl">학습 단어</p></div>
+          <div class="card" style="flex:1; text-align:center;"><p class="stat-num">41</p><p class="stat-lbl">마스터</p></div>
+        </div>
+        <div class="card">
+          <p style="font-weight:800; font-size:14px; margin-bottom:4px;">주간 학습 시간 <span style="font-weight:600; color:var(--muted); font-size:12px;">(분)</span></p>
+          <div class="weekchart">
+            <div class="col"><div class="bar" style="height:45%"></div><span class="day">월</span></div>
+            <div class="col"><div class="bar" style="height:70%"></div><span class="day">화</span></div>
+            <div class="col"><div class="bar" style="height:30%"></div><span class="day">수</span></div>
+            <div class="col"><div class="bar" style="height:85%"></div><span class="day">목</span></div>
+            <div class="col"><div class="bar" style="height:55%"></div><span class="day">금</span></div>
+            <div class="col"><div class="bar" style="height:95%"></div><span class="day">토</span></div>
+            <div class="col"><div class="bar hi" style="height:60%"></div><span class="day">일</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <p style="font-weight:800; font-size:14px; margin-bottom:9px;">자주 틀리는 단어</p>
+          <p style="font-size:13.5px; line-height:2.1;">
+            <b class="word">comply</b> <span style="color:var(--error); font-size:12px;">5회 오답</span> — 준수하다<br />
+            <b class="word">negotiate</b> <span style="color:var(--error); font-size:12px;">3회 오답</span> — 협상하다<br />
+            <b class="word">invoice</b> <span style="color:var(--error); font-size:12px;">3회 오답</span> — 송장
+          </p>
+        </div>
+        <div class="card">
+          <p style="font-weight:800; font-size:14px; margin-bottom:9px;">다가오는 복습 (SRS 큐)</p>
+          <p style="font-size:13px; color:var(--muted); line-height:1.9;">오늘 12개 · 내일 8개 · 이번 주 31개<br />스케줄은 단어별로 직접 확인·조정할 수 있어요 →</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── P0: 프로필 ── -->
+    <section class="screen" id="s-profile">
+      <div class="apphead" style="padding-top:16px;"><span class="ttl" style="font-size:19px;">프로필</span></div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:12px; padding-top:4px;">
+        <div class="card" style="display:flex; align-items:center; gap:14px;">
+          <span style="width:54px; height:54px; border-radius:50%; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:800;">우</span>
+          <div>
+            <p style="font-weight:800; font-size:16px;">우용</p>
+            <p style="font-size:12.5px; color:var(--muted);">Lv.5 · B1 · 🔥 7일 연속</p>
+          </div>
+        </div>
+        <button class="listrow" onclick="go('stats')"><span class="emoji">📊</span><div><p class="t">학습 통계</p><p class="d">정답률 · 주간 차트 · 약점 단어</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('leveltest-intro')"><span class="emoji">🎯</span><div><p class="t">목표 설정</p><p class="d">시험 (토익/수능) · 하루 10분</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="alert('알림 설정: 복습 리마인더 09:00 / 리그 마감 알림 ON')"><span class="emoji">🔔</span><div><p class="t">알림</p><p class="d">복습 리마인더 09:00</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="alert('오프라인 캐시: 최근 세션 + TOEIC 800 단어팩 (4.2MB) 저장됨')"><span class="emoji">📥</span><div><p class="t">오프라인 학습</p><p class="d">단어팩 캐시 — 지하철에서도 OK</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('login')"><span class="emoji">🚪</span><div><p class="t">로그아웃</p><p class="d">wooyong@test.com</p></div><span class="arr">›</span></button>
+      </div>
+    </section>
+
+    <!-- 단어 카드 bottom sheet -->
+    <div class="sheetveil" id="sheetVeil" onclick="closeSheet()"></div>
+    <div class="sheet" id="wordSheet">
+      <div class="grab"></div>
+      <p class="headword">implement <button onclick="alert('TTS: /ˈɪmplɪment/')" aria-label="발음 듣기" style="font-size:18px;">🔊</button></p>
+      <p style="font-size:13px; color:var(--muted); margin:2px 0 12px;">verb · /ˈɪmplɪment/ · TOEIC 빈출</p>
+      <p style="font-size:16px; font-weight:700; margin-bottom:10px;">시행하다, 실행하다</p>
+      <div class="card" style="background:var(--surface); margin-bottom:10px;">
+        <p style="font-family:var(--serif); font-size:14.5px; font-style:italic; line-height:1.6;">They implemented the new policy last quarter.</p>
+        <p style="font-size:12.5px; color:var(--muted); margin-top:4px;">그들은 지난 분기에 새 정책을 시행했다.</p>
+      </div>
+      <p style="font-size:12.5px; color:var(--muted);">동의어: <b>carry out, execute</b> · 다음 복습: 3일 뒤</p>
+    </div>
+
+    <div class="confetti" id="confetti"></div>
+  </div>
+
+  <!-- 탭바 -->
+  <div class="tabbar" id="tabbar">
+    <button data-tab="home" onclick="go('home')"><span class="ico">🏠</span>홈</button>
+    <button data-tab="learn" onclick="go('learn')"><span class="ico">📚</span>학습</button>
+    <button data-tab="review" onclick="go('review')"><span class="ico">🔄</span>복습</button>
+    <button data-tab="profile" onclick="go('profile')"><span class="ico">👤</span>프로필</button>
+  </div>
+</div>
+<p style="font-size:11.5px; color:#7C79B8;">정적 모형 — 데이터는 모두 mock · 새로고침 시 초기화</p>
+</div>
+
+<!-- ════════ 우측 검증 노트 ════════ -->
+<aside class="notes" id="notes" aria-label="검증 포인트"></aside>
+
+<script>
+/* ════════════════ 데이터 ════════════════ */
+const SCREENS = [
+  { id: 'login',            phase: 'P0 Foundation', label: '로그인 / 가입' },
+  { id: 'onboarding',       phase: 'P0 Foundation', label: '온보딩 (3-step)' },
+  { id: 'home',             phase: 'P0 Foundation', label: '홈 대시보드', tab: 'home' },
+  { id: 'profile',          phase: 'P0 Foundation', label: '프로필', tab: 'profile' },
+  { id: 'leveltest-intro',  phase: 'P1 Vocab Core', label: '레벨 테스트 인트로' },
+  { id: 'leveltest',        phase: 'P1 Vocab Core', label: '레벨 테스트 (20문항)' },
+  { id: 'leveltest-result', phase: 'P1 Vocab Core', label: '진단 결과 (CEFR)' },
+  { id: 'learn',            phase: 'P1 Vocab Core', label: '학습 허브', tab: 'learn' },
+  { id: 'vocab',            phase: 'P1 Vocab Core', label: '어휘 퀴즈 3종' },
+  { id: 'vocab-done',       phase: 'P1 Vocab Core', label: '세션 완료 + XP' },
+  { id: 'review',           phase: 'P2 SRS + Stats', label: 'SRS 복습 (SM-2)', tab: 'review' },
+  { id: 'review-done',      phase: 'P2 SRS + Stats', label: '복습 완료 + 스케줄' },
+  { id: 'stats',            phase: 'P2 SRS + Stats', label: '학습 통계' },
+  { id: 'grammar',          phase: 'P3 Grammar', label: '문법 — 카드 배열' },
+  { id: 'listening',        phase: 'P4 Listening', label: '리스닝 + 퀴즈' },
+  { id: 'speaking-list',    phase: 'P5 Speaking AI', label: '회화 시나리오 목록' },
+  { id: 'speaking',         phase: 'P5 Speaking AI', label: '회화 — STT + 피드백' },
+  { id: 'league',           phase: 'P6 Gamification', label: '주간 리그' },
+];
+
+const NOTES = {
+  'login': { q: ['소셜 로그인 없이 P0 출시가 괜찮은가?', '가입 마찰을 줄이려면 게스트 모드가 필요한가?'], d: 'Supabase Auth. 미설정 시 Dev Mock — 현재 P0 구현과 동일.' },
+  'onboarding': { q: ['3스텝이 적당한가, 줄여야 하나?', '목표 선택지 3개로 충분한가? (여행·기초 등)', 'Ted 반말 톤이 타깃에게 맞는가?'], d: '목표·일일 목표 → profiles 저장. 와이어프레임 1번 구현.' },
+  'home': { q: ['"오늘 할 일" 카드가 첫 행동을 잘 유도하는가?', '모듈 4종 그리드 vs 단일 "시작" 버튼?', '리그 카드가 홈에 있을 가치가 있나?'], d: '일일 루프의 시작점. streak·XP는 상단 고정.' },
+  'profile': { q: ['통계 진입이 프로필 안에 숨는 게 맞나? (탭 승격?)'], d: '오프라인 캐시·알림 설정 동선 포함.' },
+  'leveltest-intro': { q: ['"나중에 하기" 허용 시 기본 코스 배정 기준은?'], d: '20문항 adaptive. 프로토타입은 3문항 샘플 후 결과로 점프.' },
+  'leveltest': { q: ['문항당 즉시 피드백 vs 끝나고 일괄 결과?', '중도 이탈 시 부분 결과 저장?'], d: '어휘/문법/리스닝 혼합. 정답률 기반 난이도 조절.' },
+  'leveltest-result': { q: ['CEFR 표기가 사용자에게 와닿는가? (토익 환산 병기)', '약점 태그 → 복습 우선순위 연결이 전달되는가?'], d: 'user_level + weak_tags 산출.' },
+  'learn': { q: ['코스 진행률 카드가 동기 부여가 되는가?', '"코스 추가" 오픈 구조를 언제 노출할까?'], d: '모듈 허브. 어휘가 1순위 동선.' },
+  'vocab': { q: ['퀴즈 3종(빈칸·영→한·철자) 난이도 체감?', '오답 시 단어 카드 진입율이 높을까?', '문항당 피드백 시트 UX가 끊기지 않는가?'], d: '실제 toeic-800-pack 단어 사용. 난이도는 최근 10문항 정답률 기반.' },
+  'vocab-done': { q: ['XP·streak 보상이 충분히 기분 좋은가?', '"바로 복습 이어하기" CTA가 루프를 만드는가?'], d: '오답 단어는 SRS 큐 자동 편입 — 차별점 ② 투명성.' },
+  'review': { q: ['4단계 평가(다시/어려움/알맞음/쉬움)가 직관적인가?', '버튼에 다음 복습일 노출 — 과한 정보인가?', 'Memory Booster 위치가 맞나?'], d: 'SM-2 (ease/interval/repetitions). 와이어프레임 4번.' },
+  'review-done': { q: ['다음 스케줄 공개가 신뢰를 주는가?', '푸시 멘트 톤 점검'], d: '차별점 ② — 복습 스케줄을 숨기지 않고 보여준다.' },
+  'stats': { q: ['주간 차트 + 약점 단어, 정보량 적당한가?', 'SRS 큐 직접 조정 UI는 어디까지 허용?'], d: 'study_sessions·quiz_attempts 집계.' },
+  'grammar': { q: ['카드 탭 배열이 모바일에서 드래그보다 나은가?', '오답 해설 2~3문장 + 규칙 링크 분량 적당?'], d: '문법 사전 60토픽과 연결. 와이어프레임 패턴 신규 제안.' },
+  'listening': { q: ['재생 후에만 문항 노출 — 강제가 맞나?', '속도 3단계로 충분한가?', '따라 말하기를 선택으로 두는 게 맞나?'], d: 'TTS 클립 5~15초 + comprehension 1~2문항.' },
+  'speaking-list': { q: ['무료 10회 제한 노출 위치가 거슬리지 않나?', '레벨 잠금이 동기인가 장벽인가?'], d: '시나리오 25종 목표. API 비용 cap 정책 반영.' },
+  'speaking': { q: ['칩 선택(모의 STT)으로 실제 발화 UX가 검증되나?', 'Ted 피드백 3줄 포맷(칭찬+팁)이 적당한가?', '턴 5개 길이 체감?'], d: 'Whisper STT + GPT-4o-mini 피드백. 와이어프레임 5번.' },
+  'league': { q: ['주간 리그가 한국 학습자에게 동기가 되는가?', '강등 압박이 부담스럽지 않나?'], d: 'league_entries 주간 XP. 브론즈/실버/골드 3티어.' },
+};
+
+const state = { xp: 120, streak: 7, dueCount: 12, vocabDone: 5, todayPct: 20 };
+
+/* ════════════════ Ted 마스코트 ════════════════ */
+function tedSVG(mood, size) {
+  const mouth = {
+    happy: '<path d="M22 33 Q 30 41 38 33" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    cheer: '<ellipse cx="30" cy="36" rx="7" ry="5.5" fill="#fff"/><path d="M23 36 Q30 33 37 36" stroke="#4F46E5" stroke-width="2.5" fill="none"/>',
+    think: '<path d="M24 36 L36 36" stroke="#fff" stroke-width="3" stroke-linecap="round"/>',
+  }[mood] || '';
+  const extra = mood === 'cheer'
+    ? '<path d="M48 6 l2.2 4.6 4.8 0.8 -3.5 3.5 0.9 4.9 -4.4-2.4 -4.4 2.4 0.9-4.9 -3.5-3.5 4.8-0.8 z" fill="#F59E0B"/>'
+    : mood === 'think'
+    ? '<circle cx="50" cy="10" r="3.4" fill="#C7D2FE"/><circle cx="55" cy="3.5" r="2.2" fill="#C7D2FE"/>'
+    : '';
+  return `<svg width="${size}" height="${size}" viewBox="0 0 60 60" role="img" aria-label="Ted">
+    <circle cx="30" cy="30" r="26" fill="#4F46E5"/>
+    <circle cx="30" cy="30" r="26" fill="none" stroke="#4338CA" stroke-width="2"/>
+    <circle cx="21.5" cy="24" r="3.6" fill="#fff"/><circle cx="38.5" cy="24" r="3.6" fill="#fff"/>
+    <circle cx="22.3" cy="24.8" r="1.7" fill="#1E1B4B"/><circle cx="39.3" cy="24.8" r="1.7" fill="#1E1B4B"/>
+    ${mouth}${extra}
+  </svg>`;
+}
+document.querySelectorAll('.ted-face').forEach(el => {
+  el.innerHTML = tedSVG(el.dataset.ted || 'happy', el.dataset.size || 48);
+});
+
+/* ════════════════ 라우터 ════════════════ */
+const TABS = { home: 'home', learn: 'learn', review: 'review', profile: 'profile' };
+let current = '';
+
+function go(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('on'));
+  const el = document.getElementById('s-' + id);
+  if (!el) return;
+  el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
+  current = id;
+  closeSheet();
+
+  const def = SCREENS.find(s => s.id === id);
+  const tabbar = document.getElementById('tabbar');
+  tabbar.classList.toggle('on', !!(def && def.tab));
+  tabbar.querySelectorAll('button').forEach(b => b.classList.toggle('active', def && b.dataset.tab === def.tab));
+
+  document.querySelectorAll('.rail button.nav').forEach(b => b.classList.toggle('active', b.dataset.go === id));
+  renderNotes(id);
+  if (id === 'onboarding') obRender();
+  if (id === 'vocab') { vqIdx = 0; vqRight = 0; vqDraw(); }
+  if (id === 'leveltest') { ltIdx = 0; ltDraw(); }
+  if (id === 'review') rvReset();
+  if (id === 'grammar') gmInit();
+  if (id === 'speaking') spReset();
+  if (id === 'listening') lsReset();
+  bindState();
+}
+
+function bindState() {
+  document.querySelectorAll('[data-bind]').forEach(el => { el.textContent = state[el.dataset.bind]; });
+  document.querySelectorAll('[data-bind-width]').forEach(el => { el.style.width = state[el.dataset.bindWidth] + '%'; });
+}
+
+/* 화면 맵 rail */
+(function buildRail() {
+  const wrap = document.getElementById('railList');
+  let phase = '';
+  SCREENS.forEach(s => {
+    if (s.phase !== phase) {
+      phase = s.phase;
+      const h = document.createElement('p');
+      h.className = 'phase'; h.textContent = phase;
+      wrap.appendChild(h);
+    }
+    const b = document.createElement('button');
+    b.className = 'nav'; b.dataset.go = s.id; b.textContent = s.label;
+    b.onclick = () => go(s.id);
+    wrap.appendChild(b);
+  });
+})();
+
+function renderNotes(id) {
+  const n = NOTES[id];
+  const def = SCREENS.find(s => s.id === id);
+  const box = document.getElementById('notes');
+  if (!n || !def) { box.innerHTML = ''; return; }
+  box.innerHTML = `
+    <div class="card">
+      <span class="tag">${def.phase}</span>
+      <h2>${def.label}</h2>
+      <p>${n.d}</p>
+    </div>
+    <div class="card">
+      <h2>✅ 검증 포인트</h2>
+      <ul>${n.q.map(q => `<li>${q}</li>`).join('')}</ul>
+    </div>`;
+}
+
+/* ════════════════ P0: 온보딩 ════════════════ */
+let obStep = 0, obGoal = null, obMin = null;
+const OB_GOALS = [
+  { v: 'exam', e: '📚', t: '시험 (토익/수능)' },
+  { v: 'conversation', e: '💬', t: '일상 회화' },
+  { v: 'business', e: '💼', t: '비즈니스' },
+];
+function obRender() {
+  obStep = 0; obGoal = null; obMin = null;
+  obDraw();
+}
+function obDraw() {
+  document.querySelectorAll('#obDots i').forEach((d, i) => d.classList.toggle('on', i === obStep));
+  const body = document.getElementById('obBody');
+  const next = document.getElementById('obNext');
+  if (obStep === 0) {
+    body.innerHTML = `
+      <div style="text-align:center; margin:18px 0 20px;">${tedSVG('happy', 84)}</div>
+      <div class="bubble" style="border-radius:16px; text-align:center; margin-bottom:20px;">안녕! 나는 <b>Ted</b>야.<br />영어 배우는 목표가 뭐야?</div>
+      <div class="optgrid">${OB_GOALS.map(g =>
+        `<button class="opt ${obGoal === g.v ? 'sel-ok' : ''}" onclick="obGoal='${g.v}';obDraw()">${g.e} ${g.t}</button>`).join('')}
+      </div>`;
+    next.textContent = '다음 →'; next.disabled = !obGoal;
+  } else if (obStep === 1) {
+    body.innerHTML = `
+      <div style="text-align:center; margin:18px 0 20px;">${tedSVG('think', 84)}</div>
+      <div class="bubble" style="border-radius:16px; text-align:center; margin-bottom:20px;">하루에 몇 분 공부할래?<br /><b>작게 시작해도 충분해!</b></div>
+      <div class="pillrow">${[5, 10, 20].map(m =>
+        `<button class="pill ${obMin === m ? 'active' : ''}" style="padding:18px 8px; font-size:16px;" onclick="obMin=${m};obDraw()">${m}분</button>`).join('')}
+      </div>`;
+    next.textContent = '다음 →'; next.disabled = !obMin;
+  } else {
+    const g = OB_GOALS.find(x => x.v === obGoal);
+    body.innerHTML = `
+      <div style="text-align:center; margin:18px 0 20px;">${tedSVG('cheer', 84)}</div>
+      <div class="bubble" style="border-radius:16px; text-align:center; margin-bottom:20px;">좋아, 준비됐어! 🎉</div>
+      <div class="card">
+        <p style="font-size:14px; line-height:2.1;">
+          목표 &nbsp;<b>${g.e} ${g.t}</b><br />
+          일일 학습 &nbsp;<b>${obMin}분</b><br />
+          시작 코스 &nbsp;<b>TOEIC 800 (레벨 테스트 후 확정)</b>
+        </p>
+      </div>`;
+    next.textContent = '학습 시작하기'; next.disabled = false;
+  }
+}
+function obNext() {
+  if (obStep < 2) { obStep++; obDraw(); }
+  else go('leveltest-intro');
+}
+
+/* ════════════════ P1: 레벨 테스트 (샘플 3문항) ════════════════ */
+const LT_QS = [
+  { type: '어휘', q: 'Please <span class="blank">submit</span> the report by Friday.', prompt: '빈칸에 알맞은 단어는?', sent: 'Please _____ the report by Friday.', opts: ['submit', 'subscribe', 'subtract', 'suburb'], ans: 0, expl: 'submit — 제출하다. "보고서를 금요일까지 제출하세요."' },
+  { type: '문법', prompt: '어법상 맞는 문장은?', sent: null, opts: ['She have finished the work.', 'She has finished the work.', 'She has finish the work.'], ans: 1, expl: '3인칭 단수 + 현재완료 → has + p.p.' },
+  { type: '어휘', prompt: '"abundant"의 뜻은?', sent: null, opts: ['부족한', '풍부한', '추상적인', '절대적인'], ans: 1, expl: 'abundant — 풍부한. "abundant natural resources"' },
+];
+let ltIdx = 0;
+function startLevelTest() { go('leveltest'); }
+function ltDraw() {
+  const q = LT_QS[ltIdx];
+  document.getElementById('ltMeta').textContent = (ltIdx + 1) + '/20';
+  document.getElementById('ltBar').style.width = ((ltIdx + 1) / 20 * 100) + '%';
+  document.getElementById('ltFb').classList.remove('on', 'good', 'bad');
+  document.getElementById('ltBody').innerHTML = `
+    <p class="qprompt">${q.type} · ${q.prompt}</p>
+    ${q.sent ? `<p class="qsentence">${q.sent.replace('_____', '<span class="blank">&nbsp;</span>')}</p>` : '<div style="height:10px"></div>'}
+    <div class="optgrid">${q.opts.map((o, i) =>
+      `<button class="opt en" onclick="ltAnswer(this, ${i})">${o}</button>`).join('')}
+    </div>`;
+}
+function ltAnswer(btn, i) {
+  const q = LT_QS[ltIdx];
+  const ok = i === q.ans;
+  document.querySelectorAll('#ltBody .opt').forEach((b, j) => {
+    b.disabled = true;
+    if (j === q.ans) b.classList.add(ok ? 'sel-ok' : 'reveal');
+  });
+  if (!ok) btn.classList.add('sel-no');
+  const fb = document.getElementById('ltFb');
+  fb.classList.add('on', ok ? 'good' : 'bad');
+  document.getElementById('ltVerdict').textContent = ok ? '✅ 정답!' : '❌ 아쉬워요';
+  document.getElementById('ltExpl').textContent = q.expl;
+}
+function ltNext() {
+  ltIdx++;
+  if (ltIdx >= LT_QS.length) {
+    go('leveltest-result');  /* 프로토타입: 3문항 후 결과로 점프 */
+  } else ltDraw();
+}
+
+/* ════════════════ P1: 어휘 퀴즈 ════════════════ */
+const VQ_QS = [
+  { kind: 'blank', prompt: 'Fill in the blank', sent: 'The company will _____ the new policy next month.', opts: ['implement', 'imply', 'import', 'improve'], ans: 0, word: 'implement', mean: '시행하다', expl: '"회사는 다음 달 새 정책을 시행할 것이다." imply(암시하다)·import(수입하다)와 혼동 주의!' },
+  { kind: 'mcq', prompt: '다음 단어의 뜻은?', head: 'invoice', opts: ['영수증', '송장', '계약서', '견적서'], ans: 1, word: 'invoice', mean: '송장', expl: '거래 물품·금액을 적어 보내는 문서. "Please send the invoice by email."' },
+  { kind: 'spell', prompt: '철자를 입력하세요', sent: '회의를 금요일로 <b>연기하다</b>', hint: 'p _ _ _ _ _ _ _', answer: 'postpone', word: 'postpone', mean: '연기하다', expl: '"The meeting was postponed until Friday." put off와 같은 뜻이에요.' },
+];
+let vqIdx = 0, vqRight = 0;
+function startVocab() { go('vocab'); }
+function vqDraw() {
+  const q = VQ_QS[vqIdx];
+  document.getElementById('vqMeta').textContent = (vqIdx + 1) + '/3';
+  document.getElementById('vqBar').style.width = ((vqIdx) / 3 * 100 + 8) + '%';
+  document.getElementById('vqFb').classList.remove('on', 'good', 'bad');
+  let html = `<p class="qprompt">${q.prompt}</p>`;
+  if (q.kind === 'blank') {
+    html += `<p class="qsentence">${q.sent.replace('_____', '<span class="blank">&nbsp;</span>')}</p>
+      <div class="optgrid">${q.opts.map((o, i) => `<button class="opt en" onclick="vqAnswer(this, ${i})">${o}</button>`).join('')}</div>`;
+  } else if (q.kind === 'mcq') {
+    html += `<p class="headword" style="margin-bottom:22px;">${q.head} <button onclick="alert('TTS 재생')" aria-label="발음" style="font-size:19px;">🔊</button></p>
+      <div class="optgrid">${q.opts.map((o, i) => `<button class="opt" onclick="vqAnswer(this, ${i})">${o}</button>`).join('')}</div>`;
+  } else {
+    html += `<p class="qsentence" style="font-size:18px;">${q.sent}</p>
+      <p style="font-family:var(--serif); font-size:21px; letter-spacing:3px; color:var(--muted); margin-bottom:14px;">${q.hint}</p>
+      <input class="field" id="spellIn" placeholder="영어로 입력" autocomplete="off" style="font-family:var(--serif); font-size:17px;" />
+      <button class="btn" style="margin-top:12px;" onclick="vqSpell()">확인</button>`;
+  }
+  document.getElementById('vqBody').innerHTML = html;
+  if (q.kind === 'spell') document.getElementById('spellIn').focus();
+}
+function vqShowFb(ok) {
+  const q = VQ_QS[vqIdx];
+  if (ok) vqRight++;
+  const fb = document.getElementById('vqFb');
+  fb.classList.add('on', ok ? 'good' : 'bad');
+  document.getElementById('vqVerdict').textContent = ok ? '✅ Correct!' : '❌ 다시 볼 단어로 저장했어요';
+  document.getElementById('vqWord').textContent = q.word + ' — ' + q.mean;
+  document.getElementById('vqExpl').textContent = q.expl;
+}
+function vqAnswer(btn, i) {
+  const q = VQ_QS[vqIdx];
+  const ok = i === q.ans;
+  document.querySelectorAll('#vqBody .opt').forEach((b, j) => {
+    b.disabled = true;
+    if (j === q.ans) b.classList.add(ok ? 'sel-ok' : 'reveal');
+  });
+  if (!ok) btn.classList.add('sel-no');
+  vqShowFb(ok);
+}
+function vqSpell() {
+  const v = (document.getElementById('spellIn').value || '').trim().toLowerCase();
+  vqShowFb(v === VQ_QS[vqIdx].answer);
+}
+function vqNext() {
+  vqIdx++;
+  if (vqIdx >= VQ_QS.length) {
+    state.xp += 30; state.vocabDone = 10; state.todayPct = 55;
+    document.getElementById('vqScore').textContent = vqRight + '/3';
+    go('vocab-done'); confetti();
+  } else vqDraw();
+}
+
+/* 단어 카드 sheet */
+function openSheet() { document.getElementById('sheetVeil').classList.add('on'); document.getElementById('wordSheet').classList.add('on'); }
+function closeSheet() { document.getElementById('sheetVeil').classList.remove('on'); document.getElementById('wordSheet').classList.remove('on'); }
+
+/* ════════════════ P2: SRS 복습 ════════════════ */
+const RV_CARDS = [
+  { w: 'implement', m: '시행하다', p: 'verb · TOEIC', ex: 'They implemented the new policy.' },
+  { w: 'comply', m: '준수하다, 따르다', p: 'verb · TOEIC', ex: 'All staff must comply with the rules.' },
+  { w: 'negotiate', m: '협상하다', p: 'verb · TOEIC', ex: 'We negotiated a better contract.' },
+  { w: 'refund', m: '환불(하다)', p: 'noun/verb · TOEIC', ex: 'You can request a full refund.' },
+];
+let rvIdx = 0;
+function rvReset() {
+  rvIdx = 0; rvDraw();
+}
+function rvDraw() {
+  const c = RV_CARDS[rvIdx];
+  const card = document.getElementById('rvCard');
+  card.classList.remove('flipped');
+  document.getElementById('rvGrades').style.visibility = 'hidden';
+  document.getElementById('rvFront').textContent = c.w;
+  document.getElementById('rvMeaning').textContent = c.m;
+  document.getElementById('rvPos').textContent = c.p;
+  document.getElementById('rvEx').textContent = c.ex;
+  document.getElementById('rvMeta').textContent = (rvIdx + 1) + '/4';
+  document.getElementById('rvBar').style.width = ((rvIdx) / 4 * 100 + 12) + '%';
+}
+function flipCard() {
+  document.getElementById('rvCard').classList.add('flipped');
+  document.getElementById('rvGrades').style.visibility = 'visible';
+}
+function gradeCard(g) {
+  rvIdx++;
+  if (rvIdx >= RV_CARDS.length) {
+    state.xp += 20; state.dueCount = 0; state.todayPct = 85; state.streak = 8;
+    go('review-done'); confetti();
+  } else rvDraw();
+}
+
+/* ════════════════ P3: 문법 ════════════════ */
+const GM_ANSWER = ['He', 'has', 'worked', 'here', 'for', 'five', 'years'];
+const GM_SHUFFLED = ['worked', 'for', 'He', 'years', 'has', 'here', 'five'];
+let gmPicked = [];
+function gmInit() {
+  gmPicked = [];
+  document.getElementById('gmFb').classList.remove('on', 'good', 'bad');
+  document.getElementById('gmChips').innerHTML = GM_SHUFFLED.map((w, i) =>
+    `<button class="chip" id="chip${i}" onclick="gmPick(${i})">${w}</button>`).join('');
+  gmDrawAnswer();
+}
+function gmDrawAnswer() {
+  const box = document.getElementById('gmAnswer');
+  box.innerHTML = gmPicked.length
+    ? gmPicked.map(i => `<span class="chip" style="cursor:default; margin:0;">${GM_SHUFFLED[i]}</span>`).join('')
+    : '<span style="color:var(--muted); font-size:13.5px; font-family:var(--sans);">여기에 카드가 놓여요</span>';
+}
+function gmPick(i) {
+  document.getElementById('chip' + i).classList.add('used');
+  gmPicked.push(i);
+  gmDrawAnswer();
+  if (gmPicked.length === GM_SHUFFLED.length) gmCheck();
+}
+function gmReset() { gmInit(); }
+function gmCheck() {
+  const made = gmPicked.map(i => GM_SHUFFLED[i]).join(' ');
+  const ok = made === GM_ANSWER.join(' ');
+  const fb = document.getElementById('gmFb');
+  fb.classList.add('on', ok ? 'good' : 'bad');
+  document.getElementById('gmVerdict').textContent = ok ? '✅ 완벽한 문장!' : '❌ 어순을 다시 볼까요?';
+  document.getElementById('gmExpl').innerHTML = ok
+    ? '<b>has worked</b> — 과거에 시작해 지금도 계속되는 일은 <b>현재완료(have/has + p.p.)</b>를 써요. 기간 앞에는 for.'
+    : `내가 만든 문장: <i>"${made}"</i><br />정답: <b>He has worked here for five years.</b> — 주어 + has + p.p. 순서, 기간(five years) 앞에는 for를 써요.`;
+}
+
+/* ════════════════ P4: 리스닝 ════════════════ */
+let lsPlayed = false;
+function lsReset() {
+  lsPlayed = false;
+  document.getElementById('lsWave').classList.remove('playing');
+  document.getElementById('lsQuiz').style.display = 'none';
+  document.getElementById('lsFb').classList.remove('on', 'good', 'bad');
+  document.getElementById('lsPlay').textContent = '▶ 재생';
+}
+function playClip() {
+  const wave = document.getElementById('lsWave');
+  wave.classList.add('playing');
+  document.getElementById('lsPlay').textContent = '⏸ 재생 중…';
+  setTimeout(() => {
+    wave.classList.remove('playing');
+    document.getElementById('lsPlay').textContent = '↺ 다시 듣기';
+    document.getElementById('lsQuiz').style.display = 'block';
+    lsPlayed = true;
+  }, 2600);
+}
+function setSpeed(btn) {
+  document.querySelectorAll('.spd').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function lsAnswer(btn, ok) {
+  document.querySelectorAll('#lsQuiz .opt').forEach(b => {
+    b.disabled = true;
+    if (b.textContent.includes('train delay')) b.classList.add(ok ? 'sel-ok' : 'reveal');
+  });
+  if (!ok) btn.classList.add('sel-no');
+  const fb = document.getElementById('lsFb');
+  fb.classList.add('on', ok ? 'good' : 'bad');
+  document.getElementById('lsVerdict').textContent = ok ? '✅ 정확해요!' : '❌ 한 번 더 들어볼까요?';
+}
+
+/* ════════════════ P5: 회화 ════════════════ */
+const SP_TURNS = [
+  { hint: '힌트: latte, please', mine: "I'd like an iced latte, please.", fb: '✅ Natural! "Could I get an iced latte?"도 카페에서 정말 많이 써.', ted: 'Sure! What size would you like?' },
+  { hint: '힌트: 사이즈 말하기 (medium)', mine: 'Medium, please. And less ice.', fb: '✅ 좋아! 요청을 덧붙일 땐 "with less ice, please"처럼 with를 쓰면 더 부드러워.', ted: "Got it. That'll be $5.50. Anything else?" },
+  { hint: '힌트: 괜찮다고 답하기', mine: "No, that's all. Thank you!", fb: "✅ Perfect ending! \"That's it for me\"도 같은 표현이야.", ted: null },
+];
+let spTurn = 0, spRecording = false;
+function spReset() {
+  spTurn = 0; spRecording = false;
+  document.getElementById('spChat').innerHTML = '<div class="msg ted"><span class="who">☕ Barista (Ted)</span>Hi there! What can I get for you today?</div>';
+  document.getElementById('spMeta').textContent = '1/5';
+  document.getElementById('spBar').style.width = '20%';
+  document.getElementById('spHint').textContent = '마이크를 누르고 영어로 답해보세요 · ' + SP_TURNS[0].hint;
+  document.getElementById('spMic').classList.remove('rec');
+  document.getElementById('spMic').style.display = 'flex';
+}
+function micTap() {
+  if (spRecording || spTurn >= SP_TURNS.length) return;
+  spRecording = true;
+  const mic = document.getElementById('spMic');
+  mic.classList.add('rec');
+  document.getElementById('spHint').textContent = '🔴 듣는 중… (모의 STT)';
+  setTimeout(() => {
+    mic.classList.remove('rec');
+    spRecording = false;
+    const t = SP_TURNS[spTurn];
+    const chat = document.getElementById('spChat');
+    chat.insertAdjacentHTML('beforeend', `<div class="msg me"><span class="who">나 (STT 인식)</span>${t.mine}</div>`);
+    chat.insertAdjacentHTML('beforeend', `<div class="msg ted" style="border-color:#A7F3D0; background:var(--success-tint); font-family:var(--sans); font-size:13px;"><span class="who">🤖 Ted 피드백</span>${t.fb}</div>`);
+    if (t.ted) chat.insertAdjacentHTML('beforeend', `<div class="msg ted"><span class="who">☕ Barista (Ted)</span>${t.ted}</div>`);
+    spTurn++;
+    document.getElementById('spMeta').textContent = Math.min(spTurn + 1, 5) + '/5';
+    document.getElementById('spBar').style.width = (20 + spTurn * 25) + '%';
+    if (spTurn >= SP_TURNS.length) {
+      document.getElementById('spHint').textContent = '🎉 시나리오 완료! +25 XP';
+      document.getElementById('spMic').style.display = 'none';
+      const dock = document.getElementById('spDock');
+      if (!document.getElementById('spDone')) {
+        dock.insertAdjacentHTML('beforeend', '<button class="btn" id="spDone" onclick="state.xp+=25; go(\'home\')">완료 — 홈으로</button>');
+      }
+      state.xp += 0; confetti();
+    } else {
+      document.getElementById('spHint').textContent = '마이크를 누르고 답해보세요 · ' + SP_TURNS[spTurn].hint;
+    }
+    chat.scrollTop = chat.scrollHeight;
+  }, 1300);
+}
+
+/* ════════════════ P6: 리그 ════════════════ */
+(function buildLeague() {
+  const rows = [
+    [1, '🇰🇷 mins_eng', 540], [2, '🇰🇷 toeic_master', 488], [3, '🇯🇵 yuki_study', 451],
+    [10, '🇰🇷 daily10min', 305], [11, '🇰🇷 grammar_cat', 290], [12, '나 (우용)', 225, true],
+    [13, '🇰🇷 voca_king', 211], [14, '🇺🇸 hangul_lover', 198],
+  ];
+  document.getElementById('leagueList').innerHTML = rows.map(r => `
+    <div class="rankrow ${r[3] ? 'me' : ''}">
+      <span class="rk">${r[0]}</span>
+      <span class="nm">${r[1]}</span>
+      <span class="xp">${r[2]} XP</span>
+    </div>${r[0] === 3 ? '<p style="text-align:center; font-size:11px; color:var(--success); font-weight:700; padding:6px 0;">─ ▲ 골드 승급선 (상위 10) ─</p>' : ''}`).join('');
+})();
+
+/* ════════════════ confetti ════════════════ */
+function confetti() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const box = document.getElementById('confetti');
+  const palette = ['#4F46E5', '#F59E0B', '#10B981', '#818CF8', '#FCD34D'];
+  box.innerHTML = Array.from({ length: 26 }, (_, i) =>
+    `<i style="left:${(i * 37) % 100}%; background:${palette[i % 5]}; animation-delay:${(i % 7) * 0.09}s; transform:rotate(${i * 33}deg);"></i>`).join('');
+  setTimeout(() => { box.innerHTML = ''; }, 2000);
+}
+
+/* 시작 — URL 해시로 딥링크 지원 (예: index.html#home) */
+function fromHash() {
+  const id = location.hash.slice(1);
+  go(SCREENS.some(s => s.id === id) ? id : 'login');
+}
+window.addEventListener('hashchange', fromHash);
+fromHash();
+</script>
+</body>
+</html>

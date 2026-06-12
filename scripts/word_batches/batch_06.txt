@@ -1,0 +1,51 @@
+convenient|adjective|편리한|Online booking is more convenient.
+convention|noun|대회|The industry convention starts next week.
+convert|verb|전환하다|Convert the file to PDF format.
+convince|verb|설득하다|Data helped convince the board to invest.
+cooperate|verb|협력하다|Departments must cooperate on the rollout.
+coordinate|verb|조율하다|She coordinates schedules for all teams.
+copy|noun|사본|Keep a copy of every signed document.
+core|adjective|핵심의|Security is a core company value.
+corporate|adjective|기업의|Corporate policy bans personal devices.
+correct|adjective|올바른|Submit the correct form to payroll.
+correspond|verb|해당하다|Prices correspond to service levels.
+cost|noun|비용|Labor cost rose more than expected.
+council|noun|협의회|The city council approved the permit.
+counsel|noun|조언|Seek legal counsel before litigation.
+count|verb|세다|Count units before sealing each box.
+counter|noun|카운터|Pick up badges at the front counter.
+country|noun|국가|We export to over thirty countries.
+coupon|noun|쿠폰|Use this coupon before it expires.
+course|noun|과정|Enroll in the safety course online.
+cover|verb|다루다|The manual covers basic procedures.
+create|verb|만들다|Teams create prototypes in the lab.
+credit|noun|신용|We extended credit to loyal clients.
+crew|noun|승무원|The flight crew boarded early today.
+crisis|noun|위기|The firm managed the crisis well.
+criterion|noun|기준|Price is one criterion for selection.
+critical|adjective|중요한|Timing is critical for this launch.
+crop|noun|작물|A poor crop reduced export volume.
+cross|verb|건너다|Trucks cross the border at dawn.
+crowd|noun|군중|A large crowd gathered at the sale.
+crucial|adjective|결정적인|Lead time is crucial for retailers.
+culture|noun|문화|Company culture supports innovation.
+currency|noun|통화|Currency swings affect import prices.
+current|adjective|현재의|Review current policies with HR.
+curriculum|noun|교육과정|The curriculum includes safety modules.
+custom|noun|관습|It is custom to greet clients formally.
+customer|noun|고객|Customer feedback drives product changes.
+cycle|noun|주기|The billing cycle ends on the fifteenth.
+daily|adjective|일일의|Read the daily report each morning.
+damage|noun|손상|Inspect goods for damage on arrival.
+danger|noun|위험|Mark areas of danger with signs.
+data|noun|데이터|Secure data stored on company servers.
+database|noun|데이터베이스|Update the client database weekly.
+date|noun|날짜|Confirm the delivery date in writing.
+deadline|noun|마감일|The deadline for bids is Friday.
+deal|noun|거래|They closed the deal after long talks.
+debate|noun|토론|A debate on fees lasted two hours.
+debt|noun|부채|The firm reduced debt last quarter.
+decade|noun|10년|Sales doubled over the past decade.
+decide|verb|결정하다|We decide after reviewing all options.
+decision|noun|결정|The decision takes effect immediately.
+declare|verb|선언하다|The CEO declared strong quarterly results.

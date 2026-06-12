@@ -1,0 +1,51 @@
+employment|noun|고용|Employment rose in the service sector.
+enable|verb|가능하게 하다|Software enables remote collaboration.
+encounter|verb|마주치다|You may encounter delays at customs.
+encourage|verb|격려하다|Managers encourage ideas from all staff.
+end|verb|끝내다|We end meetings on time whenever possible.
+energy|noun|에너지|Lower energy use cuts operating costs.
+enforce|verb|시행하다|Security enforces badge rules at entry.
+engage|verb|참여시키다|Campaigns engage customers on social media.
+engine|noun|엔진|The engine meets new emission standards.
+engineer|noun|엔지니어|An engineer reviewed the structural plans.
+enhance|verb|향상시키다|Training enhances skills across teams.
+enormous|adjective|엄청난|An enormous warehouse stores seasonal stock.
+ensure|verb|보장하다|Checks ensure orders ship without errors.
+enterprise|noun|기업|Small enterprise grants are available now.
+entire|adjective|전체의|The entire staff attended the briefing.
+entity|noun|실체|Each entity files taxes separately.
+entrance|noun|입구|Use the side entrance after six pm.
+entry|noun|입력|Data entry must be accurate and timely.
+environment|noun|환경|A clean environment boosts productivity.
+equal|adjective|동등한|Equal pay rules apply to all roles.
+equipment|noun|장비|Inspect equipment before each shift starts.
+equivalent|adjective|동등한|One euro is equivalent to about one dollar.
+error|noun|오류|Fix the error before resubmitting the form.
+escape|verb|탈출하다|No one could escape strict budget limits.
+especially|adverb|특히|Prices rose, especially for raw materials.
+essential|adjective|필수적인|Water is essential for the production line.
+establish|verb|설립하다|They established the firm in nineteen ninety.
+estimate|verb|추정하다|We estimate costs will rise five percent.
+evaluate|verb|평가하다|Managers evaluate staff performance yearly.
+even|adverb|심지어|Even small delays hurt client trust.
+event|noun|행사|The event attracted vendors from abroad.
+eventually|adverb|결국|Costs will eventually stabilize, analysts say.
+evidence|noun|증거|Evidence supports our market expansion plan.
+exact|adjective|정확한|Use the exact figure from the ledger.
+examine|verb|조사하다|Auditors examine records each quarter.
+example|noun|예|See the example on page twelve please.
+exceed|verb|초과하다|Sales exceeded forecasts for three months.
+excellent|adjective|훌륭한|She received excellent feedback from clients.
+except|preposition|~을 제외하고|All staff except interns may travel.
+exchange|noun|교환|We exchange data through secure portals.
+excited|adjective|흥분한|Teams are excited about the new product.
+exclude|verb|제외하다|The price excludes tax and shipping fees.
+excuse|noun|변명|There is no excuse for missed deadlines.
+execute|verb|실행하다|We execute the plan in three phases.
+executive|noun|임원|An executive signed the final agreement.
+exercise|noun|행사|Stock options exercise after vesting periods.
+exhibit|verb|전시하다|Galleries exhibit work from local artists.
+exist|verb|존재하다|Many risks exist in global supply chains.
+expand|verb|확장하다|We expand into Asia next fiscal year.
+expansion|noun|확장|Expansion requires new capital and staff.
+expect|verb|기대하다|We expect demand to rise in summer.

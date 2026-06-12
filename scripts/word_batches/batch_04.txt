@@ -1,0 +1,51 @@
+caution|noun|주의|Proceed with caution during repairs.
+celebrate|verb|축하하다|We celebrate milestones with the team.
+cell|noun|세포|Lab staff study each cell sample.
+center|noun|센터|The training center opens at nine.
+central|adjective|중앙의|Our central office handles billing.
+certificate|noun|증명서|Bring your certificate to orientation.
+chain|noun|체인|The hotel chain expanded overseas.
+chair|noun|의장|She was elected chair of the committee.
+challenge|noun|도전|Rising costs pose a major challenge.
+chance|noun|기회|This is a chance to enter new markets.
+change|verb|변화하다|Policies change with new leadership.
+channel|noun|채널|Use our online channel for orders.
+character|noun|성격|Honesty is part of his character.
+charge|verb|청구하다|We charge a fee for rush delivery.
+chart|noun|차트|The chart shows monthly growth.
+check|verb|확인하다|Check inventory before placing orders.
+chief|adjective|수석의|The chief engineer approved the design.
+choice|noun|선택|Customers want more product choices.
+choose|verb|선택하다|Choose the option that fits your needs.
+circumstance|noun|상황|Under no circumstance share passwords.
+cite|verb|인용하다|Please cite your sources in the report.
+claim|verb|주장하다|He claims the data supports his view.
+clarify|verb|명확히 하다|Clarify the terms before signing.
+class|noun|등급|This room is first class only.
+classic|adjective|고전적인|The design has a classic look.
+classify|verb|분류하다|Classify expenses by department.
+clean|adjective|깨끗한|Keep workstations clean and organized.
+clear|adjective|명확한|Give clear instructions to new hires.
+clerk|noun|점원|The clerk processed our return quickly.
+client|noun|고객|Each client receives a dedicated manager.
+climate|noun|기후|Climate affects agricultural output.
+close|verb|마감하다|We close accounts at month end.
+closure|noun|폐쇄|The factory closure affected many workers.
+clue|noun|단서|The email provides a clue about timing.
+coast|noun|해안|Shipments move along the coast.
+code|noun|코드|Enter the access code at the gate.
+coin|noun|동전|The machine accepts coins and bills.
+collapse|verb|붕괴하다|Prices may collapse if demand falls.
+colleague|noun|동료|Ask a colleague to review the draft.
+collect|verb|수집하다|We collect feedback after each event.
+collection|noun|수집|A data collection starts on Monday.
+combine|verb|결합하다|Combine teams to finish faster.
+comfort|noun|편안함|Guest comfort is our priority.
+command|noun|명령|He issued a command to halt work.
+comment|noun|코멘트|Leave a comment on the proposal.
+commerce|noun|상업|E-commerce drives much of our growth.
+commercial|adjective|상업의|The commercial district is expanding.
+commission|noun|수수료|Sales staff earn a commission.
+commit|verb|약속하다|We commit to meeting deadlines.
+committee|noun|위원회|The committee will vote on Friday.
+common|adjective|흔한|Delays are common during peak season.

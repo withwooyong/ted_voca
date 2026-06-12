@@ -1,0 +1,51 @@
+abandon|verb|포기하다|They had to abandon the project.
+ability|noun|능력|She has the ability to lead teams.
+abroad|adverb|해외에|He works abroad for a global firm.
+absence|noun|부재|Your absence was noted in the meeting.
+absolute|adjective|절대적인|There is no absolute guarantee.
+absorb|verb|흡수하다|The sponge can absorb water quickly.
+abstract|adjective|추상적인|The concept is too abstract for beginners.
+abundant|adjective|풍부한|The region has abundant natural resources.
+academic|adjective|학문의|She received an academic award.
+accept|verb|수락하다|We accept credit cards only.
+access|noun|접근|Employees have access to the database.
+accommodate|verb|수용하다|The hotel can accommodate 200 guests.
+accompany|verb|동반하다|A guide will accompany the tour group.
+accomplish|verb|성취하다|We accomplished our quarterly goals.
+accord|noun|합의|They reached an accord on pricing.
+account|noun|계정|Please create a user account.
+accurate|adjective|정확한|The report contains accurate data.
+achieve|verb|달성하다|She achieved record sales this year.
+acknowledge|verb|인정하다|He acknowledged the receipt of the package.
+acquire|verb|획득하다|The firm acquired a smaller competitor.
+adapt|verb|적응하다|Staff must adapt to new software.
+adequate|adjective|적절한|We need adequate funding for the plan.
+adjust|verb|조정하다|Please adjust the settings accordingly.
+administration|noun|행정|Administration approved the budget.
+admit|verb|인정하다|He admitted making a mistake.
+adopt|verb|채택하다|The board adopted a new policy.
+advance|verb|진전시키다|Technology continues to advance rapidly.
+advantage|noun|이점|Bilingual skills are a clear advantage.
+advertise|verb|광고하다|They advertise on social media.
+advise|verb|조언하다|Experts advise caution during negotiations.
+affair|noun|업무|He manages public affairs for the company.
+affect|verb|영향을 미치다|Weather can affect delivery schedules.
+afford|verb|~할 여유가 있다|We cannot afford further delays.
+agency|noun|대행사|The travel agency booked our flights.
+agenda|noun|의제|The agenda includes budget review.
+agent|noun|대리인|Contact our sales agent for details.
+agree|verb|동의하다|Both parties agree on the terms.
+agreement|noun|계약|They signed a three-year agreement.
+agriculture|noun|농업|Agriculture remains a key export sector.
+aid|noun|지원|Foreign aid supported the recovery.
+aim|verb|겨냥하다|The campaign aims to boost awareness.
+aircraft|noun|항공기|The aircraft landed on schedule.
+alarm|noun|경보|The fire alarm sounded at noon.
+allocate|verb|할당하다|Funds were allocated to marketing.
+allow|verb|허용하다|Smoking is not allowed in the building.
+alter|verb|변경하다|We cannot alter the contract now.
+alternative|noun|대안|Consider an alternative supplier.
+although|conjunction|비록 ~이지만|Although costs rose, profits grew.
+altogether|adverb|완전히|The plan was altogether successful.
+amateur|adjective|아마추어의|Amateur photographers joined the contest.
+ambiguous|adjective|애매한|The wording is ambiguous and unclear.
