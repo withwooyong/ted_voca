@@ -1,0 +1,3239 @@
+{
+  "topics": [
+    {
+      "slug": "present-perfect",
+      "title": "현재완료",
+      "cefr_level": "A2",
+      "explanation": "과거에 시작해 지금까지 이어지거나 영향을 주는 일은 현재완료(have/has + p.p.)로 나타낸다. 기간은 for, 시점은 since와 함께 쓰고, 구체적 과거 시점(yesterday 등)과는 함께 쓰지 않는다.",
+      "tags": [
+        "tense"
+      ],
+      "sort_order": 1
+    },
+    {
+      "slug": "past-simple",
+      "title": "과거시제",
+      "cefr_level": "A2",
+      "explanation": "이미 끝난 과거의 동작이나 상태는 과거시제로 나타낸다. 규칙 동사는 -ed를 붙이고, 의문문과 부정문에서는 did를 쓰며 본동사는 원형으로 돌아간다.",
+      "tags": [
+        "tense"
+      ],
+      "sort_order": 2
+    },
+    {
+      "slug": "articles",
+      "title": "관사 a/an/the",
+      "cefr_level": "A2",
+      "explanation": "처음 언급하는 셀 수 있는 단수 명사 앞에는 부정관사 a/an을, 특정한 것을 가리킬 때는 정관사 the를 쓴다. 모음 소리로 시작하는 단어 앞에는 an을 쓴다.",
+      "tags": [
+        "grammar-articles"
+      ],
+      "sort_order": 3
+    },
+    {
+      "slug": "countable-uncountable",
+      "title": "셀 수 있는 명사와 없는 명사",
+      "cefr_level": "A2",
+      "explanation": "셀 수 있는 명사는 복수형이 가능하고 many와 함께 쓰며, 셀 수 없는 명사는 단수 취급하고 much와 함께 쓴다. 양을 말할 때는 some, a lot of 등을 활용한다.",
+      "tags": [
+        "grammar-articles"
+      ],
+      "sort_order": 4
+    },
+    {
+      "slug": "comparatives",
+      "title": "비교급과 최상급",
+      "cefr_level": "A2",
+      "explanation": "두 대상을 비교할 때는 비교급(-er 또는 more)에 than을 쓰고, 셋 이상에서 가장 ~한 것은 최상급(-est 또는 most)에 the를 붙인다. 음절이 긴 형용사는 more/most를 쓴다.",
+      "tags": [
+        "comparison"
+      ],
+      "sort_order": 5
+    },
+    {
+      "slug": "prepositions-time",
+      "title": "시간 전치사",
+      "cefr_level": "A2",
+      "explanation": "시각·구체적 시점에는 at, 요일·날짜에는 on, 월·연도·계절처럼 긴 기간에는 in을 쓴다. 마감이나 기한을 말할 때는 by와 until을 구별해 쓴다.",
+      "tags": [
+        "prepositions"
+      ],
+      "sort_order": 6
+    },
+    {
+      "slug": "prepositions-place",
+      "title": "장소 전치사",
+      "cefr_level": "A2",
+      "explanation": "넓은 공간이나 도시·나라 안에는 in, 표면 위나 거리·층에는 on, 특정 지점에는 at을 쓴다. 위치 관계를 정확히 나타내려면 전치사 선택이 중요하다.",
+      "tags": [
+        "prepositions"
+      ],
+      "sort_order": 7
+    },
+    {
+      "slug": "future-will-going-to",
+      "title": "미래 will과 be going to",
+      "cefr_level": "A2",
+      "explanation": "말하는 순간 결정한 일이나 단순 예측에는 will을, 이미 정해진 계획이나 근거 있는 예측에는 be going to를 쓴다. 두 표현 모두 미래를 나타내지만 뉘앙스가 다르다.",
+      "tags": [
+        "tense"
+      ],
+      "sort_order": 8
+    },
+    {
+      "slug": "modal-can-could",
+      "title": "조동사 can과 could",
+      "cefr_level": "A2",
+      "explanation": "can은 현재의 능력·허락·가능성을, could는 과거의 능력이나 더 공손한 요청·가능성을 나타낸다. 조동사 뒤에는 항상 동사원형을 쓴다.",
+      "tags": [
+        "modals"
+      ],
+      "sort_order": 9
+    },
+    {
+      "slug": "present-continuous",
+      "title": "현재진행형",
+      "cefr_level": "A2",
+      "explanation": "지금 진행 중인 동작이나 일시적인 상황은 현재진행형(be동사 + 동사ing)으로 나타낸다. like, know처럼 상태를 나타내는 동사는 보통 진행형으로 쓰지 않는다.",
+      "tags": [
+        "tense"
+      ],
+      "sort_order": 10
+    },
+    {
+      "slug": "modal-should-must",
+      "title": "조동사 should/must",
+      "cefr_level": "A2",
+      "explanation": "should는 충고나 권유를, must는 강한 의무나 확신을 나타냅니다. 뒤에는 항상 동사원형이 옵니다.",
+      "tags": [
+        "modals"
+      ],
+      "sort_order": 11
+    },
+    {
+      "slug": "conditionals-first",
+      "title": "가정법 1형식 (if + 현재)",
+      "cefr_level": "B1",
+      "explanation": "실현 가능한 미래의 일을 말할 때 if절에는 현재시제, 주절에는 will을 씁니다. 일어날 법한 조건과 결과를 나타냅니다.",
+      "tags": [
+        "conditionals"
+      ],
+      "sort_order": 12
+    },
+    {
+      "slug": "conditionals-second",
+      "title": "가정법 2형식 (if + 과거)",
+      "cefr_level": "B1",
+      "explanation": "현재 사실과 반대되거나 일어날 가능성이 낮은 일을 가정할 때 if절에는 과거시제, 주절에는 would를 씁니다. be동사는 was 대신 were를 자주 씁니다.",
+      "tags": [
+        "conditionals"
+      ],
+      "sort_order": 13
+    },
+    {
+      "slug": "passive-voice",
+      "title": "수동태",
+      "cefr_level": "B1",
+      "explanation": "동작의 대상이 주어가 될 때 수동태를 쓰며 'be동사 + 과거분사' 형태입니다. 행위자는 by로 나타냅니다.",
+      "tags": [
+        "passive"
+      ],
+      "sort_order": 14
+    },
+    {
+      "slug": "relative-clauses",
+      "title": "관계대명사",
+      "cefr_level": "B1",
+      "explanation": "관계대명사는 두 문장을 연결하며 사람에는 who, 사물에는 which, 둘 다에는 that을 씁니다. 선행사를 꾸며주는 절을 이끕니다.",
+      "tags": [
+        "clauses"
+      ],
+      "sort_order": 15
+    },
+    {
+      "slug": "gerund-infinitive",
+      "title": "동명사 vs to부정사",
+      "cefr_level": "B1",
+      "explanation": "동사에 따라 뒤에 동명사(-ing)나 to부정사가 옵니다. enjoy, finish는 동명사를, want, decide는 to부정사를 취합니다.",
+      "tags": [
+        "verb-patterns"
+      ],
+      "sort_order": 16
+    },
+    {
+      "slug": "question-tags",
+      "title": "부가의문문",
+      "cefr_level": "A2",
+      "explanation": "부가의문문은 문장 끝에 짧게 덧붙이는 의문문입니다. 앞이 긍정이면 부정, 부정이면 긍정으로 만들고 같은 시제의 조동사를 씁니다.",
+      "tags": [
+        "questions"
+      ],
+      "sort_order": 17
+    },
+    {
+      "slug": "adverbs-frequency",
+      "title": "빈도 부사",
+      "cefr_level": "A2",
+      "explanation": "always, usually, often, sometimes, never 같은 빈도 부사는 일반동사 앞, be동사 뒤에 위치합니다. 얼마나 자주 하는지를 나타냅니다.",
+      "tags": [
+        "adverbs"
+      ],
+      "sort_order": 18
+    },
+    {
+      "slug": "too-enough",
+      "title": "too / enough",
+      "cefr_level": "A2",
+      "explanation": "too는 형용사 앞에서 '너무 ~한'을, enough는 형용사 뒤에서 '충분히 ~한'을 나타냅니다. too는 부정적 의미, enough는 충분함을 표현합니다.",
+      "tags": [
+        "comparison"
+      ],
+      "sort_order": 19
+    },
+    {
+      "slug": "used-to",
+      "title": "used to",
+      "cefr_level": "A2",
+      "explanation": "used to는 과거에 습관적으로 했지만 지금은 하지 않는 일을 나타냅니다. 뒤에는 항상 동사원형이 오며 부정은 didn't use to입니다.",
+      "tags": [
+        "tense"
+      ],
+      "sort_order": 20
+    }
+  ],
+  "questions": [
+    {
+      "id": "present-perfect:1",
+      "topic_slug": "present-perfect",
+      "question_type": "word_order",
+      "prompt": "그는 여기서 5년째 일해 왔다.",
+      "options": [
+        "He",
+        "has",
+        "worked",
+        "here",
+        "for",
+        "five",
+        "years"
+      ],
+      "answer": "He has worked here for five years.",
+      "explanation": "has worked — 현재완료 + for + 기간으로 지속을 나타낸다.",
+      "sort_order": 1
+    },
+    {
+      "id": "present-perfect:2",
+      "topic_slug": "present-perfect",
+      "question_type": "word_order",
+      "prompt": "나는 그 영화를 이미 봤다.",
+      "options": [
+        "I",
+        "have",
+        "already",
+        "seen",
+        "that",
+        "movie"
+      ],
+      "answer": "I have already seen that movie.",
+      "explanation": "already는 have와 과거분사 사이에 놓는다.",
+      "sort_order": 2
+    },
+    {
+      "id": "present-perfect:3",
+      "topic_slug": "present-perfect",
+      "question_type": "word_order",
+      "prompt": "우리는 2020년부터 서울에 살았다.",
+      "options": [
+        "We",
+        "have",
+        "lived",
+        "in",
+        "Seoul",
+        "since",
+        "2020"
+      ],
+      "answer": "We have lived in Seoul since 2020.",
+      "explanation": "since + 시작 시점은 현재완료와 함께 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "present-perfect:4",
+      "topic_slug": "present-perfect",
+      "question_type": "blank_choice",
+      "prompt": "She ___ finished the report.",
+      "options": [
+        "has",
+        "have",
+        "had"
+      ],
+      "answer": "has",
+      "explanation": "3인칭 단수 주어 She에는 has를 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "present-perfect:5",
+      "topic_slug": "present-perfect",
+      "question_type": "blank_choice",
+      "prompt": "I have lived here ___ ten years.",
+      "options": [
+        "since",
+        "for",
+        "from"
+      ],
+      "answer": "for",
+      "explanation": "기간(ten years) 앞에는 for를 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "present-perfect:6",
+      "topic_slug": "present-perfect",
+      "question_type": "blank_choice",
+      "prompt": "They have ___ arrived at the airport.",
+      "options": [
+        "yet",
+        "just",
+        "ago"
+      ],
+      "answer": "just",
+      "explanation": "just는 '방금'의 의미로 현재완료와 자연스럽다. ago는 과거시제와만 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "present-perfect:7",
+      "topic_slug": "present-perfect",
+      "question_type": "blank_choice",
+      "prompt": "Have you ___ been to Japan?",
+      "options": [
+        "ever",
+        "already",
+        "since"
+      ],
+      "answer": "ever",
+      "explanation": "의문문에서 '~한 적 있니'는 ever를 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "present-perfect:8",
+      "topic_slug": "present-perfect",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She have finished the work.",
+      "options": [
+        "She",
+        "have",
+        "finished",
+        "the work"
+      ],
+      "answer": "have",
+      "explanation": "주어가 3인칭 단수이므로 have가 아니라 has를 써야 한다.",
+      "sort_order": 8
+    },
+    {
+      "id": "present-perfect:9",
+      "topic_slug": "present-perfect",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I have seen him yesterday.",
+      "options": [
+        "I",
+        "have seen",
+        "him",
+        "yesterday"
+      ],
+      "answer": "yesterday",
+      "explanation": "구체적 과거 시점 yesterday는 현재완료와 함께 쓸 수 없다.",
+      "sort_order": 9
+    },
+    {
+      "id": "present-perfect:10",
+      "topic_slug": "present-perfect",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: We have lived here since five years.",
+      "options": [
+        "We",
+        "have lived",
+        "here",
+        "since five years"
+      ],
+      "answer": "since five years",
+      "explanation": "기간 five years 앞에는 since가 아니라 for를 써야 한다.",
+      "sort_order": 10
+    },
+    {
+      "id": "past-simple:1",
+      "topic_slug": "past-simple",
+      "question_type": "word_order",
+      "prompt": "나는 어제 새 노트북을 샀다.",
+      "options": [
+        "I",
+        "bought",
+        "a",
+        "new",
+        "laptop",
+        "yesterday"
+      ],
+      "answer": "I bought a new laptop yesterday.",
+      "explanation": "buy의 과거형은 bought이고, yesterday로 과거 시점을 명시한다.",
+      "sort_order": 1
+    },
+    {
+      "id": "past-simple:2",
+      "topic_slug": "past-simple",
+      "question_type": "word_order",
+      "prompt": "그들은 지난주에 회의에 참석했다.",
+      "options": [
+        "They",
+        "attended",
+        "the",
+        "meeting",
+        "last",
+        "week"
+      ],
+      "answer": "They attended the meeting last week.",
+      "explanation": "규칙동사 attend의 과거형 attended를 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "past-simple:3",
+      "topic_slug": "past-simple",
+      "question_type": "word_order",
+      "prompt": "그녀는 2시간 전에 떠났다.",
+      "options": [
+        "She",
+        "left",
+        "two",
+        "hours",
+        "ago"
+      ],
+      "answer": "She left two hours ago.",
+      "explanation": "leave의 과거형 left와 ago는 과거시제와 함께 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "past-simple:4",
+      "topic_slug": "past-simple",
+      "question_type": "word_order",
+      "prompt": "우리는 그 식당에서 점심을 먹지 않았다.",
+      "options": [
+        "We",
+        "did",
+        "not",
+        "have",
+        "lunch",
+        "there"
+      ],
+      "answer": "We did not have lunch there.",
+      "explanation": "부정문은 did not + 동사원형(have)으로 만든다.",
+      "sort_order": 4
+    },
+    {
+      "id": "past-simple:5",
+      "topic_slug": "past-simple",
+      "question_type": "blank_choice",
+      "prompt": "He ___ to the office early yesterday.",
+      "options": [
+        "went",
+        "goes",
+        "has gone"
+      ],
+      "answer": "went",
+      "explanation": "yesterday가 있으므로 과거시제 went를 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "past-simple:6",
+      "topic_slug": "past-simple",
+      "question_type": "blank_choice",
+      "prompt": "They ___ not finish the project on time.",
+      "options": [
+        "did",
+        "do",
+        "were"
+      ],
+      "answer": "did",
+      "explanation": "일반동사 부정의 과거형은 did not이다.",
+      "sort_order": 6
+    },
+    {
+      "id": "past-simple:7",
+      "topic_slug": "past-simple",
+      "question_type": "blank_choice",
+      "prompt": "Did you ___ the email this morning?",
+      "options": [
+        "send",
+        "sent",
+        "sending"
+      ],
+      "answer": "send",
+      "explanation": "did 다음에는 동사원형 send를 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "past-simple:8",
+      "topic_slug": "past-simple",
+      "question_type": "blank_choice",
+      "prompt": "The store ___ at nine last night.",
+      "options": [
+        "closed",
+        "closes",
+        "close"
+      ],
+      "answer": "closed",
+      "explanation": "과거 시점(last night)이므로 과거형 closed를 쓴다.",
+      "sort_order": 8
+    },
+    {
+      "id": "past-simple:9",
+      "topic_slug": "past-simple",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She buyed a ticket last Friday.",
+      "options": [
+        "She",
+        "buyed",
+        "a ticket",
+        "last Friday"
+      ],
+      "answer": "buyed",
+      "explanation": "buy는 불규칙동사로 과거형이 bought이다.",
+      "sort_order": 9
+    },
+    {
+      "id": "past-simple:10",
+      "topic_slug": "past-simple",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: We did went home after work.",
+      "options": [
+        "We",
+        "did",
+        "went",
+        "home"
+      ],
+      "answer": "went",
+      "explanation": "did가 있으면 본동사는 원형 go를 써야 한다.",
+      "sort_order": 10
+    },
+    {
+      "id": "articles:1",
+      "topic_slug": "articles",
+      "question_type": "word_order",
+      "prompt": "그녀는 한 시간 안에 보고서를 끝냈다.",
+      "options": [
+        "She",
+        "finished",
+        "the",
+        "report",
+        "in",
+        "an",
+        "hour"
+      ],
+      "answer": "She finished the report in an hour.",
+      "explanation": "an hour는 h가 묵음이라 모음 소리로 시작해 an을 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "articles:2",
+      "topic_slug": "articles",
+      "question_type": "word_order",
+      "prompt": "그는 정직한 직원을 찾고 있다.",
+      "options": [
+        "He",
+        "is",
+        "looking",
+        "for",
+        "an",
+        "honest",
+        "employee"
+      ],
+      "answer": "He is looking for an honest employee.",
+      "explanation": "honest는 h가 묵음이므로 an을 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "articles:3",
+      "topic_slug": "articles",
+      "question_type": "word_order",
+      "prompt": "그 책은 탁자 위에 있다.",
+      "options": [
+        "The",
+        "book",
+        "is",
+        "on",
+        "that",
+        "table"
+      ],
+      "answer": "The book is on that table.",
+      "explanation": "특정한 책을 가리키므로 the를 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "articles:4",
+      "topic_slug": "articles",
+      "question_type": "blank_choice",
+      "prompt": "I bought ___ umbrella this morning.",
+      "options": [
+        "an",
+        "a",
+        "the"
+      ],
+      "answer": "an",
+      "explanation": "umbrella는 모음 소리로 시작하므로 an을 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "articles:5",
+      "topic_slug": "articles",
+      "question_type": "blank_choice",
+      "prompt": "She is ___ university student in London.",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answer": "a",
+      "explanation": "university는 발음이 '유'로 자음 소리라서 a를 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "articles:6",
+      "topic_slug": "articles",
+      "question_type": "blank_choice",
+      "prompt": "Can you pass me ___ salt, please?",
+      "options": [
+        "the",
+        "a",
+        "an"
+      ],
+      "answer": "the",
+      "explanation": "식탁 위의 특정 소금을 가리키므로 the를 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "articles:7",
+      "topic_slug": "articles",
+      "question_type": "blank_choice",
+      "prompt": "He works as ___ engineer at a startup.",
+      "options": [
+        "an",
+        "a",
+        "the"
+      ],
+      "answer": "an",
+      "explanation": "engineer는 모음 소리로 시작하므로 an을 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "articles:8",
+      "topic_slug": "articles",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is a honest manager.",
+      "options": [
+        "She is",
+        "a",
+        "honest",
+        "manager"
+      ],
+      "answer": "a",
+      "explanation": "honest는 모음 소리로 시작하므로 an을 써야 한다.",
+      "sort_order": 8
+    },
+    {
+      "id": "articles:9",
+      "topic_slug": "articles",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: He gave me an useful tip.",
+      "options": [
+        "He gave me",
+        "an",
+        "useful",
+        "tip"
+      ],
+      "answer": "an",
+      "explanation": "useful은 '유'로 자음 소리라서 a를 써야 한다.",
+      "sort_order": 9
+    },
+    {
+      "id": "articles:10",
+      "topic_slug": "articles",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: Please open a window near you.",
+      "options": [
+        "Please open",
+        "a",
+        "window",
+        "near you"
+      ],
+      "answer": "a",
+      "explanation": "특정한 창문을 가리키므로 the가 더 자연스럽다.",
+      "sort_order": 10
+    },
+    {
+      "id": "countable-uncountable:1",
+      "topic_slug": "countable-uncountable",
+      "question_type": "word_order",
+      "prompt": "책상 위에 많은 정보가 있다.",
+      "options": [
+        "There",
+        "is",
+        "much",
+        "information",
+        "on",
+        "the",
+        "desk"
+      ],
+      "answer": "There is much information on the desk.",
+      "explanation": "information은 불가산명사라 much와 함께 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "countable-uncountable:2",
+      "topic_slug": "countable-uncountable",
+      "question_type": "word_order",
+      "prompt": "우리는 약간의 조언이 필요하다.",
+      "options": [
+        "We",
+        "need",
+        "a",
+        "little",
+        "advice"
+      ],
+      "answer": "We need a little advice.",
+      "explanation": "advice는 불가산명사라 a little과 함께 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "countable-uncountable:3",
+      "topic_slug": "countable-uncountable",
+      "question_type": "word_order",
+      "prompt": "회의에 많은 사람들이 왔다.",
+      "options": [
+        "Many",
+        "people",
+        "came",
+        "to",
+        "the",
+        "meeting"
+      ],
+      "answer": "Many people came to the meeting.",
+      "explanation": "people은 가산명사라 many와 함께 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "countable-uncountable:4",
+      "topic_slug": "countable-uncountable",
+      "question_type": "blank_choice",
+      "prompt": "How ___ money do you have?",
+      "options": [
+        "much",
+        "many",
+        "few"
+      ],
+      "answer": "much",
+      "explanation": "money는 불가산명사라 much를 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "countable-uncountable:5",
+      "topic_slug": "countable-uncountable",
+      "question_type": "blank_choice",
+      "prompt": "There aren't ___ chairs in the room.",
+      "options": [
+        "many",
+        "much",
+        "little"
+      ],
+      "answer": "many",
+      "explanation": "chairs는 가산명사라 many를 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "countable-uncountable:6",
+      "topic_slug": "countable-uncountable",
+      "question_type": "blank_choice",
+      "prompt": "I'd like some ___ , please.",
+      "options": [
+        "water",
+        "waters",
+        "a water"
+      ],
+      "answer": "water",
+      "explanation": "water는 불가산명사라 복수형을 쓰지 않는다.",
+      "sort_order": 6
+    },
+    {
+      "id": "countable-uncountable:7",
+      "topic_slug": "countable-uncountable",
+      "question_type": "blank_choice",
+      "prompt": "She gave me a useful ___ .",
+      "options": [
+        "piece of advice",
+        "advices",
+        "advice piece"
+      ],
+      "answer": "piece of advice",
+      "explanation": "advice는 불가산이라 a piece of advice로 센다.",
+      "sort_order": 7
+    },
+    {
+      "id": "countable-uncountable:8",
+      "topic_slug": "countable-uncountable",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I have many homeworks tonight.",
+      "options": [
+        "I have",
+        "many",
+        "homeworks",
+        "tonight"
+      ],
+      "answer": "homeworks",
+      "explanation": "homework는 불가산명사라 복수형 homeworks가 없다.",
+      "sort_order": 8
+    },
+    {
+      "id": "countable-uncountable:9",
+      "topic_slug": "countable-uncountable",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: How much books did you buy?",
+      "options": [
+        "How",
+        "much",
+        "books",
+        "did you buy"
+      ],
+      "answer": "much",
+      "explanation": "books는 가산명사라 much가 아니라 many를 써야 한다.",
+      "sort_order": 9
+    },
+    {
+      "id": "countable-uncountable:10",
+      "topic_slug": "countable-uncountable",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: We made a good progress today.",
+      "options": [
+        "We made",
+        "a",
+        "good progress",
+        "today"
+      ],
+      "answer": "a",
+      "explanation": "progress는 불가산명사라 부정관사 a를 붙일 수 없다.",
+      "sort_order": 10
+    },
+    {
+      "id": "comparatives:1",
+      "topic_slug": "comparatives",
+      "question_type": "word_order",
+      "prompt": "이 가방이 저것보다 더 비싸다.",
+      "options": [
+        "This",
+        "bag",
+        "is",
+        "more",
+        "expensive",
+        "than",
+        "that"
+      ],
+      "answer": "This bag is more expensive than that.",
+      "explanation": "expensive는 긴 형용사라 more를 쓰고 than으로 비교한다.",
+      "sort_order": 1
+    },
+    {
+      "id": "comparatives:2",
+      "topic_slug": "comparatives",
+      "question_type": "word_order",
+      "prompt": "그녀는 반에서 가장 키가 크다.",
+      "options": [
+        "She",
+        "is",
+        "the",
+        "tallest",
+        "in",
+        "her",
+        "class"
+      ],
+      "answer": "She is the tallest in her class.",
+      "explanation": "최상급 tallest 앞에는 the를 붙인다.",
+      "sort_order": 2
+    },
+    {
+      "id": "comparatives:3",
+      "topic_slug": "comparatives",
+      "question_type": "word_order",
+      "prompt": "오늘이 어제보다 더 춥다.",
+      "options": [
+        "Today",
+        "is",
+        "colder",
+        "than",
+        "yesterday"
+      ],
+      "answer": "Today is colder than yesterday.",
+      "explanation": "cold의 비교급은 colder이고 than과 함께 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "comparatives:4",
+      "topic_slug": "comparatives",
+      "question_type": "blank_choice",
+      "prompt": "This phone is ___ than mine.",
+      "options": [
+        "cheaper",
+        "cheapest",
+        "more cheap"
+      ],
+      "answer": "cheaper",
+      "explanation": "둘을 비교하므로 비교급 cheaper를 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "comparatives:5",
+      "topic_slug": "comparatives",
+      "question_type": "blank_choice",
+      "prompt": "It was the ___ day of the year.",
+      "options": [
+        "hottest",
+        "hotter",
+        "most hot"
+      ],
+      "answer": "hottest",
+      "explanation": "hot의 최상급은 자음을 겹쳐 hottest이다.",
+      "sort_order": 5
+    },
+    {
+      "id": "comparatives:6",
+      "topic_slug": "comparatives",
+      "question_type": "blank_choice",
+      "prompt": "Her idea is ___ interesting than his.",
+      "options": [
+        "more",
+        "most",
+        "much"
+      ],
+      "answer": "more",
+      "explanation": "interesting은 긴 형용사라 비교급에 more를 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "comparatives:7",
+      "topic_slug": "comparatives",
+      "question_type": "blank_choice",
+      "prompt": "He runs ___ than his brother.",
+      "options": [
+        "faster",
+        "fastest",
+        "more fast"
+      ],
+      "answer": "faster",
+      "explanation": "fast의 비교급은 faster이다.",
+      "sort_order": 7
+    },
+    {
+      "id": "comparatives:8",
+      "topic_slug": "comparatives",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: This box is more heavier than that one.",
+      "options": [
+        "This box is",
+        "more",
+        "heavier",
+        "than that one"
+      ],
+      "answer": "more",
+      "explanation": "heavier가 이미 비교급이므로 more를 함께 쓰면 안 된다.",
+      "sort_order": 8
+    },
+    {
+      "id": "comparatives:9",
+      "topic_slug": "comparatives",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is the most tall student.",
+      "options": [
+        "She is",
+        "the",
+        "most tall",
+        "student"
+      ],
+      "answer": "most tall",
+      "explanation": "tall은 짧은 형용사라 최상급이 tallest이다.",
+      "sort_order": 9
+    },
+    {
+      "id": "comparatives:10",
+      "topic_slug": "comparatives",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: My car is faster as yours.",
+      "options": [
+        "My car is",
+        "faster",
+        "as",
+        "yours"
+      ],
+      "answer": "as",
+      "explanation": "비교급 뒤에는 as가 아니라 than을 써야 한다.",
+      "sort_order": 10
+    },
+    {
+      "id": "prepositions-time:1",
+      "topic_slug": "prepositions-time",
+      "question_type": "word_order",
+      "prompt": "회의는 오전 9시에 시작한다.",
+      "options": [
+        "The",
+        "meeting",
+        "starts",
+        "at",
+        "nine"
+      ],
+      "answer": "The meeting starts at nine.",
+      "explanation": "정확한 시각 앞에는 at을 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "prepositions-time:2",
+      "topic_slug": "prepositions-time",
+      "question_type": "word_order",
+      "prompt": "우리는 월요일에 출발한다.",
+      "options": [
+        "We",
+        "leave",
+        "on",
+        "Monday"
+      ],
+      "answer": "We leave on Monday.",
+      "explanation": "요일 앞에는 on을 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "prepositions-time:3",
+      "topic_slug": "prepositions-time",
+      "question_type": "word_order",
+      "prompt": "그는 5월에 입사했다.",
+      "options": [
+        "He",
+        "joined",
+        "the",
+        "company",
+        "in",
+        "May"
+      ],
+      "answer": "He joined the company in May.",
+      "explanation": "월 앞에는 in을 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "prepositions-time:4",
+      "topic_slug": "prepositions-time",
+      "question_type": "blank_choice",
+      "prompt": "The store opens ___ 8 a.m.",
+      "options": [
+        "at",
+        "on",
+        "in"
+      ],
+      "answer": "at",
+      "explanation": "정확한 시각 앞에는 at을 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "prepositions-time:5",
+      "topic_slug": "prepositions-time",
+      "question_type": "blank_choice",
+      "prompt": "Her birthday is ___ April.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": "in",
+      "explanation": "월 앞에는 in을 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "prepositions-time:6",
+      "topic_slug": "prepositions-time",
+      "question_type": "blank_choice",
+      "prompt": "Please submit the form ___ Friday.",
+      "options": [
+        "by",
+        "until",
+        "since"
+      ],
+      "answer": "by",
+      "explanation": "'~까지(완료 기한)'는 by를 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "prepositions-time:7",
+      "topic_slug": "prepositions-time",
+      "question_type": "blank_choice",
+      "prompt": "We met ___ the morning of July 3rd.",
+      "options": [
+        "on",
+        "in",
+        "at"
+      ],
+      "answer": "on",
+      "explanation": "특정 날짜의 아침에는 on을 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "prepositions-time:8",
+      "topic_slug": "prepositions-time",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: The class begins in 10 o'clock.",
+      "options": [
+        "The class begins",
+        "in",
+        "10",
+        "o'clock"
+      ],
+      "answer": "in",
+      "explanation": "정확한 시각 앞에는 in이 아니라 at을 써야 한다.",
+      "sort_order": 8
+    },
+    {
+      "id": "prepositions-time:9",
+      "topic_slug": "prepositions-time",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I will call you on the evening.",
+      "options": [
+        "I will call you",
+        "on",
+        "the",
+        "evening"
+      ],
+      "answer": "on",
+      "explanation": "the evening 앞에는 in을 써야 한다.",
+      "sort_order": 9
+    },
+    {
+      "id": "prepositions-time:10",
+      "topic_slug": "prepositions-time",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She was born on 1995.",
+      "options": [
+        "She was born",
+        "on",
+        "1995"
+      ],
+      "answer": "on",
+      "explanation": "연도 앞에는 on이 아니라 in을 써야 한다.",
+      "sort_order": 10
+    },
+    {
+      "id": "prepositions-place:1",
+      "topic_slug": "prepositions-place",
+      "question_type": "word_order",
+      "prompt": "내 열쇠들이 저 탁자 위에 있다.",
+      "options": [
+        "My",
+        "keys",
+        "are",
+        "on",
+        "that",
+        "table"
+      ],
+      "answer": "My keys are on that table.",
+      "explanation": "표면 위에는 on을 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "prepositions-place:2",
+      "topic_slug": "prepositions-place",
+      "question_type": "word_order",
+      "prompt": "그녀는 부산에 산다.",
+      "options": [
+        "She",
+        "lives",
+        "in",
+        "Busan"
+      ],
+      "answer": "She lives in Busan.",
+      "explanation": "도시 안에는 in을 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "prepositions-place:3",
+      "topic_slug": "prepositions-place",
+      "question_type": "word_order",
+      "prompt": "우리는 정류장에서 만났다.",
+      "options": [
+        "We",
+        "met",
+        "at",
+        "the",
+        "bus",
+        "stop"
+      ],
+      "answer": "We met at the bus stop.",
+      "explanation": "특정 지점 앞에는 at을 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "prepositions-place:4",
+      "topic_slug": "prepositions-place",
+      "question_type": "blank_choice",
+      "prompt": "The picture is ___ the wall.",
+      "options": [
+        "on",
+        "in",
+        "at"
+      ],
+      "answer": "on",
+      "explanation": "벽 표면에 붙은 것은 on을 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "prepositions-place:5",
+      "topic_slug": "prepositions-place",
+      "question_type": "blank_choice",
+      "prompt": "He is waiting ___ the station.",
+      "options": [
+        "at",
+        "on",
+        "into"
+      ],
+      "answer": "at",
+      "explanation": "특정 장소(지점) 앞에는 at을 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "prepositions-place:6",
+      "topic_slug": "prepositions-place",
+      "question_type": "blank_choice",
+      "prompt": "There is some milk ___ the fridge.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": "in",
+      "explanation": "내부 공간 안에는 in을 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "prepositions-place:7",
+      "topic_slug": "prepositions-place",
+      "question_type": "blank_choice",
+      "prompt": "My office is ___ the third floor.",
+      "options": [
+        "on",
+        "in",
+        "at"
+      ],
+      "answer": "on",
+      "explanation": "층 앞에는 on을 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "prepositions-place:8",
+      "topic_slug": "prepositions-place",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is sitting in the chair near me.",
+      "options": [
+        "She is sitting",
+        "in",
+        "the chair",
+        "near me"
+      ],
+      "answer": "in",
+      "explanation": "의자에 앉을 때는 on the chair를 쓴다.",
+      "sort_order": 8
+    },
+    {
+      "id": "prepositions-place:9",
+      "topic_slug": "prepositions-place",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: They arrived to the airport late.",
+      "options": [
+        "They arrived",
+        "to",
+        "the airport",
+        "late"
+      ],
+      "answer": "to",
+      "explanation": "arrive 다음에는 to가 아니라 at을 써야 한다.",
+      "sort_order": 9
+    },
+    {
+      "id": "prepositions-place:10",
+      "topic_slug": "prepositions-place",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I left my bag on the taxi.",
+      "options": [
+        "I left my bag",
+        "on",
+        "the",
+        "taxi"
+      ],
+      "answer": "on",
+      "explanation": "택시 같은 작은 차량 안에는 in을 써야 한다.",
+      "sort_order": 10
+    },
+    {
+      "id": "future-will-going-to:1",
+      "topic_slug": "future-will-going-to",
+      "question_type": "word_order",
+      "prompt": "내가 문을 열어 줄게.",
+      "options": [
+        "I",
+        "will",
+        "open",
+        "the",
+        "door"
+      ],
+      "answer": "I will open the door.",
+      "explanation": "그 자리에서 즉흥적으로 결정한 일에는 will을 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "future-will-going-to:2",
+      "topic_slug": "future-will-going-to",
+      "question_type": "word_order",
+      "prompt": "우리는 다음 달에 이사할 예정이다.",
+      "options": [
+        "We",
+        "are",
+        "going",
+        "to",
+        "move",
+        "next",
+        "month"
+      ],
+      "answer": "We are going to move next month.",
+      "explanation": "이미 정해진 계획에는 be going to를 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "future-will-going-to:3",
+      "topic_slug": "future-will-going-to",
+      "question_type": "word_order",
+      "prompt": "그녀는 의사가 될 것이다.",
+      "options": [
+        "She",
+        "is",
+        "going",
+        "to",
+        "be",
+        "a",
+        "doctor"
+      ],
+      "answer": "She is going to be a doctor.",
+      "explanation": "의도나 계획을 말할 때 be going to를 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "future-will-going-to:4",
+      "topic_slug": "future-will-going-to",
+      "question_type": "blank_choice",
+      "prompt": "Look at those clouds! It ___ rain.",
+      "options": [
+        "is going to",
+        "will",
+        "would"
+      ],
+      "answer": "is going to",
+      "explanation": "눈앞의 근거가 있는 예측에는 be going to를 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "future-will-going-to:5",
+      "topic_slug": "future-will-going-to",
+      "question_type": "blank_choice",
+      "prompt": "The phone is ringing. I ___ answer it.",
+      "options": [
+        "will",
+        "am going to",
+        "was going to"
+      ],
+      "answer": "will",
+      "explanation": "방금 결정한 행동에는 will을 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "future-will-going-to:6",
+      "topic_slug": "future-will-going-to",
+      "question_type": "blank_choice",
+      "prompt": "They ___ visit their grandparents tomorrow.",
+      "options": [
+        "are going to",
+        "will being",
+        "going"
+      ],
+      "answer": "are going to",
+      "explanation": "이미 계획된 일에는 be going to를 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "future-will-going-to:7",
+      "topic_slug": "future-will-going-to",
+      "question_type": "blank_choice",
+      "prompt": "I think it ___ be sunny this weekend.",
+      "options": [
+        "will",
+        "is going",
+        "going to"
+      ],
+      "answer": "will",
+      "explanation": "단순한 생각·예측에는 will을 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "future-will-going-to:8",
+      "topic_slug": "future-will-going-to",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: We will to start the project soon.",
+      "options": [
+        "We",
+        "will",
+        "to start",
+        "the project"
+      ],
+      "answer": "to start",
+      "explanation": "will 다음에는 to 없이 동사원형 start를 쓴다.",
+      "sort_order": 8
+    },
+    {
+      "id": "future-will-going-to:9",
+      "topic_slug": "future-will-going-to",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is going visit Paris in June.",
+      "options": [
+        "She is",
+        "going",
+        "visit",
+        "Paris"
+      ],
+      "answer": "going",
+      "explanation": "be going 다음에는 to visit처럼 to가 필요하다.",
+      "sort_order": 9
+    },
+    {
+      "id": "future-will-going-to:10",
+      "topic_slug": "future-will-going-to",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: Look out! You will fall down the stairs.",
+      "options": [
+        "Look out",
+        "You",
+        "will",
+        "fall"
+      ],
+      "answer": "will",
+      "explanation": "눈앞의 위험을 보고 하는 예측에는 are going to가 자연스럽다.",
+      "sort_order": 10
+    },
+    {
+      "id": "modal-can-could:1",
+      "topic_slug": "modal-can-could",
+      "question_type": "word_order",
+      "prompt": "그녀는 세 가지 언어를 말할 수 있다.",
+      "options": [
+        "She",
+        "can",
+        "speak",
+        "three",
+        "languages"
+      ],
+      "answer": "She can speak three languages.",
+      "explanation": "현재의 능력에는 can + 동사원형을 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "modal-can-could:2",
+      "topic_slug": "modal-can-could",
+      "question_type": "word_order",
+      "prompt": "제가 창문을 열어도 될까요?",
+      "options": [
+        "Could",
+        "I",
+        "open",
+        "the",
+        "window"
+      ],
+      "answer": "Could I open the window?",
+      "explanation": "공손한 허락 요청에는 could를 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "modal-can-could:3",
+      "topic_slug": "modal-can-could",
+      "question_type": "word_order",
+      "prompt": "나는 어릴 때 빨리 달릴 수 있었다.",
+      "options": [
+        "I",
+        "could",
+        "run",
+        "fast",
+        "as",
+        "a",
+        "child"
+      ],
+      "answer": "I could run fast as a child.",
+      "explanation": "과거의 능력에는 could를 쓴다.",
+      "sort_order": 3
+    },
+    {
+      "id": "modal-can-could:4",
+      "topic_slug": "modal-can-could",
+      "question_type": "blank_choice",
+      "prompt": "___ you help me with this box?",
+      "options": [
+        "Could",
+        "Can to",
+        "Could to"
+      ],
+      "answer": "Could",
+      "explanation": "공손한 부탁에는 Could를 쓰고 뒤에 동사원형이 온다.",
+      "sort_order": 4
+    },
+    {
+      "id": "modal-can-could:5",
+      "topic_slug": "modal-can-could",
+      "question_type": "blank_choice",
+      "prompt": "He ___ swim when he was five.",
+      "options": [
+        "could",
+        "can",
+        "cans"
+      ],
+      "answer": "could",
+      "explanation": "과거의 능력에는 could를 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "modal-can-could:6",
+      "topic_slug": "modal-can-could",
+      "question_type": "blank_choice",
+      "prompt": "We ___ finish the work by Friday.",
+      "options": [
+        "can",
+        "could to",
+        "can to"
+      ],
+      "answer": "can",
+      "explanation": "can 다음에는 동사원형 finish가 온다.",
+      "sort_order": 6
+    },
+    {
+      "id": "modal-can-could:7",
+      "topic_slug": "modal-can-could",
+      "question_type": "blank_choice",
+      "prompt": "___ I borrow your pen for a second?",
+      "options": [
+        "Can",
+        "Can to",
+        "Could to"
+      ],
+      "answer": "Can",
+      "explanation": "일상적인 허락 요청에는 Can을 쓰고 뒤에 동사원형이 온다.",
+      "sort_order": 7
+    },
+    {
+      "id": "modal-can-could:8",
+      "topic_slug": "modal-can-could",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She can speaks four languages.",
+      "options": [
+        "She",
+        "can",
+        "speaks",
+        "four languages"
+      ],
+      "answer": "speaks",
+      "explanation": "조동사 can 다음에는 동사원형 speak를 써야 한다.",
+      "sort_order": 8
+    },
+    {
+      "id": "modal-can-could:9",
+      "topic_slug": "modal-can-could",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: Could you to pass the salt?",
+      "options": [
+        "Could",
+        "you",
+        "to pass",
+        "the salt"
+      ],
+      "answer": "to pass",
+      "explanation": "could 다음에는 to 없이 동사원형 pass를 쓴다.",
+      "sort_order": 9
+    },
+    {
+      "id": "modal-can-could:10",
+      "topic_slug": "modal-can-could",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I can to drive a truck now.",
+      "options": [
+        "I",
+        "can",
+        "to drive",
+        "a truck"
+      ],
+      "answer": "to drive",
+      "explanation": "can 다음에는 to 없이 동사원형 drive를 쓴다.",
+      "sort_order": 10
+    },
+    {
+      "id": "present-continuous:1",
+      "topic_slug": "present-continuous",
+      "question_type": "word_order",
+      "prompt": "그녀는 지금 점심을 먹고 있다.",
+      "options": [
+        "She",
+        "is",
+        "eating",
+        "lunch",
+        "now"
+      ],
+      "answer": "She is eating lunch now.",
+      "explanation": "지금 진행 중인 동작에는 be + -ing를 쓴다.",
+      "sort_order": 1
+    },
+    {
+      "id": "present-continuous:2",
+      "topic_slug": "present-continuous",
+      "question_type": "word_order",
+      "prompt": "그들은 새 사무실을 짓고 있다.",
+      "options": [
+        "They",
+        "are",
+        "building",
+        "a",
+        "new",
+        "office"
+      ],
+      "answer": "They are building a new office.",
+      "explanation": "진행 중인 동작에는 are building을 쓴다.",
+      "sort_order": 2
+    },
+    {
+      "id": "present-continuous:3",
+      "topic_slug": "present-continuous",
+      "question_type": "word_order",
+      "prompt": "나는 다음 주에 친구를 만날 것이다.",
+      "options": [
+        "I",
+        "am",
+        "meeting",
+        "a",
+        "friend",
+        "next",
+        "week"
+      ],
+      "answer": "I am meeting a friend next week.",
+      "explanation": "정해진 가까운 미래 약속도 현재진행형으로 표현한다.",
+      "sort_order": 3
+    },
+    {
+      "id": "present-continuous:4",
+      "topic_slug": "present-continuous",
+      "question_type": "blank_choice",
+      "prompt": "He ___ watching TV right now.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answer": "is",
+      "explanation": "3인칭 단수 주어 He에는 is를 쓴다.",
+      "sort_order": 4
+    },
+    {
+      "id": "present-continuous:5",
+      "topic_slug": "present-continuous",
+      "question_type": "blank_choice",
+      "prompt": "We are ___ for the bus.",
+      "options": [
+        "waiting",
+        "wait",
+        "waits"
+      ],
+      "answer": "waiting",
+      "explanation": "진행형은 be 다음에 동사ing 형태를 쓴다.",
+      "sort_order": 5
+    },
+    {
+      "id": "present-continuous:6",
+      "topic_slug": "present-continuous",
+      "question_type": "blank_choice",
+      "prompt": "They ___ working on the report at the moment.",
+      "options": [
+        "are",
+        "is",
+        "be"
+      ],
+      "answer": "are",
+      "explanation": "복수 주어 They에는 are를 쓴다.",
+      "sort_order": 6
+    },
+    {
+      "id": "present-continuous:7",
+      "topic_slug": "present-continuous",
+      "question_type": "blank_choice",
+      "prompt": "Listen! Someone ___ knocking on the door.",
+      "options": [
+        "is",
+        "are",
+        "does"
+      ],
+      "answer": "is",
+      "explanation": "someone은 단수 취급이라 is를 쓴다.",
+      "sort_order": 7
+    },
+    {
+      "id": "present-continuous:8",
+      "topic_slug": "present-continuous",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I am know the answer now.",
+      "options": [
+        "I",
+        "am know",
+        "the answer",
+        "now"
+      ],
+      "answer": "am know",
+      "explanation": "know는 상태동사라 진행형으로 쓰지 않고 I know로 쓴다.",
+      "sort_order": 8
+    },
+    {
+      "id": "present-continuous:9",
+      "topic_slug": "present-continuous",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is study English these days.",
+      "options": [
+        "She",
+        "is",
+        "study",
+        "English"
+      ],
+      "answer": "study",
+      "explanation": "진행형은 be 다음에 동사ing(studying)를 써야 한다.",
+      "sort_order": 9
+    },
+    {
+      "id": "present-continuous:10",
+      "topic_slug": "present-continuous",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: They is having a meeting now.",
+      "options": [
+        "They",
+        "is",
+        "having",
+        "a meeting"
+      ],
+      "answer": "is",
+      "explanation": "복수 주어 They에는 is가 아니라 are를 써야 한다.",
+      "sort_order": 10
+    },
+    {
+      "id": "modal-should-must:1",
+      "topic_slug": "modal-should-must",
+      "question_type": "blank_choice",
+      "prompt": "You ___ see a doctor if you feel sick.",
+      "options": [
+        "should",
+        "must to",
+        "shoulds"
+      ],
+      "answer": "should",
+      "explanation": "should 뒤에는 동사원형이 와야 하며 to를 붙이지 않습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "modal-should-must:2",
+      "topic_slug": "modal-should-must",
+      "question_type": "blank_choice",
+      "prompt": "Drivers ___ stop at a red light. It's the law.",
+      "options": [
+        "must",
+        "should not",
+        "can"
+      ],
+      "answer": "must",
+      "explanation": "법적 의무처럼 반드시 해야 하는 일에는 must를 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "modal-should-must:3",
+      "topic_slug": "modal-should-must",
+      "question_type": "blank_choice",
+      "prompt": "You ___ eat so much sugar. It's bad for you.",
+      "options": [
+        "shouldn't",
+        "mustn't to",
+        "don't should"
+      ],
+      "answer": "shouldn't",
+      "explanation": "충고로 하지 말라고 할 때는 shouldn't를 씁니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "modal-should-must:4",
+      "topic_slug": "modal-should-must",
+      "question_type": "blank_choice",
+      "prompt": "She looks tired. She ___ go to bed early.",
+      "options": [
+        "should",
+        "musts",
+        "should to"
+      ],
+      "answer": "should",
+      "explanation": "가벼운 권유나 충고에는 should를 씁니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "modal-should-must:5",
+      "topic_slug": "modal-should-must",
+      "question_type": "blank_choice",
+      "prompt": "We ___ wear a seatbelt in the car.",
+      "options": [
+        "must",
+        "should to",
+        "must to"
+      ],
+      "answer": "must",
+      "explanation": "안전상 반드시 지켜야 하는 규칙에는 must를 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "modal-should-must:6",
+      "topic_slug": "modal-should-must",
+      "question_type": "word_order",
+      "prompt": "너는 더 열심히 공부해야 한다.",
+      "options": [
+        "You",
+        "should",
+        "study",
+        "harder"
+      ],
+      "answer": "You should study harder.",
+      "explanation": "should는 충고를 나타내며 동사원형 study가 뒤따릅니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "modal-should-must:7",
+      "topic_slug": "modal-should-must",
+      "question_type": "word_order",
+      "prompt": "우리는 지금 떠나야 한다.",
+      "options": [
+        "We",
+        "must",
+        "leave",
+        "now"
+      ],
+      "answer": "We must leave now.",
+      "explanation": "must는 강한 의무를 나타내고 동사원형 leave가 옵니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "modal-should-must:8",
+      "topic_slug": "modal-should-must",
+      "question_type": "word_order",
+      "prompt": "너는 늦으면 안 된다.",
+      "options": [
+        "You",
+        "should",
+        "not",
+        "be",
+        "late"
+      ],
+      "answer": "You should not be late.",
+      "explanation": "should not은 하지 말아야 할 충고를 나타냅니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "modal-should-must:9",
+      "topic_slug": "modal-should-must",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: You must to finish your homework today.",
+      "options": [
+        "You",
+        "must",
+        "to",
+        "finish"
+      ],
+      "answer": "to",
+      "explanation": "must 뒤에는 to 없이 동사원형이 와야 하므로 to가 틀렸습니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "modal-should-must:10",
+      "topic_slug": "modal-should-must",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She should studies English every day.",
+      "options": [
+        "She",
+        "should",
+        "studies",
+        "every day"
+      ],
+      "answer": "studies",
+      "explanation": "should 뒤에는 동사원형 study가 와야 하므로 studies가 틀렸습니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "conditionals-first:1",
+      "topic_slug": "conditionals-first",
+      "question_type": "blank_choice",
+      "prompt": "If it ___ tomorrow, we will stay home.",
+      "options": [
+        "rains",
+        "will rain",
+        "rained"
+      ],
+      "answer": "rains",
+      "explanation": "if절에는 미래의 일이라도 현재시제를 씁니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "conditionals-first:2",
+      "topic_slug": "conditionals-first",
+      "question_type": "blank_choice",
+      "prompt": "If you study hard, you ___ pass the exam.",
+      "options": [
+        "will",
+        "would",
+        "are"
+      ],
+      "answer": "will",
+      "explanation": "1형식 가정법의 주절에는 will을 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "conditionals-first:3",
+      "topic_slug": "conditionals-first",
+      "question_type": "blank_choice",
+      "prompt": "She will call you if she ___ time.",
+      "options": [
+        "has",
+        "will have",
+        "had"
+      ],
+      "answer": "has",
+      "explanation": "if절은 현재시제로 미래 조건을 나타냅니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "conditionals-first:4",
+      "topic_slug": "conditionals-first",
+      "question_type": "blank_choice",
+      "prompt": "If we ___ now, we won't be late.",
+      "options": [
+        "leave",
+        "will leave",
+        "left"
+      ],
+      "answer": "leave",
+      "explanation": "if절에는 현재시제 leave를 씁니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "conditionals-first:5",
+      "topic_slug": "conditionals-first",
+      "question_type": "blank_choice",
+      "prompt": "If he doesn't hurry, he ___ the bus.",
+      "options": [
+        "will miss",
+        "misses",
+        "missed"
+      ],
+      "answer": "will miss",
+      "explanation": "주절은 미래 결과이므로 will miss를 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "conditionals-first:6",
+      "topic_slug": "conditionals-first",
+      "question_type": "word_order",
+      "prompt": "비가 오면 나는 집에 있을 것이다.",
+      "options": [
+        "If",
+        "it",
+        "rains",
+        "I",
+        "will",
+        "stay",
+        "home"
+      ],
+      "answer": "If it rains I will stay home.",
+      "explanation": "if절은 현재시제, 주절은 will을 사용합니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "conditionals-first:7",
+      "topic_slug": "conditionals-first",
+      "question_type": "word_order",
+      "prompt": "네가 도와주면 우리는 끝낼 것이다.",
+      "options": [
+        "If",
+        "you",
+        "help",
+        "we",
+        "will",
+        "finish"
+      ],
+      "answer": "If you help we will finish.",
+      "explanation": "조건이 충족되면 일어날 결과를 will로 나타냅니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "conditionals-first:8",
+      "topic_slug": "conditionals-first",
+      "question_type": "word_order",
+      "prompt": "네가 서두르면 우리는 늦지 않을 것이다.",
+      "options": [
+        "If",
+        "you",
+        "hurry",
+        "we",
+        "won't",
+        "be",
+        "late"
+      ],
+      "answer": "If you hurry we won't be late.",
+      "explanation": "if절 현재시제, 주절은 won't로 부정 미래를 표현합니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "conditionals-first:9",
+      "topic_slug": "conditionals-first",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: If it will rain tomorrow, we will cancel the trip.",
+      "options": [
+        "If",
+        "it will rain",
+        "tomorrow",
+        "we will cancel"
+      ],
+      "answer": "it will rain",
+      "explanation": "if절에는 will을 쓰지 않고 현재시제를 써야 합니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "conditionals-first:10",
+      "topic_slug": "conditionals-first",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: If you are tired, you should resting.",
+      "options": [
+        "If you are tired",
+        "you",
+        "should",
+        "resting"
+      ],
+      "answer": "resting",
+      "explanation": "should 뒤에는 동사원형 rest가 와야 하므로 resting이 틀렸습니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "conditionals-second:1",
+      "topic_slug": "conditionals-second",
+      "question_type": "blank_choice",
+      "prompt": "If I ___ rich, I would travel the world.",
+      "options": [
+        "were",
+        "am",
+        "will be"
+      ],
+      "answer": "were",
+      "explanation": "가정법 2형식에서 be동사는 주어와 관계없이 were를 씁니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "conditionals-second:2",
+      "topic_slug": "conditionals-second",
+      "question_type": "blank_choice",
+      "prompt": "If I had time, I ___ help you.",
+      "options": [
+        "would",
+        "will",
+        "am"
+      ],
+      "answer": "would",
+      "explanation": "2형식 가정법 주절에는 would를 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "conditionals-second:3",
+      "topic_slug": "conditionals-second",
+      "question_type": "blank_choice",
+      "prompt": "If she ___ harder, she would succeed.",
+      "options": [
+        "studied",
+        "studies",
+        "will study"
+      ],
+      "answer": "studied",
+      "explanation": "if절에 과거시제 studied를 써서 비현실적 조건을 나타냅니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "conditionals-second:4",
+      "topic_slug": "conditionals-second",
+      "question_type": "blank_choice",
+      "prompt": "What would you do if you ___ a million dollars?",
+      "options": [
+        "won",
+        "win",
+        "will win"
+      ],
+      "answer": "won",
+      "explanation": "if절에는 과거시제 won을 써서 가정을 표현합니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "conditionals-second:5",
+      "topic_slug": "conditionals-second",
+      "question_type": "blank_choice",
+      "prompt": "If he ___ here, he would know the answer.",
+      "options": [
+        "were",
+        "is",
+        "will be"
+      ],
+      "answer": "were",
+      "explanation": "사실과 반대되는 가정이므로 were를 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "conditionals-second:6",
+      "topic_slug": "conditionals-second",
+      "question_type": "word_order",
+      "prompt": "Tom이 부자라면 해외여행을 할 텐데.",
+      "options": [
+        "If",
+        "Tom",
+        "were",
+        "rich,",
+        "he",
+        "would",
+        "travel",
+        "abroad"
+      ],
+      "answer": "If Tom were rich, he would travel abroad.",
+      "explanation": "비현실적 가정에는 were와 조동사 would를 씁니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "conditionals-second:7",
+      "topic_slug": "conditionals-second",
+      "question_type": "word_order",
+      "prompt": "시간이 더 있다면 너를 도울 텐데.",
+      "options": [
+        "With",
+        "more",
+        "time,",
+        "I",
+        "would",
+        "help",
+        "you"
+      ],
+      "answer": "With more time, I would help you.",
+      "explanation": "if절 대신 with 전치사구로 조건을 나타낸 가정법 — 주절은 would.",
+      "sort_order": 7
+    },
+    {
+      "id": "conditionals-second:8",
+      "topic_slug": "conditionals-second",
+      "question_type": "word_order",
+      "prompt": "그녀가 여기 있다면 답을 알 텐데.",
+      "options": [
+        "She",
+        "would",
+        "know",
+        "the",
+        "answer",
+        "here"
+      ],
+      "answer": "She would know the answer here.",
+      "explanation": "가정법에서 would로 사실과 반대인 가정의 결과를 나타냅니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "conditionals-second:9",
+      "topic_slug": "conditionals-second",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: If I was you, I would apologize.",
+      "options": [
+        "If",
+        "I was",
+        "you",
+        "would apologize"
+      ],
+      "answer": "I was",
+      "explanation": "가정법 2형식에서는 was 대신 were를 써야 합니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "conditionals-second:10",
+      "topic_slug": "conditionals-second",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: If I had a car, I will drive to work.",
+      "options": [
+        "If I had a car",
+        "I",
+        "will drive",
+        "to work"
+      ],
+      "answer": "will drive",
+      "explanation": "2형식 가정법 주절에는 will이 아니라 would를 써야 합니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "passive-voice:1",
+      "topic_slug": "passive-voice",
+      "question_type": "blank_choice",
+      "prompt": "This book ___ by many students.",
+      "options": [
+        "is read",
+        "reads",
+        "reading"
+      ],
+      "answer": "is read",
+      "explanation": "수동태는 be동사 + 과거분사 형태입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "passive-voice:2",
+      "topic_slug": "passive-voice",
+      "question_type": "blank_choice",
+      "prompt": "The window ___ broken yesterday.",
+      "options": [
+        "was",
+        "is",
+        "has"
+      ],
+      "answer": "was",
+      "explanation": "과거의 수동태이므로 was를 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "passive-voice:3",
+      "topic_slug": "passive-voice",
+      "question_type": "blank_choice",
+      "prompt": "The cake ___ by my mother.",
+      "options": [
+        "was made",
+        "made",
+        "was make"
+      ],
+      "answer": "was made",
+      "explanation": "수동태는 be동사 뒤에 과거분사 made를 씁니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "passive-voice:4",
+      "topic_slug": "passive-voice",
+      "question_type": "blank_choice",
+      "prompt": "English ___ all over the world.",
+      "options": [
+        "is spoken",
+        "speaks",
+        "is speaking"
+      ],
+      "answer": "is spoken",
+      "explanation": "영어는 말해지는 대상이므로 수동태 is spoken을 씁니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "passive-voice:5",
+      "topic_slug": "passive-voice",
+      "question_type": "blank_choice",
+      "prompt": "These cars ___ in Korea.",
+      "options": [
+        "are made",
+        "make",
+        "are making"
+      ],
+      "answer": "are made",
+      "explanation": "복수 주어의 현재 수동태는 are made입니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "passive-voice:6",
+      "topic_slug": "passive-voice",
+      "question_type": "word_order",
+      "prompt": "이 다리는 1990년에 지어졌다.",
+      "options": [
+        "This",
+        "bridge",
+        "was",
+        "built",
+        "in",
+        "1990"
+      ],
+      "answer": "This bridge was built in 1990.",
+      "explanation": "be동사 was와 과거분사 built로 과거 수동태를 만듭니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "passive-voice:7",
+      "topic_slug": "passive-voice",
+      "question_type": "word_order",
+      "prompt": "그 편지들은 어제 보내졌다.",
+      "options": [
+        "The",
+        "letters",
+        "were",
+        "sent",
+        "yesterday"
+      ],
+      "answer": "The letters were sent yesterday.",
+      "explanation": "복수 주어이므로 were와 과거분사 sent를 씁니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "passive-voice:8",
+      "topic_slug": "passive-voice",
+      "question_type": "word_order",
+      "prompt": "그 방은 매일 청소된다.",
+      "options": [
+        "The",
+        "room",
+        "is",
+        "cleaned",
+        "every",
+        "day"
+      ],
+      "answer": "The room is cleaned every day.",
+      "explanation": "현재 수동태는 is와 과거분사 cleaned로 표현합니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "passive-voice:9",
+      "topic_slug": "passive-voice",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: The report was wrote by the manager.",
+      "options": [
+        "The report",
+        "was",
+        "wrote",
+        "by the manager"
+      ],
+      "answer": "wrote",
+      "explanation": "수동태에는 과거형 wrote가 아니라 과거분사 written을 써야 합니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "passive-voice:10",
+      "topic_slug": "passive-voice",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: This song is sang by a famous singer.",
+      "options": [
+        "This song",
+        "is",
+        "sang",
+        "by a famous singer"
+      ],
+      "answer": "sang",
+      "explanation": "수동태에는 과거분사 sung을 써야 하므로 sang이 틀렸습니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "relative-clauses:1",
+      "topic_slug": "relative-clauses",
+      "question_type": "blank_choice",
+      "prompt": "The man ___ lives next door is a doctor.",
+      "options": [
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer": "who",
+      "explanation": "사람을 선행사로 받을 때는 who를 씁니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "relative-clauses:2",
+      "topic_slug": "relative-clauses",
+      "question_type": "blank_choice",
+      "prompt": "This is the book ___ I bought yesterday.",
+      "options": [
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer": "which",
+      "explanation": "사물을 선행사로 받을 때는 which를 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "relative-clauses:3",
+      "topic_slug": "relative-clauses",
+      "question_type": "blank_choice",
+      "prompt": "I met a girl ___ name is Anna.",
+      "options": [
+        "whose",
+        "who",
+        "which"
+      ],
+      "answer": "whose",
+      "explanation": "소유 관계를 나타낼 때는 whose를 씁니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "relative-clauses:4",
+      "topic_slug": "relative-clauses",
+      "question_type": "blank_choice",
+      "prompt": "The house ___ we live in is old.",
+      "options": [
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer": "that",
+      "explanation": "사물 선행사에는 that 또는 which를 쓸 수 있습니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "relative-clauses:5",
+      "topic_slug": "relative-clauses",
+      "question_type": "blank_choice",
+      "prompt": "She is the teacher ___ helped me a lot.",
+      "options": [
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer": "who",
+      "explanation": "도움을 준 주체가 사람이므로 who를 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "relative-clauses:6",
+      "topic_slug": "relative-clauses",
+      "question_type": "word_order",
+      "prompt": "나는 영어를 가르치는 친구가 있다.",
+      "options": [
+        "I",
+        "have",
+        "a",
+        "friend",
+        "who",
+        "teaches",
+        "English"
+      ],
+      "answer": "I have a friend who teaches English.",
+      "explanation": "who가 사람 선행사 friend를 받아 절을 이끕니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "relative-clauses:7",
+      "topic_slug": "relative-clauses",
+      "question_type": "word_order",
+      "prompt": "이것이 내가 원하는 가방이다.",
+      "options": [
+        "This",
+        "is",
+        "the",
+        "bag",
+        "which",
+        "I",
+        "want"
+      ],
+      "answer": "This is the bag which I want.",
+      "explanation": "사물 선행사 bag을 which가 받습니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "relative-clauses:8",
+      "topic_slug": "relative-clauses",
+      "question_type": "word_order",
+      "prompt": "빨간 모자를 쓴 소년은 내 동생이다.",
+      "options": [
+        "The",
+        "boy",
+        "who",
+        "wears",
+        "red",
+        "caps",
+        "is",
+        "my",
+        "brother"
+      ],
+      "answer": "The boy who wears red caps is my brother.",
+      "explanation": "who가 사람 선행사 boy를 수식하는 절을 이끕니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "relative-clauses:9",
+      "topic_slug": "relative-clauses",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I know a woman which speaks five languages.",
+      "options": [
+        "I know",
+        "a woman",
+        "which",
+        "speaks five languages"
+      ],
+      "answer": "which",
+      "explanation": "사람 선행사에는 which가 아니라 who를 써야 합니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "relative-clauses:10",
+      "topic_slug": "relative-clauses",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: The car who is parked outside is mine.",
+      "options": [
+        "The car",
+        "who",
+        "is parked",
+        "outside"
+      ],
+      "answer": "who",
+      "explanation": "사물 선행사 car에는 who가 아니라 which나 that을 써야 합니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "gerund-infinitive:1",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "blank_choice",
+      "prompt": "I enjoy ___ books in my free time.",
+      "options": [
+        "reading",
+        "to read",
+        "read"
+      ],
+      "answer": "reading",
+      "explanation": "enjoy 뒤에는 동명사 reading이 와야 합니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "gerund-infinitive:2",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "blank_choice",
+      "prompt": "She wants ___ a new car.",
+      "options": [
+        "to buy",
+        "buying",
+        "buy"
+      ],
+      "answer": "to buy",
+      "explanation": "want 뒤에는 to부정사가 옵니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "gerund-infinitive:3",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "blank_choice",
+      "prompt": "He finished ___ his homework.",
+      "options": [
+        "doing",
+        "to do",
+        "do"
+      ],
+      "answer": "doing",
+      "explanation": "finish 뒤에는 동명사 doing이 옵니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "gerund-infinitive:4",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "blank_choice",
+      "prompt": "They decided ___ early.",
+      "options": [
+        "to leave",
+        "leaving",
+        "left"
+      ],
+      "answer": "to leave",
+      "explanation": "decide 뒤에는 to부정사가 옵니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "gerund-infinitive:5",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "blank_choice",
+      "prompt": "Would you mind ___ the door?",
+      "options": [
+        "closing",
+        "to close",
+        "close"
+      ],
+      "answer": "closing",
+      "explanation": "mind 뒤에는 동명사 closing을 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "gerund-infinitive:6",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "word_order",
+      "prompt": "나는 음악 듣는 것을 좋아한다.",
+      "options": [
+        "I",
+        "like",
+        "listening",
+        "to",
+        "music"
+      ],
+      "answer": "I like listening to music.",
+      "explanation": "like는 동명사를 취할 수 있어 listening을 씁니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "gerund-infinitive:7",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "word_order",
+      "prompt": "그녀는 의사가 되기를 원한다.",
+      "options": [
+        "She",
+        "wants",
+        "to",
+        "become",
+        "a",
+        "doctor"
+      ],
+      "answer": "She wants to become a doctor.",
+      "explanation": "want 뒤에는 to부정사 to become이 옵니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "gerund-infinitive:8",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "word_order",
+      "prompt": "우리는 비 오는 것을 멈추기를 기다렸다.",
+      "options": [
+        "We",
+        "waited",
+        "for",
+        "the",
+        "rain",
+        "to",
+        "stop"
+      ],
+      "answer": "We waited for the rain to stop.",
+      "explanation": "wait for 뒤에 의미상 주어와 to부정사가 옵니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "gerund-infinitive:9",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I enjoy to play tennis on weekends.",
+      "options": [
+        "I",
+        "enjoy",
+        "to play",
+        "tennis"
+      ],
+      "answer": "to play",
+      "explanation": "enjoy 뒤에는 to부정사가 아니라 동명사 playing을 써야 합니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "gerund-infinitive:10",
+      "topic_slug": "gerund-infinitive",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She decided buying a new phone.",
+      "options": [
+        "She",
+        "decided",
+        "buying",
+        "a new phone"
+      ],
+      "answer": "buying",
+      "explanation": "decide 뒤에는 동명사가 아니라 to부정사 to buy를 써야 합니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "question-tags:1",
+      "topic_slug": "question-tags",
+      "question_type": "blank_choice",
+      "prompt": "You are a student, ___?",
+      "options": [
+        "aren't you",
+        "are you",
+        "isn't you"
+      ],
+      "answer": "aren't you",
+      "explanation": "긍정문 뒤에는 부정 부가의문문 aren't you를 씁니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "question-tags:2",
+      "topic_slug": "question-tags",
+      "question_type": "blank_choice",
+      "prompt": "She can swim, ___?",
+      "options": [
+        "can't she",
+        "can she",
+        "doesn't she"
+      ],
+      "answer": "can't she",
+      "explanation": "조동사 can을 받아 부정형 can't she를 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "question-tags:3",
+      "topic_slug": "question-tags",
+      "question_type": "blank_choice",
+      "prompt": "They don't like coffee, ___?",
+      "options": [
+        "do they",
+        "don't they",
+        "are they"
+      ],
+      "answer": "do they",
+      "explanation": "부정문 뒤에는 긍정 부가의문문 do they를 씁니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "question-tags:4",
+      "topic_slug": "question-tags",
+      "question_type": "blank_choice",
+      "prompt": "He went home, ___?",
+      "options": [
+        "didn't he",
+        "doesn't he",
+        "wasn't he"
+      ],
+      "answer": "didn't he",
+      "explanation": "일반동사 과거 긍정문에는 didn't he를 씁니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "question-tags:5",
+      "topic_slug": "question-tags",
+      "question_type": "blank_choice",
+      "prompt": "It's cold today, ___?",
+      "options": [
+        "isn't it",
+        "doesn't it",
+        "won't it"
+      ],
+      "answer": "isn't it",
+      "explanation": "be동사 is를 받아 부정형 isn't it을 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "question-tags:6",
+      "topic_slug": "question-tags",
+      "question_type": "word_order",
+      "prompt": "톰은 그를 알지, 그렇지 않니?",
+      "options": [
+        "Tom",
+        "knows",
+        "him,",
+        "doesn't",
+        "he"
+      ],
+      "answer": "Tom knows him, doesn't he?",
+      "explanation": "일반동사 긍정문 뒤에는 부정 부가의문문 doesn't he를 붙입니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "question-tags:7",
+      "topic_slug": "question-tags",
+      "question_type": "word_order",
+      "prompt": "안나는 바쁘지, 그렇지 않니?",
+      "options": [
+        "Anna",
+        "is",
+        "busy,",
+        "isn't",
+        "she"
+      ],
+      "answer": "Anna is busy, isn't she?",
+      "explanation": "be동사 is를 받아 부정형 isn't she를 붙입니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "question-tags:8",
+      "topic_slug": "question-tags",
+      "question_type": "word_order",
+      "prompt": "그 학생들은 오지 않을 거야, 그렇지?",
+      "options": [
+        "The",
+        "students",
+        "won't",
+        "come,",
+        "will",
+        "they"
+      ],
+      "answer": "The students won't come, will they?",
+      "explanation": "부정문 뒤에는 긍정 will they를 붙입니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "question-tags:9",
+      "topic_slug": "question-tags",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: You like pizza, don't you like?",
+      "options": [
+        "You",
+        "like",
+        "pizza",
+        "don't you like"
+      ],
+      "answer": "don't you like",
+      "explanation": "부가의문문은 don't you로 짧게 끝내야 하며 동사를 반복하지 않습니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "question-tags:10",
+      "topic_slug": "question-tags",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is tired, doesn't she?",
+      "options": [
+        "She",
+        "is",
+        "tired",
+        "doesn't she"
+      ],
+      "answer": "doesn't she",
+      "explanation": "be동사 문장이므로 doesn't가 아니라 isn't she를 써야 합니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "adverbs-frequency:1",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "blank_choice",
+      "prompt": "I ___ drink coffee in the morning.",
+      "options": [
+        "always",
+        "am always",
+        "do always"
+      ],
+      "answer": "always",
+      "explanation": "빈도 부사는 일반동사 drink 앞에 옵니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "adverbs-frequency:2",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "blank_choice",
+      "prompt": "She is ___ late for work.",
+      "options": [
+        "never",
+        "do never",
+        "nevers"
+      ],
+      "answer": "never",
+      "explanation": "be동사 뒤에 빈도 부사 never가 옵니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "adverbs-frequency:3",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "blank_choice",
+      "prompt": "We ___ go to the gym on Mondays.",
+      "options": [
+        "usually",
+        "are usually",
+        "usually go to do"
+      ],
+      "answer": "usually",
+      "explanation": "일반동사 go 앞에 usually가 위치합니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "adverbs-frequency:4",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "blank_choice",
+      "prompt": "He ___ eats meat because he's a vegetarian.",
+      "options": [
+        "never",
+        "is never",
+        "do never"
+      ],
+      "answer": "never",
+      "explanation": "일반동사 eats 앞에 never가 옵니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "adverbs-frequency:5",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "blank_choice",
+      "prompt": "They are ___ happy to help.",
+      "options": [
+        "always",
+        "do always",
+        "always are"
+      ],
+      "answer": "always",
+      "explanation": "be동사 are 뒤에 always가 옵니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "adverbs-frequency:6",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "word_order",
+      "prompt": "나는 항상 일찍 일어난다.",
+      "options": [
+        "I",
+        "always",
+        "wake",
+        "up",
+        "early"
+      ],
+      "answer": "I always wake up early.",
+      "explanation": "빈도 부사 always는 일반동사 wake 앞에 옵니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "adverbs-frequency:7",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "word_order",
+      "prompt": "그는 보통 7시에 출근한다.",
+      "options": [
+        "He",
+        "usually",
+        "goes",
+        "to",
+        "work",
+        "at",
+        "seven"
+      ],
+      "answer": "He usually goes to work at seven.",
+      "explanation": "usually는 일반동사 goes 앞에 위치합니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "adverbs-frequency:8",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "word_order",
+      "prompt": "그녀는 결코 늦지 않는다.",
+      "options": [
+        "She",
+        "is",
+        "never",
+        "late"
+      ],
+      "answer": "She is never late.",
+      "explanation": "be동사 is 뒤에 빈도 부사 never가 옵니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "adverbs-frequency:9",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I go always to school by bus.",
+      "options": [
+        "I",
+        "go always",
+        "to school",
+        "by bus"
+      ],
+      "answer": "go always",
+      "explanation": "빈도 부사 always는 일반동사 go 앞에 와야 하므로 어순이 틀렸습니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "adverbs-frequency:10",
+      "topic_slug": "adverbs-frequency",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She always is kind to everyone.",
+      "options": [
+        "She",
+        "always is",
+        "kind",
+        "to everyone"
+      ],
+      "answer": "always is",
+      "explanation": "be동사 문장에서는 always가 is 뒤에 와야 하므로 어순이 틀렸습니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "too-enough:1",
+      "topic_slug": "too-enough",
+      "question_type": "blank_choice",
+      "prompt": "This coffee is ___ hot to drink.",
+      "options": [
+        "too",
+        "enough",
+        "very much"
+      ],
+      "answer": "too",
+      "explanation": "'너무 뜨거워서 못 마신다'는 too + 형용사로 표현합니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "too-enough:2",
+      "topic_slug": "too-enough",
+      "question_type": "blank_choice",
+      "prompt": "She is old ___ to drive a car.",
+      "options": [
+        "enough",
+        "too",
+        "so"
+      ],
+      "answer": "enough",
+      "explanation": "'충분히 ~한'은 형용사 뒤에 enough를 씁니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "too-enough:3",
+      "topic_slug": "too-enough",
+      "question_type": "blank_choice",
+      "prompt": "He isn't tall ___ to reach the shelf.",
+      "options": [
+        "enough",
+        "too",
+        "very"
+      ],
+      "answer": "enough",
+      "explanation": "enough는 형용사 tall 뒤에 와서 충분함을 나타냅니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "too-enough:4",
+      "topic_slug": "too-enough",
+      "question_type": "blank_choice",
+      "prompt": "The box is ___ heavy for me to carry.",
+      "options": [
+        "too",
+        "enough",
+        "more"
+      ],
+      "answer": "too",
+      "explanation": "'너무 무거운'은 too + 형용사로 표현합니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "too-enough:5",
+      "topic_slug": "too-enough",
+      "question_type": "blank_choice",
+      "prompt": "Are you warm ___ now?",
+      "options": [
+        "enough",
+        "too",
+        "so"
+      ],
+      "answer": "enough",
+      "explanation": "enough는 형용사 warm 뒤에 와서 충분함을 나타냅니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "too-enough:6",
+      "topic_slug": "too-enough",
+      "question_type": "word_order",
+      "prompt": "그 셔츠는 나에게 너무 작다.",
+      "options": [
+        "The",
+        "shirt",
+        "is",
+        "too",
+        "small",
+        "for",
+        "me"
+      ],
+      "answer": "The shirt is too small for me.",
+      "explanation": "too는 형용사 small 앞에서 '너무 ~한'을 나타냅니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "too-enough:7",
+      "topic_slug": "too-enough",
+      "question_type": "word_order",
+      "prompt": "그는 그 일을 할 만큼 충분히 강하다.",
+      "options": [
+        "He",
+        "is",
+        "strong",
+        "enough",
+        "for",
+        "the",
+        "job"
+      ],
+      "answer": "He is strong enough for the job.",
+      "explanation": "enough는 형용사 strong 뒤에 위치합니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "too-enough:8",
+      "topic_slug": "too-enough",
+      "question_type": "word_order",
+      "prompt": "이 물은 마시기에 충분히 깨끗하다.",
+      "options": [
+        "This",
+        "water",
+        "is",
+        "clean",
+        "enough",
+        "to",
+        "drink"
+      ],
+      "answer": "This water is clean enough to drink.",
+      "explanation": "enough는 형용사 clean 뒤에 와서 충분함을 표현합니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "too-enough:9",
+      "topic_slug": "too-enough",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She is enough old to vote.",
+      "options": [
+        "She",
+        "is",
+        "enough old",
+        "to vote"
+      ],
+      "answer": "enough old",
+      "explanation": "enough는 형용사 뒤에 와야 하므로 old enough가 맞습니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "too-enough:10",
+      "topic_slug": "too-enough",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: It is too much cold to go outside.",
+      "options": [
+        "It",
+        "is",
+        "too much cold",
+        "to go outside"
+      ],
+      "answer": "too much cold",
+      "explanation": "형용사 앞에는 too much가 아니라 too만 써서 too cold가 맞습니다.",
+      "sort_order": 10
+    },
+    {
+      "id": "used-to:1",
+      "topic_slug": "used-to",
+      "question_type": "blank_choice",
+      "prompt": "I ___ live in London when I was young.",
+      "options": [
+        "used to",
+        "use to",
+        "am used to"
+      ],
+      "answer": "used to",
+      "explanation": "과거의 습관을 나타낼 때는 used to + 동사원형을 씁니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "used-to:2",
+      "topic_slug": "used-to",
+      "question_type": "blank_choice",
+      "prompt": "She used to ___ long hair.",
+      "options": [
+        "have",
+        "has",
+        "having"
+      ],
+      "answer": "have",
+      "explanation": "used to 뒤에는 동사원형 have가 옵니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "used-to:3",
+      "topic_slug": "used-to",
+      "question_type": "blank_choice",
+      "prompt": "He ___ smoke, but he quit last year.",
+      "options": [
+        "used to",
+        "use to",
+        "is used to"
+      ],
+      "answer": "used to",
+      "explanation": "과거에 했던 일을 나타내므로 used to를 씁니다.",
+      "sort_order": 3
+    },
+    {
+      "id": "used-to:4",
+      "topic_slug": "used-to",
+      "question_type": "blank_choice",
+      "prompt": "They didn't ___ to like vegetables.",
+      "options": [
+        "use",
+        "used",
+        "using"
+      ],
+      "answer": "use",
+      "explanation": "부정문에서는 didn't use to 형태로 use를 씁니다.",
+      "sort_order": 4
+    },
+    {
+      "id": "used-to:5",
+      "topic_slug": "used-to",
+      "question_type": "blank_choice",
+      "prompt": "___ you use to play soccer?",
+      "options": [
+        "Did",
+        "Do",
+        "Were"
+      ],
+      "answer": "Did",
+      "explanation": "의문문에서는 Did + 주어 + use to 형태를 씁니다.",
+      "sort_order": 5
+    },
+    {
+      "id": "used-to:6",
+      "topic_slug": "used-to",
+      "question_type": "word_order",
+      "prompt": "나는 매일 우유를 마시곤 했다.",
+      "options": [
+        "I",
+        "used",
+        "to",
+        "drink",
+        "milk",
+        "every",
+        "day"
+      ],
+      "answer": "I used to drink milk every day.",
+      "explanation": "used to + 동사원형 drink로 과거 습관을 나타냅니다.",
+      "sort_order": 6
+    },
+    {
+      "id": "used-to:7",
+      "topic_slug": "used-to",
+      "question_type": "word_order",
+      "prompt": "그녀는 발레를 배우곤 했다.",
+      "options": [
+        "She",
+        "used",
+        "to",
+        "learn",
+        "ballet"
+      ],
+      "answer": "She used to learn ballet.",
+      "explanation": "과거의 습관을 used to learn으로 표현합니다.",
+      "sort_order": 7
+    },
+    {
+      "id": "used-to:8",
+      "topic_slug": "used-to",
+      "question_type": "word_order",
+      "prompt": "우리는 그곳에 자주 가곤 했다.",
+      "options": [
+        "We",
+        "used",
+        "to",
+        "go",
+        "there",
+        "often"
+      ],
+      "answer": "We used to go there often.",
+      "explanation": "used to 뒤에 동사원형 go가 와서 과거 습관을 나타냅니다.",
+      "sort_order": 8
+    },
+    {
+      "id": "used-to:9",
+      "topic_slug": "used-to",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: I used to played the piano as a child.",
+      "options": [
+        "I",
+        "used to",
+        "played",
+        "as a child"
+      ],
+      "answer": "played",
+      "explanation": "used to 뒤에는 동사원형 play가 와야 하므로 played가 틀렸습니다.",
+      "sort_order": 9
+    },
+    {
+      "id": "used-to:10",
+      "topic_slug": "used-to",
+      "question_type": "error_find",
+      "prompt": "틀린 부분을 고르세요: She didn't used to eat breakfast.",
+      "options": [
+        "She",
+        "didn't",
+        "used to",
+        "eat breakfast"
+      ],
+      "answer": "used to",
+      "explanation": "부정문에서는 did와 함께 use to를 써야 하므로 used to가 틀렸습니다.",
+      "sort_order": 10
+    }
+  ]
+}

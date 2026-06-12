@@ -2,7 +2,7 @@
  * 데이터 레이어 공개 API — Supabase 설정 여부에 따라 remote/local로 분기.
  * 화면 코드는 반드시 이 모듈만 import한다 (auth-store 패턴 준용, plan §1.2.3).
  */
-import type { SrsGrade } from '@ted-voca/shared';
+import type { GrammarQuestionLike, GrammarTopicLike, SrsGrade } from '@ted-voca/shared';
 
 import { getSupabase } from '@/lib/supabase';
 import * as local from './local';
@@ -74,4 +74,26 @@ export function getTodaySummary(now: Date): Promise<TodaySummary> {
 export function getStatsOverview(now: Date): Promise<StatsOverview> {
   const sb = getSupabase();
   return sb ? remote.getStatsOverview(sb, now) : local.getStatsOverview(now);
+}
+
+// ── 문법 (P3) ──────────────────────────────────────────────
+
+export function getGrammarTopics(): Promise<GrammarTopicLike[]> {
+  const sb = getSupabase();
+  return sb ? remote.getGrammarTopics(sb) : local.getGrammarTopics();
+}
+
+export function getGrammarQuestions(topicSlug?: string): Promise<GrammarQuestionLike[]> {
+  const sb = getSupabase();
+  return sb ? remote.getGrammarQuestions(sb, topicSlug) : local.getGrammarQuestions(topicSlug);
+}
+
+export function recordGrammarAttempt(input: {
+  questionId: string;
+  correct: boolean;
+  now: Date;
+  userAnswer?: string;
+}): Promise<void> {
+  const sb = getSupabase();
+  return sb ? remote.recordGrammarAttempt(sb, input) : local.recordGrammarAttempt(input);
 }

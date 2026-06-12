@@ -9,6 +9,8 @@ import {
   nextStreak,
   toDateKey,
   XP_LEVEL_TEST,
+  type GrammarQuestionLike,
+  type GrammarTopicLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
@@ -34,7 +36,9 @@ const MAX_SESSIONS_KEPT = 200;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 type StoredAttempt = {
-  word_id: string;
+  /** 어휘 attempt — 문법 attempt는 word_id 없이 grammar_question_id 사용 */
+  word_id?: string;
+  grammar_question_id?: string;
   quiz_type: string;
   is_correct: boolean;
   created_at: string;
@@ -142,7 +146,7 @@ export async function saveReview(wordId: string, grade: SrsGrade, now: Date): Pr
 export async function getRecentResults(limit: number): Promise<boolean[]> {
   const attempts = await readJson<StoredAttempt[]>(KEY_ATTEMPTS, []);
   return attempts
-    .slice()
+    .filter((a) => !!a.word_id) // 어휘 난이도 조절 입력 — 문법 attempt 제외
     .sort((a, b) => a.created_at.localeCompare(b.created_at))
     .slice(-limit)
     .map((a) => a.is_correct);
@@ -190,6 +194,38 @@ export async function saveLevelTestResult(input: LevelTestSave): Promise<Profile
   return updated;
 }
 
+// ── 문법 (P3) ──────────────────────────────────────────────
+
+// grammar-pack은 lazy require — 어휘 전용 테스트/화면이 문법 번들 부재에 영향받지 않도록
+export async function getGrammarTopics(): Promise<GrammarTopicLike[]> {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- 의도된 lazy 로드 (모듈 평가 시점 JSON 의존 제거)
+  const { getBundledGrammarTopics } = require('@/lib/content/grammar-pack') as typeof import('@/lib/content/grammar-pack');
+  return getBundledGrammarTopics();
+}
+
+export async function getGrammarQuestions(topicSlug?: string): Promise<GrammarQuestionLike[]> {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- 의도된 lazy 로드 (모듈 평가 시점 JSON 의존 제거)
+  const { getBundledGrammarQuestions } = require('@/lib/content/grammar-pack') as typeof import('@/lib/content/grammar-pack');
+  const all = getBundledGrammarQuestions();
+  return topicSlug ? all.filter((q) => q.topic_slug === topicSlug) : all;
+}
+
+export async function recordGrammarAttempt(input: {
+  questionId: string;
+  correct: boolean;
+  now: Date;
+  userAnswer?: string;
+}): Promise<void> {
+  const attempts = await readJson<StoredAttempt[]>(KEY_ATTEMPTS, []);
+  attempts.push({
+    grammar_question_id: input.questionId,
+    quiz_type: 'grammar',
+    is_correct: input.correct,
+    created_at: input.now.toISOString(),
+  });
+  await writeJson(KEY_ATTEMPTS, attempts.slice(-MAX_ATTEMPTS_KEPT));
+}
+
 export async function getTodaySummary(now: Date): Promise<TodaySummary> {
   const today = toDateKey(now);
   const [due, attempts, sessions] = await Promise.all([
@@ -224,7 +260,7 @@ export async function getStatsOverview(now: Date): Promise<StatsOverview> {
   const states = Object.values(map);
   const wrongCounts = new Map<string, number>();
   for (const a of attempts) {
-    if (!a.is_correct) wrongCounts.set(a.word_id, (wrongCounts.get(a.word_id) ?? 0) + 1);
+    if (!a.is_correct && a.word_id) wrongCounts.set(a.word_id, (wrongCounts.get(a.word_id) ?? 0) + 1);
   }
   const topWrongWords = [...wrongCounts.entries()]
     .sort((a, b) => b[1] - a[1])

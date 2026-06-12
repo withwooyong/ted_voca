@@ -1,13 +1,23 @@
 # HANDOFF — Ted Voca
 
-> 마지막 업데이트: 2026-06-12 (P1+P2 완료)
+> 마지막 업데이트: 2026-06-12 (P3 완료)
 
 ## 현재 상태
 
-**P0 Foundation ✅ → P1+P2 Vocab Core + SRS + Stats ✅** (ted-run 파이프라인 전체 통과)
+**P0 ✅ → P1+P2 ✅ → P3 Grammar ✅** (ted-run 파이프라인 전체 통과)
 
-로컬(Dev Mock) 모드에서 풀 루프 동작: 가입 → 온보딩 → 레벨 테스트(20문항 adaptive) →
-어휘 퀴즈 3종(10문항) → 오답 자동 복습 큐 편입 → SM-2 플래시카드 복습 → XP/streak/통계.
+로컬(Dev Mock) 모드에서 풀 루프 동작: 가입 → 온보딩 → 레벨 테스트(adaptive) →
+어휘 퀴즈 3종 → SM-2 복습 → **문법 퀴즈 3유형(어순 배열·빈칸·오류 찾기) → 문법 사전(20토픽)**
+→ XP/streak/통계. 레벨 테스트 weak_tags가 문법 추천(Ted 추천)에 연동됨.
+
+## P3 산출물 (2026-06-12)
+
+- `packages/shared/src/grammar.ts` — 어순 채점·셔플·세션 선택·추천 (vitest 18케이스, ADR-0004)
+- 문법 콘텐츠 파이프라인: `scripts/grammar_content/batch_*.txt` → `generate_grammar_seed.py` →
+  `content/grammar-pack.json` + `migrations/004_grammar.sql` (20토픽/200문항, 파서 unittest 16)
+- 화면: `app/quiz/grammar.tsx`, `app/grammar-dict/{index,[slug]}.tsx`, learn 허브 문법 활성화 + Ted 추천
+- `WordOrderBuilder` 컴포넌트 (칩 탭 배열, controlled)
+- 데이터 레이어 문법 확장 (dual-mode, 어휘 난이도 입력 오염 방지 필터)
 
 ## 실행
 
@@ -39,5 +49,7 @@ Supabase 사용 시: migrations 001→002(단어 510 시드)→003(level_test_do
 
 ## 다음 작업
 
-- **P3 Grammar** 또는 **P4 Listening** (`docs/plans/` — 상호 독립, 병행 가능) → `/ted-run docs/plans/p3-grammar.md`
-- 레벨 테스트 문항·시드 콘텐츠 human review
+- **P4 Listening** (`docs/plans/p4-listening.md`) → `/ted-run docs/plans/p4-listening.md`
+- 콘텐츠 human review: 레벨 테스트 25문항 + **문법 200문항** (`scripts/grammar_content/batch_*.txt` —
+  수정 후 `python3 scripts/generate_grammar_seed.py` 재실행하면 JSON·SQL 동기 갱신)
+- Supabase 사용 시 migration 004 적용 필요

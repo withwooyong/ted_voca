@@ -8,6 +8,9 @@ import {
   nextStreak,
   toDateKey,
   XP_LEVEL_TEST,
+  type GrammarQuestionLike,
+  type GrammarQuestionType,
+  type GrammarTopicLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
@@ -169,6 +172,7 @@ export async function getRecentResults(sb: SupabaseClient, limit: number): Promi
     .from('quiz_attempts')
     .select('is_correct, created_at')
     .eq('user_id', userId)
+    .not('word_id', 'is', null) // 어휘 난이도 조절 입력 — 문법 attempt 제외
     .order('created_at', { ascending: false })
     .limit(limit);
   if (error) throw error;
@@ -254,6 +258,84 @@ export async function saveLevelTestResult(sb: SupabaseClient, input: LevelTestSa
     weak_tags: input.weakTags,
     level_test_done: true,
   };
+}
+
+// ── 문법 (P3) ──────────────────────────────────────────────
+
+type GrammarTopicRow = {
+  id: string;
+  slug: string;
+  title: string;
+  cefr_level: string | null;
+  explanation: string | null;
+  tags: string[] | null;
+  sort_order: number;
+};
+
+type GrammarQuestionRow = {
+  id: string;
+  question_type: string;
+  prompt: string;
+  options: { chips?: string[]; choices?: string[]; segments?: string[] } | null;
+  correct_answer: string;
+  explanation: string | null;
+  sort_order: number;
+  grammar_topics: { slug: string } | null;
+};
+
+let grammarTopicsCache: GrammarTopicLike[] | null = null;
+
+export async function getGrammarTopics(sb: SupabaseClient): Promise<GrammarTopicLike[]> {
+  if (grammarTopicsCache) return grammarTopicsCache;
+  const { data, error } = await sb.from('grammar_topics').select('*').order('sort_order');
+  if (error) throw error;
+  grammarTopicsCache = (data as GrammarTopicRow[]).map((t) => ({
+    slug: t.slug,
+    title: t.title,
+    cefr_level: t.cefr_level ?? 'A2',
+    explanation: t.explanation ?? '',
+    tags: t.tags ?? [],
+    sort_order: t.sort_order,
+  }));
+  return grammarTopicsCache;
+}
+
+export async function getGrammarQuestions(
+  sb: SupabaseClient,
+  topicSlug?: string,
+): Promise<GrammarQuestionLike[]> {
+  let query = sb
+    .from('grammar_questions')
+    .select('id, question_type, prompt, options, correct_answer, explanation, sort_order, grammar_topics!inner(slug)')
+    .order('sort_order');
+  if (topicSlug) query = query.eq('grammar_topics.slug', topicSlug);
+  const { data, error } = await query;
+  if (error) throw error;
+  return (data as unknown as GrammarQuestionRow[]).map((q) => ({
+    id: q.id,
+    topic_slug: q.grammar_topics?.slug ?? '',
+    question_type: q.question_type as GrammarQuestionType,
+    prompt: q.prompt,
+    options: q.options?.chips ?? q.options?.choices ?? q.options?.segments ?? [],
+    answer: q.correct_answer,
+    explanation: q.explanation ?? '',
+  }));
+}
+
+export async function recordGrammarAttempt(
+  sb: SupabaseClient,
+  input: { questionId: string; correct: boolean; now: Date; userAnswer?: string },
+): Promise<void> {
+  const userId = await getUserId(sb);
+  // quiz_type enum에 문법 유형 추가됨 (migration 004) — 통합 'grammar' 값 사용
+  const { error } = await sb.from('quiz_attempts').insert({
+    user_id: userId,
+    grammar_question_id: input.questionId,
+    quiz_type: 'grammar',
+    is_correct: input.correct,
+    user_answer: input.userAnswer ?? null,
+  });
+  if (error) throw error;
 }
 
 export async function getTodaySummary(sb: SupabaseClient, now: Date): Promise<TodaySummary> {

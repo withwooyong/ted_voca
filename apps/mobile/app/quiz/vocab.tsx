@@ -47,6 +47,8 @@ export default function VocabQuizScreen() {
   const [lastCorrect, setLastCorrect] = useState(false);
   const [picked, setPicked] = useState<string | null>(null);
   const [finishing, setFinishing] = useState(false);
+  // 동기 더블탭 가드 (state 반영 지연 보완)
+  const finishingRef = useRef(false);
   // 로드 완료 시점에 설정 (렌더 중 impure 호출 금지 — react-hooks/purity)
   const startedAt = useRef(0);
   const questionStart = useRef(0);
@@ -187,9 +189,10 @@ export default function VocabQuizScreen() {
   };
 
   const next = async () => {
-    if (finishing) return;
+    if (finishing || finishingRef.current) return;
     const now = new Date();
     if (index + 1 >= total) {
+      finishingRef.current = true;
       setFinishing(true);
       const finalCorrect = correctRef.current;
       const xp = xpForQuizSession(finalCorrect);

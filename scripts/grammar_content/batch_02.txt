@@ -1,0 +1,121 @@
+# TODO(content-review): AI 생성 초안 — human review 필요
+
+topic: modal-should-must | 조동사 should/must | A2 | modals | should는 충고나 권유를, must는 강한 의무나 확신을 나타냅니다. 뒤에는 항상 동사원형이 옵니다.
+blank_choice | You ___ see a doctor if you feel sick. | should;must to;shoulds=should | should 뒤에는 동사원형이 와야 하며 to를 붙이지 않습니다.
+blank_choice | Drivers ___ stop at a red light. It's the law. | must;should not;can=must | 법적 의무처럼 반드시 해야 하는 일에는 must를 씁니다.
+blank_choice | You ___ eat so much sugar. It's bad for you. | shouldn't;mustn't to;don't should=shouldn't | 충고로 하지 말라고 할 때는 shouldn't를 씁니다.
+blank_choice | She looks tired. She ___ go to bed early. | should;musts;should to=should | 가벼운 권유나 충고에는 should를 씁니다.
+blank_choice | We ___ wear a seatbelt in the car. | must;should to;must to=must | 안전상 반드시 지켜야 하는 규칙에는 must를 씁니다.
+word_order | 너는 더 열심히 공부해야 한다. | You should study harder. | should는 충고를 나타내며 동사원형 study가 뒤따릅니다.
+word_order | 우리는 지금 떠나야 한다. | We must leave now. | must는 강한 의무를 나타내고 동사원형 leave가 옵니다.
+word_order | 너는 늦으면 안 된다. | You should not be late. | should not은 하지 말아야 할 충고를 나타냅니다.
+error_find | 틀린 부분을 고르세요: You must to finish your homework today. | You;must;to;finish=to | must 뒤에는 to 없이 동사원형이 와야 하므로 to가 틀렸습니다.
+error_find | 틀린 부분을 고르세요: She should studies English every day. | She;should;studies;every day=studies | should 뒤에는 동사원형 study가 와야 하므로 studies가 틀렸습니다.
+
+topic: conditionals-first | 가정법 1형식 (if + 현재) | B1 | conditionals | 실현 가능한 미래의 일을 말할 때 if절에는 현재시제, 주절에는 will을 씁니다. 일어날 법한 조건과 결과를 나타냅니다.
+blank_choice | If it ___ tomorrow, we will stay home. | rains;will rain;rained=rains | if절에는 미래의 일이라도 현재시제를 씁니다.
+blank_choice | If you study hard, you ___ pass the exam. | will;would;are=will | 1형식 가정법의 주절에는 will을 씁니다.
+blank_choice | She will call you if she ___ time. | has;will have;had=has | if절은 현재시제로 미래 조건을 나타냅니다.
+blank_choice | If we ___ now, we won't be late. | leave;will leave;left=leave | if절에는 현재시제 leave를 씁니다.
+blank_choice | If he doesn't hurry, he ___ the bus. | will miss;misses;missed=will miss | 주절은 미래 결과이므로 will miss를 씁니다.
+word_order | 비가 오면 나는 집에 있을 것이다. | If it rains I will stay home. | if절은 현재시제, 주절은 will을 사용합니다.
+word_order | 네가 도와주면 우리는 끝낼 것이다. | If you help we will finish. | 조건이 충족되면 일어날 결과를 will로 나타냅니다.
+word_order | 네가 서두르면 우리는 늦지 않을 것이다. | If you hurry we won't be late. | if절 현재시제, 주절은 won't로 부정 미래를 표현합니다.
+error_find | 틀린 부분을 고르세요: If it will rain tomorrow, we will cancel the trip. | If;it will rain;tomorrow;we will cancel=it will rain | if절에는 will을 쓰지 않고 현재시제를 써야 합니다.
+error_find | 틀린 부분을 고르세요: If you are tired, you should resting. | If you are tired;you;should;resting=resting | should 뒤에는 동사원형 rest가 와야 하므로 resting이 틀렸습니다.
+
+topic: conditionals-second | 가정법 2형식 (if + 과거) | B1 | conditionals | 현재 사실과 반대되거나 일어날 가능성이 낮은 일을 가정할 때 if절에는 과거시제, 주절에는 would를 씁니다. be동사는 was 대신 were를 자주 씁니다.
+blank_choice | If I ___ rich, I would travel the world. | were;am;will be=were | 가정법 2형식에서 be동사는 주어와 관계없이 were를 씁니다.
+blank_choice | If I had time, I ___ help you. | would;will;am=would | 2형식 가정법 주절에는 would를 씁니다.
+blank_choice | If she ___ harder, she would succeed. | studied;studies;will study=studied | if절에 과거시제 studied를 써서 비현실적 조건을 나타냅니다.
+blank_choice | What would you do if you ___ a million dollars? | won;win;will win=won | if절에는 과거시제 won을 써서 가정을 표현합니다.
+blank_choice | If he ___ here, he would know the answer. | were;is;will be=were | 사실과 반대되는 가정이므로 were를 씁니다.
+word_order | Tom이 부자라면 해외여행을 할 텐데. | If Tom were rich, he would travel abroad. | 비현실적 가정에는 were와 조동사 would를 씁니다.
+word_order | 시간이 더 있다면 너를 도울 텐데. | With more time, I would help you. | if절 대신 with 전치사구로 조건을 나타낸 가정법 — 주절은 would.
+word_order | 그녀가 여기 있다면 답을 알 텐데. | She would know the answer here. | 가정법에서 would로 사실과 반대인 가정의 결과를 나타냅니다.
+error_find | 틀린 부분을 고르세요: If I was you, I would apologize. | If;I was;you;would apologize=I was | 가정법 2형식에서는 was 대신 were를 써야 합니다.
+error_find | 틀린 부분을 고르세요: If I had a car, I will drive to work. | If I had a car;I;will drive;to work=will drive | 2형식 가정법 주절에는 will이 아니라 would를 써야 합니다.
+
+topic: passive-voice | 수동태 | B1 | passive | 동작의 대상이 주어가 될 때 수동태를 쓰며 'be동사 + 과거분사' 형태입니다. 행위자는 by로 나타냅니다.
+blank_choice | This book ___ by many students. | is read;reads;reading=is read | 수동태는 be동사 + 과거분사 형태입니다.
+blank_choice | The window ___ broken yesterday. | was;is;has=was | 과거의 수동태이므로 was를 씁니다.
+blank_choice | The cake ___ by my mother. | was made;made;was make=was made | 수동태는 be동사 뒤에 과거분사 made를 씁니다.
+blank_choice | English ___ all over the world. | is spoken;speaks;is speaking=is spoken | 영어는 말해지는 대상이므로 수동태 is spoken을 씁니다.
+blank_choice | These cars ___ in Korea. | are made;make;are making=are made | 복수 주어의 현재 수동태는 are made입니다.
+word_order | 이 다리는 1990년에 지어졌다. | This bridge was built in 1990. | be동사 was와 과거분사 built로 과거 수동태를 만듭니다.
+word_order | 그 편지들은 어제 보내졌다. | The letters were sent yesterday. | 복수 주어이므로 were와 과거분사 sent를 씁니다.
+word_order | 그 방은 매일 청소된다. | The room is cleaned every day. | 현재 수동태는 is와 과거분사 cleaned로 표현합니다.
+error_find | 틀린 부분을 고르세요: The report was wrote by the manager. | The report;was;wrote;by the manager=wrote | 수동태에는 과거형 wrote가 아니라 과거분사 written을 써야 합니다.
+error_find | 틀린 부분을 고르세요: This song is sang by a famous singer. | This song;is;sang;by a famous singer=sang | 수동태에는 과거분사 sung을 써야 하므로 sang이 틀렸습니다.
+
+topic: relative-clauses | 관계대명사 | B1 | clauses | 관계대명사는 두 문장을 연결하며 사람에는 who, 사물에는 which, 둘 다에는 that을 씁니다. 선행사를 꾸며주는 절을 이끕니다.
+blank_choice | The man ___ lives next door is a doctor. | who;which;whose=who | 사람을 선행사로 받을 때는 who를 씁니다.
+blank_choice | This is the book ___ I bought yesterday. | which;who;whose=which | 사물을 선행사로 받을 때는 which를 씁니다.
+blank_choice | I met a girl ___ name is Anna. | whose;who;which=whose | 소유 관계를 나타낼 때는 whose를 씁니다.
+blank_choice | The house ___ we live in is old. | that;who;whose=that | 사물 선행사에는 that 또는 which를 쓸 수 있습니다.
+blank_choice | She is the teacher ___ helped me a lot. | who;which;whom=who | 도움을 준 주체가 사람이므로 who를 씁니다.
+word_order | 나는 영어를 가르치는 친구가 있다. | I have a friend who teaches English. | who가 사람 선행사 friend를 받아 절을 이끕니다.
+word_order | 이것이 내가 원하는 가방이다. | This is the bag which I want. | 사물 선행사 bag을 which가 받습니다.
+word_order | 빨간 모자를 쓴 소년은 내 동생이다. | The boy who wears red caps is my brother. | who가 사람 선행사 boy를 수식하는 절을 이끕니다.
+error_find | 틀린 부분을 고르세요: I know a woman which speaks five languages. | I know;a woman;which;speaks five languages=which | 사람 선행사에는 which가 아니라 who를 써야 합니다.
+error_find | 틀린 부분을 고르세요: The car who is parked outside is mine. | The car;who;is parked;outside=who | 사물 선행사 car에는 who가 아니라 which나 that을 써야 합니다.
+
+topic: gerund-infinitive | 동명사 vs to부정사 | B1 | verb-patterns | 동사에 따라 뒤에 동명사(-ing)나 to부정사가 옵니다. enjoy, finish는 동명사를, want, decide는 to부정사를 취합니다.
+blank_choice | I enjoy ___ books in my free time. | reading;to read;read=reading | enjoy 뒤에는 동명사 reading이 와야 합니다.
+blank_choice | She wants ___ a new car. | to buy;buying;buy=to buy | want 뒤에는 to부정사가 옵니다.
+blank_choice | He finished ___ his homework. | doing;to do;do=doing | finish 뒤에는 동명사 doing이 옵니다.
+blank_choice | They decided ___ early. | to leave;leaving;left=to leave | decide 뒤에는 to부정사가 옵니다.
+blank_choice | Would you mind ___ the door? | closing;to close;close=closing | mind 뒤에는 동명사 closing을 씁니다.
+word_order | 나는 음악 듣는 것을 좋아한다. | I like listening to music. | like는 동명사를 취할 수 있어 listening을 씁니다.
+word_order | 그녀는 의사가 되기를 원한다. | She wants to become a doctor. | want 뒤에는 to부정사 to become이 옵니다.
+word_order | 우리는 비 오는 것을 멈추기를 기다렸다. | We waited for the rain to stop. | wait for 뒤에 의미상 주어와 to부정사가 옵니다.
+error_find | 틀린 부분을 고르세요: I enjoy to play tennis on weekends. | I;enjoy;to play;tennis=to play | enjoy 뒤에는 to부정사가 아니라 동명사 playing을 써야 합니다.
+error_find | 틀린 부분을 고르세요: She decided buying a new phone. | She;decided;buying;a new phone=buying | decide 뒤에는 동명사가 아니라 to부정사 to buy를 써야 합니다.
+
+topic: question-tags | 부가의문문 | A2 | questions | 부가의문문은 문장 끝에 짧게 덧붙이는 의문문입니다. 앞이 긍정이면 부정, 부정이면 긍정으로 만들고 같은 시제의 조동사를 씁니다.
+blank_choice | You are a student, ___? | aren't you;are you;isn't you=aren't you | 긍정문 뒤에는 부정 부가의문문 aren't you를 씁니다.
+blank_choice | She can swim, ___? | can't she;can she;doesn't she=can't she | 조동사 can을 받아 부정형 can't she를 씁니다.
+blank_choice | They don't like coffee, ___? | do they;don't they;are they=do they | 부정문 뒤에는 긍정 부가의문문 do they를 씁니다.
+blank_choice | He went home, ___? | didn't he;doesn't he;wasn't he=didn't he | 일반동사 과거 긍정문에는 didn't he를 씁니다.
+blank_choice | It's cold today, ___? | isn't it;doesn't it;won't it=isn't it | be동사 is를 받아 부정형 isn't it을 씁니다.
+word_order | 톰은 그를 알지, 그렇지 않니? | Tom knows him, doesn't he? | 일반동사 긍정문 뒤에는 부정 부가의문문 doesn't he를 붙입니다.
+word_order | 안나는 바쁘지, 그렇지 않니? | Anna is busy, isn't she? | be동사 is를 받아 부정형 isn't she를 붙입니다.
+word_order | 그 학생들은 오지 않을 거야, 그렇지? | The students won't come, will they? | 부정문 뒤에는 긍정 will they를 붙입니다.
+error_find | 틀린 부분을 고르세요: You like pizza, don't you like? | You;like;pizza;don't you like=don't you like | 부가의문문은 don't you로 짧게 끝내야 하며 동사를 반복하지 않습니다.
+error_find | 틀린 부분을 고르세요: She is tired, doesn't she? | She;is;tired;doesn't she=doesn't she | be동사 문장이므로 doesn't가 아니라 isn't she를 써야 합니다.
+
+topic: adverbs-frequency | 빈도 부사 | A2 | adverbs | always, usually, often, sometimes, never 같은 빈도 부사는 일반동사 앞, be동사 뒤에 위치합니다. 얼마나 자주 하는지를 나타냅니다.
+blank_choice | I ___ drink coffee in the morning. | always;am always;do always=always | 빈도 부사는 일반동사 drink 앞에 옵니다.
+blank_choice | She is ___ late for work. | never;do never;nevers=never | be동사 뒤에 빈도 부사 never가 옵니다.
+blank_choice | We ___ go to the gym on Mondays. | usually;are usually;usually go to do=usually | 일반동사 go 앞에 usually가 위치합니다.
+blank_choice | He ___ eats meat because he's a vegetarian. | never;is never;do never=never | 일반동사 eats 앞에 never가 옵니다.
+blank_choice | They are ___ happy to help. | always;do always;always are=always | be동사 are 뒤에 always가 옵니다.
+word_order | 나는 항상 일찍 일어난다. | I always wake up early. | 빈도 부사 always는 일반동사 wake 앞에 옵니다.
+word_order | 그는 보통 7시에 출근한다. | He usually goes to work at seven. | usually는 일반동사 goes 앞에 위치합니다.
+word_order | 그녀는 결코 늦지 않는다. | She is never late. | be동사 is 뒤에 빈도 부사 never가 옵니다.
+error_find | 틀린 부분을 고르세요: I go always to school by bus. | I;go always;to school;by bus=go always | 빈도 부사 always는 일반동사 go 앞에 와야 하므로 어순이 틀렸습니다.
+error_find | 틀린 부분을 고르세요: She always is kind to everyone. | She;always is;kind;to everyone=always is | be동사 문장에서는 always가 is 뒤에 와야 하므로 어순이 틀렸습니다.
+
+topic: too-enough | too / enough | A2 | comparison | too는 형용사 앞에서 '너무 ~한'을, enough는 형용사 뒤에서 '충분히 ~한'을 나타냅니다. too는 부정적 의미, enough는 충분함을 표현합니다.
+blank_choice | This coffee is ___ hot to drink. | too;enough;very much=too | '너무 뜨거워서 못 마신다'는 too + 형용사로 표현합니다.
+blank_choice | She is old ___ to drive a car. | enough;too;so=enough | '충분히 ~한'은 형용사 뒤에 enough를 씁니다.
+blank_choice | He isn't tall ___ to reach the shelf. | enough;too;very=enough | enough는 형용사 tall 뒤에 와서 충분함을 나타냅니다.
+blank_choice | The box is ___ heavy for me to carry. | too;enough;more=too | '너무 무거운'은 too + 형용사로 표현합니다.
+blank_choice | Are you warm ___ now? | enough;too;so=enough | enough는 형용사 warm 뒤에 와서 충분함을 나타냅니다.
+word_order | 그 셔츠는 나에게 너무 작다. | The shirt is too small for me. | too는 형용사 small 앞에서 '너무 ~한'을 나타냅니다.
+word_order | 그는 그 일을 할 만큼 충분히 강하다. | He is strong enough for the job. | enough는 형용사 strong 뒤에 위치합니다.
+word_order | 이 물은 마시기에 충분히 깨끗하다. | This water is clean enough to drink. | enough는 형용사 clean 뒤에 와서 충분함을 표현합니다.
+error_find | 틀린 부분을 고르세요: She is enough old to vote. | She;is;enough old;to vote=enough old | enough는 형용사 뒤에 와야 하므로 old enough가 맞습니다.
+error_find | 틀린 부분을 고르세요: It is too much cold to go outside. | It;is;too much cold;to go outside=too much cold | 형용사 앞에는 too much가 아니라 too만 써서 too cold가 맞습니다.
+
+topic: used-to | used to | A2 | tense | used to는 과거에 습관적으로 했지만 지금은 하지 않는 일을 나타냅니다. 뒤에는 항상 동사원형이 오며 부정은 didn't use to입니다.
+blank_choice | I ___ live in London when I was young. | used to;use to;am used to=used to | 과거의 습관을 나타낼 때는 used to + 동사원형을 씁니다.
+blank_choice | She used to ___ long hair. | have;has;having=have | used to 뒤에는 동사원형 have가 옵니다.
+blank_choice | He ___ smoke, but he quit last year. | used to;use to;is used to=used to | 과거에 했던 일을 나타내므로 used to를 씁니다.
+blank_choice | They didn't ___ to like vegetables. | use;used;using=use | 부정문에서는 didn't use to 형태로 use를 씁니다.
+blank_choice | ___ you use to play soccer? | Did;Do;Were=Did | 의문문에서는 Did + 주어 + use to 형태를 씁니다.
+word_order | 나는 매일 우유를 마시곤 했다. | I used to drink milk every day. | used to + 동사원형 drink로 과거 습관을 나타냅니다.
+word_order | 그녀는 발레를 배우곤 했다. | She used to learn ballet. | 과거의 습관을 used to learn으로 표현합니다.
+word_order | 우리는 그곳에 자주 가곤 했다. | We used to go there often. | used to 뒤에 동사원형 go가 와서 과거 습관을 나타냅니다.
+error_find | 틀린 부분을 고르세요: I used to played the piano as a child. | I;used to;played;as a child=played | used to 뒤에는 동사원형 play가 와야 하므로 played가 틀렸습니다.
+error_find | 틀린 부분을 고르세요: She didn't used to eat breakfast. | She;didn't;used to;eat breakfast=used to | 부정문에서는 did와 함께 use to를 써야 하므로 used to가 틀렸습니다.

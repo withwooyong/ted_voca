@@ -4,7 +4,8 @@ import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from
 
 import { Card } from '@/components/ui/Card';
 import { colors, spacing } from '@/constants/theme';
-import { getTodaySummary, getUserWordMap } from '@/lib/data';
+import { getGrammarTopics, getTodaySummary, getLocalProfileProgress, getUserWordMap } from '@/lib/data';
+import { recommendTopics, type GrammarTopicLike } from '@ted-voca/shared';
 
 const COURSE_TITLE = 'TOEIC 800 — 핵심 어휘 510';
 const COURSE_TOTAL = 510;
@@ -16,7 +17,6 @@ type LockedRow = {
 };
 
 const LOCKED: LockedRow[] = [
-  { emoji: '📝', title: '문법', desc: '🔒 P3에서 해제 — 카드 배열로 문장 만들기' },
   { emoji: '🎧', title: '리스닝', desc: '🔒 P4에서 해제 — 안내 방송 듣기' },
   { emoji: '🗣️', title: '회화 (AI)', desc: '🔒 P5에서 해제 — 상황극 + Ted 피드백' },
 ];
@@ -24,17 +24,22 @@ const LOCKED: LockedRow[] = [
 export default function LearnScreen() {
   const [learned, setLearned] = useState(0);
   const [dueCount, setDueCount] = useState(0);
+  const [recommended, setRecommended] = useState<GrammarTopicLike | null>(null);
   const [loading, setLoading] = useState(true);
 
   const load = useCallback(async (isActive: () => boolean) => {
     try {
-      const [map, summary] = await Promise.all([
+      const [map, summary, progress, topics] = await Promise.all([
         getUserWordMap(),
         getTodaySummary(new Date()),
+        getLocalProfileProgress(),
+        getGrammarTopics(),
       ]);
       if (!isActive()) return; // 포커스 이탈 후 setState 방지
       setLearned(Object.keys(map).length);
       setDueCount(summary.dueCount);
+      const recs = recommendTopics(topics, progress.weak_tags);
+      setRecommended(recs[0] ?? null);
     } catch (err) {
       console.error('[learn] load failed', err);
     } finally {
@@ -84,6 +89,28 @@ export default function LearnScreen() {
         </Card>
       </Pressable>
 
+      <Pressable onPress={() => router.push('/quiz/grammar')}>
+        <Card style={styles.row}>
+          <Text style={styles.rowEmoji}>📝</Text>
+          <View style={styles.rowBody}>
+            <Text style={styles.rowTitle}>문법 퀴즈</Text>
+            <Text style={styles.rowDesc}>카드 배열 · 빈칸 선택 · 오류 찾기</Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </Card>
+      </Pressable>
+
+      <Pressable onPress={() => router.push('/grammar-dict')}>
+        <Card style={styles.row}>
+          <Text style={styles.rowEmoji}>📚</Text>
+          <View style={styles.rowBody}>
+            <Text style={styles.rowTitle}>문법 사전</Text>
+            <Text style={styles.rowDesc}>CEFR 레벨별 문법 설명 + 예문</Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </Card>
+      </Pressable>
+
       <Pressable onPress={() => router.push('/(tabs)/review')}>
         <Card style={styles.row}>
           <Text style={styles.rowEmoji}>🔄</Text>
@@ -107,6 +134,19 @@ export default function LearnScreen() {
           <Text style={styles.chevron}>›</Text>
         </Card>
       </Pressable>
+
+      {recommended ? (
+        <Pressable onPress={() => router.push(`/grammar-dict/${recommended.slug}`)}>
+          <Card style={StyleSheet.flatten([styles.row, styles.recRow])}>
+            <Text style={styles.rowEmoji}>🎯</Text>
+            <View style={styles.rowBody}>
+              <Text style={styles.rowTitle}>Ted 추천: {recommended.title}</Text>
+              <Text style={styles.rowDesc}>약점 태그 기반 — 이 문법을 복습해볼까?</Text>
+            </View>
+            <Text style={styles.chevron}>›</Text>
+          </Card>
+        </Pressable>
+      ) : null}
 
       {LOCKED.map((row) => (
         <Card key={row.title} style={StyleSheet.flatten([styles.row, styles.rowLocked])}>
@@ -138,6 +178,7 @@ const styles = StyleSheet.create({
   courseMeta: { fontSize: 12, color: '#fff', opacity: 0.85, marginTop: 7 },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   rowLocked: { opacity: 0.5 },
+  recRow: { borderColor: colors.accent, backgroundColor: '#FFFBEB' },
   rowEmoji: { fontSize: 26 },
   rowBody: { flex: 1 },
   rowTitle: { fontSize: 15, fontWeight: '700', color: colors.text },
