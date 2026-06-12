@@ -113,15 +113,15 @@ status: new → learning(rep<2) → review → mastered(rep≥4 && ease≥2.5 &&
 
 ## 8. 완료 체크리스트
 
-- [ ] vitest(shared) + jest-expo(mobile) 설정, 샘플 테스트 GREEN
-- [ ] `srs.ts` SM-2 + 테스트 (경계값 포함)
-- [ ] `quiz.ts` 문항 생성·난이도 조절 + 테스트
-- [ ] words 시드 SQL 생성·적용 (510 rows)
-- [ ] repository dual-mode (Supabase/mock) 동작
-- [ ] 레벨 테스트 20문항 → user_level/weak_tags 저장
-- [ ] 어휘 퀴즈 3종 + 피드백 시트 + 단어 카드
-- [ ] study_sessions/quiz_attempts/user_words 기록
-- [ ] Review 탭 플래시카드 + 4단계 평가 + 다음 복습일 노출
-- [ ] 홈 대시보드 실데이터 (오늘 할 일·streak·XP)
-- [ ] 통계 화면 5개 위젯
-- [ ] `tsc --noEmit` + 전체 테스트 PASS
+- [x] vitest(shared) + jest-expo(mobile) 설정, 샘플 테스트 GREEN
+- [x] `srs.ts` SM-2 + 테스트 (경계값 포함)
+- [x] `quiz.ts` 문항 생성·난이도 조절 + 테스트
+- [x] words 시드 SQL 생성·적용 (510 rows)
+- [x] repository dual-mode (Supabase/mock) 동작
+- [x] 레벨 테스트 20문항 → user_level/weak_tags 저장
+- [x] 어휘 퀴즈 3종 + 피드백 시트 + 단어 카드
+- [x] study_sessions/quiz_attempts/user_words 기록
+- [x] Review 탭 플래시카드 + 4단계 평가 + 다음 복습일 노출
+- [x] 홈 대시보드 실데이터 (오늘 할 일·streak·XP)
+- [x] 통계 화면 5개 위젯
+- [x] `tsc --noEmit` + 전체 테스트 PASS

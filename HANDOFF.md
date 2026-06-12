@@ -1,55 +1,62 @@
-# HANDOFF — Ted Voca
+# Session Handoff
 
-> 마지막 업데이트: 2026-06-12 (P3 완료)
+> Last updated: 2026-06-12 17:41 (KST)
+> Branch: `main` (https://github.com/withwooyong/ted_voca — public)
+> Latest commit: `74f8da2` - P3 Grammar — 문법 퀴즈 3유형·사전·콘텐츠 파이프라인
 
-## 현재 상태
+## Current Status
 
-**P0 ✅ → P1+P2 ✅ → P3 Grammar ✅** (ted-run 파이프라인 전체 통과)
+**P0 ✅ → P1+P2 ✅ → P3 Grammar ✅** — 로컬(Dev Mock) 모드에서 풀 루프 동작:
+가입 → 온보딩 → 레벨 테스트(adaptive) → 어휘 퀴즈 3종 → SM-2 복습 → 문법 퀴즈 3유형 →
+문법 사전(20토픽) → XP/streak/통계. 모든 변경 커밋·푸시 완료, 미커밋 작업 없음.
 
-로컬(Dev Mock) 모드에서 풀 루프 동작: 가입 → 온보딩 → 레벨 테스트(adaptive) →
-어휘 퀴즈 3종 → SM-2 복습 → **문법 퀴즈 3유형(어순 배열·빈칸·오류 찾기) → 문법 사전(20토픽)**
-→ XP/streak/통계. 레벨 테스트 weak_tags가 문법 추천(Ted 추천)에 연동됨.
+## Completed This Session
 
-## P3 산출물 (2026-06-12)
+| # | Task | Commit | Files |
+|---|------|--------|-------|
+| 1 | 인터랙티브 프로토타입 (P0~P6 전체 동선 클릭 모형) | `4e7d761` | docs/prototype/index.html |
+| 2 | P1~P6 작업계획서 일괄 작성 + MASTER-PLAN 로드맵 연결 | `4e7d761` | docs/plans/p1-p2…p6, docs/MASTER-PLAN.md |
+| 3 | P1+P2: SM-2 SRS·어휘 퀴즈 3종·레벨 테스트·통계·단어 시드 510·테스트 인프라 (ted-run 풀 파이프라인) | `4e7d761` | packages/shared, apps/mobile/lib·app, migrations/002·003, ADR-0001~0003 |
+| 4 | git init + GitHub repo 생성(withwooyong/ted_voca) | `4e7d761` | — |
+| 5 | P3: 문법 퀴즈 3유형·사전·콘텐츠 파이프라인 20토픽/200문항 (ted-run 풀 파이프라인) | `74f8da2` | app/quiz/grammar.tsx, app/grammar-dict/, shared/grammar.ts, scripts/grammar_content/, migrations/004, ADR-0004 |
+| 6 | repo public 전환 + 푸시 | `74f8da2` | — |
 
-- `packages/shared/src/grammar.ts` — 어순 채점·셔플·세션 선택·추천 (vitest 18케이스, ADR-0004)
-- 문법 콘텐츠 파이프라인: `scripts/grammar_content/batch_*.txt` → `generate_grammar_seed.py` →
-  `content/grammar-pack.json` + `migrations/004_grammar.sql` (20토픽/200문항, 파서 unittest 16)
-- 화면: `app/quiz/grammar.tsx`, `app/grammar-dict/{index,[slug]}.tsx`, learn 허브 문법 활성화 + Ted 추천
-- `WordOrderBuilder` 컴포넌트 (칩 탭 배열, controlled)
-- 데이터 레이어 문법 확장 (dual-mode, 어휘 난이도 입력 오염 방지 필터)
+## In Progress / Pending
 
-## 실행
+| # | Task | Status | Notes |
+|---|------|--------|-------|
+| 1 | P4 Listening | ⬜ 미착수 | `/ted-run docs/plans/p4-listening.md` — P3와 독립, 바로 진입 가능 |
+| 2 | 콘텐츠 human review | 🟡 대기 | 문법 200문항(`scripts/grammar_content/batch_*.txt`) + 레벨테스트 25문항(`lib/content/level-test.ts`). batch 수정 후 `python3 scripts/generate_grammar_seed.py` 재실행 시 JSON·SQL 동기 갱신 |
+| 3 | Supabase 실서버 마이그레이션 | ⬜ 대기 | 001→002→003→004 순서 적용 (Supabase 프로젝트 생성 시) |
+| 4 | P5 Speaking / P6 Gamification | ⬜ 미착수 | P5는 외부 API(Edge Function) — plan doc 참조 |
 
-```bash
-cd apps/mobile && npm install && npm start    # Supabase 없이 Dev Mock으로 전체 동작
-npm test                                       # jest 17
-npm run lint && npm run typecheck
-cd packages/shared && npm install && npm test  # vitest 67 (coverage 100%)
-```
+## Key Decisions Made
 
-Supabase 사용 시: migrations 001→002(단어 510 시드)→003(level_test_done, enum) 순서로 적용 후 `.env` 설정.
+- **SM-2 등 학습 로직은 packages/shared 순수 함수** — 시간 주입(now 파라미터), vitest 전수 검증 (ADR-0001)
+- **데이터 레이어 dual-mode repository** — 화면은 `@/lib/data`만 import, Supabase/AsyncStorage 분기 일원화 (ADR-0002)
+- **@ted-voca/shared는 file: 의존성 + Metro watchFolders** — tsconfig paths만으로는 Metro가 못 풀어 런타임 깨짐 (ADR-0003)
+- **문법 콘텐츠는 batch 텍스트 단일 소스 → JSON+SQL 이중 출력** — local/remote 콘텐츠 불일치 구조적 차단 (ADR-0004)
+- **문법은 SRS 비대상 (v1.0)** — v1.1에서 어휘 SRS와 통합 검토 (ADR-0004)
+- **어순 UI는 드래그가 아닌 칩 탭 배열** — 프로토타입 검증 결정
 
-## 이번 세션(P1+P2) 산출물
+## Known Issues
 
-- `packages/shared/src/` — srs(SM-2)·quiz·xp·streak·leveltest 순수 로직 + vitest 67케이스 ([ADR-0001](docs/ADR/ADR-0001-srs-shared-pure-logic.md))
-- `apps/mobile/lib/data/` — dual-mode repository (Supabase/local) ([ADR-0002](docs/ADR/ADR-0002-dual-mode-repository.md))
-- 화면: 홈(실데이터)·학습 허브·어휘 퀴즈·세션 완료·SRS 복습·레벨 테스트·통계·프로필 확장
-- `supabase/migrations/002`(단어 시드)·`003`(계약 보강), `scripts/generate_words_seed_sql.py`
-- 테스트/빌드 인프라: vitest·jest-expo·eslint9·metro 모노레포 설정 ([ADR-0003](docs/ADR/ADR-0003-monorepo-resolution-test-infra.md))
-- E2E: 웹 export + Playwright 8단계 통과 (XP 정산 수치 검증 포함)
+- 문법 200문항·레벨테스트 25문항은 AI 초안 — human review 전 (`# TODO(content-review)` 표기)
+- `001_initial_schema.sql`의 `user_words.status` DEFAULT 'learning' vs 코드 initial 'new' — 코드가 항상 명시 upsert라 무해, 다음 마이그레이션에서 통일 예정
+- RTL v14는 `render`/`fireEvent`가 **async** — 컴포넌트 테스트는 반드시 `await` (ADR-0003)
+- `react-hooks/purity` 룰이 컴포넌트 스코프 `Date.now()`를 플래그 — 핸들러에서 `new Date()` 생성·재사용 컨벤션
+- 첫 push 시 "remote end hung up" 발생 이력 → `http.postBuffer` 150MB로 로컬 설정해 해결됨
 
-## 주의 사항 (다음 세션에서 알아야 할 것)
+## Context for Next Session
 
-1. **RTL v14는 render/fireEvent가 async** — 컴포넌트 테스트는 반드시 `await render(...)`
-2. **`@ted-voca/shared`는 file: 의존성** — shared에 파일 추가 시 별도 빌드 불필요, 단 Metro 캐시 이슈 시 `npx expo start -c`
-3. `lib/content/level-test.ts` 25문항 — **콘텐츠 human review 미완** (TODO 주석 참조)
-4. 알려진 LOW 이슈(수용): vocab.tsx finishing이 state라 이론상 초고속 더블탭 틈, 001 `user_words.status` 기본값 'learning'(코드는 항상 명시 upsert라 무해 — P3 마이그레이션에서 'new'로 통일)
-5. 저장소가 **git 미초기화** 상태였음 — 커밋 이력은 이 세션부터 시작
+- **사용자 목표**: MASTER-PLAN 기반 말해보카급 풀스위트 영어 학습 앱을 Phase 단위로 완성. 실행 전략은 "계획 일괄, 실행 단계별" — ted-run 4회 분할(P1+P2 / P3·P4 / P5 / P6) 중 2회 완료
+- **개발 방식**: `/ted-run <plan doc>` 풀 파이프라인 (TDD red→green, opus 병렬 구현, sonnet 독립 리뷰→전건 수정→재리뷰, 5관문 검증, 웹 export+Playwright E2E, ADR/커밋). 이 방식 유지 권장
+- **제약·선호**: 커밋 메시지 한글, 커밋·푸시 분리 확인(글로벌 규칙), Expo SDK 56 — 코드 작성 전 versioned docs 확인(AGENTS.md)
+- **실행/검증 명령**: `apps/mobile`: `npm start`(Dev Mock 전체 동작) / `npm test`(jest 28) / `npm run lint·typecheck`; `packages/shared`: `npm test`(vitest 85, cov 98.7%); E2E는 `npx expo export --platform web` + `expo serve dist` + Playwright(python) 패턴 — /tmp/proto_shot/ted_e2e*.py 참조(휘발성)
+- **다음 착수점**: P4 Listening — expo-speech 실시간 TTS(오디오 파일 없음), `listening_questions` 테이블 신설(migration 005), Memory Booster. p4-listening.md에 상세 스펙 있음
 
-## 다음 작업
+## Files Modified This Session
 
-- **P4 Listening** (`docs/plans/p4-listening.md`) → `/ted-run docs/plans/p4-listening.md`
-- 콘텐츠 human review: 레벨 테스트 25문항 + **문법 200문항** (`scripts/grammar_content/batch_*.txt` —
-  수정 후 `python3 scripts/generate_grammar_seed.py` 재실행하면 JSON·SQL 동기 갱신)
-- Supabase 사용 시 migration 004 적용 필요
+- `4e7d761` 초기 커밋: 113 files (P0+기획문서+프로토타입+P1+P2 전체)
+- `74f8da2` P3: 24 files changed, +5,780 / −14
+- 세션 마무리 문서 정리(본 handoff): CHANGELOG.md 신규, HANDOFF.md 재작성, plan doc 체크리스트·MASTER-PLAN 로드맵 현행화
