@@ -10,7 +10,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
-## [2026-06-13] P5 Speaking + AI
+## [2026-06-13] P5 Speaking + AI (`45aa9fb`)
 
 ### Added
 - 회화 시나리오: 목록(레벨 잠금·일일 잔여 횟수) + 턴제 대화(Ted TTS → 사용자 발화 → 피드백 카드 → 다음 턴), 완료 화면(XP·좋은 발화 수)
@@ -31,7 +31,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
-## [2026-06-13] P4 Listening
+## [2026-06-13] P4 Listening (`fb040b2`)
 
 ### Added
 - P4 Listening: TTS 재생(0.75x/1.0x/1.25x) → 재생 게이트 → comprehension 퀴즈 3지선다 → 해설, 따라 말하기 placeholder(P5 연동 지점)

@@ -2,7 +2,7 @@
 
 > Last updated: 2026-06-13 (KST)
 > Branch: `main` (https://github.com/withwooyong/ted_voca — public)
-> Latest commit: P5 커밋 (`git log -1` 참조) — 직전 푸시 완료분은 `fb040b2` P4
+> Latest commit: `45aa9fb` P5 Speaking + AI (커밋·푸시 완료)
 
 ## Current Status
 
