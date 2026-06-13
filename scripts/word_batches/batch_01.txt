@@ -38,7 +38,7 @@ agree|verb|동의하다|Both parties agree on the terms.
 agreement|noun|계약|They signed a three-year agreement.
 agriculture|noun|농업|Agriculture remains a key export sector.
 aid|noun|지원|Foreign aid supported the recovery.
-aim|verb|겨냥하다|The campaign aims to boost awareness.
+aim|verb|목표로 하다|The campaign aims to boost awareness.
 aircraft|noun|항공기|The aircraft landed on schedule.
 alarm|noun|경보|The fire alarm sounded at noon.
 allocate|verb|할당하다|Funds were allocated to marketing.

@@ -4,7 +4,7 @@ basis|noun|기준|We pay bonuses on a merit basis.
 behalf|noun|대표|She spoke on behalf of the team.
 behave|verb|행동하다|Employees must behave professionally.
 benefit|noun|혜택|Health benefits start after ninety days.
-besides|preposition|게다가|Besides salary, we offer training.
+besides|preposition|~외에도|Besides salary, we offer training.
 beware|verb|조심하다|Beware of fraudulent emails.
 bid|noun|입찰|Our bid was the lowest submitted.
 bill|noun|청구서|Please pay the bill by Monday.

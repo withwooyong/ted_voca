@@ -38,7 +38,7 @@ coin|noun|동전|The machine accepts coins and bills.
 collapse|verb|붕괴하다|Prices may collapse if demand falls.
 colleague|noun|동료|Ask a colleague to review the draft.
 collect|verb|수집하다|We collect feedback after each event.
-collection|noun|수집|A data collection starts on Monday.
+collection|noun|수집|Data collection starts on Monday.
 combine|verb|결합하다|Combine teams to finish faster.
 comfort|noun|편안함|Guest comfort is our priority.
 command|noun|명령|He issued a command to halt work.

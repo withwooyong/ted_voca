@@ -32,7 +32,7 @@ culture|noun|문화|Company culture supports innovation.
 currency|noun|통화|Currency swings affect import prices.
 current|adjective|현재의|Review current policies with HR.
 curriculum|noun|교육과정|The curriculum includes safety modules.
-custom|noun|관습|It is custom to greet clients formally.
+custom|noun|관습|It is the custom to greet clients formally.
 customer|noun|고객|Customer feedback drives product changes.
 cycle|noun|주기|The billing cycle ends on the fifteenth.
 daily|adjective|일일의|Read the daily report each morning.

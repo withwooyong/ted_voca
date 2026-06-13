@@ -1,7 +1,7 @@
 decline|verb|감소하다|Orders declined during the slow season.
 decrease|verb|줄이다|We decreased spending on travel.
 dedicate|verb|헌신하다|She dedicates time to mentor interns.
-deduct|verb|공제하다|Taxes deduct from each paycheck.
+deduct|verb|공제하다|We deduct taxes from each paycheck.
 defect|noun|결함|Report any defect within seven days.
 defend|verb|옹호하다|Lawyers defend the firm in court.
 define|verb|정의하다|Define roles before the project starts.

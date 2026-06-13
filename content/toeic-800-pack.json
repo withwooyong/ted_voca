@@ -528,7 +528,7 @@
     {
       "lemma": "aim",
       "pos": "verb",
-      "meaning_ko": "겨냥하다",
+      "meaning_ko": "목표로 하다",
       "example_en": "The campaign aims to boost awareness.",
       "example_ko": "",
       "difficulty": 1,
@@ -763,7 +763,7 @@
       "lemma": "apologize",
       "pos": "verb",
       "meaning_ko": "사과하다",
-      "example_en": "Please apologize for the delay.",
+      "example_en": "We apologize for the delay.",
       "example_ko": "",
       "difficulty": 1,
       "tags": [
@@ -1412,7 +1412,7 @@
     {
       "lemma": "besides",
       "pos": "preposition",
-      "meaning_ko": "게다가",
+      "meaning_ko": "~외에도",
       "example_en": "Besides salary, we offer training.",
       "example_ko": "",
       "difficulty": 2,
@@ -2518,7 +2518,7 @@
       "lemma": "collection",
       "pos": "noun",
       "meaning_ko": "수집",
-      "example_en": "A data collection starts on Monday.",
+      "example_en": "Data collection starts on Monday.",
       "example_ko": "",
       "difficulty": 2,
       "tags": [
@@ -3766,7 +3766,7 @@
       "lemma": "custom",
       "pos": "noun",
       "meaning_ko": "관습",
-      "example_en": "It is custom to greet clients formally.",
+      "example_en": "It is the custom to greet clients formally.",
       "example_ko": "",
       "difficulty": 3,
       "tags": [
@@ -4026,7 +4026,7 @@
       "lemma": "deduct",
       "pos": "verb",
       "meaning_ko": "공제하다",
-      "example_en": "Taxes deduct from each paycheck.",
+      "example_en": "We deduct taxes from each paycheck.",
       "example_ko": "",
       "difficulty": 4,
       "tags": [
@@ -4714,7 +4714,7 @@
     {
       "lemma": "distinction",
       "pos": "noun",
-      "meaning_ko": "차별",
+      "meaning_ko": "차이, 구별",
       "example_en": "There is a clear distinction in quality.",
       "example_ko": "",
       "difficulty": 4,
@@ -4923,7 +4923,7 @@
       "lemma": "due",
       "pos": "adjective",
       "meaning_ko": "마감인",
-      "example_en": "Payment is due on the first of month.",
+      "example_en": "Payment is due on the first of the month.",
       "example_ko": "",
       "difficulty": 4,
       "tags": [
@@ -4973,14 +4973,14 @@
     },
     {
       "lemma": "each",
-      "pos": "determiner",
+      "pos": "other",
       "meaning_ko": "각각",
       "example_en": "Each employee receives a badge.",
       "example_ko": "",
       "difficulty": 4,
       "tags": [
         "toeic",
-        "determiner"
+        "other"
       ],
       "sort_order": 383
     },
@@ -5168,14 +5168,14 @@
     },
     {
       "lemma": "either",
-      "pos": "determiner",
+      "pos": "other",
       "meaning_ko": "둘 중 하나",
       "example_en": "Either option meets our basic needs.",
       "example_ko": "",
       "difficulty": 4,
       "tags": [
         "toeic",
-        "determiner"
+        "other"
       ],
       "sort_order": 398
     },
@@ -5910,8 +5910,8 @@
     {
       "lemma": "exercise",
       "pos": "noun",
-      "meaning_ko": "행사",
-      "example_en": "Stock options exercise after vesting periods.",
+      "meaning_ko": "운동, 행사",
+      "example_en": "Daily exercise improves staff wellbeing.",
       "example_ko": "",
       "difficulty": 5,
       "tags": [

@@ -3,7 +3,7 @@ disease|noun|질병|Insurance covers treatment for disease.
 display|verb|전시하다|Stores display new models near entrances.
 dispose|verb|처분하다|Dispose of chemicals following safety rules.
 distinct|adjective|뚜렷한|Each brand has a distinct logo style.
-distinction|noun|차별|There is a clear distinction in quality.
+distinction|noun|차이, 구별|There is a clear distinction in quality.
 distinguish|verb|구별하다|Labels help distinguish similar products.
 distribute|verb|배포하다|We distribute catalogs to all branches.
 district|noun|지구|The business district is expanding west.
@@ -19,11 +19,11 @@ draft|noun|초안|Send a draft by end of day Friday.
 dramatic|adjective|극적인|We saw dramatic growth in mobile orders.
 draw|verb|끌어들이다|The event drew record attendance.
 drive|verb|운전하다|Drivers deliver goods across the region.
-due|adjective|마감인|Payment is due on the first of month.
+due|adjective|마감인|Payment is due on the first of the month.
 duration|noun|기간|The duration of the course is six weeks.
 duty|noun|의무|It is your duty to report safety issues.
 dynamic|adjective|역동적인|We need dynamic leaders for new units.
-each|determiner|각각|Each employee receives a badge.
+each|other|각각|Each employee receives a badge.
 early|adjective|이른|Early orders qualify for free shipping.
 earn|verb|벌다|Top reps earn bonuses each quarter.
 ease|noun|완화|New tools ease daily reporting work.
@@ -38,7 +38,7 @@ effective|adjective|효과적인|Training proved effective for new hires.
 efficiency|noun|효율|Automation improved warehouse efficiency.
 efficient|adjective|효율적인|We seek efficient ways to cut waste.
 effort|noun|노력|Thank you for your effort on the launch.
-either|determiner|둘 중 하나|Either option meets our basic needs.
+either|other|둘 중 하나|Either option meets our basic needs.
 elect|verb|선출하다|Members elect officers each spring.
 electric|adjective|전기의|Electric vehicles reduce fuel costs.
 element|noun|요소|Trust is a key element of partnership.
