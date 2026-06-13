@@ -10,6 +10,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-13] 콘텐츠 human review 1차 (`16a68b4`)
+
+### Changed
+- 문법 콘텐츠 검수 수정: 가정법 조건절 누락(`She would know the answer here` → `If Mary were here, she would help us`), 관사 한영 일치(`that table` → `on my desk`), 관계대명사 단수 일치(`red caps` → `a cap`)
+- 리스닝: 비표준 "손님센터" → "고객 서비스 데스크"(shopping-lost-child transcript_ko + 해설)
+- 회화: job-interview 힌트 직역투 다듬기("혁신에 대한 집중에 끌렸습니다" → "혁신을 중시하는 점에 끌렸습니다")
+- 레벨테스트 lt-d5-04 해설: "감동시켰다"·"그의" 성별 단정 → "우리에게 깊은 인상을 준 지원자"
+- 3개 콘텐츠 팩 재생성(grammar 200·listening 50·speaking 68) → migration 004·005·006 SQL 동기화
+
+### Fixed
+- 문법 error_find 무오류 문항 교체(`Please open a window near you` — 틀린 부분 없음 → `I saw a moon last night`, 유일 대상 the 학습)
+
+### Removed
+- 추적되던 `scripts/__pycache__/*.pyc` Git 추적 해제(.gitignore 기등록 잔재)
+
+---
+
 ## [2026-06-13] v1.1 리그 group_no 분할 (`b77fc95`)
 
 ### Added
