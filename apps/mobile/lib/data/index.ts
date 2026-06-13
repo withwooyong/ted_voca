@@ -2,7 +2,14 @@
  * 데이터 레이어 공개 API — Supabase 설정 여부에 따라 remote/local로 분기.
  * 화면 코드는 반드시 이 모듈만 import한다 (auth-store 패턴 준용, plan §1.2.3).
  */
-import type { GrammarQuestionLike, GrammarTopicLike, SrsGrade } from '@ted-voca/shared';
+import type {
+  BoosterItem,
+  GrammarQuestionLike,
+  GrammarTopicLike,
+  ListeningClipLike,
+  ListeningQuestionLike,
+  SrsGrade,
+} from '@ted-voca/shared';
 
 import { getSupabase } from '@/lib/supabase';
 import * as local from './local';
@@ -11,6 +18,7 @@ import type {
   AttemptInput,
   DueCard,
   LevelTestSave,
+  ListeningAttemptInput,
   ProfileProgress,
   SessionInput,
   StatsOverview,
@@ -96,4 +104,26 @@ export function recordGrammarAttempt(input: {
 }): Promise<void> {
   const sb = getSupabase();
   return sb ? remote.recordGrammarAttempt(sb, input) : local.recordGrammarAttempt(input);
+}
+
+// ── 리스닝 (P4) ────────────────────────────────────────────
+
+export function getListeningClips(): Promise<ListeningClipLike[]> {
+  const sb = getSupabase();
+  return sb ? remote.getListeningClips(sb) : local.getListeningClips();
+}
+
+export function getListeningQuestions(clipSlug?: string): Promise<ListeningQuestionLike[]> {
+  const sb = getSupabase();
+  return sb ? remote.getListeningQuestions(sb, clipSlug) : local.getListeningQuestions(clipSlug);
+}
+
+export function recordListeningAttempt(input: ListeningAttemptInput): Promise<void> {
+  const sb = getSupabase();
+  return sb ? remote.recordListeningAttempt(sb, input) : local.recordListeningAttempt(input);
+}
+
+export function getBoosterItems(now: Date): Promise<BoosterItem[]> {
+  const sb = getSupabase();
+  return sb ? remote.getBoosterItems(sb, now) : local.getBoosterItems(now);
 }

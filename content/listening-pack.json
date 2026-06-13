@@ -1,0 +1,1087 @@
+{
+  "clips": [
+    {
+      "id": "airport-boarding",
+      "slug": "airport-boarding",
+      "title": "탑승 안내방송",
+      "transcript_en": "Attention passengers on flight 207 to Tokyo. Boarding will begin in ten minutes at gate B12.",
+      "transcript_ko": "도쿄행 207편 승객 여러분께 안내드립니다. 탑승은 10분 후 B12 게이트에서 시작됩니다.",
+      "duration_seconds": 6,
+      "difficulty": 2,
+      "tags": [
+        "announcement",
+        "travel",
+        "airport"
+      ],
+      "sort_order": 1
+    },
+    {
+      "id": "airport-delay",
+      "slug": "airport-delay",
+      "title": "항공편 지연 안내",
+      "transcript_en": "We are sorry to announce that flight 88 to London has been delayed by one hour due to bad weather.",
+      "transcript_ko": "런던행 88편이 악천후로 1시간 지연되었음을 알려드려 죄송합니다.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "announcement",
+        "travel",
+        "airport"
+      ],
+      "sort_order": 2
+    },
+    {
+      "id": "airport-baggage",
+      "slug": "airport-baggage",
+      "title": "수하물 찾는 곳 안내",
+      "transcript_en": "Passengers arriving from Sydney can collect their baggage at carousel number five.",
+      "transcript_ko": "시드니에서 도착하신 승객 여러분은 5번 수하물 컨베이어에서 짐을 찾으실 수 있습니다.",
+      "duration_seconds": 5,
+      "difficulty": 2,
+      "tags": [
+        "announcement",
+        "travel",
+        "airport"
+      ],
+      "sort_order": 3
+    },
+    {
+      "id": "airport-final-call",
+      "slug": "airport-final-call",
+      "title": "최종 탑승 안내",
+      "transcript_en": "This is the final call for passenger Kim traveling to Paris. Please proceed to gate A7 immediately.",
+      "transcript_ko": "파리로 가시는 승객 Kim님께 마지막 안내입니다. 즉시 A7 게이트로 와 주시기 바랍니다.",
+      "duration_seconds": 7,
+      "difficulty": 3,
+      "tags": [
+        "announcement",
+        "travel",
+        "airport"
+      ],
+      "sort_order": 4
+    },
+    {
+      "id": "station-train-delay",
+      "slug": "station-train-delay",
+      "title": "열차 지연 안내",
+      "transcript_en": "The express train to Busan is running about fifteen minutes late. We apologize for the inconvenience.",
+      "transcript_ko": "부산행 급행열차가 약 15분 지연되고 있습니다. 불편을 드려 죄송합니다.",
+      "duration_seconds": 6,
+      "difficulty": 2,
+      "tags": [
+        "announcement",
+        "travel",
+        "station"
+      ],
+      "sort_order": 5
+    },
+    {
+      "id": "station-platform-change",
+      "slug": "station-platform-change",
+      "title": "승강장 변경 안내",
+      "transcript_en": "The train to Incheon will now depart from platform three instead of platform one.",
+      "transcript_ko": "인천행 열차가 1번 승강장 대신 3번 승강장에서 출발합니다.",
+      "duration_seconds": 6,
+      "difficulty": 3,
+      "tags": [
+        "announcement",
+        "travel",
+        "station"
+      ],
+      "sort_order": 6
+    },
+    {
+      "id": "station-last-train",
+      "slug": "station-last-train",
+      "title": "막차 안내방송",
+      "transcript_en": "The last train tonight leaves at eleven thirty. Please make sure you are on the platform before that time.",
+      "transcript_ko": "오늘 밤 막차는 11시 30분에 출발합니다. 그 전에 승강장에 도착해 주시기 바랍니다.",
+      "duration_seconds": 8,
+      "difficulty": 2,
+      "tags": [
+        "announcement",
+        "travel",
+        "station"
+      ],
+      "sort_order": 7
+    },
+    {
+      "id": "subway-doors",
+      "slug": "subway-doors",
+      "title": "지하철 출입문 안내",
+      "transcript_en": "Please stand clear of the closing doors. The next stop is City Hall.",
+      "transcript_ko": "닫히는 문에서 물러서 주십시오. 다음 역은 시청역입니다.",
+      "duration_seconds": 5,
+      "difficulty": 1,
+      "tags": [
+        "announcement",
+        "travel",
+        "station"
+      ],
+      "sort_order": 8
+    },
+    {
+      "id": "inflight-seatbelt",
+      "slug": "inflight-seatbelt",
+      "title": "기내 좌석벨트 안내",
+      "transcript_en": "Ladies and gentlemen, we are about to land. Please fasten your seatbelt and return your seat to the upright position.",
+      "transcript_ko": "승객 여러분, 곧 착륙하겠습니다. 좌석벨트를 매시고 좌석 등받이를 세워 주시기 바랍니다.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "announcement",
+        "travel",
+        "airport"
+      ],
+      "sort_order": 9
+    },
+    {
+      "id": "inflight-meal",
+      "slug": "inflight-meal",
+      "title": "기내식 안내",
+      "transcript_en": "We will now begin our meal service. Today we are offering chicken with rice or pasta.",
+      "transcript_ko": "지금부터 기내식 서비스를 시작하겠습니다. 오늘은 닭고기 덮밥 또는 파스타를 제공합니다.",
+      "duration_seconds": 6,
+      "difficulty": 2,
+      "tags": [
+        "announcement",
+        "travel",
+        "airport"
+      ],
+      "sort_order": 10
+    },
+    {
+      "id": "office-meeting-time",
+      "slug": "office-meeting-time",
+      "title": "사내 회의 공지",
+      "transcript_en": "The weekly team meeting has been moved to Thursday at three in the conference room on the fifth floor.",
+      "transcript_ko": "주간 팀 회의가 목요일 오후 3시 5층 회의실로 변경되었습니다.",
+      "duration_seconds": 8,
+      "difficulty": 2,
+      "tags": [
+        "office",
+        "announcement",
+        "meeting"
+      ],
+      "sort_order": 11
+    },
+    {
+      "id": "office-printer",
+      "slug": "office-printer",
+      "title": "프린터 점검 공지",
+      "transcript_en": "The printer on the third floor will be out of service this afternoon for maintenance. Please use the one on the second floor.",
+      "transcript_ko": "3층 프린터가 오늘 오후 점검으로 사용이 중단됩니다. 2층 프린터를 이용해 주십시오.",
+      "duration_seconds": 9,
+      "difficulty": 2,
+      "tags": [
+        "office",
+        "announcement"
+      ],
+      "sort_order": 12
+    },
+    {
+      "id": "office-deadline",
+      "slug": "office-deadline",
+      "title": "보고서 마감 공지",
+      "transcript_en": "This is a reminder that the monthly sales report is due by Friday noon. Please send it to your manager.",
+      "transcript_ko": "월간 영업 보고서 마감이 금요일 정오임을 다시 알려드립니다. 담당 매니저에게 보내 주세요.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "office",
+        "announcement"
+      ],
+      "sort_order": 13
+    },
+    {
+      "id": "office-parking",
+      "slug": "office-parking",
+      "title": "주차장 안내 공지",
+      "transcript_en": "Starting next Monday, the company parking lot will be closed for repairs. Employees can park in the public garage nearby.",
+      "transcript_ko": "다음 주 월요일부터 회사 주차장이 수리를 위해 폐쇄됩니다. 직원들은 인근 공용 주차장을 이용할 수 있습니다.",
+      "duration_seconds": 8,
+      "difficulty": 2,
+      "tags": [
+        "office",
+        "announcement"
+      ],
+      "sort_order": 14
+    },
+    {
+      "id": "office-fire-drill",
+      "slug": "office-fire-drill",
+      "title": "소방 훈련 공지",
+      "transcript_en": "We will hold a fire drill tomorrow at ten in the morning. When you hear the alarm, please leave the building calmly using the stairs.",
+      "transcript_ko": "내일 오전 10시에 소방 훈련을 실시합니다. 경보가 울리면 계단을 이용해 침착하게 건물 밖으로 나가 주십시오.",
+      "duration_seconds": 10,
+      "difficulty": 3,
+      "tags": [
+        "office",
+        "announcement"
+      ],
+      "sort_order": 15
+    },
+    {
+      "id": "phone-message-doctor",
+      "slug": "phone-message-doctor",
+      "title": "병원 예약 음성 메시지",
+      "transcript_en": "Hi, this is a reminder from Green Clinic. Your appointment with Doctor Lee is tomorrow at two thirty. Please call us if you cannot come.",
+      "transcript_ko": "안녕하세요, 그린 클리닉에서 알려드립니다. 이 선생님과의 예약이 내일 2시 30분입니다. 오실 수 없으면 전화 주세요.",
+      "duration_seconds": 10,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "phone"
+      ],
+      "sort_order": 16
+    },
+    {
+      "id": "phone-message-delivery",
+      "slug": "phone-message-delivery",
+      "title": "택배 배송 음성 메시지",
+      "transcript_en": "Hello, this is City Delivery. We tried to deliver your package today but no one was home. We will try again tomorrow morning.",
+      "transcript_ko": "안녕하세요, 시티 딜리버리입니다. 오늘 배송을 시도했으나 댁에 아무도 안 계셨습니다. 내일 오전에 다시 시도하겠습니다.",
+      "duration_seconds": 9,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "phone"
+      ],
+      "sort_order": 17
+    },
+    {
+      "id": "phone-message-restaurant",
+      "slug": "phone-message-restaurant",
+      "title": "식당 예약 확인 메시지",
+      "transcript_en": "Hi, this is Bella Restaurant calling to confirm your table for four people this Saturday at seven in the evening.",
+      "transcript_ko": "안녕하세요, 벨라 레스토랑입니다. 이번 주 토요일 저녁 7시 4인석 예약을 확인하려고 전화드립니다.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "daily",
+        "phone"
+      ],
+      "sort_order": 18
+    },
+    {
+      "id": "weather-rain",
+      "slug": "weather-rain",
+      "title": "오늘의 날씨 예보",
+      "transcript_en": "Good morning. Today will be cloudy with heavy rain in the afternoon. Don't forget to take an umbrella with you.",
+      "transcript_ko": "좋은 아침입니다. 오늘은 흐리고 오후에 강한 비가 내리겠습니다. 우산을 잊지 말고 챙기세요.",
+      "duration_seconds": 8,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "weather"
+      ],
+      "sort_order": 19
+    },
+    {
+      "id": "weather-cold",
+      "slug": "weather-cold",
+      "title": "한파 주의 예보",
+      "transcript_en": "Tonight will be very cold, with temperatures dropping below zero. Please wear warm clothes if you go outside.",
+      "transcript_ko": "오늘 밤은 기온이 영하로 떨어져 매우 춥겠습니다. 외출하실 때는 따뜻한 옷을 입으세요.",
+      "duration_seconds": 7,
+      "difficulty": 3,
+      "tags": [
+        "daily",
+        "weather"
+      ],
+      "sort_order": 20
+    },
+    {
+      "id": "weather-weekend",
+      "slug": "weather-weekend",
+      "title": "주말 날씨 안내",
+      "transcript_en": "The weekend forecast looks great. Saturday will be sunny and warm, perfect for outdoor activities.",
+      "transcript_ko": "주말 예보가 아주 좋습니다. 토요일은 맑고 따뜻해 야외 활동에 안성맞춤이겠습니다.",
+      "duration_seconds": 6,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "weather"
+      ],
+      "sort_order": 21
+    },
+    {
+      "id": "shopping-sale",
+      "slug": "shopping-sale",
+      "title": "매장 세일 안내방송",
+      "transcript_en": "Attention shoppers. For the next hour, all winter coats are thirty percent off on the second floor.",
+      "transcript_ko": "고객 여러분께 안내드립니다. 앞으로 한 시간 동안 2층의 모든 겨울 코트를 30% 할인합니다.",
+      "duration_seconds": 7,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "announcement"
+      ],
+      "sort_order": 22
+    },
+    {
+      "id": "shopping-closing",
+      "slug": "shopping-closing",
+      "title": "매장 마감 안내",
+      "transcript_en": "Our store will be closing in fifteen minutes. Please bring your items to the checkout counter.",
+      "transcript_ko": "저희 매장은 15분 후 마감합니다. 구매하실 물건을 계산대로 가져와 주십시오.",
+      "duration_seconds": 6,
+      "difficulty": 1,
+      "tags": [
+        "daily",
+        "announcement"
+      ],
+      "sort_order": 23
+    },
+    {
+      "id": "shopping-lost-child",
+      "slug": "shopping-lost-child",
+      "title": "미아 안내방송",
+      "transcript_en": "We have a young boy named Sam waiting at the customer service desk. Could his parents please come to collect him?",
+      "transcript_ko": "손님센터에서 Sam이라는 남자아이가 기다리고 있습니다. 부모님께서는 데리러 와 주시기 바랍니다.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "daily",
+        "announcement"
+      ],
+      "sort_order": 24
+    },
+    {
+      "id": "library-hours",
+      "slug": "library-hours",
+      "title": "도서관 운영 안내",
+      "transcript_en": "Welcome to the city library. Please note that we close early today at six in the evening for a special event.",
+      "transcript_ko": "시립 도서관에 오신 것을 환영합니다. 오늘은 특별 행사로 저녁 6시에 일찍 마감하는 점 참고해 주세요.",
+      "duration_seconds": 8,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "announcement"
+      ],
+      "sort_order": 25
+    },
+    {
+      "id": "cafe-order",
+      "slug": "cafe-order",
+      "title": "카페 주문 안내",
+      "transcript_en": "Your order is ready. One large coffee and one chocolate muffin. Please pick it up at the counter.",
+      "transcript_ko": "주문하신 음료가 준비되었습니다. 라지 사이즈 커피 한 잔과 초콜릿 머핀 하나입니다. 카운터에서 받아 가세요.",
+      "duration_seconds": 7,
+      "difficulty": 1,
+      "tags": [
+        "daily"
+      ],
+      "sort_order": 26
+    },
+    {
+      "id": "gym-class",
+      "slug": "gym-class",
+      "title": "헬스장 수업 안내",
+      "transcript_en": "The morning yoga class will start in ten minutes in studio two. Please bring your own mat.",
+      "transcript_ko": "아침 요가 수업이 10분 후 2번 스튜디오에서 시작됩니다. 개인 매트를 가져와 주세요.",
+      "duration_seconds": 7,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "announcement"
+      ],
+      "sort_order": 27
+    },
+    {
+      "id": "hotel-checkout",
+      "slug": "hotel-checkout",
+      "title": "호텔 체크아웃 안내",
+      "transcript_en": "Good morning. Please remember that checkout time is eleven o'clock. If you need a late checkout, contact the front desk.",
+      "transcript_ko": "좋은 아침입니다. 체크아웃 시간은 11시임을 기억해 주세요. 레이트 체크아웃이 필요하시면 프런트로 연락 주세요.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "daily",
+        "travel"
+      ],
+      "sort_order": 28
+    },
+    {
+      "id": "bus-route-change",
+      "slug": "bus-route-change",
+      "title": "버스 노선 변경 안내",
+      "transcript_en": "Due to road work, bus number twelve will not stop at Oak Street today. The nearest stop will be Pine Avenue.",
+      "transcript_ko": "도로 공사로 인해 오늘 12번 버스는 오크 스트리트에 정차하지 않습니다. 가장 가까운 정류장은 파인 애비뉴입니다.",
+      "duration_seconds": 8,
+      "difficulty": 3,
+      "tags": [
+        "daily",
+        "travel",
+        "announcement"
+      ],
+      "sort_order": 29
+    },
+    {
+      "id": "museum-tour",
+      "slug": "museum-tour",
+      "title": "박물관 투어 안내",
+      "transcript_en": "A free guided tour of the art gallery will begin at two o'clock near the main entrance. Everyone is welcome.",
+      "transcript_ko": "미술관 무료 가이드 투어가 2시에 정문 근처에서 시작됩니다. 누구나 환영합니다.",
+      "duration_seconds": 8,
+      "difficulty": 2,
+      "tags": [
+        "daily",
+        "announcement"
+      ],
+      "sort_order": 30
+    }
+  ],
+  "questions": [
+    {
+      "id": "airport-boarding:1",
+      "clip_slug": "airport-boarding",
+      "prompt": "Where will the flight depart from?",
+      "choices": [
+        "Gate B2",
+        "Gate B12",
+        "Gate B20"
+      ],
+      "answer": "Gate B12",
+      "explanation": "안내방송에서 'at gate B12'라고 출발 게이트를 명시했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "airport-boarding:2",
+      "clip_slug": "airport-boarding",
+      "prompt": "When does boarding begin?",
+      "choices": [
+        "In ten minutes",
+        "In two minutes",
+        "Right now"
+      ],
+      "answer": "In ten minutes",
+      "explanation": "'Boarding will begin in ten minutes'에서 10분 후 시작한다고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "airport-delay:1",
+      "clip_slug": "airport-delay",
+      "prompt": "Why is the flight delayed?",
+      "choices": [
+        "Bad weather",
+        "A technical problem",
+        "A crew shortage"
+      ],
+      "answer": "Bad weather",
+      "explanation": "'due to bad weather'에서 지연 사유가 악천후임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "airport-delay:2",
+      "clip_slug": "airport-delay",
+      "prompt": "How long is the delay?",
+      "choices": [
+        "Thirty minutes",
+        "One hour",
+        "Two hours"
+      ],
+      "answer": "One hour",
+      "explanation": "'delayed by one hour'에서 지연 시간이 1시간임을 확인할 수 있습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "airport-baggage:1",
+      "clip_slug": "airport-baggage",
+      "prompt": "Where can passengers collect their baggage?",
+      "choices": [
+        "Carousel five",
+        "Carousel nine",
+        "The information desk"
+      ],
+      "answer": "Carousel five",
+      "explanation": "'at carousel number five'에서 5번 컨베이어라고 안내했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "airport-final-call:1",
+      "clip_slug": "airport-final-call",
+      "prompt": "What should passenger Kim do?",
+      "choices": [
+        "Go to gate A7",
+        "Check in luggage",
+        "Wait at the cafe"
+      ],
+      "answer": "Go to gate A7",
+      "explanation": "'proceed to gate A7 immediately'에서 즉시 A7 게이트로 가야 함을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "station-train-delay:1",
+      "clip_slug": "station-train-delay",
+      "prompt": "How late is the train?",
+      "choices": [
+        "About five minutes",
+        "About fifteen minutes",
+        "About fifty minutes"
+      ],
+      "answer": "About fifteen minutes",
+      "explanation": "'about fifteen minutes late'에서 약 15분 지연임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "station-train-delay:2",
+      "clip_slug": "station-train-delay",
+      "prompt": "Where is the train going?",
+      "choices": [
+        "Busan",
+        "Seoul",
+        "Daegu"
+      ],
+      "answer": "Busan",
+      "explanation": "'The express train to Busan'에서 목적지가 부산입니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "station-platform-change:1",
+      "clip_slug": "station-platform-change",
+      "prompt": "Which platform will the train now use?",
+      "choices": [
+        "Platform one",
+        "Platform three",
+        "Platform two"
+      ],
+      "answer": "Platform three",
+      "explanation": "'depart from platform three instead of platform one'에서 변경된 승강장은 3번입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "station-last-train:1",
+      "clip_slug": "station-last-train",
+      "prompt": "What time does the last train leave?",
+      "choices": [
+        "At eleven thirty",
+        "At ten thirty",
+        "At twelve thirty"
+      ],
+      "answer": "At eleven thirty",
+      "explanation": "'leaves at eleven thirty'에서 막차 시간이 11시 30분입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "subway-doors:1",
+      "clip_slug": "subway-doors",
+      "prompt": "What is the next stop?",
+      "choices": [
+        "Central Park",
+        "City Hall",
+        "Main Street"
+      ],
+      "answer": "City Hall",
+      "explanation": "'The next stop is City Hall'에서 다음 역이 시청역입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "inflight-seatbelt:1",
+      "clip_slug": "inflight-seatbelt",
+      "prompt": "What are passengers asked to do?",
+      "choices": [
+        "Fasten their seatbelt",
+        "Open the window",
+        "Use their phone"
+      ],
+      "answer": "Fasten their seatbelt",
+      "explanation": "'Please fasten your seatbelt'에서 좌석벨트를 매라고 요청했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "inflight-seatbelt:2",
+      "clip_slug": "inflight-seatbelt",
+      "prompt": "What is about to happen?",
+      "choices": [
+        "The plane will land",
+        "The plane will take off",
+        "Meals will be served"
+      ],
+      "answer": "The plane will land",
+      "explanation": "'we are about to land'에서 곧 착륙함을 알 수 있습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "inflight-meal:1",
+      "clip_slug": "inflight-meal",
+      "prompt": "What meal options are offered?",
+      "choices": [
+        "Chicken or pasta",
+        "Beef or fish",
+        "Salad or soup"
+      ],
+      "answer": "Chicken or pasta",
+      "explanation": "'chicken with rice or pasta'에서 선택지가 닭고기와 파스타임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "office-meeting-time:1",
+      "clip_slug": "office-meeting-time",
+      "prompt": "When is the meeting now?",
+      "choices": [
+        "Thursday at three",
+        "Wednesday at three",
+        "Thursday at five"
+      ],
+      "answer": "Thursday at three",
+      "explanation": "'moved to Thursday at three'에서 변경된 시각이 목요일 3시입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "office-meeting-time:2",
+      "clip_slug": "office-meeting-time",
+      "prompt": "Where will the meeting take place?",
+      "choices": [
+        "The fifth floor conference room",
+        "The cafeteria",
+        "The first floor lobby"
+      ],
+      "answer": "The fifth floor conference room",
+      "explanation": "'conference room on the fifth floor'에서 장소가 5층 회의실입니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "office-printer:1",
+      "clip_slug": "office-printer",
+      "prompt": "Why is the printer out of service?",
+      "choices": [
+        "For maintenance",
+        "It is broken",
+        "It is being replaced"
+      ],
+      "answer": "For maintenance",
+      "explanation": "'out of service this afternoon for maintenance'에서 점검 때문임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "office-deadline:1",
+      "clip_slug": "office-deadline",
+      "prompt": "When is the report due?",
+      "choices": [
+        "By Friday noon",
+        "By Monday noon",
+        "By Friday evening"
+      ],
+      "answer": "By Friday noon",
+      "explanation": "'due by Friday noon'에서 마감이 금요일 정오임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "office-deadline:2",
+      "clip_slug": "office-deadline",
+      "prompt": "Who should receive the report?",
+      "choices": [
+        "The manager",
+        "A client",
+        "The receptionist"
+      ],
+      "answer": "The manager",
+      "explanation": "'send it to your manager'에서 매니저에게 보내라고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "office-parking:1",
+      "clip_slug": "office-parking",
+      "prompt": "When will the parking lot close?",
+      "choices": [
+        "Next Monday",
+        "This Friday",
+        "Next month"
+      ],
+      "answer": "Next Monday",
+      "explanation": "'Starting next Monday'에서 다음 주 월요일부터 폐쇄됨을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "office-fire-drill:1",
+      "clip_slug": "office-fire-drill",
+      "prompt": "What should employees do when they hear the alarm?",
+      "choices": [
+        "Leave using the stairs",
+        "Take the elevator",
+        "Stay at their desks"
+      ],
+      "answer": "Leave using the stairs",
+      "explanation": "'leave the building calmly using the stairs'에서 계단으로 대피하라고 했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "office-fire-drill:2",
+      "clip_slug": "office-fire-drill",
+      "prompt": "When is the fire drill?",
+      "choices": [
+        "Tomorrow at ten",
+        "Today at ten",
+        "Tomorrow at two"
+      ],
+      "answer": "Tomorrow at ten",
+      "explanation": "'tomorrow at ten in the morning'에서 내일 오전 10시입니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "phone-message-doctor:1",
+      "clip_slug": "phone-message-doctor",
+      "prompt": "When is the appointment?",
+      "choices": [
+        "Tomorrow at two thirty",
+        "Today at two thirty",
+        "Tomorrow at three thirty"
+      ],
+      "answer": "Tomorrow at two thirty",
+      "explanation": "'tomorrow at two thirty'에서 예약이 내일 2시 30분입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "phone-message-doctor:2",
+      "clip_slug": "phone-message-doctor",
+      "prompt": "What should the listener do if they cannot come?",
+      "choices": [
+        "Call the clinic",
+        "Send an email",
+        "Visit another doctor"
+      ],
+      "answer": "Call the clinic",
+      "explanation": "'Please call us if you cannot come'에서 못 오면 전화하라고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "phone-message-delivery:1",
+      "clip_slug": "phone-message-delivery",
+      "prompt": "Why was the package not delivered?",
+      "choices": [
+        "No one was home",
+        "The address was wrong",
+        "It was too heavy"
+      ],
+      "answer": "No one was home",
+      "explanation": "'no one was home'에서 집에 아무도 없어 배송하지 못했음을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "phone-message-delivery:2",
+      "clip_slug": "phone-message-delivery",
+      "prompt": "When will they try again?",
+      "choices": [
+        "Tomorrow morning",
+        "This evening",
+        "Next week"
+      ],
+      "answer": "Tomorrow morning",
+      "explanation": "'try again tomorrow morning'에서 내일 오전에 다시 시도합니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "phone-message-restaurant:1",
+      "clip_slug": "phone-message-restaurant",
+      "prompt": "How many people is the reservation for?",
+      "choices": [
+        "Four",
+        "Two",
+        "Seven"
+      ],
+      "answer": "Four",
+      "explanation": "'table for four people'에서 4인석 예약임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "phone-message-restaurant:2",
+      "clip_slug": "phone-message-restaurant",
+      "prompt": "When is the reservation?",
+      "choices": [
+        "Saturday at seven",
+        "Sunday at seven",
+        "Saturday at five"
+      ],
+      "answer": "Saturday at seven",
+      "explanation": "'this Saturday at seven in the evening'에서 토요일 저녁 7시입니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "weather-rain:1",
+      "clip_slug": "weather-rain",
+      "prompt": "What will the weather be like in the afternoon?",
+      "choices": [
+        "Heavy rain",
+        "Sunny",
+        "Snowy"
+      ],
+      "answer": "Heavy rain",
+      "explanation": "'heavy rain in the afternoon'에서 오후에 강한 비가 옴을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "weather-rain:2",
+      "clip_slug": "weather-rain",
+      "prompt": "What does the speaker suggest taking?",
+      "choices": [
+        "An umbrella",
+        "Sunglasses",
+        "A jacket"
+      ],
+      "answer": "An umbrella",
+      "explanation": "\"Don't forget to take an umbrella\"에서 우산을 챙기라고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "weather-cold:1",
+      "clip_slug": "weather-cold",
+      "prompt": "How cold will it be tonight?",
+      "choices": [
+        "Below zero",
+        "Around twenty",
+        "Mild and warm"
+      ],
+      "answer": "Below zero",
+      "explanation": "'temperatures dropping below zero'에서 영하로 떨어진다고 했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "weather-cold:2",
+      "clip_slug": "weather-cold",
+      "prompt": "What advice does the speaker give?",
+      "choices": [
+        "Wear warm clothes",
+        "Stay home all day",
+        "Drink cold water"
+      ],
+      "answer": "Wear warm clothes",
+      "explanation": "'wear warm clothes if you go outside'에서 따뜻한 옷을 입으라고 조언했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "weather-weekend:1",
+      "clip_slug": "weather-weekend",
+      "prompt": "What is the weather like on Saturday?",
+      "choices": [
+        "Sunny and warm",
+        "Rainy and cold",
+        "Windy and cloudy"
+      ],
+      "answer": "Sunny and warm",
+      "explanation": "'Saturday will be sunny and warm'에서 토요일이 맑고 따뜻함을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "shopping-sale:1",
+      "clip_slug": "shopping-sale",
+      "prompt": "What items are on sale?",
+      "choices": [
+        "Winter coats",
+        "Summer shoes",
+        "Children's toys"
+      ],
+      "answer": "Winter coats",
+      "explanation": "'all winter coats are thirty percent off'에서 겨울 코트가 할인 품목입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "shopping-sale:2",
+      "clip_slug": "shopping-sale",
+      "prompt": "How much is the discount?",
+      "choices": [
+        "Thirty percent",
+        "Thirteen percent",
+        "Fifty percent"
+      ],
+      "answer": "Thirty percent",
+      "explanation": "'thirty percent off'에서 할인율이 30%임을 알 수 있습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "shopping-closing:1",
+      "clip_slug": "shopping-closing",
+      "prompt": "When will the store close?",
+      "choices": [
+        "In fifteen minutes",
+        "In fifty minutes",
+        "In five minutes"
+      ],
+      "answer": "In fifteen minutes",
+      "explanation": "'closing in fifteen minutes'에서 15분 후 마감함을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "shopping-lost-child:1",
+      "clip_slug": "shopping-lost-child",
+      "prompt": "Where is the boy waiting?",
+      "choices": [
+        "The customer service desk",
+        "The parking lot",
+        "The food court"
+      ],
+      "answer": "The customer service desk",
+      "explanation": "'waiting at the customer service desk'에서 손님센터에서 기다린다고 했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "shopping-lost-child:2",
+      "clip_slug": "shopping-lost-child",
+      "prompt": "Who is asked to come?",
+      "choices": [
+        "His parents",
+        "His teacher",
+        "A doctor"
+      ],
+      "answer": "His parents",
+      "explanation": "'Could his parents please come'에서 부모님을 호출했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "library-hours:1",
+      "clip_slug": "library-hours",
+      "prompt": "Why does the library close early today?",
+      "choices": [
+        "For a special event",
+        "For cleaning",
+        "For a holiday"
+      ],
+      "answer": "For a special event",
+      "explanation": "'close early today at six ... for a special event'에서 특별 행사 때문임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "library-hours:2",
+      "clip_slug": "library-hours",
+      "prompt": "What time does the library close today?",
+      "choices": [
+        "At six",
+        "At eight",
+        "At four"
+      ],
+      "answer": "At six",
+      "explanation": "'close early today at six in the evening'에서 오늘은 저녁 6시에 마감합니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "cafe-order:1",
+      "clip_slug": "cafe-order",
+      "prompt": "What did the customer order?",
+      "choices": [
+        "Coffee and a muffin",
+        "Tea and a sandwich",
+        "Juice and a cookie"
+      ],
+      "answer": "Coffee and a muffin",
+      "explanation": "'One large coffee and one chocolate muffin'에서 커피와 머핀을 주문했습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "cafe-order:2",
+      "clip_slug": "cafe-order",
+      "prompt": "Where should the customer pick up the order?",
+      "choices": [
+        "At the counter",
+        "At the table",
+        "At the entrance"
+      ],
+      "answer": "At the counter",
+      "explanation": "'pick it up at the counter'에서 카운터에서 받으라고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "gym-class:1",
+      "clip_slug": "gym-class",
+      "prompt": "Where will the yoga class be held?",
+      "choices": [
+        "Studio two",
+        "Studio one",
+        "The pool"
+      ],
+      "answer": "Studio two",
+      "explanation": "'in studio two'에서 수업 장소가 2번 스튜디오입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "gym-class:2",
+      "clip_slug": "gym-class",
+      "prompt": "What should participants bring?",
+      "choices": [
+        "Their own mat",
+        "A water bottle",
+        "Running shoes"
+      ],
+      "answer": "Their own mat",
+      "explanation": "'bring your own mat'에서 개인 매트를 가져오라고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "hotel-checkout:1",
+      "clip_slug": "hotel-checkout",
+      "prompt": "What time is checkout?",
+      "choices": [
+        "Eleven o'clock",
+        "Ten o'clock",
+        "Twelve o'clock"
+      ],
+      "answer": "Eleven o'clock",
+      "explanation": "'checkout time is eleven o''clock'에서 체크아웃이 11시임을 알 수 있습니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "hotel-checkout:2",
+      "clip_slug": "hotel-checkout",
+      "prompt": "Who should you contact for a late checkout?",
+      "choices": [
+        "The front desk",
+        "Room service",
+        "The manager"
+      ],
+      "answer": "The front desk",
+      "explanation": "'contact the front desk'에서 프런트에 연락하라고 했습니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "bus-route-change:1",
+      "clip_slug": "bus-route-change",
+      "prompt": "Why is the bus route changed?",
+      "choices": [
+        "Road work",
+        "A festival",
+        "Heavy traffic"
+      ],
+      "answer": "Road work",
+      "explanation": "'Due to road work'에서 도로 공사가 변경 이유입니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "bus-route-change:2",
+      "clip_slug": "bus-route-change",
+      "prompt": "What is the nearest stop today?",
+      "choices": [
+        "Pine Avenue",
+        "Oak Street",
+        "Main Street"
+      ],
+      "answer": "Pine Avenue",
+      "explanation": "'The nearest stop will be Pine Avenue'에서 가장 가까운 정류장이 파인 애비뉴입니다.",
+      "sort_order": 2
+    },
+    {
+      "id": "museum-tour:1",
+      "clip_slug": "museum-tour",
+      "prompt": "When does the guided tour start?",
+      "choices": [
+        "At two o'clock",
+        "At noon",
+        "At three o'clock"
+      ],
+      "answer": "At two o'clock",
+      "explanation": "'begin at two o''clock'에서 투어가 2시에 시작합니다.",
+      "sort_order": 1
+    },
+    {
+      "id": "museum-tour:2",
+      "clip_slug": "museum-tour",
+      "prompt": "Where does the tour begin?",
+      "choices": [
+        "Near the main entrance",
+        "In the gift shop",
+        "On the rooftop"
+      ],
+      "answer": "Near the main entrance",
+      "explanation": "'near the main entrance'에서 정문 근처에서 시작합니다.",
+      "sort_order": 2
+    }
+  ]
+}

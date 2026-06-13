@@ -17,7 +17,6 @@ type LockedRow = {
 };
 
 const LOCKED: LockedRow[] = [
-  { emoji: '🎧', title: '리스닝', desc: '🔒 P4에서 해제 — 안내 방송 듣기' },
   { emoji: '🗣️', title: '회화 (AI)', desc: '🔒 P5에서 해제 — 상황극 + Ted 피드백' },
 ];
 
@@ -95,6 +94,17 @@ export default function LearnScreen() {
           <View style={styles.rowBody}>
             <Text style={styles.rowTitle}>문법 퀴즈</Text>
             <Text style={styles.rowDesc}>카드 배열 · 빈칸 선택 · 오류 찾기</Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </Card>
+      </Pressable>
+
+      <Pressable onPress={() => router.push('/quiz/listening')}>
+        <Card style={styles.row}>
+          <Text style={styles.rowEmoji}>🎧</Text>
+          <View style={styles.rowBody}>
+            <Text style={styles.rowTitle}>리스닝</Text>
+            <Text style={styles.rowDesc}>안내 방송 듣고 답하기 · 속도 조절</Text>
           </View>
           <Text style={styles.chevron}>›</Text>
         </Card>

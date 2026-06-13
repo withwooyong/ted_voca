@@ -67,4 +67,11 @@ export type LevelTestSave = {
   now: Date;
 };
 
+export type ListeningAttemptInput = {
+  questionId: string;
+  correct: boolean;
+  now: Date;
+  userAnswer?: string;
+};
+
 export type ReviewGrade = SrsGrade;

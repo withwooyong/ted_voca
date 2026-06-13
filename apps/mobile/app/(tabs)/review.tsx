@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { router, useFocusEffect } from 'expo-router';
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { Flashcard } from '@/components/review/Flashcard';
 import { TedMascot } from '@/components/TedMascot';
@@ -173,6 +173,9 @@ export default function ReviewScreen() {
           onPress={() => router.push('/(tabs)')}
           style={styles.actionBtn}
         />
+        <View style={styles.boosterSlot}>
+          <BoosterCard />
+        </View>
       </View>
     );
   }
@@ -215,6 +218,7 @@ export default function ReviewScreen() {
           onPress={() => router.push('/(tabs)')}
           style={styles.actionBtn}
         />
+        <BoosterCard />
       </ScrollView>
     );
   }
@@ -266,7 +270,27 @@ export default function ReviewScreen() {
       ) : (
         <Text style={styles.flipHint}>카드를 탭해서 뜻을 확인하고 평가해 줘</Text>
       )}
+
+      <View style={styles.boosterSlot}>
+        <BoosterCard />
+      </View>
     </ScrollView>
+  );
+}
+
+/** Memory Booster 진입 카드 (프로토타입 review 하단). 어느 phase에서든 재사용. */
+function BoosterCard() {
+  return (
+    <Pressable onPress={() => router.push('/memory-booster')} accessibilityRole="button">
+      <Card style={styles.boosterCard}>
+        <Text style={styles.boosterIcon}>🔊</Text>
+        <View style={styles.boosterBody}>
+          <Text style={styles.boosterTitle}>Memory Booster</Text>
+          <Text style={styles.boosterDesc}>최근 7일 학습 문장 자동 재생</Text>
+        </View>
+        <Text style={styles.boosterChevron}>›</Text>
+      </Card>
+    </Pressable>
   );
 }
 
@@ -375,4 +399,11 @@ const styles = StyleSheet.create({
   },
   scheduleLine: { fontSize: 14, color: colors.text, lineHeight: 26 },
   scheduleWord: { fontWeight: '800', color: colors.primary },
+  boosterSlot: { alignSelf: 'stretch', marginTop: spacing.lg },
+  boosterCard: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  boosterIcon: { fontSize: 21 },
+  boosterBody: { flex: 1 },
+  boosterTitle: { fontSize: 14, fontWeight: '800', color: colors.text },
+  boosterDesc: { fontSize: 12, color: colors.textMuted, marginTop: 2 },
+  boosterChevron: { color: colors.textMuted, fontSize: 20 },
 });

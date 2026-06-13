@@ -5,3 +5,4 @@ export * from './xp';
 export * from './streak';
 export * from './leveltest';
 export * from './grammar';
+export * from './listening';

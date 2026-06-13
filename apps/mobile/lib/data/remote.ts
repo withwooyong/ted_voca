@@ -3,14 +3,18 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 
 import {
   applyGrade,
+  buildBoosterQueue,
   initialSrsState,
   levelFromXp,
   nextStreak,
   toDateKey,
   XP_LEVEL_TEST,
+  type BoosterItem,
   type GrammarQuestionLike,
   type GrammarQuestionType,
   type GrammarTopicLike,
+  type ListeningClipLike,
+  type ListeningQuestionLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
@@ -19,6 +23,7 @@ import type {
   AttemptInput,
   DueCard,
   LevelTestSave,
+  ListeningAttemptInput,
   ProfileProgress,
   SessionInput,
   StatsOverview,
@@ -336,6 +341,105 @@ export async function recordGrammarAttempt(
     user_answer: input.userAnswer ?? null,
   });
   if (error) throw error;
+}
+
+// ── 리스닝 (P4) ────────────────────────────────────────────
+
+type ListeningClipRow = {
+  id: string;
+  slug: string;
+  title: string;
+  transcript_en: string;
+  transcript_ko: string | null;
+  duration_seconds: number | null;
+  difficulty: number | null;
+  tags: string[] | null;
+  sort_order: number | null;
+};
+
+type ListeningQuestionRow = {
+  id: string;
+  prompt: string;
+  options: { choices?: string[] } | null;
+  correct_answer: string;
+  explanation: string | null;
+  sort_order: number | null;
+  listening_clips: { slug: string } | null;
+};
+
+export async function getListeningClips(sb: SupabaseClient): Promise<ListeningClipLike[]> {
+  const { data, error } = await sb
+    .from('listening_clips')
+    .select('id, slug, title, transcript_en, transcript_ko, duration_seconds, difficulty, tags, sort_order')
+    .order('sort_order');
+  if (error) throw error;
+  return (data as ListeningClipRow[]).map((c) => ({
+    id: c.id,
+    slug: c.slug,
+    title: c.title,
+    transcript_en: c.transcript_en,
+    transcript_ko: c.transcript_ko ?? '',
+    duration_seconds: c.duration_seconds ?? 0,
+    difficulty: c.difficulty ?? 1,
+    tags: c.tags ?? [],
+    sort_order: c.sort_order ?? 0,
+  }));
+}
+
+export async function getListeningQuestions(
+  sb: SupabaseClient,
+  clipSlug?: string,
+): Promise<ListeningQuestionLike[]> {
+  let query = sb
+    .from('listening_questions')
+    .select('id, prompt, options, correct_answer, explanation, sort_order, listening_clips!inner(slug)')
+    .order('sort_order');
+  if (clipSlug) query = query.eq('listening_clips.slug', clipSlug);
+  const { data, error } = await query;
+  if (error) throw error;
+  return (data as unknown as ListeningQuestionRow[]).map((q) => ({
+    id: q.id,
+    clip_slug: q.listening_clips?.slug ?? '',
+    prompt: q.prompt,
+    choices: q.options?.choices ?? [],
+    answer: q.correct_answer,
+    explanation: q.explanation ?? '',
+    sort_order: q.sort_order ?? 0,
+  }));
+}
+
+export async function recordListeningAttempt(
+  sb: SupabaseClient,
+  input: ListeningAttemptInput,
+): Promise<void> {
+  const userId = await getUserId(sb);
+  // migration 005: quiz_type enum에 'listening' 추가, listening_question_id 컬럼 추가
+  const { error } = await sb.from('quiz_attempts').insert({
+    user_id: userId,
+    listening_question_id: input.questionId,
+    quiz_type: 'listening',
+    is_correct: input.correct,
+    user_answer: input.userAnswer ?? null,
+  });
+  if (error) throw error;
+}
+
+export async function getBoosterItems(sb: SupabaseClient, now: Date): Promise<BoosterItem[]> {
+  const userId = await getUserId(sb);
+  const weekAgo = new Date(now.getTime() - 7 * DAY_MS);
+  const [words, attemptsRes] = await Promise.all([
+    getWords(sb),
+    sb
+      .from('quiz_attempts')
+      .select('word_id, created_at')
+      .eq('user_id', userId)
+      .not('word_id', 'is', null)
+      .gte('created_at', weekAgo.toISOString())
+      .order('created_at', { ascending: false }),
+  ]);
+  if (attemptsRes.error) throw attemptsRes.error;
+  const attempts = (attemptsRes.data ?? []) as { word_id: string | null; created_at: string }[];
+  return buildBoosterQueue(attempts, words, now);
 }
 
 export async function getTodaySummary(sb: SupabaseClient, now: Date): Promise<TodaySummary> {

@@ -26,7 +26,7 @@
 
 1. **TTS 재생** — `expo-speech`로 transcript 실시간 합성. 속도 0.75x/1.0x/1.25x = `rate` 파라미터 (오디오 파일 불필요, 마이그레이션으로 `audio_url` 컬럼은 예약만)
 2. **재생 게이트** — 최소 1회 재생 후 문항 노출 (프로토타입 UX). "다시 듣기" 무제한
-3. **comprehension 퀴즈** — 클립당 1~2문항 4지선다. `listening_questions` 테이블 신설
+3. **comprehension 퀴즈** — 클립당 1~2문항 3지선다 (프로토타입 `#listening` 검증 — 모바일 한 화면 보기 수). `listening_questions` 테이블 신설
 4. **따라 말하기 (선택)** — 버튼만 배치, 녹음·비교는 P5 STT 인프라 재사용 시 활성화 (P4에서는 disabled + 안내)
 5. **기록 연동** — `study_sessions(module='listening')` + `quiz_attempts.listening_question_id`
 6. **Memory Booster** — 최근 7일 학습 단어(`quiz_attempts` 기준)의 예문을 연속 TTS 재생하는 자동 모드. Review 탭 하단 진입(프로토타입 위치)
@@ -85,11 +85,11 @@ ALTER TABLE quiz_attempts ADD COLUMN listening_question_id UUID REFERENCES liste
 
 ## 6. 완료 체크리스트
 
-- [ ] migration 004 적용 + 클립 30/문항 50 시드 (human review)
-- [ ] tts.ts 래퍼 + 테스트
-- [ ] 리스닝 화면: 재생 게이트·속도·퀴즈·해설
-- [ ] 따라 말하기 placeholder (P5 연동 지점 주석)
-- [ ] Memory Booster 자동 재생 + 일시정지
-- [ ] 세션·attempts 기록 + XP 연동
-- [ ] 실기기 오디오 검증 (iOS 무음 모드 포함)
-- [ ] typecheck + 전체 테스트 PASS
+- [x] migration 005 생성(004는 grammar가 점유 → 번호 이월) + 클립 30/문항 50 시드 — Supabase 실서버 적용·human review는 대기
+- [x] tts.ts 래퍼 + 테스트 (세대 기반 큐 취소·onError 처리 — ADR-0005)
+- [x] 리스닝 화면: 재생 게이트·속도 3단·퀴즈·해설
+- [x] 따라 말하기 placeholder (P5 연동 지점 주석)
+- [x] Memory Booster 자동 재생 + 백그라운드 정지/복귀 재개 (XP 0 정책 — ADR-0005)
+- [x] 세션·attempts 기록 + XP 연동 (`xpForQuizSession`)
+- [ ] 실기기 오디오 검증 (iOS 무음 모드 포함) — 사용자 실기기 필요
+- [x] typecheck + 전체 테스트 PASS (jest 83 / vitest 118 / python 22, E2E 4시나리오)

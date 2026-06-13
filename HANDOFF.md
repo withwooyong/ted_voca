@@ -1,62 +1,65 @@
 # Session Handoff
 
-> Last updated: 2026-06-12 17:41 (KST)
+> Last updated: 2026-06-13 (KST)
 > Branch: `main` (https://github.com/withwooyong/ted_voca — public)
-> Latest commit: `74f8da2` - P3 Grammar — 문법 퀴즈 3유형·사전·콘텐츠 파이프라인
+> Latest commit: 본 세션 P4 커밋 참조 (`git log -1`)
 
 ## Current Status
 
-**P0 ✅ → P1+P2 ✅ → P3 Grammar ✅** — 로컬(Dev Mock) 모드에서 풀 루프 동작:
-가입 → 온보딩 → 레벨 테스트(adaptive) → 어휘 퀴즈 3종 → SM-2 복습 → 문법 퀴즈 3유형 →
-문법 사전(20토픽) → XP/streak/통계. 모든 변경 커밋·푸시 완료, 미커밋 작업 없음.
+**P0 ✅ → P1+P2 ✅ → P3 ✅ → P4 Listening ✅** — 로컬(Dev Mock) 모드에서 풀 루프 동작:
+가입 → 온보딩 → 레벨 테스트 → 어휘 퀴즈 3종 → SM-2 복습 → 문법 퀴즈/사전 →
+**리스닝(TTS 재생 게이트 → comprehension 퀴즈) → Memory Booster** → XP/streak/통계.
 
-## Completed This Session
+## Completed This Session (P4 — ted-run 풀 파이프라인)
 
-| # | Task | Commit | Files |
-|---|------|--------|-------|
-| 1 | 인터랙티브 프로토타입 (P0~P6 전체 동선 클릭 모형) | `4e7d761` | docs/prototype/index.html |
-| 2 | P1~P6 작업계획서 일괄 작성 + MASTER-PLAN 로드맵 연결 | `4e7d761` | docs/plans/p1-p2…p6, docs/MASTER-PLAN.md |
-| 3 | P1+P2: SM-2 SRS·어휘 퀴즈 3종·레벨 테스트·통계·단어 시드 510·테스트 인프라 (ted-run 풀 파이프라인) | `4e7d761` | packages/shared, apps/mobile/lib·app, migrations/002·003, ADR-0001~0003 |
-| 4 | git init + GitHub repo 생성(withwooyong/ted_voca) | `4e7d761` | — |
-| 5 | P3: 문법 퀴즈 3유형·사전·콘텐츠 파이프라인 20토픽/200문항 (ted-run 풀 파이프라인) | `74f8da2` | app/quiz/grammar.tsx, app/grammar-dict/, shared/grammar.ts, scripts/grammar_content/, migrations/004, ADR-0004 |
-| 6 | repo public 전환 + 푸시 | `74f8da2` | — |
+| # | Task | Files |
+|---|------|-------|
+| 1 | TDD: 테스트 93개 red 선행 (계약 고정) | shared/tests/listening, __tests__/tts·data-listening·clip-session, scripts/test_generate_listening_seed.py |
+| 2 | shared 리스닝 순수 로직 (채점·클립 선택·buildBoosterQueue) | packages/shared/src/listening.ts |
+| 3 | TTS 래퍼 — 세대 기반 큐 취소, expo-audio playsInSilentMode | apps/mobile/lib/tts.ts |
+| 4 | 데이터 레이어 dual-mode 리스닝 4함수 | lib/data/{types,local,remote,index}.ts, lib/content/listening-pack.ts |
+| 5 | 콘텐츠 파이프라인: 클립 30/문항 50 → JSON+SQL | scripts/generate_listening_seed.py, scripts/listening_content/, content/listening-pack.json, migrations/005_listening.sql |
+| 6 | UI: ClipSession(재생 게이트)·리스닝 퀴즈·Memory Booster·진입점 | components/listening/, app/quiz/listening.tsx, app/memory-booster.tsx, (tabs)/review·learn.tsx |
+| 7 | 리뷰 1차 FAIL(HIGH 2) → 전건 수정 → 재리뷰 PASS | tts 세대 카운터·onError, slug NOT NULL, aliveRef 등 6건 |
+| 8 | E2E 4시나리오 PASS (TTS 스텁 주입 기법) | /tmp/ted_e2e_p4/ (휘발성) |
+| 9 | ADR-0005 + 문서 현행화 | docs/ADR/ADR-0005, MASTER-PLAN, plan §6 체크리스트, CHANGELOG |
 
 ## In Progress / Pending
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | P4 Listening | ⬜ 미착수 | `/ted-run docs/plans/p4-listening.md` — P3와 독립, 바로 진입 가능 |
-| 2 | 콘텐츠 human review | 🟡 대기 | 문법 200문항(`scripts/grammar_content/batch_*.txt`) + 레벨테스트 25문항(`lib/content/level-test.ts`). batch 수정 후 `python3 scripts/generate_grammar_seed.py` 재실행 시 JSON·SQL 동기 갱신 |
-| 3 | Supabase 실서버 마이그레이션 | ⬜ 대기 | 001→002→003→004 순서 적용 (Supabase 프로젝트 생성 시) |
-| 4 | P5 Speaking / P6 Gamification | ⬜ 미착수 | P5는 외부 API(Edge Function) — plan doc 참조 |
+| 1 | P5 Speaking + AI | ⬜ 미착수 | `/ted-run docs/plans/p5-speaking-ai.md` — 외부 API(Edge Function), 따라 말하기 활성화 연동 지점은 ClipSession의 `TODO(P5)` 주석 |
+| 2 | 실기기 오디오 검증 | 🟡 대기 | iOS 무음 스위치·백그라운드·속도 3단 체감 — 시뮬레이터 TTS 음질 상이, 사용자 실기기 필요 (plan §6 유일한 미체크 항목) |
+| 3 | 콘텐츠 human review | 🟡 대기 | 리스닝 50문항(`scripts/listening_content/batch_*.txt`) + 문법 200문항 + 레벨테스트 25문항. batch 수정 후 `python3 scripts/generate_listening_seed.py` 재실행 시 JSON·SQL 동기 갱신 |
+| 4 | Supabase 실서버 마이그레이션 | ⬜ 대기 | 001→002→003→004→005 순서 적용 |
+| 5 | P6 Gamification | ⬜ 미착수 | 전 모듈 완성 후 |
 
-## Key Decisions Made
+## Key Decisions Made (ADR-0005)
 
-- **SM-2 등 학습 로직은 packages/shared 순수 함수** — 시간 주입(now 파라미터), vitest 전수 검증 (ADR-0001)
-- **데이터 레이어 dual-mode repository** — 화면은 `@/lib/data`만 import, Supabase/AsyncStorage 분기 일원화 (ADR-0002)
-- **@ted-voca/shared는 file: 의존성 + Metro watchFolders** — tsconfig paths만으로는 Metro가 못 풀어 런타임 깨짐 (ADR-0003)
-- **문법 콘텐츠는 batch 텍스트 단일 소스 → JSON+SQL 이중 출력** — local/remote 콘텐츠 불일치 구조적 차단 (ADR-0004)
-- **문법은 SRS 비대상 (v1.0)** — v1.1에서 어휘 SRS와 통합 검토 (ADR-0004)
-- **어순 UI는 드래그가 아닌 칩 탭 배열** — 프로토타입 검증 결정
+- **오디오 파일 없이 expo-speech 실시간 TTS** — audio_url 컬럼만 예약, v1.1에서 MP3 폴백 전환 가능
+- **SDK 56은 expo-av 아닌 expo-audio** — `setAudioModeAsync({ playsInSilentMode: true })` + speech 옵션 `useApplicationAudioSession: true`
+- **TTS 큐 취소는 세대(generation) 카운터** — boolean 플래그는 큐 재시작 시 구 네이티브 콜백이 신 큐를 오염시킴 (리뷰 H-1)
+- **Memory Booster XP 0** — 자동 재생 XP 파밍 차단, 세션 기록만. 백그라운드는 stop+인덱스 재개 (Android pause 미지원)
+- **리스닝 attempt는 word_id 없음** — 어휘 SRS·난이도 조절 입력에서 격리 (P3 문법과 동일 패턴)
+- **3지선다** — 프로토타입 검증 결정, plan 문서 현행화함
+- **ClipSession 재생 게이트는 useSyncExternalStore** — 네이티브 onDone(React 이벤트 밖)의 동기 flush 필요 (ConcurrentRoot)
 
 ## Known Issues
 
-- 문법 200문항·레벨테스트 25문항은 AI 초안 — human review 전 (`# TODO(content-review)` 표기)
-- `001_initial_schema.sql`의 `user_words.status` DEFAULT 'learning' vs 코드 initial 'new' — 코드가 항상 명시 upsert라 무해, 다음 마이그레이션에서 통일 예정
-- RTL v14는 `render`/`fireEvent`가 **async** — 컴포넌트 테스트는 반드시 `await` (ADR-0003)
-- `react-hooks/purity` 룰이 컴포넌트 스코프 `Date.now()`를 플래그 — 핸들러에서 `new Date()` 생성·재사용 컨벤션
-- 첫 push 시 "remote end hung up" 발생 이력 → `http.postBuffer` 150MB로 로컬 설정해 해결됨
+- 리스닝 50문항·클립 30개는 AI 초안 — human review 전 (`# TODO(content-review)`)
+- `user_words.status` DEFAULT 불일치(001) — 무해, 다음 마이그레이션에서 통일 예정 (이전 세션부터 이월)
+- RTL v14 render/fireEvent는 async — 반드시 await / `react-hooks/purity` — `new Date()`는 핸들러 안에서
+- E2E 시 headless TTS는 onend 미발화 — `speechSynthesis.speak`를 **prototype 레벨 Object.defineProperty**로 스텁해야 함 (직접 교체는 타입 에러). 서빙은 `npx expo serve dist` 필수 (http.server는 SPA 라우팅 안 됨)
 
 ## Context for Next Session
 
-- **사용자 목표**: MASTER-PLAN 기반 말해보카급 풀스위트 영어 학습 앱을 Phase 단위로 완성. 실행 전략은 "계획 일괄, 실행 단계별" — ted-run 4회 분할(P1+P2 / P3·P4 / P5 / P6) 중 2회 완료
-- **개발 방식**: `/ted-run <plan doc>` 풀 파이프라인 (TDD red→green, opus 병렬 구현, sonnet 독립 리뷰→전건 수정→재리뷰, 5관문 검증, 웹 export+Playwright E2E, ADR/커밋). 이 방식 유지 권장
-- **제약·선호**: 커밋 메시지 한글, 커밋·푸시 분리 확인(글로벌 규칙), Expo SDK 56 — 코드 작성 전 versioned docs 확인(AGENTS.md)
-- **실행/검증 명령**: `apps/mobile`: `npm start`(Dev Mock 전체 동작) / `npm test`(jest 28) / `npm run lint·typecheck`; `packages/shared`: `npm test`(vitest 85, cov 98.7%); E2E는 `npx expo export --platform web` + `expo serve dist` + Playwright(python) 패턴 — /tmp/proto_shot/ted_e2e*.py 참조(휘발성)
-- **다음 착수점**: P4 Listening — expo-speech 실시간 TTS(오디오 파일 없음), `listening_questions` 테이블 신설(migration 005), Memory Booster. p4-listening.md에 상세 스펙 있음
+- **사용자 목표**: MASTER-PLAN 기반 풀스위트 영어 학습 앱 — ted-run 4회 분할 중 3회 완료 (P1+P2 / P3·P4 / 남은 것: P5 / P6)
+- **개발 방식**: `/ted-run <plan doc>` 풀 파이프라인 유지 권장 (TDD red→green, opus 병렬 구현, 독립 리뷰→전건 수정→재리뷰, 5관문, 웹 export+Playwright E2E, ADR/커밋)
+- **제약·선호**: 커밋 한글, 커밋·푸시 분리 확인, Expo SDK 56 — versioned docs 확인 (AGENTS.md)
+- **실행/검증 명령**: `apps/mobile`: `npm start` / `npx jest`(83) / `npm run lint·typecheck`; `packages/shared`: `npx vitest run`(118, cov 100/96.8); `python3 scripts/test_generate_listening_seed.py`(22)
+- **다음 착수점**: P5 Speaking + AI — STT·LLM 피드백·시나리오. 외부 API라 Supabase Edge Function 필요 (p5-speaking-ai.md 참조). ClipSession 따라 말하기 활성화도 P5 범위
 
 ## Files Modified This Session
 
-- `4e7d761` 초기 커밋: 113 files (P0+기획문서+프로토타입+P1+P2 전체)
-- `74f8da2` P3: 24 files changed, +5,780 / −14
-- 세션 마무리 문서 정리(본 handoff): CHANGELOG.md 신규, HANDOFF.md 재작성, plan doc 체크리스트·MASTER-PLAN 로드맵 현행화
+- 신규: shared/listening.ts, lib/tts.ts, lib/content/listening-pack.ts, components/listening/ClipSession.tsx, app/quiz/listening.tsx, app/memory-booster.tsx, scripts/generate_listening_seed.py, scripts/listening_content/batch_01·02.txt, content/listening-pack.json, migrations/005_listening.sql, ADR-0005, 테스트 5파일
+- 수정: lib/data 4파일, (tabs)/review.tsx, (tabs)/learn.tsx, shared/index.ts, plan p4 문서, MASTER-PLAN, CHANGELOG, HANDOFF(본 문서), package.json(expo-speech·expo-audio 추가)

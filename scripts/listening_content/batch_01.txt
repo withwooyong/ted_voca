@@ -1,0 +1,60 @@
+# TODO(content-review): AI 생성 초안 — human review 필요
+# 형식: docs/plans/p4-listening.md §1.2.7 및 generate_listening_seed.py spec 참조
+# clip: slug | 제목(한국어) | difficulty(1~5) | tags(콤마구분) | transcript_en | transcript_ko
+# q | prompt(영어 질문) | 보기1;보기2=정답보기;보기3 | explanation(한국어 1~2문장)
+#   - q 줄은 직전 clip 소속, 클립당 1~2개
+#   - 보기는 세미콜론(;) 분리, 정답 보기에 =정답 표시 (3지선다)
+#   - 모든 transcript는 자체 작성 (외부 콘텐츠·저작권물 금지)
+# batch_01: 여행 안내방송(공항·역·기내) + 사내 공지(회의·일정·시설)
+
+clip: airport-boarding | 탑승 안내방송 | 2 | announcement,travel,airport | Attention passengers on flight 207 to Tokyo. Boarding will begin in ten minutes at gate B12. | 도쿄행 207편 승객 여러분께 안내드립니다. 탑승은 10분 후 B12 게이트에서 시작됩니다.
+q | Where will the flight depart from? | Gate B2;Gate B12=Gate B12;Gate B20 | 안내방송에서 'at gate B12'라고 출발 게이트를 명시했습니다.
+q | When does boarding begin? | In ten minutes=In ten minutes;In two minutes;Right now | 'Boarding will begin in ten minutes'에서 10분 후 시작한다고 했습니다.
+
+clip: airport-delay | 항공편 지연 안내 | 3 | announcement,travel,airport | We are sorry to announce that flight 88 to London has been delayed by one hour due to bad weather. | 런던행 88편이 악천후로 1시간 지연되었음을 알려드려 죄송합니다.
+q | Why is the flight delayed? | Bad weather=Bad weather;A technical problem;A crew shortage | 'due to bad weather'에서 지연 사유가 악천후임을 알 수 있습니다.
+q | How long is the delay? | Thirty minutes;One hour=One hour;Two hours | 'delayed by one hour'에서 지연 시간이 1시간임을 확인할 수 있습니다.
+
+clip: airport-baggage | 수하물 찾는 곳 안내 | 2 | announcement,travel,airport | Passengers arriving from Sydney can collect their baggage at carousel number five. | 시드니에서 도착하신 승객 여러분은 5번 수하물 컨베이어에서 짐을 찾으실 수 있습니다.
+q | Where can passengers collect their baggage? | Carousel five=Carousel five;Carousel nine;The information desk | 'at carousel number five'에서 5번 컨베이어라고 안내했습니다.
+
+clip: airport-final-call | 최종 탑승 안내 | 3 | announcement,travel,airport | This is the final call for passenger Kim traveling to Paris. Please proceed to gate A7 immediately. | 파리로 가시는 승객 Kim님께 마지막 안내입니다. 즉시 A7 게이트로 와 주시기 바랍니다.
+q | What should passenger Kim do? | Go to gate A7=Go to gate A7;Check in luggage;Wait at the cafe | 'proceed to gate A7 immediately'에서 즉시 A7 게이트로 가야 함을 알 수 있습니다.
+
+clip: station-train-delay | 열차 지연 안내 | 2 | announcement,travel,station | The express train to Busan is running about fifteen minutes late. We apologize for the inconvenience. | 부산행 급행열차가 약 15분 지연되고 있습니다. 불편을 드려 죄송합니다.
+q | How late is the train? | About five minutes;About fifteen minutes=About fifteen minutes;About fifty minutes | 'about fifteen minutes late'에서 약 15분 지연임을 알 수 있습니다.
+q | Where is the train going? | Busan=Busan;Seoul;Daegu | 'The express train to Busan'에서 목적지가 부산입니다.
+
+clip: station-platform-change | 승강장 변경 안내 | 3 | announcement,travel,station | The train to Incheon will now depart from platform three instead of platform one. | 인천행 열차가 1번 승강장 대신 3번 승강장에서 출발합니다.
+q | Which platform will the train now use? | Platform one;Platform three=Platform three;Platform two | 'depart from platform three instead of platform one'에서 변경된 승강장은 3번입니다.
+
+clip: station-last-train | 막차 안내방송 | 2 | announcement,travel,station | The last train tonight leaves at eleven thirty. Please make sure you are on the platform before that time. | 오늘 밤 막차는 11시 30분에 출발합니다. 그 전에 승강장에 도착해 주시기 바랍니다.
+q | What time does the last train leave? | At eleven thirty=At eleven thirty;At ten thirty;At twelve thirty | 'leaves at eleven thirty'에서 막차 시간이 11시 30분입니다.
+
+clip: subway-doors | 지하철 출입문 안내 | 1 | announcement,travel,station | Please stand clear of the closing doors. The next stop is City Hall. | 닫히는 문에서 물러서 주십시오. 다음 역은 시청역입니다.
+q | What is the next stop? | Central Park;City Hall=City Hall;Main Street | 'The next stop is City Hall'에서 다음 역이 시청역입니다.
+
+clip: inflight-seatbelt | 기내 좌석벨트 안내 | 3 | announcement,travel,airport | Ladies and gentlemen, we are about to land. Please fasten your seatbelt and return your seat to the upright position. | 승객 여러분, 곧 착륙하겠습니다. 좌석벨트를 매시고 좌석 등받이를 세워 주시기 바랍니다.
+q | What are passengers asked to do? | Fasten their seatbelt=Fasten their seatbelt;Open the window;Use their phone | 'Please fasten your seatbelt'에서 좌석벨트를 매라고 요청했습니다.
+q | What is about to happen? | The plane will land=The plane will land;The plane will take off;Meals will be served | 'we are about to land'에서 곧 착륙함을 알 수 있습니다.
+
+clip: inflight-meal | 기내식 안내 | 2 | announcement,travel,airport | We will now begin our meal service. Today we are offering chicken with rice or pasta. | 지금부터 기내식 서비스를 시작하겠습니다. 오늘은 닭고기 덮밥 또는 파스타를 제공합니다.
+q | What meal options are offered? | Chicken or pasta=Chicken or pasta;Beef or fish;Salad or soup | 'chicken with rice or pasta'에서 선택지가 닭고기와 파스타임을 알 수 있습니다.
+
+clip: office-meeting-time | 사내 회의 공지 | 2 | office,announcement,meeting | The weekly team meeting has been moved to Thursday at three in the conference room on the fifth floor. | 주간 팀 회의가 목요일 오후 3시 5층 회의실로 변경되었습니다.
+q | When is the meeting now? | Thursday at three=Thursday at three;Wednesday at three;Thursday at five | 'moved to Thursday at three'에서 변경된 시각이 목요일 3시입니다.
+q | Where will the meeting take place? | The fifth floor conference room=The fifth floor conference room;The cafeteria;The first floor lobby | 'conference room on the fifth floor'에서 장소가 5층 회의실입니다.
+
+clip: office-printer | 프린터 점검 공지 | 2 | office,announcement | The printer on the third floor will be out of service this afternoon for maintenance. Please use the one on the second floor. | 3층 프린터가 오늘 오후 점검으로 사용이 중단됩니다. 2층 프린터를 이용해 주십시오.
+q | Why is the printer out of service? | For maintenance=For maintenance;It is broken;It is being replaced | 'out of service this afternoon for maintenance'에서 점검 때문임을 알 수 있습니다.
+
+clip: office-deadline | 보고서 마감 공지 | 3 | office,announcement | This is a reminder that the monthly sales report is due by Friday noon. Please send it to your manager. | 월간 영업 보고서 마감이 금요일 정오임을 다시 알려드립니다. 담당 매니저에게 보내 주세요.
+q | When is the report due? | By Friday noon=By Friday noon;By Monday noon;By Friday evening | 'due by Friday noon'에서 마감이 금요일 정오임을 알 수 있습니다.
+q | Who should receive the report? | The manager=The manager;A client;The receptionist | 'send it to your manager'에서 매니저에게 보내라고 했습니다.
+
+clip: office-parking | 주차장 안내 공지 | 2 | office,announcement | Starting next Monday, the company parking lot will be closed for repairs. Employees can park in the public garage nearby. | 다음 주 월요일부터 회사 주차장이 수리를 위해 폐쇄됩니다. 직원들은 인근 공용 주차장을 이용할 수 있습니다.
+q | When will the parking lot close? | Next Monday=Next Monday;This Friday;Next month | 'Starting next Monday'에서 다음 주 월요일부터 폐쇄됨을 알 수 있습니다.
+
+clip: office-fire-drill | 소방 훈련 공지 | 3 | office,announcement | We will hold a fire drill tomorrow at ten in the morning. When you hear the alarm, please leave the building calmly using the stairs. | 내일 오전 10시에 소방 훈련을 실시합니다. 경보가 울리면 계단을 이용해 침착하게 건물 밖으로 나가 주십시오.
+q | What should employees do when they hear the alarm? | Leave using the stairs=Leave using the stairs;Take the elevator;Stay at their desks | 'leave the building calmly using the stairs'에서 계단으로 대피하라고 했습니다.
+q | When is the fire drill? | Tomorrow at ten=Tomorrow at ten;Today at ten;Tomorrow at two | 'tomorrow at ten in the morning'에서 내일 오전 10시입니다.

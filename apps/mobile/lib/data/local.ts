@@ -4,13 +4,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {
   applyGrade,
+  buildBoosterQueue,
   initialSrsState,
   levelFromXp,
   nextStreak,
   toDateKey,
   XP_LEVEL_TEST,
+  type BoosterItem,
   type GrammarQuestionLike,
   type GrammarTopicLike,
+  type ListeningClipLike,
+  type ListeningQuestionLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
@@ -19,6 +23,7 @@ import type {
   AttemptInput,
   DueCard,
   LevelTestSave,
+  ListeningAttemptInput,
   ProfileProgress,
   SessionInput,
   StatsOverview,
@@ -36,9 +41,10 @@ const MAX_SESSIONS_KEPT = 200;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 type StoredAttempt = {
-  /** 어휘 attempt — 문법 attempt는 word_id 없이 grammar_question_id 사용 */
+  /** 어휘 attempt — 문법/리스닝 attempt는 word_id 없이 *_question_id 사용 */
   word_id?: string;
   grammar_question_id?: string;
+  listening_question_id?: string;
   quiz_type: string;
   is_correct: boolean;
   created_at: string;
@@ -224,6 +230,41 @@ export async function recordGrammarAttempt(input: {
     created_at: input.now.toISOString(),
   });
   await writeJson(KEY_ATTEMPTS, attempts.slice(-MAX_ATTEMPTS_KEPT));
+}
+
+// ── 리스닝 (P4) ────────────────────────────────────────────
+
+// listening-pack은 lazy require — JSON 부재가 모듈 평가 시점에 영향 주지 않도록 (grammar 패턴 동일)
+export async function getListeningClips(): Promise<ListeningClipLike[]> {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- 의도된 lazy 로드 (모듈 평가 시점 JSON 의존 제거)
+  const { getBundledListeningClips } = require('@/lib/content/listening-pack') as typeof import('@/lib/content/listening-pack');
+  return getBundledListeningClips();
+}
+
+export async function getListeningQuestions(clipSlug?: string): Promise<ListeningQuestionLike[]> {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- 의도된 lazy 로드 (모듈 평가 시점 JSON 의존 제거)
+  const { getBundledListeningQuestions } = require('@/lib/content/listening-pack') as typeof import('@/lib/content/listening-pack');
+  const all = getBundledListeningQuestions();
+  return clipSlug ? all.filter((q) => q.clip_slug === clipSlug) : all;
+}
+
+export async function recordListeningAttempt(input: ListeningAttemptInput): Promise<void> {
+  const attempts = await readJson<StoredAttempt[]>(KEY_ATTEMPTS, []);
+  attempts.push({
+    listening_question_id: input.questionId,
+    quiz_type: 'listening',
+    is_correct: input.correct,
+    created_at: input.now.toISOString(),
+  });
+  await writeJson(KEY_ATTEMPTS, attempts.slice(-MAX_ATTEMPTS_KEPT));
+}
+
+export async function getBoosterItems(now: Date): Promise<BoosterItem[]> {
+  const [attempts, words] = await Promise.all([
+    readJson<StoredAttempt[]>(KEY_ATTEMPTS, []),
+    getWords(),
+  ]);
+  return buildBoosterQueue(attempts, words, now);
 }
 
 export async function getTodaySummary(now: Date): Promise<TodaySummary> {

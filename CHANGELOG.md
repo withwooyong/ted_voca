@@ -10,6 +10,31 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-13] Session Summary
+
+### Added
+- P4 Listening: TTS 재생(0.75x/1.0x/1.25x) → 재생 게이트 → comprehension 퀴즈 3지선다 → 해설, 따라 말하기 placeholder(P5 연동 지점)
+- Memory Booster: 최근 7일 학습 단어의 lemma→예문 연속 TTS 자동 재생, 백그라운드 정지/복귀 재개, XP 0 정책 (Review 탭 진입 카드)
+- `lib/tts.ts`: expo-speech+expo-audio(SDK 56, `playsInSilentMode`) 래퍼 — 세대(generation) 기반 큐 취소·onError 처리 (회귀 테스트 포함)
+- `packages/shared/listening.ts`: 채점·클립 선택·`buildBoosterQueue`(7일 경계·dedupe·example_en 필터) — vitest 33케이스, cov 100%
+- 리스닝 콘텐츠 파이프라인: batch 텍스트 → `listening-pack.json` + `migrations/005_listening.sql` 이중 출력, 클립 30/문항 50(AI 초안, human review 필요), 파서 unittest 22
+- migration 005: `listening_questions` 신설(RLS read_all, `UNIQUE(clip_id, sort_order)`), `quiz_attempts.listening_question_id`, `quiz_type` enum 'listening', `listening_clips`에 slug(백필+NOT NULL+UNIQUE)·audio_url(v1.1 예약)·tags·sort_order
+- `ClipSession` 컴포넌트(재생 게이트 — `useSyncExternalStore` 외부 스토어로 네이티브 onDone 동기 flush) + 데이터 레이어 리스닝 dual-mode 확장
+- ADR-0005: 실시간 TTS 채택·세대 기반 큐 제어·Booster XP 0 근거
+
+### Changed
+- learn 허브: 리스닝 잠금 해제 → `/quiz/listening` 진입
+- review 탭: Memory Booster 진입 카드 (empty/done/reviewing 전 phase)
+- plan §1.2.3 4지선다 → 3지선다 현행화 (프로토타입 검증 근거)
+
+### Fixed
+- 리뷰 검출 6건: TTS 큐 재시작 시 구 콜백의 신 큐 오염(H-1, 세대 카운터), 엔진 오류 시 promise 영구 hang(H-2), migration slug NULL의 UNIQUE 우회(M-1), booster 언마운트 후 setState(M-2), TTS 실패 시 무한 침묵 게이트(L-2), tts 테스트의 expo-av 시절 키(`playsInSilentModeIOS`) 단언 교정
+
+### Removed
+- (없음)
+
+---
+
 ## [2026-06-12] Session Summary
 
 ### Added

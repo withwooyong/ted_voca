@@ -1,0 +1,63 @@
+# TODO(content-review): AI 생성 초안 — human review 필요
+# 형식: docs/plans/p4-listening.md §1.2.7 및 generate_listening_seed.py spec 참조
+# clip: slug | 제목(한국어) | difficulty(1~5) | tags(콤마구분) | transcript_en | transcript_ko
+# q | prompt(영어 질문) | 보기1;보기2=정답보기;보기3 | explanation(한국어 1~2문장)
+# batch_02: 일상 monologue(전화 메시지·날씨·쇼핑 안내) + 혼합
+
+clip: phone-message-doctor | 병원 예약 음성 메시지 | 2 | daily,phone | Hi, this is a reminder from Green Clinic. Your appointment with Doctor Lee is tomorrow at two thirty. Please call us if you cannot come. | 안녕하세요, 그린 클리닉에서 알려드립니다. 이 선생님과의 예약이 내일 2시 30분입니다. 오실 수 없으면 전화 주세요.
+q | When is the appointment? | Tomorrow at two thirty=Tomorrow at two thirty;Today at two thirty;Tomorrow at three thirty | 'tomorrow at two thirty'에서 예약이 내일 2시 30분입니다.
+q | What should the listener do if they cannot come? | Call the clinic=Call the clinic;Send an email;Visit another doctor | 'Please call us if you cannot come'에서 못 오면 전화하라고 했습니다.
+
+clip: phone-message-delivery | 택배 배송 음성 메시지 | 2 | daily,phone | Hello, this is City Delivery. We tried to deliver your package today but no one was home. We will try again tomorrow morning. | 안녕하세요, 시티 딜리버리입니다. 오늘 배송을 시도했으나 댁에 아무도 안 계셨습니다. 내일 오전에 다시 시도하겠습니다.
+q | Why was the package not delivered? | No one was home=No one was home;The address was wrong;It was too heavy | 'no one was home'에서 집에 아무도 없어 배송하지 못했음을 알 수 있습니다.
+q | When will they try again? | Tomorrow morning=Tomorrow morning;This evening;Next week | 'try again tomorrow morning'에서 내일 오전에 다시 시도합니다.
+
+clip: phone-message-restaurant | 식당 예약 확인 메시지 | 3 | daily,phone | Hi, this is Bella Restaurant calling to confirm your table for four people this Saturday at seven in the evening. | 안녕하세요, 벨라 레스토랑입니다. 이번 주 토요일 저녁 7시 4인석 예약을 확인하려고 전화드립니다.
+q | How many people is the reservation for? | Four=Four;Two;Seven | 'table for four people'에서 4인석 예약임을 알 수 있습니다.
+q | When is the reservation? | Saturday at seven=Saturday at seven;Sunday at seven;Saturday at five | 'this Saturday at seven in the evening'에서 토요일 저녁 7시입니다.
+
+clip: weather-rain | 오늘의 날씨 예보 | 2 | daily,weather | Good morning. Today will be cloudy with heavy rain in the afternoon. Don't forget to take an umbrella with you. | 좋은 아침입니다. 오늘은 흐리고 오후에 강한 비가 내리겠습니다. 우산을 잊지 말고 챙기세요.
+q | What will the weather be like in the afternoon? | Heavy rain=Heavy rain;Sunny;Snowy | 'heavy rain in the afternoon'에서 오후에 강한 비가 옴을 알 수 있습니다.
+q | What does the speaker suggest taking? | An umbrella=An umbrella;Sunglasses;A jacket | "Don't forget to take an umbrella"에서 우산을 챙기라고 했습니다.
+
+clip: weather-cold | 한파 주의 예보 | 3 | daily,weather | Tonight will be very cold, with temperatures dropping below zero. Please wear warm clothes if you go outside. | 오늘 밤은 기온이 영하로 떨어져 매우 춥겠습니다. 외출하실 때는 따뜻한 옷을 입으세요.
+q | How cold will it be tonight? | Below zero=Below zero;Around twenty;Mild and warm | 'temperatures dropping below zero'에서 영하로 떨어진다고 했습니다.
+q | What advice does the speaker give? | Wear warm clothes=Wear warm clothes;Stay home all day;Drink cold water | 'wear warm clothes if you go outside'에서 따뜻한 옷을 입으라고 조언했습니다.
+
+clip: weather-weekend | 주말 날씨 안내 | 2 | daily,weather | The weekend forecast looks great. Saturday will be sunny and warm, perfect for outdoor activities. | 주말 예보가 아주 좋습니다. 토요일은 맑고 따뜻해 야외 활동에 안성맞춤이겠습니다.
+q | What is the weather like on Saturday? | Sunny and warm=Sunny and warm;Rainy and cold;Windy and cloudy | 'Saturday will be sunny and warm'에서 토요일이 맑고 따뜻함을 알 수 있습니다.
+
+clip: shopping-sale | 매장 세일 안내방송 | 2 | daily,announcement | Attention shoppers. For the next hour, all winter coats are thirty percent off on the second floor. | 고객 여러분께 안내드립니다. 앞으로 한 시간 동안 2층의 모든 겨울 코트를 30% 할인합니다.
+q | What items are on sale? | Winter coats=Winter coats;Summer shoes;Children's toys | 'all winter coats are thirty percent off'에서 겨울 코트가 할인 품목입니다.
+q | How much is the discount? | Thirty percent=Thirty percent;Thirteen percent;Fifty percent | 'thirty percent off'에서 할인율이 30%임을 알 수 있습니다.
+
+clip: shopping-closing | 매장 마감 안내 | 1 | daily,announcement | Our store will be closing in fifteen minutes. Please bring your items to the checkout counter. | 저희 매장은 15분 후 마감합니다. 구매하실 물건을 계산대로 가져와 주십시오.
+q | When will the store close? | In fifteen minutes=In fifteen minutes;In fifty minutes;In five minutes | 'closing in fifteen minutes'에서 15분 후 마감함을 알 수 있습니다.
+
+clip: shopping-lost-child | 미아 안내방송 | 3 | daily,announcement | We have a young boy named Sam waiting at the customer service desk. Could his parents please come to collect him? | 손님센터에서 Sam이라는 남자아이가 기다리고 있습니다. 부모님께서는 데리러 와 주시기 바랍니다.
+q | Where is the boy waiting? | The customer service desk=The customer service desk;The parking lot;The food court | 'waiting at the customer service desk'에서 손님센터에서 기다린다고 했습니다.
+q | Who is asked to come? | His parents=His parents;His teacher;A doctor | 'Could his parents please come'에서 부모님을 호출했습니다.
+
+clip: library-hours | 도서관 운영 안내 | 2 | daily,announcement | Welcome to the city library. Please note that we close early today at six in the evening for a special event. | 시립 도서관에 오신 것을 환영합니다. 오늘은 특별 행사로 저녁 6시에 일찍 마감하는 점 참고해 주세요.
+q | Why does the library close early today? | For a special event=For a special event;For cleaning;For a holiday | 'close early today at six ... for a special event'에서 특별 행사 때문임을 알 수 있습니다.
+q | What time does the library close today? | At six=At six;At eight;At four | 'close early today at six in the evening'에서 오늘은 저녁 6시에 마감합니다.
+
+clip: cafe-order | 카페 주문 안내 | 1 | daily | Your order is ready. One large coffee and one chocolate muffin. Please pick it up at the counter. | 주문하신 음료가 준비되었습니다. 라지 사이즈 커피 한 잔과 초콜릿 머핀 하나입니다. 카운터에서 받아 가세요.
+q | What did the customer order? | Coffee and a muffin=Coffee and a muffin;Tea and a sandwich;Juice and a cookie | 'One large coffee and one chocolate muffin'에서 커피와 머핀을 주문했습니다.
+q | Where should the customer pick up the order? | At the counter=At the counter;At the table;At the entrance | 'pick it up at the counter'에서 카운터에서 받으라고 했습니다.
+
+clip: gym-class | 헬스장 수업 안내 | 2 | daily,announcement | The morning yoga class will start in ten minutes in studio two. Please bring your own mat. | 아침 요가 수업이 10분 후 2번 스튜디오에서 시작됩니다. 개인 매트를 가져와 주세요.
+q | Where will the yoga class be held? | Studio two=Studio two;Studio one;The pool | 'in studio two'에서 수업 장소가 2번 스튜디오입니다.
+q | What should participants bring? | Their own mat=Their own mat;A water bottle;Running shoes | 'bring your own mat'에서 개인 매트를 가져오라고 했습니다.
+
+clip: hotel-checkout | 호텔 체크아웃 안내 | 3 | daily,travel | Good morning. Please remember that checkout time is eleven o'clock. If you need a late checkout, contact the front desk. | 좋은 아침입니다. 체크아웃 시간은 11시임을 기억해 주세요. 레이트 체크아웃이 필요하시면 프런트로 연락 주세요.
+q | What time is checkout? | Eleven o'clock=Eleven o'clock;Ten o'clock;Twelve o'clock | 'checkout time is eleven o''clock'에서 체크아웃이 11시임을 알 수 있습니다.
+q | Who should you contact for a late checkout? | The front desk=The front desk;Room service;The manager | 'contact the front desk'에서 프런트에 연락하라고 했습니다.
+
+clip: bus-route-change | 버스 노선 변경 안내 | 3 | daily,travel,announcement | Due to road work, bus number twelve will not stop at Oak Street today. The nearest stop will be Pine Avenue. | 도로 공사로 인해 오늘 12번 버스는 오크 스트리트에 정차하지 않습니다. 가장 가까운 정류장은 파인 애비뉴입니다.
+q | Why is the bus route changed? | Road work=Road work;A festival;Heavy traffic | 'Due to road work'에서 도로 공사가 변경 이유입니다.
+q | What is the nearest stop today? | Pine Avenue=Pine Avenue;Oak Street;Main Street | 'The nearest stop will be Pine Avenue'에서 가장 가까운 정류장이 파인 애비뉴입니다.
+
+clip: museum-tour | 박물관 투어 안내 | 2 | daily,announcement | A free guided tour of the art gallery will begin at two o'clock near the main entrance. Everyone is welcome. | 미술관 무료 가이드 투어가 2시에 정문 근처에서 시작됩니다. 누구나 환영합니다.
+q | When does the guided tour start? | At two o'clock=At two o'clock;At noon;At three o'clock | 'begin at two o''clock'에서 투어가 2시에 시작합니다.
+q | Where does the tour begin? | Near the main entrance=Near the main entrance;In the gift shop;On the rooftop | 'near the main entrance'에서 정문 근처에서 시작합니다.

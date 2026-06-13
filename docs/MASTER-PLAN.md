@@ -192,7 +192,7 @@ ted_voca/
 | **P1 Vocab Core** | 3주 | 레벨 테스트, 어휘 퀴즈, 토익 코스 | [p1-p2-vocab-srs.md](plans/p1-p2-vocab-srs.md) ✅ 완료 (P1+P2 통합) |
 | **P2 SRS + Stats** | 2주 | SM-2, 복습, streak/XP/통계 | ↑ ✅ 완료 |
 | **P3 Grammar** | 3주 | 문법 퀴즈 + 사전 60토픽 | [p3-grammar.md](plans/p3-grammar.md) ✅ 완료 (1차 20토픽/200문항) |
-| **P4 Listening** | 2주 | 오디오, comprehension, Memory Booster | [p4-listening.md](plans/p4-listening.md) — P3와 병행 가능 |
+| **P4 Listening** | 2주 | 오디오, comprehension, Memory Booster | [p4-listening.md](plans/p4-listening.md) ✅ 완료 (TTS 기반, 클립 30/문항 50 — 실기기 오디오 검증만 잔여) |
 | **P5 Speaking + AI** | 3주 | STT, LLM 피드백, 시나리오 25 | [p5-speaking-ai.md](plans/p5-speaking-ai.md) — 외부 API, 단독 |
 | **P6 Gamification** | 2주 | 리그, 푸시, 스토어 준비 | [p6-gamification.md](plans/p6-gamification.md) — 전 모듈 완성 후 |
 
