@@ -719,14 +719,15 @@ type LeagueBoardRow = {
 export async function getLeagueSummary(sb: SupabaseClient, now: Date): Promise<LeagueSummary> {
   const weekStart = weekStartKey(now);
 
-  // 본인 행 tier·xp (해당 주 league_entries; 없으면 bronze/0)
+  // 본인 행 tier·xp·group_no (해당 주 league_entries; 없으면 bronze/0/0)
   const { data: meRow, error: meErr } = await sb
     .from('league_entries')
-    .select('tier, xp')
+    .select('tier, xp, group_no')
     .eq('week_start', weekStart)
     .maybeSingle();
   if (meErr) throw meErr;
   const tier = ((meRow?.tier as LeagueTier | undefined) ?? 'bronze') as LeagueTier;
+  const groupNo = (meRow?.group_no as number | undefined) ?? 0;
 
   const { data: boardData, error: boardErr } = await sb.rpc('get_league_board', {
     p_week_start: weekStart,
@@ -747,6 +748,7 @@ export async function getLeagueSummary(sb: SupabaseClient, now: Date): Promise<L
   return {
     weekStart,
     tier,
+    groupNo,
     myRank: me ? me.rank : null,
     myXp: me ? me.xp : (meRow?.xp ?? 0),
     daysLeft: daysUntilWeekEnd(now),

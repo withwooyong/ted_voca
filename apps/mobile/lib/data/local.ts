@@ -472,6 +472,7 @@ export async function getLeagueSummary(now: Date): Promise<LeagueSummary> {
   return {
     weekStart: week,
     tier,
+    groupNo: 0, // Dev Mock 단일 유저 → 항상 그룹 0
     myRank: 1,
     myXp: xp,
     daysLeft: daysUntilWeekEnd(now),

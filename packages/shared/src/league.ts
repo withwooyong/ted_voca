@@ -13,6 +13,7 @@ export type LeagueEntryLike = {
   display_name: string | null;
   xp: number; // 주간 누적 XP (league_entries.xp 컬럼)
   tier: LeagueTier;
+  group_no?: number; // tier 내 그룹 번호(0-based). 미지정이면 단일 그룹(=0)으로 간주 — v1.0 호환
 };
 export type RankedEntry = LeagueEntryLike & { rank: number };
 export type LeagueOutcome = 'promote' | 'demote' | 'stay';
@@ -111,6 +112,44 @@ export function chunkIntoGroups<T>(items: T[], size = LEAGUE_GROUP_SIZE): T[][] 
     groups.push(items.slice(i, i + size));
   }
   return groups;
+}
+
+/**
+ * 한 tier 내 유저들을 user_id 사전순(ASC)으로 정렬한 뒤 size명씩 그룹에 배정.
+ * group_no = floor(index / size). 입력 불변(새 배열·새 객체 반환). 빈 입력 → [].
+ *
+ * 주간 정산(finalize_league)에서 *다음 주* 시드 행의 group_no를 정하는 SQL과 1:1 대응:
+ *   floor((ROW_NUMBER() OVER (PARTITION BY new_tier ORDER BY user_id ASC) - 1) / size)
+ * user_id 정렬은 결정적(replay 안전)이며 실력과 무관하게 그룹을 분산시킨다.
+ */
+export function assignGroupNos<T extends { user_id: string }>(
+  users: T[],
+  size = LEAGUE_GROUP_SIZE,
+): Array<T & { group_no: number }> {
+  return [...users]
+    .sort((a, b) => a.user_id.localeCompare(b.user_id))
+    .map((u, i) => ({ ...u, group_no: Math.floor(i / size) }));
+}
+
+/**
+ * 신규 엔트리(이번 주 처음 적립하는 유저)에게 배정할 group_no 결정.
+ * `counts`는 해당 (week, tier)의 기존 group_no→인원수 맵.
+ *   - 빈 맵 → 0 (첫 그룹)
+ *   - 여유(인원 < size) 있는 그룹 중 가장 작은 group_no
+ *   - 모든 그룹이 만석이면 max(group_no) + 1 (새 그룹)
+ *
+ * increment_league_xp의 INSERT 경로 SQL과 1:1 대응(finalize가 시드하지 않은 첫 주·주중 신규 가입 처리).
+ */
+export function pickGroupNoForNewEntry(
+  counts: Map<number, number>,
+  size = LEAGUE_GROUP_SIZE,
+): number {
+  if (counts.size === 0) return 0;
+  const keys = [...counts.keys()].sort((a, b) => a - b);
+  for (const k of keys) {
+    if ((counts.get(k) ?? 0) < size) return k;
+  }
+  return keys[keys.length - 1] + 1;
 }
 
 /**

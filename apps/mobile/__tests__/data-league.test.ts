@@ -85,6 +85,12 @@ describe('getLeagueSummary — 리그 요약 조회', () => {
     expect(summary.daysLeft).toBe(2);
   });
 
+  it('groupNo: Dev Mock 단일 유저 → 항상 0', async () => {
+    await data.addLeagueXp(50, NOW);
+    const summary = await data.getLeagueSummary(NOW);
+    expect(summary.groupNo).toBe(0);
+  });
+
   it('board 1행 구조: {user_id:me, display_name:나, xp, tier, rank:1}', async () => {
     await data.addLeagueXp(120, NOW);
     const summary = await data.getLeagueSummary(NOW);

@@ -3,6 +3,7 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  assignGroupNos,
   buildLeagueView,
   chunkIntoGroups,
   daysUntilWeekEnd,
@@ -13,6 +14,7 @@ import {
   LEAGUE_TIERS,
   nextTier,
   outcomeForRank,
+  pickGroupNoForNewEntry,
   rankEntries,
   weekStartKey,
   type LeagueEntryLike,
@@ -344,6 +346,118 @@ describe('chunkIntoGroups', () => {
     const groups = chunkIntoGroups(items, 2);
     expect(groups[0]).toEqual(['a', 'b']);
     expect(groups[1]).toEqual(['c']);
+  });
+});
+
+// ────────────────────────────────────────────────────────────
+// 7-1. assignGroupNos (v1.1 group_no 분할)
+// ────────────────────────────────────────────────────────────
+
+describe('assignGroupNos', () => {
+  const users = (n: number) =>
+    // user_id를 zero-pad 해 사전순 == 숫자순이 되도록(정렬 검증 용이)
+    Array.from({ length: n }, (_, i) => ({ user_id: `u${String(i).padStart(3, '0')}` }));
+
+  it('빈 배열 → []', () => {
+    expect(assignGroupNos([])).toEqual([]);
+  });
+
+  it('29명 → 전원 group_no 0', () => {
+    const r = assignGroupNos(users(29), 30);
+    expect(r).toHaveLength(29);
+    expect(r.every((u) => u.group_no === 0)).toBe(true);
+  });
+
+  it('30명 → 전원 group_no 0 (경계)', () => {
+    const r = assignGroupNos(users(30), 30);
+    expect(r.every((u) => u.group_no === 0)).toBe(true);
+  });
+
+  it('31명 → 30명 group 0 + 1명 group 1 (경계)', () => {
+    const r = assignGroupNos(users(31), 30);
+    expect(r.filter((u) => u.group_no === 0)).toHaveLength(30);
+    expect(r.filter((u) => u.group_no === 1)).toHaveLength(1);
+  });
+
+  it('60명 → group 0/1 각 30명, 61명 → group 2에 1명', () => {
+    expect(assignGroupNos(users(60), 30).filter((u) => u.group_no === 1)).toHaveLength(30);
+    const r61 = assignGroupNos(users(61), 30);
+    expect(r61.filter((u) => u.group_no === 2)).toHaveLength(1);
+  });
+
+  it('user_id 사전순 정렬 후 chunk — floor(index/size)', () => {
+    const shuffled = [{ user_id: 'c' }, { user_id: 'a' }, { user_id: 'b' }, { user_id: 'd' }];
+    const r = assignGroupNos(shuffled, 2);
+    // 정렬: a,b → group 0 / c,d → group 1
+    expect(r).toEqual([
+      { user_id: 'a', group_no: 0 },
+      { user_id: 'b', group_no: 0 },
+      { user_id: 'c', group_no: 1 },
+      { user_id: 'd', group_no: 1 },
+    ]);
+  });
+
+  it('입력 배열을 변경하지 않음', () => {
+    const input = [{ user_id: 'b' }, { user_id: 'a' }];
+    const snapshot = JSON.parse(JSON.stringify(input));
+    assignGroupNos(input, 2);
+    expect(input).toEqual(snapshot);
+  });
+
+  it('기본 size는 LEAGUE_GROUP_SIZE(30)', () => {
+    const r = assignGroupNos(users(31));
+    expect(r.filter((u) => u.group_no === 1)).toHaveLength(1);
+  });
+});
+
+// ────────────────────────────────────────────────────────────
+// 7-2. pickGroupNoForNewEntry (v1.1 group_no 분할)
+// ────────────────────────────────────────────────────────────
+
+describe('pickGroupNoForNewEntry', () => {
+  it('빈 맵 → 0 (첫 그룹)', () => {
+    expect(pickGroupNoForNewEntry(new Map(), 30)).toBe(0);
+  });
+
+  it('여유 있는 그룹 → 그 group_no (0에 자리)', () => {
+    expect(pickGroupNoForNewEntry(new Map([[0, 5]]), 30)).toBe(0);
+  });
+
+  it('group 0 만석 → 1', () => {
+    expect(pickGroupNoForNewEntry(new Map([[0, 30]]), 30)).toBe(1);
+  });
+
+  it('group 0·1 만석 → 2 (max+1)', () => {
+    expect(
+      pickGroupNoForNewEntry(
+        new Map([
+          [0, 30],
+          [1, 30],
+        ]),
+        30,
+      ),
+    ).toBe(2);
+  });
+
+  it('여러 그룹 중 여유 있는 최소 group_no 우선 (0 만석, 1 여유)', () => {
+    expect(
+      pickGroupNoForNewEntry(
+        new Map([
+          [0, 30],
+          [1, 10],
+        ]),
+        30,
+      ),
+    ).toBe(1);
+  });
+
+  it('정확히 size면 만석으로 간주(< 비교)', () => {
+    expect(pickGroupNoForNewEntry(new Map([[0, 30]]), 30)).toBe(1);
+    expect(pickGroupNoForNewEntry(new Map([[0, 29]]), 30)).toBe(0);
+  });
+
+  it('기본 size는 LEAGUE_GROUP_SIZE(30)', () => {
+    expect(pickGroupNoForNewEntry(new Map([[0, 30]]))).toBe(1);
   });
 });
 

@@ -198,6 +198,14 @@ ted_voca/
 
 **총 추정: 17주 (~4개월), 1인 풀타임 기준 — ted-run 실행은 4회 (P1+P2 / P3·P4 / P5 / P6)**
 
+### v1.1 후속 (코드 완결 후)
+
+| 항목 | 산출물 | 상태 |
+|------|--------|------|
+| 리그 group_no 분할 | tier 내 30명 단위 그룹 — migration 008, shared `assignGroupNos`/`pickGroupNoForNewEntry`, 보드 그룹 격리 ([ADR-0008](ADR/ADR-0008-league-group-split.md)) | ✅ 코드 완결 (실서버 008 적용·30명+ 검증 잔여) |
+| 원격 푸시 발송 | push_tokens 기반 서버 발송 파이프라인 (현재 토큰 수집만) | ⬜ 후순위 |
+| 유료 구독 결제(IAP) | App Store / Play Store 결제, 상점 | ⬜ 후순위 |
+
 ---
 
 ## 8. 관련 문서

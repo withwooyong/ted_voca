@@ -95,6 +95,7 @@ export type SpeakFeedbackResult =
 export type LeagueSummary = {
   weekStart: string;
   tier: LeagueTier;
+  groupNo: number; // tier 내 그룹 번호(0-based). 단일 그룹 환경은 0. (v1.1 group_no 분할)
   myRank: number | null;
   myXp: number;
   daysLeft: number;

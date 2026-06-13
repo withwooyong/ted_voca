@@ -59,7 +59,12 @@ export default function LeagueScreen() {
       ) : null}
 
       {summary && !loading ? (
-        <LeagueBoard board={summary.board} myUserId={myUserId} tier={summary.tier} />
+        <LeagueBoard
+          board={summary.board}
+          myUserId={myUserId}
+          tier={summary.tier}
+          groupNo={summary.groupNo}
+        />
       ) : null}
     </ScrollView>
   );

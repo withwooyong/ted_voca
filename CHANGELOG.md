@@ -6,7 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 ## [Unreleased]
 
 ### Added
-- (없음)
+- 리그 group_no 분할(v1.1): 각 tier를 30명 단위 그룹으로 쪼개 랭킹·승강등·보드를 `(tier, group_no)` 단위로 동작
+  - `packages/shared/league.ts`: `assignGroupNos`(주간 시드 — user_id 정렬 후 floor(index/30)), `pickGroupNoForNewEntry`(신규 적립 — 여유 그룹 최소→max+1→0), `LeagueEntryLike.group_no?` — vitest 213→228
+  - migration 008: `league_entries.group_no` 컬럼 + `increment_league_xp`(신규 행 group_no 배정)·`get_league_board`(본인 그룹만)·`finalize_league`(그룹 내 정산 + 새 tier 기준 group_no 재편) 교체. pg_cron은 함수만 교체되어 재등록 불필요
+  - `LeagueSummary.groupNo` 노출(remote me-row, local Dev Mock=0), LeagueBoard `groupNo>0`일 때 "그룹 N" 라벨
+- ADR-0008: group_no 분할·user_id 정렬 배정·동시 INSERT 한계 근거
 
 ---
 

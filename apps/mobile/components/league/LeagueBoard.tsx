@@ -24,9 +24,10 @@ type Props = {
   board: RankedEntry[];
   myUserId: string;
   tier: LeagueTier;
+  groupNo?: number; // tier 내 그룹 번호(0-based). 분할이 일어난 경우(>0)만 라벨 표시.
 };
 
-export function LeagueBoard({ board, myUserId, tier }: Props) {
+export function LeagueBoard({ board, myUserId, tier, groupNo = 0 }: Props) {
   const meta = TIER_META[tier];
   const groupSize = board.length;
 
@@ -40,7 +41,9 @@ export function LeagueBoard({ board, myUserId, tier }: Props) {
     <View style={styles.wrap}>
       <Card style={styles.tierCard}>
         <Text style={styles.tierEmoji}>{meta.emoji}</Text>
-        <Text style={styles.tierTitle}>{meta.label} 리그</Text>
+        <Text style={styles.tierTitle}>
+          {meta.label} 리그{groupNo > 0 ? ` · 그룹 ${groupNo + 1}` : ''}
+        </Text>
         <Text style={styles.tierSub}>상위 10명 승급 · 하위 5명 강등</Text>
       </Card>
 
