@@ -502,6 +502,7 @@
         <button class="listrow" onclick="go('grammar')"><span class="emoji">📝</span><div><p class="t">문법</p><p class="d">현재완료 — 카드 배열로 문장 만들기</p></div><span class="arr">›</span></button>
         <button class="listrow" onclick="go('listening')"><span class="emoji">🎧</span><div><p class="t">리스닝</p><p class="d">안내 방송 듣기 · 0.75x~1.25x 속도</p></div><span class="arr">›</span></button>
         <button class="listrow" onclick="go('speaking-list')"><span class="emoji">🗣️</span><div><p class="t">회화 (AI)</p><p class="d">상황극 25종 · Ted가 피드백 — 오늘 무료 10회</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('grammar-dict')"><span class="emoji">📚</span><div><p class="t">문법 사전</p><p class="d">20토픽 · CEFR 레벨별 규칙·예문 — 약점 토픽 우선</p></div><span class="arr">›</span></button>
         <div class="card" style="border-style:dashed;">
           <p style="font-weight:800; font-size:14px;">+ 코스 추가</p>
           <p style="font-size:12.5px; color:var(--muted); margin-top:4px;">수능 필수 · 일상 회화 · 비즈니스 — 단어팩(JSON)으로 확장되는 오픈 구조</p>
@@ -579,14 +580,14 @@
           <button class="pill" style="border-color:var(--primary); color:var(--primary);" onclick="gradeCard('easy')">쉬움<br /><small>7일</small></button>
         </div>
         <p style="text-align:center; font-size:11.5px; color:var(--muted);">버튼의 날짜 = SM-2가 계산한 다음 복습일 (투명한 스케줄)</p>
-        <div class="card" style="display:flex; align-items:center; gap:11px; margin-top:auto;">
+        <button class="card" style="display:flex; align-items:center; gap:11px; margin-top:auto; width:100%; text-align:left; cursor:pointer;" onclick="go('memory-booster')">
           <span style="font-size:21px;">🔊</span>
           <div style="flex:1;">
             <p style="font-weight:800; font-size:13.5px;">Memory Booster</p>
-            <p style="font-size:11.5px; color:var(--muted);">최근 7일 학습 문장 자동 재생</p>
+            <p style="font-size:11.5px; color:var(--muted);">최근 7일 학습 문장 자동 재생 · XP 0</p>
           </div>
-          <button class="pill" id="mbToggle" style="flex:none; padding:7px 16px;" onclick="this.classList.toggle('active'); this.textContent = this.classList.contains('active') ? 'ON' : 'OFF';">OFF</button>
-        </div>
+          <span style="color:var(--muted);">›</span>
+        </button>
       </div>
     </section>
 
@@ -633,7 +634,7 @@
         <div class="verdict" id="gmVerdict"></div>
         <p class="expl" id="gmExpl"></p>
         <div style="display:flex; gap:9px;">
-          <button class="btn ghost" style="flex:1;" onclick="alert('문법 사전: 현재완료 (have + p.p.) — A2\\n\\n과거에 시작해 지금까지 이어지는 일은 현재완료 + for/since를 써요.')">📚 규칙 보기</button>
+          <button class="btn ghost" style="flex:1;" onclick="go('grammar-dict')">📚 규칙 보기</button>
           <button class="btn" style="flex:2;" onclick="go('learn')">계속 →</button>
         </div>
       </div>
@@ -714,7 +715,7 @@
       </div>
     </section>
 
-    <!-- ── P6: 리그 ── -->
+    <!-- ── P6: 리그 (v1.1 그룹 분할) ── -->
     <section class="screen" id="s-league">
       <div class="apphead">
         <button class="back" onclick="go('home')" aria-label="뒤로">‹</button>
@@ -724,10 +725,12 @@
       <div class="pad" style="display:flex; flex-direction:column; gap:12px;">
         <div class="card" style="text-align:center; background:linear-gradient(135deg, #EEF2FF, #E0E7FF); border-color:#C7D2FE;">
           <p style="font-size:34px;">🥈</p>
-          <p style="font-weight:800; font-size:17px;">실버 리그</p>
-          <p style="font-size:12.5px; color:var(--muted); margin-top:3px;">상위 10명 골드 승급 · 하위 5명 브론즈 강등</p>
+          <p style="font-weight:800; font-size:17px;">실버 리그 · 그룹 2</p>
+          <p style="font-size:12px; color:var(--primary-dark); font-weight:700; margin-top:3px;">같은 티어 28명과 경쟁 중 (30명 단위 분할)</p>
+          <p style="font-size:12.5px; color:var(--muted); margin-top:5px;">그룹 내 상위 10명 골드 승급 · 하위 5명 브론즈 강등</p>
         </div>
         <div class="card" style="padding:8px;" id="leagueList"></div>
+        <p style="text-align:center; font-size:11px; color:var(--muted);">v1.1 — 티어 인원이 30명을 넘으면 group_no로 분할돼 보드·승강등이 그룹별로 동작해요</p>
       </div>
     </section>
 
@@ -783,9 +786,75 @@
         </div>
         <button class="listrow" onclick="go('stats')"><span class="emoji">📊</span><div><p class="t">학습 통계</p><p class="d">정답률 · 주간 차트 · 약점 단어</p></div><span class="arr">›</span></button>
         <button class="listrow" onclick="go('leveltest-intro')"><span class="emoji">🎯</span><div><p class="t">목표 설정</p><p class="d">시험 (토익/수능) · 하루 10분</p></div><span class="arr">›</span></button>
-        <button class="listrow" onclick="alert('알림 설정: 복습 리마인더 09:00 / 리그 마감 알림 ON')"><span class="emoji">🔔</span><div><p class="t">알림</p><p class="d">복습 리마인더 09:00</p></div><span class="arr">›</span></button>
+        <button class="listrow" onclick="go('notifications')"><span class="emoji">🔔</span><div><p class="t">알림</p><p class="d">복습 리마인더 09:00 · streak · 리그 마감</p></div><span class="arr">›</span></button>
         <button class="listrow" onclick="alert('오프라인 캐시: 최근 세션 + TOEIC 800 단어팩 (4.2MB) 저장됨')"><span class="emoji">📥</span><div><p class="t">오프라인 학습</p><p class="d">단어팩 캐시 — 지하철에서도 OK</p></div><span class="arr">›</span></button>
         <button class="listrow" onclick="go('login')"><span class="emoji">🚪</span><div><p class="t">로그아웃</p><p class="d">wooyong@test.com</p></div><span class="arr">›</span></button>
+      </div>
+    </section>
+
+    <!-- ── P3: 문법 사전 ── -->
+    <section class="screen" id="s-grammar-dict">
+      <div class="apphead">
+        <button class="back" onclick="go('grammar')" aria-label="뒤로">‹</button>
+        <span class="ttl">📚 문법 사전</span>
+        <button class="close" onclick="go('learn')" aria-label="닫기">✕</button>
+      </div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:11px;">
+        <div class="ted-row">
+          <span class="ted-face" data-ted="think" data-size="44"></span>
+          <div class="bubble">네 약점 태그에 맞는 토픽을 위로 올려놨어. CEFR 레벨로 정리돼 있어 📚</div>
+        </div>
+        <div id="gdList"></div>
+      </div>
+    </section>
+
+    <!-- ── P4: Memory Booster ── -->
+    <section class="screen" id="s-memory-booster">
+      <div class="apphead">
+        <button class="back" onclick="go('review')" aria-label="뒤로">‹</button>
+        <span class="ttl">🔊 Memory Booster</span>
+        <button class="close" onclick="go('review')" aria-label="닫기">✕</button>
+      </div>
+      <div class="pad" style="flex:1; display:flex; flex-direction:column; gap:14px;">
+        <div class="ted-row">
+          <span class="ted-face" data-ted="happy" data-size="44"></span>
+          <div class="bubble">최근 7일 배운 문장을 자동으로 들려줄게. 듣기만 해도 복습돼 — <b>XP는 0이야 (자동 재생)</b>.</div>
+        </div>
+        <div class="card" style="text-align:center; padding:20px;">
+          <p class="stat-lbl">지금 재생 중 · <span id="mbNow">1</span>/5</p>
+          <p class="word" id="mbWord" style="font-family:var(--serif); font-size:24px; font-weight:700; margin:8px 0 4px;">implement</p>
+          <p style="font-family:var(--serif); font-style:italic; font-size:14.5px; color:var(--muted);" id="mbEx">They implemented the new policy.</p>
+          <div class="wave playing" id="mbWave" style="margin-top:14px;"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <button class="btn" style="width:auto; margin:12px auto 0; padding:11px 34px;" id="mbPlay" onclick="mbToggle()">⏸ 일시정지</button>
+        </div>
+        <div class="card" style="padding:8px;" id="mbList"></div>
+      </div>
+    </section>
+
+    <!-- ── P6: 알림 설정 ── -->
+    <section class="screen" id="s-notifications">
+      <div class="apphead">
+        <button class="back" onclick="go('profile')" aria-label="뒤로">‹</button>
+        <span class="ttl">🔔 알림 설정</span>
+      </div>
+      <div class="pad" style="display:flex; flex-direction:column; gap:11px;">
+        <div class="listrow" style="cursor:default;">
+          <span class="emoji">📋</span>
+          <div style="flex:1;"><p class="t">복습 리마인더</p><p class="d">오늘 복습할 단어가 있으면 알려줄게 · 09:00</p></div>
+          <button class="pill active" style="flex:none; padding:7px 16px;" onclick="ntToggle(this)">ON</button>
+        </div>
+        <div class="listrow" style="cursor:default;">
+          <span class="emoji">🔥</span>
+          <div style="flex:1;"><p class="t">Streak 지키미</p><p class="d">오늘 학습 안 했으면 밤 9시에 알림</p></div>
+          <button class="pill active" style="flex:none; padding:7px 16px;" onclick="ntToggle(this)">ON</button>
+        </div>
+        <div class="listrow" style="cursor:default;">
+          <span class="emoji">🏆</span>
+          <div style="flex:1;"><p class="t">리그 마감 알림</p><p class="d">일요일 저녁, 순위 지킬 시간을 알려줄게</p></div>
+          <button class="pill active" style="flex:none; padding:7px 16px;" onclick="ntToggle(this)">ON</button>
+        </div>
+        <p style="font-size:11.5px; color:var(--muted); padding:2px 4px; line-height:1.6;">알림 권한이 꺼져 있으면 예약되지 않아요. 기기 설정 &gt; 알림에서 Ted 알림을 켜주세요. (expo-notifications 로컬 스케줄)</p>
+        <button class="btn" onclick="confetti(); go('profile')">저장</button>
       </div>
     </section>
 
@@ -837,10 +906,13 @@ const SCREENS = [
   { id: 'review-done',      phase: 'P2 SRS + Stats', label: '복습 완료 + 스케줄' },
   { id: 'stats',            phase: 'P2 SRS + Stats', label: '학습 통계' },
   { id: 'grammar',          phase: 'P3 Grammar', label: '문법 — 카드 배열' },
+  { id: 'grammar-dict',     phase: 'P3 Grammar', label: '문법 사전 (20토픽)' },
   { id: 'listening',        phase: 'P4 Listening', label: '리스닝 + 퀴즈' },
+  { id: 'memory-booster',   phase: 'P4 Listening', label: 'Memory Booster' },
   { id: 'speaking-list',    phase: 'P5 Speaking AI', label: '회화 시나리오 목록' },
   { id: 'speaking',         phase: 'P5 Speaking AI', label: '회화 — STT + 피드백' },
-  { id: 'league',           phase: 'P6 Gamification', label: '주간 리그' },
+  { id: 'league',           phase: 'P6 Gamification', label: '주간 리그 (그룹)' },
+  { id: 'notifications',    phase: 'P6 Gamification', label: '알림 설정' },
 ];
 
 const NOTES = {
@@ -861,7 +933,10 @@ const NOTES = {
   'listening': { q: ['재생 후에만 문항 노출 — 강제가 맞나?', '속도 3단계로 충분한가?', '따라 말하기를 선택으로 두는 게 맞나?'], d: 'TTS 클립 5~15초 + comprehension 1~2문항.' },
   'speaking-list': { q: ['무료 10회 제한 노출 위치가 거슬리지 않나?', '레벨 잠금이 동기인가 장벽인가?'], d: '시나리오 25종 목표. API 비용 cap 정책 반영.' },
   'speaking': { q: ['칩 선택(모의 STT)으로 실제 발화 UX가 검증되나?', 'Ted 피드백 3줄 포맷(칭찬+팁)이 적당한가?', '턴 5개 길이 체감?'], d: 'Whisper STT + GPT-4o-mini 피드백. 와이어프레임 5번.' },
-  'league': { q: ['주간 리그가 한국 학습자에게 동기가 되는가?', '강등 압박이 부담스럽지 않나?'], d: 'league_entries 주간 XP. 브론즈/실버/골드 3티어.' },
+  'grammar-dict': { q: ['CEFR 레벨 그룹핑이 학습자에게 직관적인가?', '약점 태그 추천 토픽을 상단에 올리는 게 도움이 되나?', '20토픽 규모가 적당한가, 더 필요한가?'], d: '문법 사전 20토픽(grammar-pack). recommendTopics(weak_tags)로 약점 토픽 우선 노출. 토픽 → 상세(규칙·예문) 연결. P3 신규.' },
+  'memory-booster': { q: ['자동 재생(XP 0)이 "공부했다"는 만족을 주는가?', '백그라운드 재개 동작이 자연스러운가?', '복습 화면 진입 동선이 맞나?'], d: '최근 7일 학습 단어 lemma·예문 연속 TTS. 전체 재생 완료 시에만 세션 기록(XP 0 — 파밍 방지). P4.' },
+  'notifications': { q: ['알림 3종(복습/streak/리그)이 과하지 않나?', '복습 리마인더 기본 09:00이 적절한가?', '권한 꺼짐 안내 카피가 명확한가?'], d: '복습 리마인더(시각 지정)+Streak 지키미(밤 9시)+리그 마감(일요일 저녁) on/off. expo-notifications 로컬 스케줄. P6.' },
+  'league': { q: ['그룹(30명) 분할이 경쟁 체감을 살리는가?', '강등 압박이 부담스럽지 않나?', '그룹 번호 노출이 혼란스럽지 않나?'], d: 'league_entries 주간 XP. 브론즈/실버/골드 3티어 × tier 내 30명 단위 group_no 분할(v1.1). 랭킹·승강등·보드가 (tier, group_no) 단위.' },
 };
 
 const state = { xp: 120, streak: 7, dueCount: 12, vocabDone: 5, todayPct: 20 };
@@ -916,6 +991,8 @@ function go(id) {
   if (id === 'grammar') gmInit();
   if (id === 'speaking') spReset();
   if (id === 'listening') lsReset();
+  if (id === 'memory-booster') mbDraw();
+  if (id === 'grammar-dict') gdDraw();
   bindState();
 }
 
@@ -1270,18 +1347,93 @@ function micTap() {
 
 /* ════════════════ P6: 리그 ════════════════ */
 (function buildLeague() {
+  // v1.1 — 실버 티어 그룹 2(28명)의 보드 일부. 랭킹·승강등은 (tier, group_no) 그룹 기준.
   const rows = [
     [1, '🇰🇷 mins_eng', 540], [2, '🇰🇷 toeic_master', 488], [3, '🇯🇵 yuki_study', 451],
     [10, '🇰🇷 daily10min', 305], [11, '🇰🇷 grammar_cat', 290], [12, '나 (우용)', 225, true],
     [13, '🇰🇷 voca_king', 211], [14, '🇺🇸 hangul_lover', 198],
+    [24, '🇰🇷 slow_start', 96], [28, '🇻🇳 anh_learns', 41],
   ];
+  const promo = '<p style="text-align:center; font-size:11px; color:var(--success); font-weight:700; padding:6px 0;">─ ▲ 골드 승급선 (그룹 내 상위 10) ─</p>';
+  const demo = '<p style="text-align:center; font-size:11px; color:var(--error); font-weight:700; padding:6px 0;">─ ▼ 브론즈 강등선 (그룹 내 하위 5) ─</p>';
   document.getElementById('leagueList').innerHTML = rows.map(r => `
-    <div class="rankrow ${r[3] ? 'me' : ''}">
+    ${r[0] === 24 ? demo : ''}<div class="rankrow ${r[3] ? 'me' : ''}">
       <span class="rk">${r[0]}</span>
       <span class="nm">${r[1]}</span>
       <span class="xp">${r[2]} XP</span>
-    </div>${r[0] === 3 ? '<p style="text-align:center; font-size:11px; color:var(--success); font-weight:700; padding:6px 0;">─ ▲ 골드 승급선 (상위 10) ─</p>' : ''}`).join('');
+    </div>${r[0] === 3 ? promo : ''}`).join('');
 })();
+
+/* ════════════════ Memory Booster (P4) ════════════════ */
+const MB_ITEMS = [
+  ['implement', '시행하다', 'They implemented the new policy.'],
+  ['negotiate', '협상하다', 'They will negotiate the contract terms.'],
+  ['comply', '준수하다', 'All staff must comply with the rules.'],
+  ['refund', '환불하다', 'We will refund your payment within a week.'],
+  ['invoice', '송장', 'Please send the invoice by Friday.'],
+];
+let mbIdx = 0, mbPlaying = true;
+function mbDraw() {
+  mbIdx = 0; mbPlaying = true;
+  mbRender();
+}
+function mbRender() {
+  const it = MB_ITEMS[mbIdx];
+  document.getElementById('mbNow').textContent = mbIdx + 1;
+  document.getElementById('mbWord').textContent = it[0];
+  document.getElementById('mbEx').textContent = it[2];
+  document.getElementById('mbWave').classList.toggle('playing', mbPlaying);
+  document.getElementById('mbPlay').textContent = mbPlaying ? '⏸ 일시정지' : '▶ 재생';
+  document.getElementById('mbList').innerHTML = MB_ITEMS.map((m, i) => `
+    <button class="rankrow ${i === mbIdx ? 'me' : ''}" style="width:100%;" onclick="mbGo(${i})">
+      <span class="rk">${i === mbIdx && mbPlaying ? '▶' : i + 1}</span>
+      <span class="nm" style="font-family:var(--serif);">${m[0]} <span style="color:var(--muted); font-weight:500; font-size:12.5px;">${m[1]}</span></span>
+      <span class="xp" style="font-size:11px; color:var(--muted);">${m[2].length > 22 ? m[2].slice(0, 22) + '…' : m[2]}</span>
+    </button>`).join('');
+}
+function mbGo(i) { mbIdx = i; mbPlaying = true; mbRender(); }
+function mbToggle() { mbPlaying = !mbPlaying; mbRender(); }
+
+/* ════════════════ 문법 사전 (P3) ════════════════ */
+const GD_TOPICS = [
+  ['현재완료', 'A2', '과거에 시작해 지금까지 이어지거나 영향을 주는 일은 현재완료(have/has + 과거분사)로 나타내고, for/since와 함께 자주 써요.', true],
+  ['시간 전치사', 'A2', '시각·구체적 시점에는 at, 요일·날짜에는 on, 월·연도·계절처럼 긴 기간에는 in을 써요.', true],
+  ['과거시제', 'A2', '이미 끝난 과거의 동작이나 상태는 과거시제로 나타내요. 규칙 동사는 -ed를 붙여요.'],
+  ['관사 a/an/the', 'A2', '처음 언급하는 셀 수 있는 단수 명사 앞에는 a/an을, 특정한 대상에는 the를 써요.'],
+  ['셀 수 있는/없는 명사', 'A2', '셀 수 있는 명사는 복수형이 가능하고 many와, 셀 수 없는 명사는 much와 함께 써요.'],
+  ['비교급과 최상급', 'A2', '두 대상을 비교할 때는 비교급(-er/more)에 than을, 셋 이상에는 최상급(the -est/most)을 써요.'],
+  ['장소 전치사', 'A2', '넓은 공간·도시·나라 안에는 in, 표면 위·거리·층에는 on, 한 지점에는 at을 써요.'],
+  ['미래 will과 be going to', 'A2', '말하는 순간 결정한 일·단순 예측에는 will, 이미 정해진 계획에는 be going to를 써요.'],
+  ['조동사 can과 could', 'A2', 'can은 현재의 능력·허락·가능성을, could는 과거의 능력이나 더 공손한 표현을 나타내요.'],
+  ['현재진행형', 'A2', '지금 진행 중이거나 일시적인 상황은 현재진행형(be동사 + 동사ing)으로 나타내요.'],
+  ['조동사 should/must', 'A2', 'should는 충고·권유를, must는 강한 의무·확신을 나타내요.'],
+  ['가정법 1형식 (if + 현재)', 'B1', '실현 가능한 미래의 일을 말할 때 if절에는 현재시제, 주절에는 will을 써요.'],
+];
+function gdDraw() {
+  const box = document.getElementById('gdList');
+  const weak = GD_TOPICS.filter(t => t[3]);
+  const rest = GD_TOPICS.filter(t => !t[3]);
+  const row = t => `
+    <button class="listrow" style="margin-bottom:9px;" onclick="alert('${t[0]} (${t[1]})\\n\\n${t[2].replace(/'/g, "\\'")}')">
+      <span class="emoji" style="font-size:13px; font-weight:800; color:var(--primary-dark); background:var(--primary-tint); padding:4px 9px; border-radius:8px;">${t[1]}</span>
+      <div style="flex:1;"><p class="t">${t[0]}${t[3] ? " <span style='font-size:11px; color:var(--accent); font-weight:700;'>· 약점</span>" : ''}</p><p class="d">${t[2].length > 38 ? t[2].slice(0, 38) + '…' : t[2]}</p></div>
+      <span class="arr">›</span>
+    </button>`;
+  let html = '';
+  if (weak.length) {
+    html += '<p style="font-size:11px; font-weight:800; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; padding:4px 2px 8px;">⭐ 약점 추천</p>';
+    html += weak.map(row).join('');
+  }
+  html += '<p style="font-size:11px; font-weight:800; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; padding:12px 2px 8px;">A2 · B1 전체 토픽</p>';
+  html += rest.map(row).join('');
+  box.innerHTML = html;
+}
+
+/* ════════════════ 알림 설정 (P6) ════════════════ */
+function ntToggle(btn) {
+  const on = btn.classList.toggle('active');
+  btn.textContent = on ? 'ON' : 'OFF';
+}
 
 /* ════════════════ confetti ════════════════ */
 function confetti() {
