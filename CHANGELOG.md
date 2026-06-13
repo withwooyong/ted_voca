@@ -10,6 +10,24 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-13] 콘텐츠 human review 2차 — 어휘 (`b66d93a`)
+
+### Changed
+- 어휘 toeic-800 검수 수정 11건(HIGH 6 + 명백 LOW 5) — 510단어(batch_01~10) 5개 병렬 전문 검수
+- HIGH: `collection` 불가산 명사 관사 오류(`A data collection` → `Data collection`), `deduct` 타동사 자동사 오용 비문(`Taxes deduct from` → `We deduct taxes from`), `exercise` 비문 예문+협소 의미(`행사` → `운동, 행사` + 명사 예문)
+- 명백 LOW: `apologize` 명령형 register(`Please apologize` → `We apologize`), `besides`(prep) 부사뜻→전치사뜻(`게다가` → `~외에도`), `custom` 비표준 영어(`It is custom to` → `It is the custom to`), `due` 관사 누락(`first of month` → `first of the month`), `aim` 예문 정합(`겨냥하다` → `목표로 하다`)
+- toeic-800-pack 재생성(510단어) → migration 002_words_seed.sql 동기화, pytest 68 통과
+
+### Fixed
+- `distinction` 오역 — meaning_ko `차별` → `차이, 구별`(예문은 '구별' 의미, 퀴즈 정답 깨짐 결함)
+- `each`/`either` pos enum 정합 — `determiner`(VALID_POS 외, SQL서 `other`로 강제 매핑되며 tags/pos 불일치) → `other`
+
+### 검수 결과
+- 리스닝 batch_01(17 clip·25문항): 결함 없음 — 정답·transcript·해설 전부 정합, 수정 없음
+- 미적용 6건: `affair`·`cell`·`compound`·`entry`·`fashion`·`deliver`(현행 허용 범위 내 취향성, 1차 보수적 기준 유지)
+
+---
+
 ## [2026-06-13] 콘텐츠 human review 1차 (`16a68b4`)
 
 ### Changed
