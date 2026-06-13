@@ -85,6 +85,14 @@ export default function ProfileScreen() {
         </Card>
       </Pressable>
 
+      <Pressable onPress={() => router.push('/notification-settings')}>
+        <Card style={styles.linkCard}>
+          <Text style={styles.linkEmoji}>🔔</Text>
+          <Text style={styles.linkTitle}>알림 설정</Text>
+          <Text style={styles.linkSub}>복습 리마인더 · Streak 지키미 · 리그 마감 알림</Text>
+        </Card>
+      </Pressable>
+
       <Button title="로그아웃" variant="secondary" onPress={onSignOut} />
     </ScrollView>
   );

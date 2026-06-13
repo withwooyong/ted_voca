@@ -94,12 +94,19 @@ CREATE TABLE push_tokens (
 
 ## 7. 완료 체크리스트
 
-- [ ] migration 006 + pg_cron 정산 등록
-- [ ] 리그 화면 + XP 적립 시 entries upsert
-- [ ] 로컬 알림 3종 + 권한 플로우
-- [ ] push_tokens 수집
-- [ ] sqlite 오프라인 캐시 + sync 큐
-- [ ] 아이콘/스플래시/스토어 문구/개인정보처리방침
-- [ ] eas.json 프로필 + preview 빌드 성공
-- [ ] TestFlight/내부 트랙 제출 1회
-- [ ] typecheck + 전체 테스트 PASS
+> 구현 완료(2026-06-13, ted-run). migration 번호는 006(P5 회화) 점유로 **007**로 이월. 상세 ADR-0007.
+
+- [x] migration **007** + pg_cron 정산 등록 (`finalize_league` SECURITY DEFINER, 매주 UTC 월요일)
+- [x] 리그 화면 + XP 적립 (직접 upsert 아닌 `increment_league_xp` RPC — 치팅 차단, 보드는 `get_league_board` PII 비노출)
+- [x] 로컬 알림 3종 + 권한 플로우 (`planNotifications` 순수 + `createExpoScheduler` SDK56)
+- [x] push_tokens 수집 (own-row RLS, 발송은 v1.1)
+- [x] sqlite 오프라인 캐시 + sync 큐 (`db.web.ts` 플랫폼 스텁으로 web 빌드 안전, `recordAttemptRaw` flush)
+- [x] 개인정보처리방침/스토어 문구 (`docs/store/`) — 아이콘/스플래시/스크린샷 **실자산은 제출 시 제작**
+- [x] eas.json 프로필 작성 — **EAS preview 실빌드는 외부 계정·서명 필요(범위 밖)**
+- [ ] TestFlight/내부 트랙 제출 1회 — **외부 계정·자산 의존(범위 밖, HANDOFF pending)**
+- [x] typecheck + 전체 테스트 PASS (shared vitest 213·mobile jest 200·lint 0/0·web export·E2E 14)
+
+### 구현 범위 조정 (사용자 합의)
+- 코드로 완결 가능한 부분(리그·알림·오프라인·push 수집·설정/문서)만 구현.
+- 스토어 **실제 제출·EAS 실빌드**는 Apple/Google 계정·서명·실 디자인 자산 의존이라 제외 — `eas.json`·`app.json` 메타·정책/문구 문서까지 작성.
+- tier=그룹 단순화, group_no 분할은 v1.1.

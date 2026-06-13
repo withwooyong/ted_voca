@@ -1,4 +1,4 @@
-import type { SpeakFeedback, SrsGrade, SrsState } from '@ted-voca/shared';
+import type { LeagueTier, RankedEntry, SpeakFeedback, SrsGrade, SrsState } from '@ted-voca/shared';
 
 import type { Word } from '@/lib/content/word-pack';
 
@@ -89,3 +89,16 @@ export type SpeakFeedbackInput = {
 export type SpeakFeedbackResult =
   | { feedback: SpeakFeedback; remainingToday: number }
   | { error: 'daily_limit'; remainingToday: 0 };
+
+// ── 리그 (P6) ──────────────────────────────────────────────
+
+export type LeagueSummary = {
+  weekStart: string;
+  tier: LeagueTier;
+  myRank: number | null;
+  myXp: number;
+  daysLeft: number;
+  board: RankedEntry[]; // 본인 그룹 보드 (rank 부여 완료)
+};
+
+export type PushTokenInput = { expoToken: string; platform: string };

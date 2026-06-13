@@ -19,9 +19,11 @@ import * as remote from './remote';
 import type {
   AttemptInput,
   DueCard,
+  LeagueSummary,
   LevelTestSave,
   ListeningAttemptInput,
   ProfileProgress,
+  PushTokenInput,
   SessionInput,
   SpeakFeedbackInput,
   SpeakFeedbackResult,
@@ -152,4 +154,21 @@ export function getSpeakingRemaining(now: Date): Promise<number> {
 export function requestSpeakFeedback(input: SpeakFeedbackInput): Promise<SpeakFeedbackResult> {
   const sb = getSupabase();
   return sb ? remote.requestSpeakFeedback(sb, input) : local.requestSpeakFeedback(input);
+}
+
+// ── 리그 (P6) ──────────────────────────────────────────────
+
+export function getLeagueSummary(now: Date): Promise<LeagueSummary> {
+  const sb = getSupabase();
+  return sb ? remote.getLeagueSummary(sb, now) : local.getLeagueSummary(now);
+}
+
+export function addLeagueXp(xpDelta: number, now: Date): Promise<void> {
+  const sb = getSupabase();
+  return sb ? remote.addLeagueXp(sb, xpDelta, now) : local.addLeagueXp(xpDelta, now);
+}
+
+export function savePushToken(input: PushTokenInput): Promise<void> {
+  const sb = getSupabase();
+  return sb ? remote.savePushToken(sb, input) : local.savePushToken(input);
 }

@@ -4,32 +4,39 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import {
   applyGrade,
   buildBoosterQueue,
+  daysUntilWeekEnd,
   initialSrsState,
   levelFromXp,
   nextStreak,
   SPEAKING_DAILY_LIMIT,
   SPEAKING_MAX_UTTERANCE_CHARS,
   toDateKey,
+  weekStartKey,
   XP_LEVEL_TEST,
   type BoosterItem,
   type DialogueTurnLike,
   type GrammarQuestionLike,
   type GrammarQuestionType,
   type GrammarTopicLike,
+  type LeagueTier,
   type ListeningClipLike,
   type ListeningQuestionLike,
+  type RankedEntry,
   type SpeakFeedback,
   type SpeakingScenarioLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
 import { COURSE_SLUG, type Word } from '@/lib/content/word-pack';
+import { enqueue } from '@/lib/offline/db';
 import type {
   AttemptInput,
   DueCard,
+  LeagueSummary,
   LevelTestSave,
   ListeningAttemptInput,
   ProfileProgress,
+  PushTokenInput,
   SessionInput,
   SpeakFeedbackInput,
   SpeakFeedbackResult,
@@ -119,7 +126,8 @@ async function upsertUserWord(sb: SupabaseClient, userId: string, state: UserWor
   if (error) throw error;
 }
 
-export async function recordAttempt(sb: SupabaseClient, input: AttemptInput): Promise<void> {
+/** 폴백 없는 원본 업로드 — 실패 시 throw. flush 경로(큐에 이미 적재된 항목 재업로드)가 사용한다. */
+export async function recordAttemptRaw(sb: SupabaseClient, input: AttemptInput): Promise<void> {
   const userId = await getUserId(sb);
   const { error } = await sb.from('quiz_attempts').insert({
     user_id: userId,
@@ -156,6 +164,25 @@ export async function recordAttempt(sb: SupabaseClient, input: AttemptInput): Pr
       ...init,
       next_review_at: input.correct ? new Date(now.getTime() + DAY_MS).toISOString() : now.toISOString(),
     });
+  }
+}
+
+export async function recordAttempt(sb: SupabaseClient, input: AttemptInput): Promise<void> {
+  try {
+    await recordAttemptRaw(sb, input);
+  } catch {
+    // 네트워크/일시 에러 → 오프라인 큐에 적재 후 조용히 반환(다음 기회 재시도).
+    // id는 결정론적이되 충돌 안 나게(word + 시각). enqueue 자체 실패도 무해하게 흡수.
+    try {
+      await enqueue({
+        id: `attempt-${input.wordId}-${input.now.getTime()}`,
+        type: 'attempt',
+        payload: input,
+        queued_at: input.now.toISOString(),
+      });
+    } catch {
+      // 오프라인 큐 적재 실패(네이티브 미가용 등)도 세션 흐름을 막지 않는다.
+    }
   }
 }
 
@@ -223,12 +250,23 @@ export async function completeSession(sb: SupabaseClient, input: SessionInput): 
   const { error: upErr } = await sb.from('profiles').update(updates).eq('id', userId);
   if (upErr) throw upErr;
 
-  return {
+  const result: ProfileProgress = {
     ...updates,
     user_level: profile.user_level ?? 'A2',
     weak_tags: profile.weak_tags ?? [],
     level_test_done: !!profile.level_test_done,
   };
+
+  // ── 리그 XP 연동 (best-effort) ──
+  if (input.xpEarned > 0) {
+    try {
+      await addLeagueXp(sb, input.xpEarned, input.now);
+    } catch {
+      // 리그 적립 실패는 세션 결과에 영향 없음 (best-effort)
+    }
+  }
+
+  return result;
 }
 
 export async function getLocalProfileProgress(sb: SupabaseClient): Promise<ProfileProgress> {
@@ -660,4 +698,67 @@ export async function requestSpeakFeedback(
     },
     remainingToday: payload.remainingToday,
   };
+}
+
+// ── 리그 (P6) ──────────────────────────────────────────────
+
+// week_start·tier는 서버(RPC)가 결정. delta cap도 RPC에서 강제.
+export async function addLeagueXp(sb: SupabaseClient, delta: number, _now: Date): Promise<void> {
+  const { error } = await sb.rpc('increment_league_xp', { p_xp: delta });
+  if (error) throw error;
+}
+
+type LeagueBoardRow = {
+  rank: number;
+  display_name: string | null;
+  xp: number;
+  tier: string;
+  is_me: boolean;
+};
+
+export async function getLeagueSummary(sb: SupabaseClient, now: Date): Promise<LeagueSummary> {
+  const weekStart = weekStartKey(now);
+
+  // 본인 행 tier·xp (해당 주 league_entries; 없으면 bronze/0)
+  const { data: meRow, error: meErr } = await sb
+    .from('league_entries')
+    .select('tier, xp')
+    .eq('week_start', weekStart)
+    .maybeSingle();
+  if (meErr) throw meErr;
+  const tier = ((meRow?.tier as LeagueTier | undefined) ?? 'bronze') as LeagueTier;
+
+  const { data: boardData, error: boardErr } = await sb.rpc('get_league_board', {
+    p_week_start: weekStart,
+  });
+  if (boardErr) throw boardErr;
+
+  const rows = (boardData ?? []) as LeagueBoardRow[];
+  // user_id는 노출되지 않으므로 본인은 'me', 나머지는 rank 기반으로 마스킹
+  const board: RankedEntry[] = rows.map((r) => ({
+    user_id: r.is_me ? 'me' : `other-${r.rank}`,
+    display_name: r.display_name,
+    xp: r.xp,
+    tier: r.tier as LeagueTier,
+    rank: r.rank,
+  }));
+
+  const me = rows.find((r) => r.is_me);
+  return {
+    weekStart,
+    tier,
+    myRank: me ? me.rank : null,
+    myXp: me ? me.xp : (meRow?.xp ?? 0),
+    daysLeft: daysUntilWeekEnd(now),
+    board,
+  };
+}
+
+export async function savePushToken(sb: SupabaseClient, input: PushTokenInput): Promise<void> {
+  const userId = await getUserId(sb);
+  const { error } = await sb.from('push_tokens').upsert(
+    { user_id: userId, expo_token: input.expoToken, platform: input.platform },
+    { onConflict: 'user_id,expo_token' },
+  );
+  if (error) throw error;
 }

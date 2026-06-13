@@ -1,18 +1,27 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { router, useFocusEffect } from 'expo-router';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { TedMascot } from '@/components/TedMascot';
 import { Card } from '@/components/ui/Card';
-import { APP_NAME, displayStreak } from '@ted-voca/shared';
+import { APP_NAME, displayStreak, LEAGUE_PROMOTE_COUNT, type LeagueTier } from '@ted-voca/shared';
 import { colors, spacing } from '@/constants/theme';
 import { useAuthStore } from '@/lib/auth-store';
 import {
+  getLeagueSummary,
   getLocalProfileProgress,
   getTodaySummary,
+  type LeagueSummary,
   type ProfileProgress,
   type TodaySummary,
 } from '@/lib/data';
+import { flushPendingQueue } from '@/lib/offline/sync';
+
+const TIER_LABEL: Record<LeagueTier, string> = {
+  bronze: '브론즈',
+  silver: '실버',
+  gold: '골드',
+};
 
 type ModuleCard = {
   emoji: string;
@@ -34,15 +43,27 @@ export default function HomeScreen() {
 
   const [progress, setProgress] = useState<ProfileProgress | null>(null);
   const [summary, setSummary] = useState<TodaySummary | null>(null);
+  const [league, setLeague] = useState<LeagueSummary | null>(null);
   const [loading, setLoading] = useState(true);
 
   const load = useCallback(async (isActive: () => boolean) => {
+    // 오프라인 sync 큐 flush (best-effort) — 실패해도 홈 로딩 비차단.
+    // (local 모드면 flushPendingQueue 내부에서 즉시 반환)
+    void flushPendingQueue().catch(() => {
+      // 오프라인/큐 비어있음 — 다음 기회 재시도. 무해하게 무시.
+    });
+
     try {
       const now = new Date();
-      const [p, s] = await Promise.all([getLocalProfileProgress(), getTodaySummary(now)]);
+      const [p, s, l] = await Promise.all([
+        getLocalProfileProgress(),
+        getTodaySummary(now),
+        getLeagueSummary(now).catch(() => null),
+      ]);
       if (!isActive()) return; // 포커스 이탈 후 setState 방지
       setProgress(p);
       setSummary(s);
+      setLeague(l);
     } catch (err) {
       console.error('[home] load failed', err);
     } finally {
@@ -67,6 +88,18 @@ export default function HomeScreen() {
   const dueCount = summary?.dueCount ?? 0;
   const attemptsToday = summary?.attemptsToday ?? 0;
   const goalMinutes = authProfile?.daily_goal_minutes ?? 10;
+
+  // 리그 카드 데이터 — 승급까지 남은 XP. 서버가 부여한 rank 를 신뢰한다.
+  // board 의 user_id 는 'me'/'other-N' 으로 마스킹돼 있어 buildLeagueView 로 재정렬하면
+  // 동점 tie-break(user_id localeCompare)이 서버와 어긋나 xpToPromote 가 오계산되므로 직접 계산.
+  const leagueTierLabel = league ? TIER_LABEL[league.tier] : '';
+  const myRank = league?.myRank ?? null;
+  const xpToPromote = useMemo(() => {
+    if (!league || league.myRank === null) return 0;
+    if (league.myRank <= LEAGUE_PROMOTE_COUNT) return 0; // 이미 승급권
+    const line = league.board.find((e) => e.rank === LEAGUE_PROMOTE_COUNT);
+    return line ? Math.max(0, line.xp - league.myXp) : 0;
+  }, [league]);
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
@@ -124,10 +157,21 @@ export default function HomeScreen() {
         ))}
       </View>
 
-      <Card style={styles.leagueCard}>
-        <Text style={styles.cardTitle}>🏆 이번 주 리그</Text>
-        <Text style={styles.cardSub}>P6 준비 중 — 곧 친구들과 겨뤄보자</Text>
-      </Card>
+      <Pressable onPress={() => router.push('/league')}>
+        <Card style={styles.leagueCard}>
+          <Text style={styles.cardTitle}>
+            🏆 {league ? `${leagueTierLabel} 리그 · 이번 주 #${myRank ?? '-'}` : '이번 주 리그'}
+          </Text>
+          <Text style={styles.cardSub}>
+            {league
+              ? xpToPromote > 0
+                ? `상위 10명 승급 — ${xpToPromote} XP 차이`
+                : '상위 10명 승급 — 이미 승급권!'
+              : '곧 친구들과 겨뤄보자'}
+          </Text>
+          <Text style={styles.cardCta}>탭하면 리그 보기 ›</Text>
+        </Card>
+      </Pressable>
 
       <TedMascot size={56} message="오늘 복습부터 시작해 볼까?" />
     </ScrollView>

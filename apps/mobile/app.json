@@ -15,14 +15,28 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ted.voca"
+      "bundleIdentifier": "com.ted.voca",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "회화 연습 중 발음을 녹음해 음성 인식으로 분석하기 위해 마이크를 사용합니다. 녹음은 분석 후 기기에 저장되지 않습니다.",
+        "NSSpeechRecognitionUsageDescription": "회화 연습에서 말한 영어 문장을 텍스트로 변환해 피드백을 제공하기 위해 음성 인식을 사용합니다.",
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#4F46E5"
       },
-      "package": "com.ted.voca"
+      "package": "com.ted.voca",
+      "permissions": [
+        "RECORD_AUDIO",
+        "POST_NOTIFICATIONS",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -33,7 +47,17 @@
       "expo-router",
       "expo-secure-store",
       "expo-audio",
-      "expo-speech-recognition"
+      "expo-speech-recognition",
+      "expo-sqlite",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/android-icon-monochrome.png",
+          "color": "#4F46E5",
+          "defaultChannel": "default",
+          "enableBackgroundRemoteNotifications": false
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

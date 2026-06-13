@@ -10,6 +10,29 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-13] P6 Gamification
+
+### Added
+- 주간 리그: 홈 리그 카드(티어·내 순위·승급까지 XP 차이) → 리그 화면(티어 배지 🥉🥈🥇·보드·본인 하이라이트·승급/강등선·마감 N일 카운트다운)
+- `packages/shared/league.ts`: 순수 로직 — `weekStartKey`/`daysUntilWeekEnd`(UTC 월요일), `rankEntries`(xp desc+user_id asc), `outcomeForRank`(승급 우선·그룹≤5 강등 없음), `nextTier`(clamp), `buildLeagueView` — vitest 61, cov 100%
+- migration 007: `increment_league_xp`(회당 cap 500·누적 2e9 오버플로우 방어·week_start 서버 강제·원자적 가산)·`get_league_board`(본인 tier 그룹, **user_id/email 비노출**)·`finalize_league`(승강등 정산) SECURITY DEFINER + pg_cron 매주 UTC 월요일 00:00 정산 + `push_tokens`(own-row RLS)
+- 로컬 알림 3종: `planNotifications`(순수 — 복습 리마인더/streak 보호/리그 마감) + `createExpoScheduler`(SDK56 DAILY/WEEKLY 트리거) + `syncNotifications`(권한→재스케줄), 알림 설정 화면(토글·시각 칩, `tv_notif_prefs`)
+- 오프라인 캐시+sync: `queue.ts`(dedupe/order/removeSynced 순수)·`sync.ts`(`flushQueue` 첫 실패 중단·`flushPendingQueue` DB연동)·`db.ts`(expo-sqlite SDK56) + 데이터 레이어 league/push dual-mode
+- 스토어 준비: `eas.json`(build/submit 프로필), `app.json`(expo-notifications plugin·알림/마이크 권한·P5 누락 infoPlist 보완), `docs/store/`(개인정보처리방침·스토어 등록 문구)
+- ADR-0007: 리그 쓰기 RPC 전용·보드 PII 비노출·tier=그룹·pg_cron·알림 순수함수·오프라인 플랫폼 분기 근거
+
+### Changed
+- 홈: 리그 placeholder → 실데이터 카드(`/league` 진입), 포커스 시 오프라인 큐 flush(best-effort)
+- 프로필: "알림 설정" 진입 카드
+- `completeSession`(local·remote): XP 적립 시 `addLeagueXp` best-effort 연동(실패해도 세션 결과 보존)
+- `lib/data/remote.ts`: `recordAttempt`를 폴백판/`recordAttemptRaw`(폴백 없음, flush 전용)로 분리, `constants/theme.ts`에 `primaryTint` 토큰 추가
+
+### Fixed
+- 이중 리뷰 검출 전건 수정: `league_entries` 직접 쓰기 RLS로 XP·tier 치팅 가능(2b CRITICAL → insert/update_own 정책 회수, 쓰기 RPC 전용), `outcomeForRank` 그룹≤5에서 선두까지 강등(2a CRITICAL → groupSize>DEMOTE 가드, SQL 동기화), 홈이 마스킹된 user_id로 `buildLeagueView` 재계산→xpToPromote 오계산(2a CRITICAL → 서버 rank 직접 사용), flush가 미지원 타입 무음 삭제(2a HIGH → throw로 큐 보존), `increment_league_xp` INT 오버플로우(2b HIGH → 2e9 cap)
+- web export 실패(expo-sqlite wa-sqlite worker/wasm) → `db.web.ts` no-op 플랫폼 스텁으로 네이티브 전용화
+
+---
+
 ## [2026-06-13] P5 Speaking + AI (`45aa9fb`)
 
 ### Added

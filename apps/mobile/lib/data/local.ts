@@ -5,7 +5,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   applyGrade,
   buildBoosterQueue,
+  daysUntilWeekEnd,
   initialSrsState,
+  LEAGUE_MAX_XP_PER_SESSION,
   levelFromXp,
   localFeedback,
   nextStreak,
@@ -13,11 +15,13 @@ import {
   SPEAKING_MAX_UTTERANCE_CHARS,
   toDateKey,
   turnsForScenario,
+  weekStartKey,
   XP_LEVEL_TEST,
   type BoosterItem,
   type DialogueTurnLike,
   type GrammarQuestionLike,
   type GrammarTopicLike,
+  type LeagueTier,
   type ListeningClipLike,
   type ListeningQuestionLike,
   type SpeakingScenarioLike,
@@ -28,9 +32,11 @@ import { getBundledWords, type Word } from '@/lib/content/word-pack';
 import type {
   AttemptInput,
   DueCard,
+  LeagueSummary,
   LevelTestSave,
   ListeningAttemptInput,
   ProfileProgress,
+  PushTokenInput,
   SessionInput,
   SpeakFeedbackInput,
   SpeakFeedbackResult,
@@ -45,6 +51,8 @@ const KEY_SESSIONS = 'tv_sessions';
 const KEY_PROGRESS = 'tv_progress';
 const KEY_SPEAKING_USAGE = 'tv_speaking_usage';
 const KEY_SPEAKING_ATTEMPTS = 'tv_speaking_attempts';
+const KEY_LEAGUE = 'tv_league';
+const KEY_PUSH_TOKEN = 'tv_push_token';
 
 const MAX_ATTEMPTS_KEPT = 1000;
 const MAX_SESSIONS_KEPT = 200;
@@ -189,6 +197,16 @@ export async function completeSession(input: SessionInput): Promise<ProfileProgr
   };
   updated.level = levelFromXp(updated.xp);
   await writeJson(KEY_PROGRESS, updated);
+
+  // ── 리그 XP 연동 (best-effort) ──
+  if (input.xpEarned > 0) {
+    try {
+      await addLeagueXp(input.xpEarned, input.now);
+    } catch {
+      // 리그 적립 실패는 세션 결과에 영향 없음 (best-effort)
+    }
+  }
+
   return updated;
 }
 
@@ -421,4 +439,46 @@ export async function getStatsOverview(now: Date): Promise<StatsOverview> {
     dueTomorrow: dueBy(endOfToday.getTime() + DAY_MS) - dueBy(endOfToday.getTime()),
     dueWeek: dueBy(endOfToday.getTime() + 7 * DAY_MS),
   };
+}
+
+// ── 리그 (P6) ──────────────────────────────────────────────
+
+type StoredLeague = { weekStart: string; xp: number; tier: LeagueTier };
+
+function defaultLeague(now: Date): StoredLeague {
+  return { weekStart: weekStartKey(now), xp: 0, tier: 'bronze' };
+}
+
+async function readLeague(now: Date): Promise<StoredLeague> {
+  return readJson<StoredLeague>(KEY_LEAGUE, defaultLeague(now));
+}
+
+export async function addLeagueXp(delta: number, now: Date): Promise<void> {
+  const week = weekStartKey(now);
+  const stored = await readLeague(now);
+  // 주가 바뀌었으면 새 주 시작(xp 리셋, tier 유지)
+  const base: StoredLeague =
+    stored.weekStart === week ? stored : { weekStart: week, xp: 0, tier: stored.tier };
+  const clamped = Math.max(0, Math.min(delta, LEAGUE_MAX_XP_PER_SESSION));
+  await writeJson(KEY_LEAGUE, { ...base, xp: base.xp + clamped });
+}
+
+export async function getLeagueSummary(now: Date): Promise<LeagueSummary> {
+  const week = weekStartKey(now);
+  const stored = await readLeague(now);
+  // weekStart 불일치면 이번 주 xp는 0 취급
+  const xp = stored.weekStart === week ? stored.xp : 0;
+  const tier = stored.tier;
+  return {
+    weekStart: week,
+    tier,
+    myRank: 1,
+    myXp: xp,
+    daysLeft: daysUntilWeekEnd(now),
+    board: [{ user_id: 'me', display_name: '나', xp, tier, rank: 1 }],
+  };
+}
+
+export async function savePushToken(input: PushTokenInput): Promise<void> {
+  await writeJson(KEY_PUSH_TOKEN, input);
 }
