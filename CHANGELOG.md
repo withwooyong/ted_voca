@@ -10,6 +10,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-13] 배포 절차 가이드화 (`930a987`)
+
+### Added
+- `docs/DEPLOY.md` 배포 런북 — 실서버 배포 5단계(Supabase 생성·마이그레이션 001~008·pg_cron·Edge Function·EAS 빌드/제출)를 실행 가능한 순서·명령·검증으로 정리
+- 마이그레이션 의존성·주의 명시: SQL Editor 번호 순 수동 적용, 007=pg_cron 선행·008=007 이후, 콘텐츠 시드 `ON CONFLICT DO NOTHING` 재시드 미갱신, pg_cron Extensions 선행 활성화
+- Edge `speak-feedback`: `OPENAI_API_KEY`만 수동 secret(SUPABASE_* 자동 주입)·`verify_jwt=true`
+- 발견 갭: `EXPO_PUBLIC_*` env가 eas.json/EAS env에 없어 빌드 시 Dev Mock으로 빌드될 위험 → `eas env:create` 주입 절차로 보강
+- 배포 후 검증 체크리스트(30명+ group_no 분할 실데이터 검증 포함)
+
+### Changed
+- `supabase/README.md` 현행화 — P1 시점 outdated 내용 → 현재 마이그레이션 목록 + DEPLOY.md 포인터로 교체
+
+---
+
 ## [2026-06-13] 콘텐츠 human review 2차 — 어휘 (`b66d93a`)
 
 ### Changed
