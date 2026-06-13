@@ -4,10 +4,12 @@
  */
 import type {
   BoosterItem,
+  DialogueTurnLike,
   GrammarQuestionLike,
   GrammarTopicLike,
   ListeningClipLike,
   ListeningQuestionLike,
+  SpeakingScenarioLike,
   SrsGrade,
 } from '@ted-voca/shared';
 
@@ -21,6 +23,8 @@ import type {
   ListeningAttemptInput,
   ProfileProgress,
   SessionInput,
+  SpeakFeedbackInput,
+  SpeakFeedbackResult,
   StatsOverview,
   TodaySummary,
   UserWordRow,
@@ -126,4 +130,26 @@ export function recordListeningAttempt(input: ListeningAttemptInput): Promise<vo
 export function getBoosterItems(now: Date): Promise<BoosterItem[]> {
   const sb = getSupabase();
   return sb ? remote.getBoosterItems(sb, now) : local.getBoosterItems(now);
+}
+
+// ── 스피킹 (P5) ────────────────────────────────────────────
+
+export function getSpeakingScenarios(): Promise<SpeakingScenarioLike[]> {
+  const sb = getSupabase();
+  return sb ? remote.getSpeakingScenarios(sb) : local.getSpeakingScenarios();
+}
+
+export function getDialogueTurns(scenarioSlug: string): Promise<DialogueTurnLike[]> {
+  const sb = getSupabase();
+  return sb ? remote.getDialogueTurns(sb, scenarioSlug) : local.getDialogueTurns(scenarioSlug);
+}
+
+export function getSpeakingRemaining(now: Date): Promise<number> {
+  const sb = getSupabase();
+  return sb ? remote.getSpeakingRemaining(sb, now) : local.getSpeakingRemaining(now);
+}
+
+export function requestSpeakFeedback(input: SpeakFeedbackInput): Promise<SpeakFeedbackResult> {
+  const sb = getSupabase();
+  return sb ? remote.requestSpeakFeedback(sb, input) : local.requestSpeakFeedback(input);
 }

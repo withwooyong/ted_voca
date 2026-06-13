@@ -1,0 +1,97 @@
+# TODO(content-review): AI 생성 초안 — human review 필요
+# 형식: docs/plans/p5-speaking-ai.md §1.2.7 및 generate_speaking_seed.py spec 참조
+# scenario: slug | 제목(한국어) | emoji | difficulty(1~5) | min_level | context(영어 1~2문장 상황)
+# ted | text_en                          (Ted = 상대역/코치, hint 없음)
+# user | text_en(기대 답안) | hint_ko    (user = 학습자, hint_ko 필수)
+#   - 턴 줄은 직전 scenario 소속, 시나리오당 5~7턴
+#   - 첫 턴은 ted, ted/user 교대(연속 user 금지), user 최소 1개
+#   - 모든 대사는 자체 작성 (외부 콘텐츠·저작권물 금지)
+# batch_01: 일상·여행·업무 회화 10개 (min_level 1~12 분포)
+
+scenario: cafe-order | 카페 주문 | ☕ | 1 | 1 | You are ordering a drink at a coffee shop. The barista greets you at the counter.
+ted | Hi there! What can I get for you today?
+user | I would like a latte, please. | 라떼 한 잔 주세요.
+ted | Sure. What size would you like?
+user | A large one, please. | 큰 사이즈로 주세요.
+ted | Great. Anything else?
+user | No, that is all. Thank you. | 아니요, 그게 다예요. 감사합니다.
+ted | Perfect. It will be ready in a moment.
+
+scenario: hotel-checkin | 호텔 체크인 | 🏨 | 2 | 2 | You arrive at a hotel front desk to check in for your stay.
+ted | Good evening! Welcome. Do you have a reservation?
+user | Yes, I have a reservation under the name Park. | 네, 박이라는 이름으로 예약했습니다.
+ted | Let me check. May I see your passport, please?
+user | Here it is. | 여기 있습니다.
+ted | Thank you. You are in room 502 on the fifth floor.
+user | Could you tell me what time breakfast is served? | 아침 식사는 몇 시에 제공되나요?
+ted | Breakfast is from seven to ten in the main restaurant.
+
+scenario: restaurant-order | 식당 주문 | 🍽️ | 2 | 3 | You are at a restaurant and the server comes to take your order.
+ted | Good evening. Are you ready to order?
+user | Yes, I will have the grilled salmon, please. | 네, 구운 연어로 할게요.
+ted | Excellent choice. Would you like soup or salad with that?
+user | I will have the salad, please. | 샐러드로 주세요.
+ted | And something to drink?
+user | Just water for now, thank you. | 우선 물만 주세요, 감사합니다.
+
+scenario: asking-directions | 길 찾기 | 🗺️ | 2 | 4 | You are lost in a new city and ask a friendly local for directions to the station.
+ted | You look a little lost. Can I help you?
+user | Yes, how do I get to the train station? | 네, 기차역까지 어떻게 가나요?
+ted | Go straight for two blocks, then turn left.
+user | Is it far from here? | 여기서 먼가요?
+ted | No, it is about a five minute walk.
+user | Thank you so much for your help. | 도와주셔서 정말 감사합니다.
+ted | You are welcome. Have a good day!
+
+scenario: shopping-clothes | 옷 쇼핑 | 🛍️ | 3 | 5 | You are shopping for clothes and a store assistant offers to help you.
+ted | Hello! Are you looking for anything in particular?
+user | Yes, I am looking for a winter jacket. | 네, 겨울 재킷을 찾고 있어요.
+ted | Of course. What size do you wear?
+user | I usually wear a medium. | 보통 미디엄을 입어요.
+ted | Here is one in medium. Would you like to try it on?
+user | Yes, where is the fitting room? | 네, 탈의실이 어디인가요?
+ted | It is right over there, on your left.
+
+scenario: phone-appointment | 전화 예약 | 📞 | 3 | 6 | You are calling a clinic to make an appointment with the receptionist.
+ted | Good morning, Sunrise Clinic. How may I help you?
+user | Hello, I would like to make an appointment. | 안녕하세요, 예약을 하고 싶어요.
+ted | Certainly. What day works best for you?
+user | Would Thursday afternoon be possible? | 목요일 오후가 가능할까요?
+ted | Yes, we have an opening at three o'clock.
+user | That works for me. Thank you. | 저는 괜찮아요. 감사합니다.
+
+scenario: airport-checkin | 공항 체크인 | ✈️ | 3 | 7 | You are at the airport check-in counter for an international flight.
+ted | Good morning. May I see your passport and ticket?
+user | Sure, here you are. | 네, 여기 있습니다.
+ted | Are you checking any bags today?
+user | Yes, I have one suitcase to check in. | 네, 부칠 가방이 하나 있어요.
+ted | Please place it on the scale. Would you like a window seat?
+user | A window seat would be great, thank you. | 창가 자리면 좋겠어요, 감사합니다.
+ted | All set. Your gate is 23, boarding at ten thirty.
+
+scenario: business-meeting | 비즈니스 미팅 | 💼 | 4 | 9 | You are introducing yourself at the start of a business meeting with a new partner.
+ted | Welcome. It is a pleasure to finally meet you in person.
+user | Thank you. I have been looking forward to this meeting. | 감사합니다. 이번 미팅을 기대하고 있었습니다.
+ted | Shall we start by reviewing the proposal?
+user | Yes, let us begin with the budget section. | 네, 예산 부분부터 시작하시죠.
+ted | Sounds good. Do you have any initial concerns?
+user | I would like to discuss the timeline in more detail. | 일정에 대해 좀 더 자세히 논의하고 싶습니다.
+ted | Of course. Let me walk you through our schedule.
+
+scenario: doctor-visit | 병원 진료 | 🏥 | 4 | 10 | You are describing your symptoms to a doctor during a medical visit.
+ted | Hello. What seems to be the problem today?
+user | I have had a sore throat and a fever since yesterday. | 어제부터 목이 아프고 열이 나요.
+ted | I see. Have you taken any medicine for it?
+user | I took some painkillers, but they did not help much. | 진통제를 먹었지만 별로 효과가 없었어요.
+ted | Let me examine you. Please open your mouth and say ah.
+user | How long will it take to recover? | 회복하는 데 얼마나 걸릴까요?
+ted | With rest and medication, you should feel better in a few days.
+
+scenario: job-interview | 면접 | 🧑‍💼 | 5 | 12 | You are in a job interview and the interviewer asks about your background.
+ted | Thanks for coming in. Could you tell me about yourself?
+user | I have five years of experience in marketing. | 저는 마케팅 분야에서 5년의 경력이 있습니다.
+ted | Impressive. Why are you interested in this position?
+user | I am drawn to your company's focus on innovation. | 귀사의 혁신에 대한 집중에 끌렸습니다.
+ted | What would you say is your greatest strength?
+user | I am very good at solving problems under pressure. | 저는 압박 속에서 문제를 해결하는 데 능숙합니다.
+ted | Great. Do you have any questions for us?

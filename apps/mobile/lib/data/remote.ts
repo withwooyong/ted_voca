@@ -7,14 +7,19 @@ import {
   initialSrsState,
   levelFromXp,
   nextStreak,
+  SPEAKING_DAILY_LIMIT,
+  SPEAKING_MAX_UTTERANCE_CHARS,
   toDateKey,
   XP_LEVEL_TEST,
   type BoosterItem,
+  type DialogueTurnLike,
   type GrammarQuestionLike,
   type GrammarQuestionType,
   type GrammarTopicLike,
   type ListeningClipLike,
   type ListeningQuestionLike,
+  type SpeakFeedback,
+  type SpeakingScenarioLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
@@ -26,6 +31,8 @@ import type {
   ListeningAttemptInput,
   ProfileProgress,
   SessionInput,
+  SpeakFeedbackInput,
+  SpeakFeedbackResult,
   StatsOverview,
   TodaySummary,
   UserWordRow,
@@ -536,5 +543,121 @@ export async function getStatsOverview(sb: SupabaseClient, now: Date): Promise<S
     dueToday: dueBy(endOfToday.getTime()),
     dueTomorrow: dueBy(endOfToday.getTime() + DAY_MS) - dueBy(endOfToday.getTime()),
     dueWeek: dueBy(endOfToday.getTime() + 7 * DAY_MS),
+  };
+}
+
+// ── 스피킹 (P5) ────────────────────────────────────────────
+// migration 006: speaking_scenarios(emoji,min_level,sort_order), dialogue_turns, speaking_usage 추가.
+
+type SpeakingScenarioRow = {
+  id: string;
+  slug: string;
+  title: string;
+  context: string | null;
+  difficulty: number | null;
+  emoji: string | null;
+  min_level: number | null;
+  sort_order: number | null;
+};
+
+type DialogueTurnRow = {
+  id: string;
+  turn_order: number;
+  speaker: string;
+  text_en: string;
+  hint_ko: string | null;
+  speaking_scenarios: { slug: string } | null;
+};
+
+export async function getSpeakingScenarios(sb: SupabaseClient): Promise<SpeakingScenarioLike[]> {
+  const { data, error } = await sb
+    .from('speaking_scenarios')
+    .select('id, slug, title, context, difficulty, emoji, min_level, sort_order')
+    .order('sort_order');
+  if (error) throw error;
+  return (data as SpeakingScenarioRow[]).map((s) => ({
+    id: s.id,
+    slug: s.slug,
+    title: s.title,
+    context: s.context,
+    difficulty: s.difficulty ?? 1,
+    emoji: s.emoji ?? '💬',
+    min_level: s.min_level ?? 1,
+    sort_order: s.sort_order ?? 0,
+  }));
+}
+
+export async function getDialogueTurns(
+  sb: SupabaseClient,
+  scenarioSlug: string,
+): Promise<DialogueTurnLike[]> {
+  const { data, error } = await sb
+    .from('dialogue_turns')
+    .select('id, turn_order, speaker, text_en, hint_ko, speaking_scenarios!inner(slug)')
+    .eq('speaking_scenarios.slug', scenarioSlug)
+    .order('turn_order');
+  if (error) throw error;
+  return (data as unknown as DialogueTurnRow[]).map((t) => ({
+    id: t.id,
+    scenario_slug: t.speaking_scenarios?.slug ?? scenarioSlug,
+    turn_order: t.turn_order,
+    speaker: t.speaker === 'user' ? 'user' : 'ted',
+    text_en: t.text_en,
+    hint_ko: t.hint_ko,
+  }));
+}
+
+export async function getSpeakingRemaining(sb: SupabaseClient, now: Date): Promise<number> {
+  const userId = await getUserId(sb);
+  const today = toDateKey(now);
+  const { data, error } = await sb
+    .from('speaking_usage')
+    .select('count')
+    .eq('user_id', userId)
+    .eq('usage_date', today)
+    .maybeSingle();
+  if (error) throw error;
+  return Math.max(0, SPEAKING_DAILY_LIMIT - (data?.count ?? 0));
+}
+
+export async function requestSpeakFeedback(
+  sb: SupabaseClient,
+  input: SpeakFeedbackInput,
+): Promise<SpeakFeedbackResult> {
+  // 길이 검사 먼저 — Edge Function 호출 전 클라이언트에서 차단
+  if (input.userText.length > SPEAKING_MAX_UTTERANCE_CHARS) {
+    throw new Error('utterance_too_long');
+  }
+
+  // Edge Function이 usage 증가·attempt 저장·LLM 피드백을 담당. remote는 호출만.
+  const { data, error } = await sb.functions.invoke('speak-feedback', {
+    body: {
+      scenarioSlug: input.scenarioSlug,
+      turnOrder: input.turnOrder,
+      userText: input.userText,
+    },
+  });
+
+  // 일일 한도 — Edge Function이 429/daily_limit 형태로 응답
+  const status = (error as { status?: number } | null)?.status;
+  if (status === 429 || (data as { error?: string } | null)?.error === 'daily_limit') {
+    return { error: 'daily_limit', remainingToday: 0 };
+  }
+  if (error) throw error;
+
+  // Edge Function은 평탄한 형태로 응답: {verdict, correction, alternative, remainingToday, fallback?}
+  const payload = data as {
+    verdict: SpeakFeedback['verdict'];
+    correction: string;
+    alternative: string;
+    remainingToday: number;
+  };
+  return {
+    feedback: {
+      verdict: payload.verdict,
+      correction: payload.correction,
+      alternative: payload.alternative,
+    },
+    remainingToday: payload.remainingToday,
   };
 }

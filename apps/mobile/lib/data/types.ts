@@ -1,4 +1,4 @@
-import type { SrsGrade, SrsState } from '@ted-voca/shared';
+import type { SpeakFeedback, SrsGrade, SrsState } from '@ted-voca/shared';
 
 import type { Word } from '@/lib/content/word-pack';
 
@@ -75,3 +75,17 @@ export type ListeningAttemptInput = {
 };
 
 export type ReviewGrade = SrsGrade;
+
+// ── 스피킹 (P5) ────────────────────────────────────────────
+
+export type SpeakFeedbackInput = {
+  scenarioSlug: string;
+  turnOrder: number;
+  userText: string;
+  expectedText: string;
+  now: Date;
+};
+
+export type SpeakFeedbackResult =
+  | { feedback: SpeakFeedback; remainingToday: number }
+  | { error: 'daily_limit'; remainingToday: 0 };

@@ -10,16 +10,6 @@ import { recommendTopics, type GrammarTopicLike } from '@ted-voca/shared';
 const COURSE_TITLE = 'TOEIC 800 — 핵심 어휘 510';
 const COURSE_TOTAL = 510;
 
-type LockedRow = {
-  emoji: string;
-  title: string;
-  desc: string;
-};
-
-const LOCKED: LockedRow[] = [
-  { emoji: '🗣️', title: '회화 (AI)', desc: '🔒 P5에서 해제 — 상황극 + Ted 피드백' },
-];
-
 export default function LearnScreen() {
   const [learned, setLearned] = useState(0);
   const [dueCount, setDueCount] = useState(0);
@@ -110,6 +100,17 @@ export default function LearnScreen() {
         </Card>
       </Pressable>
 
+      <Pressable onPress={() => router.push('/speaking')}>
+        <Card style={styles.row}>
+          <Text style={styles.rowEmoji}>🗣️</Text>
+          <View style={styles.rowBody}>
+            <Text style={styles.rowTitle}>회화 (AI)</Text>
+            <Text style={styles.rowDesc}>상황극 + Ted 피드백 — 영어로 말해보기</Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </Card>
+      </Pressable>
+
       <Pressable onPress={() => router.push('/grammar-dict')}>
         <Card style={styles.row}>
           <Text style={styles.rowEmoji}>📚</Text>
@@ -157,16 +158,6 @@ export default function LearnScreen() {
           </Card>
         </Pressable>
       ) : null}
-
-      {LOCKED.map((row) => (
-        <Card key={row.title} style={StyleSheet.flatten([styles.row, styles.rowLocked])}>
-          <Text style={styles.rowEmoji}>{row.emoji}</Text>
-          <View style={styles.rowBody}>
-            <Text style={styles.rowTitle}>{row.title}</Text>
-            <Text style={styles.rowDesc}>{row.desc}</Text>
-          </View>
-        </Card>
-      ))}
     </ScrollView>
   );
 }
@@ -187,7 +178,6 @@ const styles = StyleSheet.create({
   courseFill: { height: '100%', backgroundColor: '#fff', borderRadius: 99 },
   courseMeta: { fontSize: 12, color: '#fff', opacity: 0.85, marginTop: 7 },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
-  rowLocked: { opacity: 0.5 },
   recRow: { borderColor: colors.accent, backgroundColor: '#FFFBEB' },
   rowEmoji: { fontSize: 26 },
   rowBody: { flex: 1 },

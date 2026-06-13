@@ -1,0 +1,5 @@
+# Supabase 프로젝트 설정 — Edge Function 게이트를 코드로 고정.
+# speak-feedback은 user JWT 검증을 플랫폼 레벨(verify_jwt)과 핸들러(getUser) 양쪽에서 강제한다(defense-in-depth).
+
+[functions.speak-feedback]
+verify_jwt = true

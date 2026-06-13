@@ -10,7 +10,28 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
-## [2026-06-13] Session Summary
+## [2026-06-13] P5 Speaking + AI
+
+### Added
+- 회화 시나리오: 목록(레벨 잠금·일일 잔여 횟수) + 턴제 대화(Ted TTS → 사용자 발화 → 피드백 카드 → 다음 턴), 완료 화면(XP·좋은 발화 수)
+- STT 어댑터 `lib/stt.ts`: on-device(expo-speech-recognition, 권한·15s 타임아웃·리스너 정리) / mock(Dev Mock 힌트 자동입력) 교체식 + `getSttAdapter` 팩토리
+- Edge Function `speak-feedback`: 순수 핸들러(DI) + index 진입점. 인증→바디→길이→turnOrder→한도→LLM(gpt-4o-mini)→저장 흐름. deno test 12
+- 비용 안전장치: 일일 10회 **원자적 RPC**(`increment_speaking_usage`, row lock 직렬화), 500자 cap(Edge 강제), LLM 실패 시 규칙기반 폴백, 키는 Edge secret + `config.toml` verify_jwt
+- `packages/shared/speaking.ts`: 채점(Dice 유사도)·`localFeedback`·`isScenarioLocked`·`xpForSpeakingSession` 등 순수 로직 — vitest 34, cov 100%
+- 콘텐츠 파이프라인: batch → `speaking-pack.json` + `migrations/006_speaking.sql` 이중 출력, 시나리오 10/턴 68(AI 초안), 파서 unittest 30
+- migration 006: `speaking_usage`·`speaking_attempts`(본인 row RLS)·원자적 usage RPC, `speaking_scenarios` emoji/min_level/sort_order, `dialogue_turns` UNIQUE(scenario_id,turn_order)
+- `DialogueSession` 컴포넌트(ConcurrentRoot 게이트로 Ted 자동진행) + 데이터 레이어 speaking dual-mode(local: localFeedback·AsyncStorage usage / remote: Edge invoke)
+- ADR-0006: Edge Function 경유 LLM·비용 안전장치·STT 어댑터 근거
+
+### Changed
+- learn 허브: 회화(AI) 잠금 해제 → `/speaking` 진입
+
+### Fixed
+- 이중 리뷰 검출: 한도 비원자성 TOCTOU 비용폭탄(C1, 원자적 RPC), Edge 응답 형상 불일치 프로덕션 크래시(C-1), Dev Mock STT off-by-one(H-1), turnOrder 미검증→500(H2), verify_jwt 코드 미고정(H1), 프롬프트 태그 탈출·LLM 출력 미정제(M2), STT 리스너 재시작 누적(M-1)
+
+---
+
+## [2026-06-13] P4 Listening
 
 ### Added
 - P4 Listening: TTS 재생(0.75x/1.0x/1.25x) → 재생 게이트 → comprehension 퀴즈 3지선다 → 해설, 따라 말하기 placeholder(P5 연동 지점)

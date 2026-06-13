@@ -2,64 +2,70 @@
 
 > Last updated: 2026-06-13 (KST)
 > Branch: `main` (https://github.com/withwooyong/ted_voca — public)
-> Latest commit: 본 세션 P4 커밋 참조 (`git log -1`)
+> Latest commit: P5 커밋 (`git log -1` 참조) — 직전 푸시 완료분은 `fb040b2` P4
 
 ## Current Status
 
-**P0 ✅ → P1+P2 ✅ → P3 ✅ → P4 Listening ✅** — 로컬(Dev Mock) 모드에서 풀 루프 동작:
+**P0 ✅ → P1+P2 ✅ → P3 ✅ → P4 ✅ → P5 Speaking + AI ✅** — 로컬(Dev Mock) 풀 루프 동작:
 가입 → 온보딩 → 레벨 테스트 → 어휘 퀴즈 3종 → SM-2 복습 → 문법 퀴즈/사전 →
-**리스닝(TTS 재생 게이트 → comprehension 퀴즈) → Memory Booster** → XP/streak/통계.
+리스닝 + Memory Booster → **회화 시나리오(Ted TTS → STT → LLM/규칙 피드백 → 다음 턴)** → XP/streak/통계.
+ted-run 4회 분할(P1+P2 / P3·P4 / P5 / P6) 중 **P5까지 완료, P6만 남음.**
 
-## Completed This Session (P4 — ted-run 풀 파이프라인)
+## Completed This Session (P5 — ted-run 풀 파이프라인, Step 1~5)
 
 | # | Task | Files |
 |---|------|-------|
-| 1 | TDD: 테스트 93개 red 선행 (계약 고정) | shared/tests/listening, __tests__/tts·data-listening·clip-session, scripts/test_generate_listening_seed.py |
-| 2 | shared 리스닝 순수 로직 (채점·클립 선택·buildBoosterQueue) | packages/shared/src/listening.ts |
-| 3 | TTS 래퍼 — 세대 기반 큐 취소, expo-audio playsInSilentMode | apps/mobile/lib/tts.ts |
-| 4 | 데이터 레이어 dual-mode 리스닝 4함수 | lib/data/{types,local,remote,index}.ts, lib/content/listening-pack.ts |
-| 5 | 콘텐츠 파이프라인: 클립 30/문항 50 → JSON+SQL | scripts/generate_listening_seed.py, scripts/listening_content/, content/listening-pack.json, migrations/005_listening.sql |
-| 6 | UI: ClipSession(재생 게이트)·리스닝 퀴즈·Memory Booster·진입점 | components/listening/, app/quiz/listening.tsx, app/memory-booster.tsx, (tabs)/review·learn.tsx |
-| 7 | 리뷰 1차 FAIL(HIGH 2) → 전건 수정 → 재리뷰 PASS | tts 세대 카운터·onError, slug NOT NULL, aliveRef 등 6건 |
-| 8 | E2E 4시나리오 PASS (TTS 스텁 주입 기법) | /tmp/ted_e2e_p4/ (휘발성) |
-| 9 | ADR-0005 + 문서 현행화 | docs/ADR/ADR-0005, MASTER-PLAN, plan §6 체크리스트, CHANGELOG |
+| 1 | shared 회화 로직 (Dice 채점·localFeedback·잠금·XP) | packages/shared/src/speaking.ts (+index) |
+| 2 | STT 어댑터 (device/mock 교체식) | apps/mobile/lib/stt.ts |
+| 3 | 데이터 레이어 speaking dual-mode 4함수 | lib/data/{types,local,remote,index}.ts, lib/content/speaking-pack.ts |
+| 4 | Edge Function speak-feedback (핸들러 DI + 진입점) + config.toml | supabase/functions/speak-feedback/{handler,index}.ts, supabase/config.toml |
+| 5 | 콘텐츠 파이프라인 시나리오 10/턴 68 → JSON+SQL | scripts/generate_speaking_seed.py, scripts/speaking_content/, content/speaking-pack.json, migrations/006_speaking.sql |
+| 6 | UI: DialogueSession·목록·대화 컨테이너·learn 진입 | components/speaking/DialogueSession.tsx, app/speaking/{index,[slug]}.tsx, (tabs)/learn.tsx |
+| 7 | 이중 리뷰(2a sonnet + 2b opus 적대적) FAIL→전건 수정→재리뷰 PASS | 한도 원자화·응답형상·off-by-one·turnOrder·verify_jwt·인젝션 등 |
+| 8 | 5관문 검증 + E2E 4시나리오 PASS | (E2E /tmp/ted_e2e_p5/ — 휘발성) |
+| 9 | ADR-0006 + 문서 현행화 | docs/ADR/ADR-0006, MASTER-PLAN, plan §7, CHANGELOG |
 
 ## In Progress / Pending
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | P5 Speaking + AI | ⬜ 미착수 | `/ted-run docs/plans/p5-speaking-ai.md` — 외부 API(Edge Function), 따라 말하기 활성화 연동 지점은 ClipSession의 `TODO(P5)` 주석 |
-| 2 | 실기기 오디오 검증 | 🟡 대기 | iOS 무음 스위치·백그라운드·속도 3단 체감 — 시뮬레이터 TTS 음질 상이, 사용자 실기기 필요 (plan §6 유일한 미체크 항목) |
-| 3 | 콘텐츠 human review | 🟡 대기 | 리스닝 50문항(`scripts/listening_content/batch_*.txt`) + 문법 200문항 + 레벨테스트 25문항. batch 수정 후 `python3 scripts/generate_listening_seed.py` 재실행 시 JSON·SQL 동기 갱신 |
-| 4 | Supabase 실서버 마이그레이션 | ⬜ 대기 | 001→002→003→004→005 순서 적용 |
-| 5 | P6 Gamification | ⬜ 미착수 | 전 모듈 완성 후 |
+| 1 | **P6 Gamification** | 🟢 다음 진입 | `/ted-run docs/plans/p6-gamification.md` — 리그·푸시·스토어 준비. 전 모듈 완성 후 마지막 Phase |
+| 2 | Edge Function 실배포 | ⬜ 대기 | `supabase functions deploy speak-feedback` + `supabase secrets set OPENAI_API_KEY=...`. 미배포 시 로컬은 규칙기반 폴백으로 동작 |
+| 3 | 실기기 검증(P4+P5) | 🟡 대기 | P4 iOS 무음 스위치 / P5 마이크 권한·실 STT 인식률·왕복 지연. app.json infoPlist에 NSMicrophoneUsageDescription·NSSpeechRecognitionUsageDescription 추가 필요(스토어 거부 방지) |
+| 4 | 콘텐츠 human review | 🟡 대기 | 회화 시나리오 10(`scripts/speaking_content/`) + 리스닝 50 + 문법 200 + 레벨테스트 25. batch 수정 → 해당 generate 스크립트 재실행 |
+| 5 | Supabase 실서버 마이그레이션 | ⬜ 대기 | 001→002→003→004→005→006 순서 + Edge 배포 |
 
-## Key Decisions Made (ADR-0005)
+## Key Decisions Made (ADR-0006)
 
-- **오디오 파일 없이 expo-speech 실시간 TTS** — audio_url 컬럼만 예약, v1.1에서 MP3 폴백 전환 가능
-- **SDK 56은 expo-av 아닌 expo-audio** — `setAudioModeAsync({ playsInSilentMode: true })` + speech 옵션 `useApplicationAudioSession: true`
-- **TTS 큐 취소는 세대(generation) 카운터** — boolean 플래그는 큐 재시작 시 구 네이티브 콜백이 신 큐를 오염시킴 (리뷰 H-1)
-- **Memory Booster XP 0** — 자동 재생 XP 파밍 차단, 세션 기록만. 백그라운드는 stop+인덱스 재개 (Android pause 미지원)
-- **리스닝 attempt는 word_id 없음** — 어휘 SRS·난이도 조절 입력에서 격리 (P3 문법과 동일 패턴)
-- **3지선다** — 프로토타입 검증 결정, plan 문서 현행화함
-- **ClipSession 재생 게이트는 useSyncExternalStore** — 네이티브 onDone(React 이벤트 밖)의 동기 flush 필요 (ConcurrentRoot)
+- **LLM은 Edge Function `speak-feedback` 경유** — OPENAI_API_KEY는 Deno.env secret, 클라이언트는 invoke만. 핸들러는 순수함수(DI)로 deno test
+- **일일 한도는 원자적 RPC** `increment_speaking_usage` — `ON CONFLICT DO UPDATE SET count=count+1 WHERE count<limit RETURNING`로 row lock 직렬화(select-then-upsert의 TOCTOU 비용폭탄 차단, 2b CRITICAL). SECURITY DEFINER + service role만 실행
+- **user_id는 검증된 JWT에서**(클라이언트 body 아님), 500자 cap·turnOrder 정수검증은 Edge에서 강제, verify_jwt는 config.toml로 코드 고정(defense-in-depth)
+- **프롬프트 인젝션 완화** — userText를 `<user_utterance>` 태그 격리 + `<`/`>` 전각 치환(태그 탈출 차단), LLM 출력 제어문자 제거·500자 cap
+- **STT 어댑터 인터페이스** — device/mock 교체, Whisper 폴백은 어댑터 추가로 v1.1
+- **Dev Mock으로 AI 없이 전 플로우** — localFeedback(Dice 0.8/0.4 구간), usage는 AsyncStorage
+- **DialogueSession Ted 자동진행은 useSyncExternalStore 게이트** — P4 ClipSession과 동일(네이티브 onDone의 ConcurrentRoot flush)
 
 ## Known Issues
 
-- 리스닝 50문항·클립 30개는 AI 초안 — human review 전 (`# TODO(content-review)`)
-- `user_words.status` DEFAULT 불일치(001) — 무해, 다음 마이그레이션에서 통일 예정 (이전 세션부터 이월)
-- RTL v14 render/fireEvent는 async — 반드시 await / `react-hooks/purity` — `new Date()`는 핸들러 안에서
-- E2E 시 headless TTS는 onend 미발화 — `speechSynthesis.speak`를 **prototype 레벨 Object.defineProperty**로 스텁해야 함 (직접 교체는 타입 에러). 서빙은 `npx expo serve dist` 필수 (http.server는 SPA 라우팅 안 됨)
+- **신규 사용자는 카페 시나리오만 해제**(레벨 1) — 나머지 9개는 min_level 잠금. 의도된 게이팅이나 콘텐츠/레벨 곡선 조정 여지. P6 또는 콘텐츠 확장 시 검토
+- Edge Function 미배포 상태 — 실 AI 피드백은 배포·secret 후. 그 전까지 remote도 폴백 품질
+- app.json에 마이크/음성인식 권한 사용 문자열 미설정 — 실기기 빌드 전 추가 필요(iOS 크래시/스토어 거부 방지)
+- 회화 시나리오 10·리스닝 50·문법 200은 AI 초안 — human review 전
+- `user_words.status` DEFAULT 불일치(001) — 무해, 이월
+- RTL v14 async / `react-hooks/purity`(new Date는 핸들러 안) / ConcurrentRoot 비동기 반영은 waitFor·useSyncExternalStore
+- E2E: headless TTS는 prototype 레벨 Object.defineProperty 스텁, STT는 Dev Mock이라 스텁 불필요. 서빙 `npx expo serve dist`(http.server는 SPA 라우팅 안 됨)
+- npm audit moderate 11건 — 전부 @expo 빌드타임 툴체인 전이 의존(런타임 비도달, SDK 56 고유), P5 무관
 
 ## Context for Next Session
 
-- **사용자 목표**: MASTER-PLAN 기반 풀스위트 영어 학습 앱 — ted-run 4회 분할 중 3회 완료 (P1+P2 / P3·P4 / 남은 것: P5 / P6)
-- **개발 방식**: `/ted-run <plan doc>` 풀 파이프라인 유지 권장 (TDD red→green, opus 병렬 구현, 독립 리뷰→전건 수정→재리뷰, 5관문, 웹 export+Playwright E2E, ADR/커밋)
-- **제약·선호**: 커밋 한글, 커밋·푸시 분리 확인, Expo SDK 56 — versioned docs 확인 (AGENTS.md)
-- **실행/검증 명령**: `apps/mobile`: `npm start` / `npx jest`(83) / `npm run lint·typecheck`; `packages/shared`: `npx vitest run`(118, cov 100/96.8); `python3 scripts/test_generate_listening_seed.py`(22)
-- **다음 착수점**: P5 Speaking + AI — STT·LLM 피드백·시나리오. 외부 API라 Supabase Edge Function 필요 (p5-speaking-ai.md 참조). ClipSession 따라 말하기 활성화도 P5 범위
+- **사용자 목표**: MASTER-PLAN 기반 말해보카급 풀스위트 영어 학습 앱 — Phase 단위 완성. P5까지 완료, **P6 Gamification이 마지막**
+- **즉시 할 일**: `/ted-run docs/plans/p6-gamification.md` — 리그·푸시 알림·스토어 준비. p6 plan doc의 migration 번호가 005 등으로 적혀 있으면 007로 이월 필요(005=리스닝, 006=회화 점유)
+- **개발 방식**: `/ted-run <plan doc>` 풀 파이프라인 유지 — TDD red→green, opus 병렬 구현(파일 소유 비중첩 3분할이 효과적), 독립 2a/2b 리뷰→전건 수정→재리뷰, 5관문(보안 분류는 3-4·3-5 포함), 웹 export+Playwright E2E, ADR/커밋. **리뷰가 실 버그를 잡는 효과 재확인**(P5: 한도 TOCTOU·응답 형상·인젝션)
+- **제약·선호**: 커밋 한글, **커밋·푸시 분리 확인**(푸시는 명시 요청 시만), Expo SDK 56 versioned docs 확인(AGENTS.md)
+- **검증 명령**: `apps/mobile`: `npx jest`(130) / `npm run typecheck·lint`; `packages/shared`: `npx vitest run`(152); `python3 scripts/test_generate_speaking_seed.py`(30); `deno test supabase/functions/speak-feedback/`(12)
+- **P5 외부 API 운영**: OpenAI 키는 `supabase secrets set OPENAI_API_KEY=...`, 함수 배포는 `supabase functions deploy speak-feedback`. 미배포여도 Dev Mock·폴백으로 앱은 동작
 
 ## Files Modified This Session
 
-- 신규: shared/listening.ts, lib/tts.ts, lib/content/listening-pack.ts, components/listening/ClipSession.tsx, app/quiz/listening.tsx, app/memory-booster.tsx, scripts/generate_listening_seed.py, scripts/listening_content/batch_01·02.txt, content/listening-pack.json, migrations/005_listening.sql, ADR-0005, 테스트 5파일
-- 수정: lib/data 4파일, (tabs)/review.tsx, (tabs)/learn.tsx, shared/index.ts, plan p4 문서, MASTER-PLAN, CHANGELOG, HANDOFF(본 문서), package.json(expo-speech·expo-audio 추가)
+- **신규**: packages/shared/src/speaking.ts, apps/mobile/lib/stt.ts, apps/mobile/components/speaking/DialogueSession.tsx, apps/mobile/app/speaking/{index,[slug]}.tsx, supabase/functions/speak-feedback/{handler,index}.ts, supabase/config.toml, scripts/generate_speaking_seed.py, scripts/speaking_content/batch_01.txt, content/speaking-pack.json, supabase/migrations/006_speaking.sql, docs/ADR/ADR-0006, 테스트 6파일(shared/tests/speaking, __tests__/{stt,data-speaking,dialogue-session}, supabase/.../index.test.ts, scripts/test_generate_speaking_seed.py)
+- **수정**: apps/mobile/lib/content/speaking-pack.ts(stub→실구현), lib/data 4파일, (tabs)/learn.tsx, shared/index.ts, app.json/package.json(expo-speech-recognition), 문서(plan p5, MASTER-PLAN, CHANGELOG, HANDOFF)

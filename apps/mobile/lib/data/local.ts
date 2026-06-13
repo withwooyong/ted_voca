@@ -7,14 +7,20 @@ import {
   buildBoosterQueue,
   initialSrsState,
   levelFromXp,
+  localFeedback,
   nextStreak,
+  SPEAKING_DAILY_LIMIT,
+  SPEAKING_MAX_UTTERANCE_CHARS,
   toDateKey,
+  turnsForScenario,
   XP_LEVEL_TEST,
   type BoosterItem,
+  type DialogueTurnLike,
   type GrammarQuestionLike,
   type GrammarTopicLike,
   type ListeningClipLike,
   type ListeningQuestionLike,
+  type SpeakingScenarioLike,
   type SrsGrade,
 } from '@ted-voca/shared';
 
@@ -26,6 +32,8 @@ import type {
   ListeningAttemptInput,
   ProfileProgress,
   SessionInput,
+  SpeakFeedbackInput,
+  SpeakFeedbackResult,
   StatsOverview,
   TodaySummary,
   UserWordRow,
@@ -35,6 +43,8 @@ const KEY_USER_WORDS = 'tv_user_words';
 const KEY_ATTEMPTS = 'tv_attempts';
 const KEY_SESSIONS = 'tv_sessions';
 const KEY_PROGRESS = 'tv_progress';
+const KEY_SPEAKING_USAGE = 'tv_speaking_usage';
+const KEY_SPEAKING_ATTEMPTS = 'tv_speaking_attempts';
 
 const MAX_ATTEMPTS_KEPT = 1000;
 const MAX_SESSIONS_KEPT = 200;
@@ -265,6 +275,77 @@ export async function getBoosterItems(now: Date): Promise<BoosterItem[]> {
     getWords(),
   ]);
   return buildBoosterQueue(attempts, words, now);
+}
+
+// ── 스피킹 (P5) ────────────────────────────────────────────
+
+const MAX_SPEAKING_ATTEMPTS_KEPT = 500;
+
+type SpeakingUsage = { date: string; count: number };
+
+type StoredSpeakingAttempt = {
+  scenario_slug: string;
+  turn_order: number;
+  user_text: string;
+  feedback: ReturnType<typeof localFeedback>;
+  created_at: string;
+};
+
+// speaking-pack은 lazy require — JSON 부재가 모듈 평가 시점에 영향 주지 않도록 (listening 패턴 동일)
+export async function getSpeakingScenarios(): Promise<SpeakingScenarioLike[]> {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- 의도된 lazy 로드 (모듈 평가 시점 JSON 의존 제거)
+  const { getBundledSpeakingScenarios } = require('@/lib/content/speaking-pack') as typeof import('@/lib/content/speaking-pack');
+  return getBundledSpeakingScenarios()
+    .slice()
+    .sort((a, b) => a.sort_order - b.sort_order);
+}
+
+export async function getDialogueTurns(scenarioSlug: string): Promise<DialogueTurnLike[]> {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- 의도된 lazy 로드 (모듈 평가 시점 JSON 의존 제거)
+  const { getBundledDialogueTurns } = require('@/lib/content/speaking-pack') as typeof import('@/lib/content/speaking-pack');
+  return turnsForScenario(getBundledDialogueTurns(), scenarioSlug);
+}
+
+async function readSpeakingUsage(now: Date): Promise<SpeakingUsage> {
+  const today = toDateKey(now);
+  const usage = await readJson<SpeakingUsage>(KEY_SPEAKING_USAGE, { date: today, count: 0 });
+  // 날짜가 바뀌었으면 리셋
+  return usage.date === today ? usage : { date: today, count: 0 };
+}
+
+export async function getSpeakingRemaining(now: Date): Promise<number> {
+  const usage = await readSpeakingUsage(now);
+  return Math.max(0, SPEAKING_DAILY_LIMIT - usage.count);
+}
+
+export async function requestSpeakFeedback(input: SpeakFeedbackInput): Promise<SpeakFeedbackResult> {
+  // 길이 검사 먼저
+  if (input.userText.length > SPEAKING_MAX_UTTERANCE_CHARS) {
+    throw new Error('utterance_too_long');
+  }
+
+  const usage = await readSpeakingUsage(input.now);
+  if (usage.count >= SPEAKING_DAILY_LIMIT) {
+    return { error: 'daily_limit', remainingToday: 0 };
+  }
+
+  // 사용량 증가
+  const nextUsage: SpeakingUsage = { date: usage.date, count: usage.count + 1 };
+  await writeJson(KEY_SPEAKING_USAGE, nextUsage);
+
+  const feedback = localFeedback(input.expectedText, input.userText);
+
+  const attempts = await readJson<StoredSpeakingAttempt[]>(KEY_SPEAKING_ATTEMPTS, []);
+  attempts.push({
+    scenario_slug: input.scenarioSlug,
+    turn_order: input.turnOrder,
+    user_text: input.userText,
+    feedback,
+    created_at: input.now.toISOString(),
+  });
+  await writeJson(KEY_SPEAKING_ATTEMPTS, attempts.slice(-MAX_SPEAKING_ATTEMPTS_KEPT));
+
+  return { feedback, remainingToday: SPEAKING_DAILY_LIMIT - nextUsage.count };
 }
 
 export async function getTodaySummary(now: Date): Promise<TodaySummary> {

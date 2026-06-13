@@ -1,0 +1,650 @@
+{
+  "scenarios": [
+    {
+      "id": "cafe-order",
+      "slug": "cafe-order",
+      "title": "카페 주문",
+      "context": "You are ordering a drink at a coffee shop. The barista greets you at the counter.",
+      "difficulty": 1,
+      "emoji": "☕",
+      "min_level": 1,
+      "sort_order": 1
+    },
+    {
+      "id": "hotel-checkin",
+      "slug": "hotel-checkin",
+      "title": "호텔 체크인",
+      "context": "You arrive at a hotel front desk to check in for your stay.",
+      "difficulty": 2,
+      "emoji": "🏨",
+      "min_level": 2,
+      "sort_order": 2
+    },
+    {
+      "id": "restaurant-order",
+      "slug": "restaurant-order",
+      "title": "식당 주문",
+      "context": "You are at a restaurant and the server comes to take your order.",
+      "difficulty": 2,
+      "emoji": "🍽️",
+      "min_level": 3,
+      "sort_order": 3
+    },
+    {
+      "id": "asking-directions",
+      "slug": "asking-directions",
+      "title": "길 찾기",
+      "context": "You are lost in a new city and ask a friendly local for directions to the station.",
+      "difficulty": 2,
+      "emoji": "🗺️",
+      "min_level": 4,
+      "sort_order": 4
+    },
+    {
+      "id": "shopping-clothes",
+      "slug": "shopping-clothes",
+      "title": "옷 쇼핑",
+      "context": "You are shopping for clothes and a store assistant offers to help you.",
+      "difficulty": 3,
+      "emoji": "🛍️",
+      "min_level": 5,
+      "sort_order": 5
+    },
+    {
+      "id": "phone-appointment",
+      "slug": "phone-appointment",
+      "title": "전화 예약",
+      "context": "You are calling a clinic to make an appointment with the receptionist.",
+      "difficulty": 3,
+      "emoji": "📞",
+      "min_level": 6,
+      "sort_order": 6
+    },
+    {
+      "id": "airport-checkin",
+      "slug": "airport-checkin",
+      "title": "공항 체크인",
+      "context": "You are at the airport check-in counter for an international flight.",
+      "difficulty": 3,
+      "emoji": "✈️",
+      "min_level": 7,
+      "sort_order": 7
+    },
+    {
+      "id": "business-meeting",
+      "slug": "business-meeting",
+      "title": "비즈니스 미팅",
+      "context": "You are introducing yourself at the start of a business meeting with a new partner.",
+      "difficulty": 4,
+      "emoji": "💼",
+      "min_level": 9,
+      "sort_order": 8
+    },
+    {
+      "id": "doctor-visit",
+      "slug": "doctor-visit",
+      "title": "병원 진료",
+      "context": "You are describing your symptoms to a doctor during a medical visit.",
+      "difficulty": 4,
+      "emoji": "🏥",
+      "min_level": 10,
+      "sort_order": 9
+    },
+    {
+      "id": "job-interview",
+      "slug": "job-interview",
+      "title": "면접",
+      "context": "You are in a job interview and the interviewer asks about your background.",
+      "difficulty": 5,
+      "emoji": "🧑‍💼",
+      "min_level": 12,
+      "sort_order": 10
+    }
+  ],
+  "turns": [
+    {
+      "id": "cafe-order:1",
+      "scenario_slug": "cafe-order",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Hi there! What can I get for you today?",
+      "hint_ko": null
+    },
+    {
+      "id": "cafe-order:2",
+      "scenario_slug": "cafe-order",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "I would like a latte, please.",
+      "hint_ko": "라떼 한 잔 주세요."
+    },
+    {
+      "id": "cafe-order:3",
+      "scenario_slug": "cafe-order",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Sure. What size would you like?",
+      "hint_ko": null
+    },
+    {
+      "id": "cafe-order:4",
+      "scenario_slug": "cafe-order",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "A large one, please.",
+      "hint_ko": "큰 사이즈로 주세요."
+    },
+    {
+      "id": "cafe-order:5",
+      "scenario_slug": "cafe-order",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Great. Anything else?",
+      "hint_ko": null
+    },
+    {
+      "id": "cafe-order:6",
+      "scenario_slug": "cafe-order",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "No, that is all. Thank you.",
+      "hint_ko": "아니요, 그게 다예요. 감사합니다."
+    },
+    {
+      "id": "cafe-order:7",
+      "scenario_slug": "cafe-order",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "Perfect. It will be ready in a moment.",
+      "hint_ko": null
+    },
+    {
+      "id": "hotel-checkin:1",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Good evening! Welcome. Do you have a reservation?",
+      "hint_ko": null
+    },
+    {
+      "id": "hotel-checkin:2",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Yes, I have a reservation under the name Park.",
+      "hint_ko": "네, 박이라는 이름으로 예약했습니다."
+    },
+    {
+      "id": "hotel-checkin:3",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Let me check. May I see your passport, please?",
+      "hint_ko": null
+    },
+    {
+      "id": "hotel-checkin:4",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "Here it is.",
+      "hint_ko": "여기 있습니다."
+    },
+    {
+      "id": "hotel-checkin:5",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Thank you. You are in room 502 on the fifth floor.",
+      "hint_ko": null
+    },
+    {
+      "id": "hotel-checkin:6",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "Could you tell me what time breakfast is served?",
+      "hint_ko": "아침 식사는 몇 시에 제공되나요?"
+    },
+    {
+      "id": "hotel-checkin:7",
+      "scenario_slug": "hotel-checkin",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "Breakfast is from seven to ten in the main restaurant.",
+      "hint_ko": null
+    },
+    {
+      "id": "restaurant-order:1",
+      "scenario_slug": "restaurant-order",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Good evening. Are you ready to order?",
+      "hint_ko": null
+    },
+    {
+      "id": "restaurant-order:2",
+      "scenario_slug": "restaurant-order",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Yes, I will have the grilled salmon, please.",
+      "hint_ko": "네, 구운 연어로 할게요."
+    },
+    {
+      "id": "restaurant-order:3",
+      "scenario_slug": "restaurant-order",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Excellent choice. Would you like soup or salad with that?",
+      "hint_ko": null
+    },
+    {
+      "id": "restaurant-order:4",
+      "scenario_slug": "restaurant-order",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "I will have the salad, please.",
+      "hint_ko": "샐러드로 주세요."
+    },
+    {
+      "id": "restaurant-order:5",
+      "scenario_slug": "restaurant-order",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "And something to drink?",
+      "hint_ko": null
+    },
+    {
+      "id": "restaurant-order:6",
+      "scenario_slug": "restaurant-order",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "Just water for now, thank you.",
+      "hint_ko": "우선 물만 주세요, 감사합니다."
+    },
+    {
+      "id": "asking-directions:1",
+      "scenario_slug": "asking-directions",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "You look a little lost. Can I help you?",
+      "hint_ko": null
+    },
+    {
+      "id": "asking-directions:2",
+      "scenario_slug": "asking-directions",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Yes, how do I get to the train station?",
+      "hint_ko": "네, 기차역까지 어떻게 가나요?"
+    },
+    {
+      "id": "asking-directions:3",
+      "scenario_slug": "asking-directions",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Go straight for two blocks, then turn left.",
+      "hint_ko": null
+    },
+    {
+      "id": "asking-directions:4",
+      "scenario_slug": "asking-directions",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "Is it far from here?",
+      "hint_ko": "여기서 먼가요?"
+    },
+    {
+      "id": "asking-directions:5",
+      "scenario_slug": "asking-directions",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "No, it is about a five minute walk.",
+      "hint_ko": null
+    },
+    {
+      "id": "asking-directions:6",
+      "scenario_slug": "asking-directions",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "Thank you so much for your help.",
+      "hint_ko": "도와주셔서 정말 감사합니다."
+    },
+    {
+      "id": "asking-directions:7",
+      "scenario_slug": "asking-directions",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "You are welcome. Have a good day!",
+      "hint_ko": null
+    },
+    {
+      "id": "shopping-clothes:1",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Hello! Are you looking for anything in particular?",
+      "hint_ko": null
+    },
+    {
+      "id": "shopping-clothes:2",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Yes, I am looking for a winter jacket.",
+      "hint_ko": "네, 겨울 재킷을 찾고 있어요."
+    },
+    {
+      "id": "shopping-clothes:3",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Of course. What size do you wear?",
+      "hint_ko": null
+    },
+    {
+      "id": "shopping-clothes:4",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "I usually wear a medium.",
+      "hint_ko": "보통 미디엄을 입어요."
+    },
+    {
+      "id": "shopping-clothes:5",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Here is one in medium. Would you like to try it on?",
+      "hint_ko": null
+    },
+    {
+      "id": "shopping-clothes:6",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "Yes, where is the fitting room?",
+      "hint_ko": "네, 탈의실이 어디인가요?"
+    },
+    {
+      "id": "shopping-clothes:7",
+      "scenario_slug": "shopping-clothes",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "It is right over there, on your left.",
+      "hint_ko": null
+    },
+    {
+      "id": "phone-appointment:1",
+      "scenario_slug": "phone-appointment",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Good morning, Sunrise Clinic. How may I help you?",
+      "hint_ko": null
+    },
+    {
+      "id": "phone-appointment:2",
+      "scenario_slug": "phone-appointment",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Hello, I would like to make an appointment.",
+      "hint_ko": "안녕하세요, 예약을 하고 싶어요."
+    },
+    {
+      "id": "phone-appointment:3",
+      "scenario_slug": "phone-appointment",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Certainly. What day works best for you?",
+      "hint_ko": null
+    },
+    {
+      "id": "phone-appointment:4",
+      "scenario_slug": "phone-appointment",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "Would Thursday afternoon be possible?",
+      "hint_ko": "목요일 오후가 가능할까요?"
+    },
+    {
+      "id": "phone-appointment:5",
+      "scenario_slug": "phone-appointment",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Yes, we have an opening at three o'clock.",
+      "hint_ko": null
+    },
+    {
+      "id": "phone-appointment:6",
+      "scenario_slug": "phone-appointment",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "That works for me. Thank you.",
+      "hint_ko": "저는 괜찮아요. 감사합니다."
+    },
+    {
+      "id": "airport-checkin:1",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Good morning. May I see your passport and ticket?",
+      "hint_ko": null
+    },
+    {
+      "id": "airport-checkin:2",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Sure, here you are.",
+      "hint_ko": "네, 여기 있습니다."
+    },
+    {
+      "id": "airport-checkin:3",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Are you checking any bags today?",
+      "hint_ko": null
+    },
+    {
+      "id": "airport-checkin:4",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "Yes, I have one suitcase to check in.",
+      "hint_ko": "네, 부칠 가방이 하나 있어요."
+    },
+    {
+      "id": "airport-checkin:5",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Please place it on the scale. Would you like a window seat?",
+      "hint_ko": null
+    },
+    {
+      "id": "airport-checkin:6",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "A window seat would be great, thank you.",
+      "hint_ko": "창가 자리면 좋겠어요, 감사합니다."
+    },
+    {
+      "id": "airport-checkin:7",
+      "scenario_slug": "airport-checkin",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "All set. Your gate is 23, boarding at ten thirty.",
+      "hint_ko": null
+    },
+    {
+      "id": "business-meeting:1",
+      "scenario_slug": "business-meeting",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Welcome. It is a pleasure to finally meet you in person.",
+      "hint_ko": null
+    },
+    {
+      "id": "business-meeting:2",
+      "scenario_slug": "business-meeting",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "Thank you. I have been looking forward to this meeting.",
+      "hint_ko": "감사합니다. 이번 미팅을 기대하고 있었습니다."
+    },
+    {
+      "id": "business-meeting:3",
+      "scenario_slug": "business-meeting",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Shall we start by reviewing the proposal?",
+      "hint_ko": null
+    },
+    {
+      "id": "business-meeting:4",
+      "scenario_slug": "business-meeting",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "Yes, let us begin with the budget section.",
+      "hint_ko": "네, 예산 부분부터 시작하시죠."
+    },
+    {
+      "id": "business-meeting:5",
+      "scenario_slug": "business-meeting",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Sounds good. Do you have any initial concerns?",
+      "hint_ko": null
+    },
+    {
+      "id": "business-meeting:6",
+      "scenario_slug": "business-meeting",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "I would like to discuss the timeline in more detail.",
+      "hint_ko": "일정에 대해 좀 더 자세히 논의하고 싶습니다."
+    },
+    {
+      "id": "business-meeting:7",
+      "scenario_slug": "business-meeting",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "Of course. Let me walk you through our schedule.",
+      "hint_ko": null
+    },
+    {
+      "id": "doctor-visit:1",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Hello. What seems to be the problem today?",
+      "hint_ko": null
+    },
+    {
+      "id": "doctor-visit:2",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "I have had a sore throat and a fever since yesterday.",
+      "hint_ko": "어제부터 목이 아프고 열이 나요."
+    },
+    {
+      "id": "doctor-visit:3",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "I see. Have you taken any medicine for it?",
+      "hint_ko": null
+    },
+    {
+      "id": "doctor-visit:4",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "I took some painkillers, but they did not help much.",
+      "hint_ko": "진통제를 먹었지만 별로 효과가 없었어요."
+    },
+    {
+      "id": "doctor-visit:5",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "Let me examine you. Please open your mouth and say ah.",
+      "hint_ko": null
+    },
+    {
+      "id": "doctor-visit:6",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "How long will it take to recover?",
+      "hint_ko": "회복하는 데 얼마나 걸릴까요?"
+    },
+    {
+      "id": "doctor-visit:7",
+      "scenario_slug": "doctor-visit",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "With rest and medication, you should feel better in a few days.",
+      "hint_ko": null
+    },
+    {
+      "id": "job-interview:1",
+      "scenario_slug": "job-interview",
+      "turn_order": 1,
+      "speaker": "ted",
+      "text_en": "Thanks for coming in. Could you tell me about yourself?",
+      "hint_ko": null
+    },
+    {
+      "id": "job-interview:2",
+      "scenario_slug": "job-interview",
+      "turn_order": 2,
+      "speaker": "user",
+      "text_en": "I have five years of experience in marketing.",
+      "hint_ko": "저는 마케팅 분야에서 5년의 경력이 있습니다."
+    },
+    {
+      "id": "job-interview:3",
+      "scenario_slug": "job-interview",
+      "turn_order": 3,
+      "speaker": "ted",
+      "text_en": "Impressive. Why are you interested in this position?",
+      "hint_ko": null
+    },
+    {
+      "id": "job-interview:4",
+      "scenario_slug": "job-interview",
+      "turn_order": 4,
+      "speaker": "user",
+      "text_en": "I am drawn to your company's focus on innovation.",
+      "hint_ko": "귀사의 혁신에 대한 집중에 끌렸습니다."
+    },
+    {
+      "id": "job-interview:5",
+      "scenario_slug": "job-interview",
+      "turn_order": 5,
+      "speaker": "ted",
+      "text_en": "What would you say is your greatest strength?",
+      "hint_ko": null
+    },
+    {
+      "id": "job-interview:6",
+      "scenario_slug": "job-interview",
+      "turn_order": 6,
+      "speaker": "user",
+      "text_en": "I am very good at solving problems under pressure.",
+      "hint_ko": "저는 압박 속에서 문제를 해결하는 데 능숙합니다."
+    },
+    {
+      "id": "job-interview:7",
+      "scenario_slug": "job-interview",
+      "turn_order": 7,
+      "speaker": "ted",
+      "text_en": "Great. Do you have any questions for us?",
+      "hint_ko": null
+    }
+  ]
+}
