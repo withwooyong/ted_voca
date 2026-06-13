@@ -10,6 +10,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-13] 프로토타입 동기화 (`45da25c`)
+
+### Added
+- 인터랙티브 프로토타입(`docs/prototype/index.html`)에 구현 화면 3개 추가 — Memory Booster(P4, 최근 7일 문장 자동 TTS·XP 0), 문법 사전(P3, 20토픽 CEFR 그룹핑·약점 추천), 알림 설정(P6, 복습/streak/리그 3종 토글)
+- 진입점 연결 — 복습 카드→Memory Booster, 문법 '규칙 보기'·학습 허브→문법 사전, 프로필 알림→알림 설정
+
+### Changed
+- 리그 화면 v1.1 group_no 분할 반영 — '실버 리그 · 그룹 2'(28명), 그룹 내 상위10 승급/하위5 강등선, `buildLeague` 그룹 기준 재구성
+- SCREENS 21개 확장 + 신규 화면 NOTES(검증 포인트) 추가, 리그 NOTES를 그룹 기준으로 갱신
+
+### Fixed
+- `gdDraw` 약점 span 따옴표 이스케이프 버그(`style=\'`) 수정 — node 시뮬레이션으로 생성 HTML 검증
+- 검증: `node --check` JS 문법 OK, `go()` 21개 전부 section 매칭, SCREENS=sections=21
+
+---
+
 ## [2026-06-13] 배포 절차 가이드화 (`930a987`)
 
 ### Added
