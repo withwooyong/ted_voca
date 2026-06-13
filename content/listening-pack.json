@@ -338,7 +338,7 @@
       "slug": "shopping-lost-child",
       "title": "미아 안내방송",
       "transcript_en": "We have a young boy named Sam waiting at the customer service desk. Could his parents please come to collect him?",
-      "transcript_ko": "손님센터에서 Sam이라는 남자아이가 기다리고 있습니다. 부모님께서는 데리러 와 주시기 바랍니다.",
+      "transcript_ko": "고객 서비스 데스크에서 Sam이라는 남자아이가 기다리고 있습니다. 부모님께서는 데리러 와 주시기 바랍니다.",
       "duration_seconds": 8,
       "difficulty": 3,
       "tags": [
@@ -911,7 +911,7 @@
         "The food court"
       ],
       "answer": "The customer service desk",
-      "explanation": "'waiting at the customer service desk'에서 손님센터에서 기다린다고 했습니다.",
+      "explanation": "'waiting at the customer service desk'에서 고객 서비스 데스크에서 기다린다고 했습니다.",
       "sort_order": 1
     },
     {

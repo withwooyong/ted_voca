@@ -34,8 +34,8 @@ q | How much is the discount? | Thirty percent=Thirty percent;Thirteen percent;F
 clip: shopping-closing | 매장 마감 안내 | 1 | daily,announcement | Our store will be closing in fifteen minutes. Please bring your items to the checkout counter. | 저희 매장은 15분 후 마감합니다. 구매하실 물건을 계산대로 가져와 주십시오.
 q | When will the store close? | In fifteen minutes=In fifteen minutes;In fifty minutes;In five minutes | 'closing in fifteen minutes'에서 15분 후 마감함을 알 수 있습니다.
 
-clip: shopping-lost-child | 미아 안내방송 | 3 | daily,announcement | We have a young boy named Sam waiting at the customer service desk. Could his parents please come to collect him? | 손님센터에서 Sam이라는 남자아이가 기다리고 있습니다. 부모님께서는 데리러 와 주시기 바랍니다.
-q | Where is the boy waiting? | The customer service desk=The customer service desk;The parking lot;The food court | 'waiting at the customer service desk'에서 손님센터에서 기다린다고 했습니다.
+clip: shopping-lost-child | 미아 안내방송 | 3 | daily,announcement | We have a young boy named Sam waiting at the customer service desk. Could his parents please come to collect him? | 고객 서비스 데스크에서 Sam이라는 남자아이가 기다리고 있습니다. 부모님께서는 데리러 와 주시기 바랍니다.
+q | Where is the boy waiting? | The customer service desk=The customer service desk;The parking lot;The food court | 'waiting at the customer service desk'에서 고객 서비스 데스크에서 기다린다고 했습니다.
 q | Who is asked to come? | His parents=His parents;His teacher;A doctor | 'Could his parents please come'에서 부모님을 호출했습니다.
 
 clip: library-hours | 도서관 운영 안내 | 2 | daily,announcement | Welcome to the city library. Please note that we close early today at six in the evening for a special event. | 시립 도서관에 오신 것을 환영합니다. 오늘은 특별 행사로 저녁 6시에 일찍 마감하는 점 참고해 주세요.

@@ -278,7 +278,7 @@ export const LEVEL_TEST_QUESTIONS: LevelTestQuestion[] = [
     sentence: 'The candidate _____ qualifications impressed us was hired.',
     options: ['whose', 'who', 'which', 'whom'],
     answer: 'whose',
-    explanation: '소유 관계의 관계대명사는 whose. "그의 자격 요건이 우리를 감동시킨 지원자가 채용되었다."',
+    explanation: '소유 관계의 관계대명사는 whose. "자격 요건이 우리에게 깊은 인상을 준 지원자가 채용되었다."',
   },
   {
     id: 'lt-d5-05',

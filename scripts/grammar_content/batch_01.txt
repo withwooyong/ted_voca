@@ -32,14 +32,14 @@ error_find | 틀린 부분을 고르세요: We did went home after work. | We;di
 topic: articles | 관사 a/an/the | A2 | grammar-articles | 처음 언급하는 셀 수 있는 단수 명사 앞에는 부정관사 a/an을, 특정한 것을 가리킬 때는 정관사 the를 쓴다. 모음 소리로 시작하는 단어 앞에는 an을 쓴다.
 word_order | 그녀는 한 시간 안에 보고서를 끝냈다. | She finished the report in an hour. | an hour는 h가 묵음이라 모음 소리로 시작해 an을 쓴다.
 word_order | 그는 정직한 직원을 찾고 있다. | He is looking for an honest employee. | honest는 h가 묵음이므로 an을 쓴다.
-word_order | 그 책은 탁자 위에 있다. | The book is on that table. | 특정한 책을 가리키므로 the를 쓴다.
+word_order | 그 책은 내 책상 위에 있다. | The book is on my desk. | 특정한 책을 가리키므로 the를 쓴다.
 blank_choice | I bought ___ umbrella this morning. | an;a;the=an | umbrella는 모음 소리로 시작하므로 an을 쓴다.
 blank_choice | She is ___ university student in London. | a;an;the=a | university는 발음이 '유'로 자음 소리라서 a를 쓴다.
 blank_choice | Can you pass me ___ salt, please? | the;a;an=the | 식탁 위의 특정 소금을 가리키므로 the를 쓴다.
 blank_choice | He works as ___ engineer at a startup. | an;a;the=an | engineer는 모음 소리로 시작하므로 an을 쓴다.
 error_find | 틀린 부분을 고르세요: She is a honest manager. | She is;a;honest;manager=a | honest는 모음 소리로 시작하므로 an을 써야 한다.
 error_find | 틀린 부분을 고르세요: He gave me an useful tip. | He gave me;an;useful;tip=an | useful은 '유'로 자음 소리라서 a를 써야 한다.
-error_find | 틀린 부분을 고르세요: Please open a window near you. | Please open;a;window;near you=a | 특정한 창문을 가리키므로 the가 더 자연스럽다.
+error_find | 틀린 부분을 고르세요: I saw a moon last night. | I saw;a;moon;last night=a | 달은 세상에 하나뿐인 대상이므로 the moon으로 써야 한다.
 
 topic: countable-uncountable | 셀 수 있는 명사와 없는 명사 | A2 | grammar-articles | 셀 수 있는 명사는 복수형이 가능하고 many와 함께 쓰며, 셀 수 없는 명사는 단수 취급하고 much와 함께 쓴다. 양을 말할 때는 some, a lot of 등을 활용한다.
 word_order | 책상 위에 많은 정보가 있다. | There is much information on the desk. | information은 불가산명사라 much와 함께 쓴다.

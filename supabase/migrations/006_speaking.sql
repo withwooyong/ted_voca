@@ -184,7 +184,7 @@ VALUES
   ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 1, 'ted', 'Thanks for coming in. Could you tell me about yourself?', NULL),
   ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 2, 'user', 'I have five years of experience in marketing.', '저는 마케팅 분야에서 5년의 경력이 있습니다.'),
   ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 3, 'ted', 'Impressive. Why are you interested in this position?', NULL),
-  ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 4, 'user', 'I am drawn to your company''s focus on innovation.', '귀사의 혁신에 대한 집중에 끌렸습니다.'),
+  ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 4, 'user', 'I am drawn to your company''s focus on innovation.', '귀사가 혁신을 중시하는 점에 끌렸습니다.'),
   ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 5, 'ted', 'What would you say is your greatest strength?', NULL),
   ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 6, 'user', 'I am very good at solving problems under pressure.', '저는 압박 속에서 문제를 해결하는 데 능숙합니다.'),
   ((SELECT id FROM speaking_scenarios WHERE slug = 'job-interview'), 7, 'ted', 'Great. Do you have any questions for us?', NULL)

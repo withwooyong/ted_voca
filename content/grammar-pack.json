@@ -549,16 +549,16 @@
       "id": "articles:3",
       "topic_slug": "articles",
       "question_type": "word_order",
-      "prompt": "그 책은 탁자 위에 있다.",
+      "prompt": "그 책은 내 책상 위에 있다.",
       "options": [
         "The",
         "book",
         "is",
         "on",
-        "that",
-        "table"
+        "my",
+        "desk"
       ],
-      "answer": "The book is on that table.",
+      "answer": "The book is on my desk.",
       "explanation": "특정한 책을 가리키므로 the를 쓴다.",
       "sort_order": 3
     },
@@ -652,15 +652,15 @@
       "id": "articles:10",
       "topic_slug": "articles",
       "question_type": "error_find",
-      "prompt": "틀린 부분을 고르세요: Please open a window near you.",
+      "prompt": "틀린 부분을 고르세요: I saw a moon last night.",
       "options": [
-        "Please open",
+        "I saw",
         "a",
-        "window",
-        "near you"
+        "moon",
+        "last night"
       ],
       "answer": "a",
-      "explanation": "특정한 창문을 가리키므로 the가 더 자연스럽다.",
+      "explanation": "달은 세상에 하나뿐인 대상이므로 the moon으로 써야 한다.",
       "sort_order": 10
     },
     {
@@ -2132,17 +2132,19 @@
       "id": "conditionals-second:8",
       "topic_slug": "conditionals-second",
       "question_type": "word_order",
-      "prompt": "그녀가 여기 있다면 답을 알 텐데.",
+      "prompt": "Mary가 여기 있다면 우리를 도울 텐데.",
       "options": [
-        "She",
+        "If",
+        "Mary",
+        "were",
+        "here,",
+        "she",
         "would",
-        "know",
-        "the",
-        "answer",
-        "here"
+        "help",
+        "us"
       ],
-      "answer": "She would know the answer here.",
-      "explanation": "가정법에서 would로 사실과 반대인 가정의 결과를 나타냅니다.",
+      "answer": "If Mary were here, she would help us.",
+      "explanation": "사실과 반대인 가정은 if + were, 주절은 would로 나타냅니다.",
       "sort_order": 8
     },
     {
@@ -2435,19 +2437,19 @@
       "id": "relative-clauses:8",
       "topic_slug": "relative-clauses",
       "question_type": "word_order",
-      "prompt": "빨간 모자를 쓴 소년은 내 동생이다.",
+      "prompt": "모자를 쓴 소년은 내 동생이다.",
       "options": [
         "The",
         "boy",
         "who",
         "wears",
-        "red",
-        "caps",
+        "a",
+        "cap",
         "is",
         "my",
         "brother"
       ],
-      "answer": "The boy who wears red caps is my brother.",
+      "answer": "The boy who wears a cap is my brother.",
       "explanation": "who가 사람 선행사 boy를 수식하는 절을 이끕니다.",
       "sort_order": 8
     },
