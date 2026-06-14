@@ -10,6 +10,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/).
 
 ---
 
+## [2026-06-14] v1.1 원격 푸시 발송 — 캠페인 발송 파이프라인 (`2ae5255`)
+
+### Added
+- `supabase/functions/push-send/` — 관리자 시크릿 인증 Edge Function. 수집된 `push_tokens`에 Expo Push API로 캠페인 푸시 발송 + 무효 토큰(`DeviceNotRegistered`) 자동 정리. P5 `speak-feedback` DI 패턴(handler 순수 + index Deno deps) 재사용.
+  - `handler.ts` — 순수 DI 핸들러 + 헬퍼(`chunk`/`sanitizeField`/`buildMessages`/`extractInvalidTokens`/`summarize`). 검증 순서: OPTIONS → 관리자 인증(401) → JSON(400) → 필드(400) → 0토큰 조기종료 → 100개 청킹 발송(throw 격리) → 무효 토큰 정리(best-effort) → 200 `{sent,failed,invalidated}`.
+  - `index.ts` — Deno serve. `X-Admin-Secret` 상수시간 비교(env 미설정 시 fail-closed), service role 토큰 조회/삭제, Expo Push 발송, 선택적 tier 필터(이번 UTC 주 — SQL `date_trunc('week')`와 동치).
+  - `index.test.ts` — deno test 27케이스(인증/검증/0토큰/정상발송/무효토큰정리/타에러보존/청킹/격리/토큰미노출/헬퍼 단위).
+- `docs/ADR/ADR-0009-remote-push-send.md` — 결정 기록(관리자 시크릿 인증·ticket 기준 무효 토큰 정리·청킹·receipt 폴링 미구현 한계).
+
+### Changed
+- `supabase/config.toml` — `[functions.push-send] verify_jwt = false`(user JWT 아닌 시크릿 인증, 핸들러 `isAdmin` 단독 책임).
+- `docs/DEPLOY.md` — §D-2 push-send 배포·`PUSH_ADMIN_SECRET` secret·curl 호출 예시·시크릿 로테이션 추가. 전체 흐름 D단계 표기 갱신.
+- `docs/MASTER-PLAN.md` — v1.1 후속 표의 원격 푸시 발송 ⬜ → ✅ 코드 완결.
+
+---
+
 ## [2026-06-13] 프로토타입 동기화 (`45da25c`)
 
 ### Added
