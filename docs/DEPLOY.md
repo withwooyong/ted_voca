@@ -9,7 +9,7 @@
 A. Supabase 프로젝트 생성          (1회)
 B. 마이그레이션 001~008 적용        (SQL Editor, 번호 순)
 C. pg_cron 활성화 + 주간 정산 확인   (007 의존)
-D. Edge Function 배포 + secret      (speak-feedback / OPENAI_API_KEY)
+D. Edge Function 배포 + secret      (speak-feedback / OPENAI_API_KEY, push-send / PUSH_ADMIN_SECRET)
 E. 앱 env 설정 → EAS 빌드 → 스토어 제출
 ```
 
@@ -99,6 +99,34 @@ SELECT column_name FROM information_schema.columns
    ```
    `supabase/config.toml`의 `[functions.speak-feedback] verify_jwt = true` 가 플랫폼 레벨 JWT 검증을 강제한다(핸들러의 `getUser`와 이중 방어).
 4. 검증: 앱 로그인 상태에서 회화 시나리오 1턴 진행 → LLM 피드백 응답 확인(키 미설정/오류 시 폴백 메시지면 키·배포 점검).
+
+### D-2. push-send (v1.1 원격 푸시 캠페인 발송)
+
+수집된 `push_tokens`(007)에 캠페인 푸시를 발송하고 무효 토큰을 자동 정리하는 **관리자 전용** 함수.
+미배포여도 앱 동작에는 영향 없다(토큰 수집은 계속됨). 관련 결정: [ADR-0009](ADR/ADR-0009-remote-push-send.md).
+
+1. 관리자 시크릿을 secret으로 등록(절대 앱·로그·클라이언트에 노출 금지, 충분히 긴 난수):
+   ```bash
+   supabase secrets set PUSH_ADMIN_SECRET="$(openssl rand -hex 32)"
+   ```
+   > `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY`는 런타임에 플랫폼이 자동 주입(토큰 조회·삭제용). `PUSH_ADMIN_SECRET`만 수동 등록.
+2. 배포:
+   ```bash
+   supabase functions deploy push-send
+   ```
+   `supabase/config.toml`의 `[functions.push-send] verify_jwt = false` 가 적용된다 — 인증은 user JWT가 아니라 `X-Admin-Secret` 헤더(핸들러 `isAdmin` 상수시간 비교)가 단독 담당. env 미설정 시 전면 거부(fail-closed).
+3. 호출(운영자가 직접, HTTPS 필수). `tier`는 선택(`bronze`/`silver`/`gold` — 생략 시 전체 발송):
+   ```bash
+   curl -X POST "https://<PROJECT_REF>.functions.supabase.co/push-send" \
+     -H "X-Admin-Secret: $PUSH_ADMIN_SECRET" \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Ted","body":"오늘 복습 잊지 마세요! 🔥","tier":"silver"}'
+   # 응답 예: {"sent":120,"failed":3,"invalidated":2}
+   ```
+   - `sent`=Expo 접수 성공, `failed`=발송 에러(레이트리밋 등 포함), `invalidated`=DeviceNotRegistered로 삭제한 토큰 수.
+   - title ≤100자 / body ≤500자 초과 시 400. 응답에 토큰 값은 절대 포함되지 않는다.
+4. **시크릿 로테이션**: 유출 의심 시 1번을 새 난수로 재실행 → 즉시 기존 시크릿 무효화(헤더 갱신 후 재호출).
+5. 알려진 한계(ADR-0009): `DeviceNotRegistered`는 주로 receipt 단계에서 확정되므로 일부 무효 토큰이 남을 수 있다(receipt 2차 폴링 미구현). 대량 발송 레이트리밋 재시도/백오프 없음(실패 카운트만).
 
 ---
 

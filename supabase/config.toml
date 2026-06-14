@@ -3,3 +3,9 @@
 
 [functions.speak-feedback]
 verify_jwt = true
+
+# push-send는 user JWT가 아닌 관리자 시크릿(X-Admin-Secret)으로 인증한다.
+# verify_jwt=true면 플랫폼이 유효한 user JWT를 요구해 관리자 curl 호출을 막으므로 false로 둔다.
+# 인증은 핸들러의 isAdmin(상수시간 시크릿 비교)이 단독 책임진다(env PUSH_ADMIN_SECRET 미설정 시 전면 거부).
+[functions.push-send]
+verify_jwt = false

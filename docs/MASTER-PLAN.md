@@ -203,7 +203,7 @@ ted_voca/
 | 항목 | 산출물 | 상태 |
 |------|--------|------|
 | 리그 group_no 분할 | tier 내 30명 단위 그룹 — migration 008, shared `assignGroupNos`/`pickGroupNoForNewEntry`, 보드 그룹 격리 ([ADR-0008](ADR/ADR-0008-league-group-split.md)) | ✅ 코드 완결 (실서버 008 적용·30명+ 검증 잔여) |
-| 원격 푸시 발송 | push_tokens 기반 서버 발송 파이프라인 (현재 토큰 수집만) | ⬜ 후순위 |
+| 원격 푸시 발송 | push_tokens 기반 서버 발송 파이프라인 — Edge Function `push-send`(관리자 시크릿 인증·Expo Push 청킹·무효 토큰 자동 정리), deno test 27 ([ADR-0009](ADR/ADR-0009-remote-push-send.md)) | ✅ 코드 완결 (실배포·`PUSH_ADMIN_SECRET`·receipt 폴링 잔여) |
 | 유료 구독 결제(IAP) | App Store / Play Store 결제, 상점 | ⬜ 후순위 |
 
 ---
